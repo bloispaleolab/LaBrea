@@ -40,8 +40,15 @@ raw.names
 dat$name[which((dat$name == "Canis cf. dirus") | (dat$name == "Canis dirus"))] <- "Canis dirus"
 dat$name[which((dat$name == "Canis cf. latrans") | (dat$name == "Canis latrans"))] <- "Canis latrans"
 dat$name[which((dat$name == "Canis sp."))] <- "Canis sp"
-
+dat$name[which((dat$name == "cf. Dipodomys sp.") | (dat$name == "Dipodomys sp."))] <- "Dipodomys sp"
+dat$name[which((dat$name == "cf. Microtus ") | (dat$name == "cf. Microtus sp.") | (dat$name == "Microtus sp. ") | (dat$name == "Microtus ") | (dat$name == "Microtus sp."))] <- "Microtus sp" 
 dat$name[which((dat$name == "Neotoma ") | (dat$name == "Neotoma sp."))] <- "Neotoma sp"
+dat$name[which((dat$name == "Mustela cf. frenata"))] <- "Mustela frenata"
+dat$name[which((dat$name == "Neotamias cf. merriami") | ("cf. Neotamias"))] <- "Neotamias sp"
+dat$name[which((dat$name == "cf. Neotamias"))] <- "Otospermophilus sp"
+
+
+
 
 ## NATE: Finish this section
 
