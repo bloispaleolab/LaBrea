@@ -62,5 +62,3 @@ dat$name[which((dat$name == "cf. Thomomys ") | (dat$name == "Thomomys sp."))] <-
 
 # Finish doing the name match, then write the file as a clean file
 write.csv(dat, file="input/processed/P23_Dep1_SmallMammals-clean.csv")
-
-# This is a test change
