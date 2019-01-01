@@ -1,10 +1,10 @@
-# Read in data exported from Google Drive
-
+# Read in data exported from Google Drive ----
 deposits <- c("1","17","7b","13")
 files <- list.files(
   "/Users/jessicablois/Documents/GitHub/LaBrea/original_data/GoogleDriveExports-mammals", 
   full=T)
 
+# create standardized taxonomic names ----
 master <- NULL
 for (i in 1:length(files)){
   original<- read.delim(files[i], sep="\t")
@@ -66,5 +66,39 @@ for (i in 1:length(files)){
   
 }
 
+# deal with specimens with repeated catalog numbers ----
+
+# first, clean up so Museum_Number so it matches
+master$Museum_Number[grep(":", master$Museum_Number)] <- gsub(":", ";", master$Museum_Number[grep(":", master$Museum_Number)])
+
+# then find all rows with repeats
+rowsWithRepeats <- grep(";", master$Museum_Number)
+newRowsMaster <- NULL
+
+# scroll through each, copy row to end and separate catalog numbers
+for (i in 1:length(rowsWithRepeats)){
+  rm(oldRow, newRows)
+  # find row with repeats and split out catalog number
+  oldRow <- master[rowsWithRepeats[i],]
+  splitNumbers <-strsplit(as.character(oldRow$Museum_Number), "; ")[[1]] 
+  
+  # create new rows and assign individual catalog numbers
+  l <- length(splitNumbers)
+  newRows <- oldRow[1,]
+  for (j in 2:l){
+    newRows <- rbind(newRows, oldRow)
+  }
+  newRows$Museum_Number <- splitNumbers
+  
+  # add to master newRows dataframe
+  newRowsMaster <- rbind(newRowsMaster, newRows)
+}
+
+# merge with master - delete old row, add new rows
+# have to do this outside the loop, otherwise rownumbers get thrown off
+master <- master[-rowsWithRepeats,]
+master <- rbind(master, newRowsMaster)
+
+# export master file ----
 write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
 
