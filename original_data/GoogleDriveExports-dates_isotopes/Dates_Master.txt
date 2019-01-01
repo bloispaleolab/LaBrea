@@ -1,0 +1,29 @@
+UCIAMS_Number	Original_sample_name	Museum_Number	Other_ID	d13C_permil	d13C_error	fraction_Modern	fraction_Modern_error	D14C_permil	D14C_error	14C_age_BP	14C_age_error	Original_data_sheet	Sample_Notes	UseSample	Museum_Number
+191095	P23-5233 Dep1 B-2 L2 sylvilagus	LACMP23-5233		-21.3	0.1	0.0117	0.0009	-988.3	0.9	35750	610	FoxBloisJul16_17.xls		Y	LACMP23-5233
+191096	P23-18270 Dep1 A-2 L5 sylvilagus	LACMP23-18270		-22.5	0.1	0.0121	0.0009	-987.9	0.9	35440	580	FoxBloisJul16_17.xls		Y	LACMP23-18270
+191097	P23-22009 Dep1 A-2 L4 sylvilagus	LACMP23-22009		-22.4	0.1	0.0126	0.0009	-987.4	0.9	35150	580	FoxBloisJul16_17.xls		Y	LACMP23-22009
+191098	P23-25476 Dep1 A-2 L4 sylvilagus	LACMP23-25476		-21.4	0.1	0.0112	0.0009	-988.8	0.9	36050	630	FoxBloisJul16_17.xls		Y	LACMP23-25476
+191099	P23-28903 Dep1 A-1 L7 sylvilagus	LACMP23-28903		-21.1	0.1	0.0148	0.0009	-985.2	0.9	33830	480	FoxBloisJul16_17.xls		Y	LACMP23-28903
+191100	P23-30238 Dep1 B-1 L2 sylvilagus	LACMP23-30238		-21.5	0.1	0.0116	0.0009	-988.4	0.9	35780	600	FoxBloisJul16_17.xls		Y	LACMP23-30238
+191101	P23-31269 Dep1 B-4 L3 sylvilagus	LACMP23-31269		-20.5	0.1	0.0032	0.0009	-996.8	0.9	46200	2200	FoxBloisJul16_17.xls		Y	LACMP23-31269
+191102	P23-31423 Dep1 B-2 L2 sylvilagus	LACMP23-31423		-21.3	0.1	0.0122	0.0009	-987.8	0.9	35420	580	FoxBloisJul16_17.xls		Y	LACMP23-31423
+191103	P23-31033 Dep14 D-2 L4 sylvilagus .32mgC	LACMP23-31033		-21.7	0.1	-0.0011	-0.0013	-1001.1	-1.3	>47800		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	LACMP23-31033
+191104	P23-31036 Dep14 C-2 L7 sylvilagus	LACMP23-31036		-22.3	0.1	0.0002	0.0009	-999.8	0.9	>49900		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	LACMP23-31036
+191105	P23-31056 Dep14 D-3 L6 sylvilagus	LACMP23-31056		-21.7	0.1	0.0002	0.0009	-999.8	0.9	>49900		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	LACMP23-31056
+191242	P23-31031 Dep14 C-3 L7 sylvilagus	LACMP23-31031		-21.1	0.1	0	-0.0009	-1000	-0.9	>50800		FoxBloisJul19_17.xls	The 14C/C ratio for this sample was within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages is quoted as a 2 sigma lower limit.	Y	LACMP23-31031
+198199	P23 2046 C. latrans Dep 1 B-1 L3	LACMP23-2046		-17	0.1	0.0116	0.0008	-988.4	0.8	35770	550	Blois_FoxJan03_18.xls		Y	LACMP23-2046
+198200	P23 11485 C. latrans Dep 1 B-1 L7	LACMP23-11485		-19.9	0.1	0.0127	0.0008	-987.3	0.8	35050	510	Blois_FoxJan03_18.xls		Y	LACMP23-11485
+198201	P23 17139 S. beecheyi Dep. 1 B-2 L8	LACMP23-17139		-20.4	0.1	0.0175	0.0008	-982.5	0.8	32500	370	Blois_FoxJan03_18.xls		Y	LACMP23-17139
+198202	P23 20172 S. beecheyi Dep. 1 B-1 L8	LACMP23-20172		-21.4	0.1	0.0115	0.0008	-988.5	0.8	35900	560	Blois_FoxJan03_18.xls		Y	LACMP23-20172
+198203	P23 26592 S. beecheyi Dep. 1 B-1 L4	LACMP23-26592		-21	0.1	0.0162	0.0012	-983.8	1.2	33100	620	Blois_FoxJan03_18.xls		Y	LACMP23-26592
+198204	P23 30796 S. beecheyi Dep. 1 B-2 L4	LACMP23-30796		-21.1	0.1	0.0111	0.0012	-988.9	1.2	36160	910	Blois_FoxJan03_18.xls		Y	LACMP23-30796
+198205	P23 33227 S. beecheyi Dep. 1 B-2 L3	LACMP23-33227		-20.7	0.1	0.0105	0.0008	-989.5	0.8	36580	610	Blois_FoxJan03_18.xls		MAYBE	LACMP23-33227
+198206	P23 33228 S. beecheyi Dep. 1 B-1 L3	LACMP23-33228		-20.7	0.1	0.0225	0.0008	-977.5	0.8	30480	290	Blois_FoxJan03_18.xls		MAYBE	LACMP23-33228
+198207	P23 33229 S. beecheyi Dep. 1 B-2 L2	LACMP23-33229		-20.9	0.1	0.019	0.0008	-981	0.8	31830	340	Blois_FoxJan03_18.xls		Y	LACMP23-33229
+198208	P23 33233 Neotoma sp. Dep. 14	LACMP23-33233		-21.1	0.1	0.0412	0.0008	-958.8	0.8	25620	160	Blois_FoxJan03_18.xls		MAYBE	LACMP23-33233
+198294	P23 28902 Sylvilagus Dep. 1 A-1 L7 .28mgC	LACMP23-28902		-20.9	0.1	0.0071	0.0007	-992.9	0.7	39700	810	BloisFoxJan06_18.xls		Y	LACMP23-28902
+198295	P23 31113 Sciuridae Dep. 14 D-3 L5	LACMP23-31113		-20.8	0.1	0.0163	0.0007	-983.7	0.7	33070	350	BloisFoxJan06_18.xls		Y	LACMP23-31113
+198296	P23 31118 Sciuridae Dep. 14 C-3 L4 .30mgC	LACMP23-31118		-19.3	0.1	0.0028	0.0007	-997.2	0.7	47400	2000	BloisFoxJan06_18.xls		Y	LACMP23-31118
+198297	P23 33232 Thomomys sp. Dep. 14	LACMP23-33232		-21.6	0.1	0.0284	0.0007	-971.6	0.7	28600	210	BloisFoxJan06_18.xls		Y	LACMP23-33232
+198298	P23 33235 S. beecheyi Dep. 14	LACMP23-33235		-20.9	0.1	0.0378	0.0007	-962.2	0.7	26310	150	BloisFoxJan06_18.xls		Y	LACMP23-33235
+198302	P23 33228 S. beecheyi Dep. 1 B-1 L3 test	LACMP23-33228		-20.2	0.1	0.0214	0.0007	-978.6	0.7	30870	270	Southon_Blois_Fox_testJan06_18.xls	"New aliquot. The P23 33228 sample run on 1/3/18 gave a golden brown extract and collagen that was light tan not white. A new aliquot was prepared and the decalcified collagen was treated with a 1:1 mixture of 0.1N HCl and 0.1M NaClO2 (2 hrs, rm temp) prior to gelatinization and ultrafiltration. The brown color of the new aliquot of decalcified bone lightened significantly, the ultrafiltered gelatin was clear, the freeze-dried collagen was white, and the yield was unchanged. The 14C result was similar to that of the initial aliquot and the C:N ratio was identical to that of well preserved bone"	Y	LACMP23-33228
