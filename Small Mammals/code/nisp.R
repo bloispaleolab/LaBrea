@@ -1,3 +1,6 @@
+library(tidyverse)
+library(scales)
+
 # calculate NISP ----
 
 # read in master mammal data 

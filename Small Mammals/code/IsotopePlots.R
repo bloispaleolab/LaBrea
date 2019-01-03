@@ -54,6 +54,9 @@ facet_labeller <- function(variable,value){
   return(facet_names[value])
 }
 
+matchingColors <-
+  # Sylvilagus #00BE67
+  # Otospermophilus #00BDD1
 par <- ggplot(long_iso, aes(x=Age_14C,
                                 y=Value,
                                 color=Species,
@@ -61,13 +64,16 @@ par <- ggplot(long_iso, aes(x=Age_14C,
   geom_point() +
   geom_smooth(method="lm") +
   scale_x_reverse() +
+  scale_color_manual(values= c("Otospermophilus beecheyi"='#00BDD1', "Sylvilagus audubonii"='#00BE67')) +
   xlab("Age (14C)") +
   ylab(expression(~'\u2030')) +
   #theme_bw()
   theme_light()
 
-pdf(file="output/isotopes.pdf", width=8, height=4, encoding="MacRoman") # 15, 7.5
-par + facet_grid(Isotope ~ ., scales="free", labeller=facet_labeller)
+pdf(file="output/isotopes.pdf", width=15, height=7.5, encoding="MacRoman") # 15, 7.5 #
+par + 
+  facet_grid(Isotope ~ ., scales="free", labeller=facet_labeller) +
+  theme(strip.text.y = element_text(size = 12, colour = "black", angle = -90))
 dev.off()
 
 
