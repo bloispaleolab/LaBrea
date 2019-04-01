@@ -14,6 +14,11 @@ for (i in 1:nrow(taxon)){
   taxon[i,] <- taxonomy[which(taxonomy$'OriginalName' == mammals$prelim_taxon_name[i]),c('RevisedName', "Order", "Family", "Genus")] 
 }
 
+## NOTE: THIS LINE WILL NEED TO BE REMOVED FOR FINAL ANALYSIS
+## for now, replace all Reithrontomys with Peromyscus
+taxon[which(taxon$Genus=="Reithrodontomys"),'Genus'] <- "Peromyscus"
+
+
 mammals_trim <- select(mammals, "prelim_taxon_name", "box")
 mammals_trim <- cbind(mammals_trim, taxon)
 mammals_trim$Family <- as.factor(mammals_trim$Family)

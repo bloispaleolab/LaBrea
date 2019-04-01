@@ -1,234 +1,508 @@
-NSF Number	Grid/Level	Class	Order	Family	Subfamily	Genus	Species	Element_original	Notes	Last ID revision	Museum_Number	prelim_taxon_name	element
-NSF-19-01	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m1					
-NSF-19-02	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1					
-NSF-19-03	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m1					
-NSF-19-04	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1					
-NSF-19-05	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m1	juv				
-NSF-19-06	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt. m2					
-NSF-19-07	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M2					
-NSF-19-08	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2					
-NSF-19-09	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt. M3					
-NSF-19-10	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M1					
-NSF-19-11	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus		lower rt m1 frag	strange re-entrant				
-NSF-19-12	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2					
-NSF-19-13	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower right m1 frag					
-NSF-19-14	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2					
-NSF-19-15	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m1 frag					
-NSF-19-16	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2	juv?				
-NSF-19-17	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M3					
-NSF-19-18	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m3					
-NSF-19-19	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus		molar frag					
-NSF-19-20	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag					
-NSF-19-21	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag					
-NSF-19-22	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt dentary	no teeth				
-NSF-19-23	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M3 frag					
-NSF-19-24	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag					
-NSF-19-25	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper lt P2					
-NSF-19-26	A3/L3	Mammalia	Rodentia	Heteromyidae		Dipodomys	sp	lower lt m1/m2					
-NSF-19-27	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper lt P2					
-NSF-19-28	A3/L3	Mammalia	Rodentia	Geomyidae		Thomomys	sp	lower (lt?) m1/m2					
-NSF-19-29	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower lt m1/m2					
-NSF-19-30	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower right m1	anteroconid grade 2 				
-NSF-19-31	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus		lower right m1	small anteroconid grade 0, juv?				
-NSF-19-32	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper right M1	small anteroloph				
-NSF-19-33	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus		upper right M1	weathered				
-NSF-19-34	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower right m2					
-NSF-19-35	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	maniculatus	upper lt M1	large anteroloph				
-NSF-19-36	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2					
-NSF-19-37	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper right M1	small anteroloph				
-NSF-19-38	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys		lower rt m1					
-NSF-19-39	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys		lower lt m1					
-NSF-19-40	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			upper right M2	worn				
-NSF-19-41	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt tooth					
-NSF-19-42	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper lt tooth					
-NSF-19-43	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt tooth					
-NSF-19-44	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper rt tooth					
-NSF-19-45	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt tooth					
-NSF-19-46	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper lt tooth					
-NSF-19-47	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-48	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower lt tooth					
-NSF-19-49	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	audubonii	lower rt p3					
-NSF-19-50	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper rt tooth					
-NSF-19-51	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper rt tooth					
-NSF-19-52	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper rt tooth					
-NSF-19-53	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth					
-NSF-19-54	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower right tooth					
-NSF-19-55	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper lt tooth					
-NSF-19-56	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper lt tooth					
-NSF-19-57	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower lt tooth					
-NSF-19-58	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower lt tooth					
-NSF-19-59	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt tooth					
-NSF-19-60	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower lt tooth					
-NSF-19-61	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth					
-NSF-19-62	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-63	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt tooth					
-NSF-19-64	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-65	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower p3 frag					
-NSF-19-66	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower lt tooth					
-NSF-19-67	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower lt tooth					
-NSF-19-68	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-69	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower m3					
-NSF-19-70	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt tooth 					
-NSF-19-71	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-72	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower tooth frag	waterworn				
-NSF-19-73	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower tooth frag					
-NSF-19-74	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower tooth frag					
-NSF-19-75	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower tooth frag					
-NSF-19-76	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	upper rt M3					
-NSF-19-77	A3/L3	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower m3 frag					
-NSF-19-78	A3/L3	Mammalia	Carnivora					partial premolar					
-NSF-19-79	A3/L3	Mammalia	Carnivora	Mustelidae		Mustela	frenata	upper lt P4 frag					
-NSF-19-80	A3/L3	Mammalia	Carnivora					premolar					
-NSF-19-81	A3/L3	Mammalia	Carnivora	Mustelidae		Mustela	frenata	upper rt M1					
-NSF-19-82	A3/L3	Mammalia	Carnivora					premolar frag					
-NSF-19-83	A3/L3	Mammalia	Carnivora					premolar frag					
-NSF-19-84	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower lt m1/m2					
-NSF-19-85	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	upper lt P4 					
-NSF-19-86	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower rt m1/m2					
-NSF-19-87	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower lt m1/m2					
-NSF-19-88	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	partial lower rt molar					
-NSF-19-89	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower rt p4					
-NSF-19-90	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower rt m3					
-NSF-19-91	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae			lower lt p4	small for beechyi				
-NSF-19-92	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower lt m1/m2					
-NSF-19-93	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower rt p4					
-NSF-19-94	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	lower rt m3					
-NSF-19-95	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	partial lower lt molar					
-NSF-19-96	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	upper lt P4					
-NSF-19-97	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys		lt dentary w/ m2					
-NSF-19-98	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2					
-NSF-19-99	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower molar	broken in 2 frags, worn				
-NSF-19-100	A3/L3	Mammalia	Rodentia	Geomyidae		Thomomys	sp	partial upper M1/M2					
-NSF-19-101	A3/L3	Mammalia	Rodentia	Geomyidae		Thomomys	sp	lower lt m1/m2					
-NSF-19-102	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juvi				
-NSF-19-103	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-104	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-105	A3/L3	Mammalia	Rodentia	Geomyidae		cf Thomomys		molar frag					
-NSF-19-106	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-107	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	partial upper rt M1					
-NSF-19-108	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2	juv?				
-NSF-19-109	A3/L3	Mammalia	Rodentia	cf Sciuridae				lower tooth frag					
-NSF-19-110	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	cf audubonii	lower rt p3	water-worn, juv				
-NSF-19-111	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt p3	simple-moderate crenulation, juv				
-NSF-19-112	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag					
-NSF-19-113	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth					
-NSF-19-114	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth					
-NSF-19-115	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth frag					
-NSF-19-116	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag					
-NSF-19-117	A3/L1	Mammalia	Lagomorpha	Leporidae		cf Sylvilagus		tooth frag					
-NSF-19-118	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower m3 frag					
-NSF-19-119	A3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M3 frag					
-NSF-19-120	A3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag					
-NSF-19-121	A3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag					
-NSF-19-122	A3/L1	Mammalia	Rodentia	Sciuridae		Otospermophilus	beecheyi	upper rt. P4					
-NSF-19-123	A3/L1	Mammalia	Rodentia	Sciuridae				partial upper lt. M1/M2	square/spatulate-shaped, large				
-NSF-19-124	A3/L1	Mammalia	Rodentia	Sciuridae		Otospermophilus	beecheyi	upper rt. M1/M2					
-NSF-19-125	A3/L1	Mammalia	Rodentia	Sciuridae		Otospermophilus	beecheyi	upper lt. M3	worn				
-NSF-19-126	A3/L1	Mammalia	Rodentia	Sciuridae				lower lt. p4	juv				
-NSF-19-127	A3/L1	Mammalia	Rodentia	Sciuridae		Tamias	sp	upper rt. M1/M2					
-NSF-19-128	A3/L1	Mammalia	Rodentia	cf Sciuridae				tooth frag					
-NSF-19-129	A3/L1	Mammalia	Carnivora					premolar					
-NSF-19-131	A3/L1	Mammalia	Rodentia	Heteromyidae		Dipodomys	sp	lower m1/m2	weathered				
-NSF-19-132	A3/L1	Mammalia	Rodentia	Heteromyidae		Dipodomys	sp	partial lower m1/m2					
-NSF-19-133	A3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-134	A3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-135	A3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-136	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small accessory loph				
-NSF-19-137	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys		lower rt m1					
-NSF-19-138	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys		upper lt M1					
-NSF-19-139	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m1	surface covered, m1 grade 0				
-NSF-19-140	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2					
-NSF-19-141	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2					
-NSF-19-142	A3/L1	Mammalia	Lagomorpha	Leporidae	Leporinae			lower m3	large for Sylvilagus				
-NSF-19-143	A2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1					
-NSF-19-144	A2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus		molar frag					
-NSF-19-145	A2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower tooth frag					
-NSF-19-146	A2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt tooth					
-NSF-19-147	A2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-148	A2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower tooth frag					
-NSF-19-149	A2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-150	A2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	cf Sylvilagus		tooth frag					
-NSF-19-151	A2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	cf Sylvilagus		tooth frag					
-NSF-19-152	A2/L1	Mammalia	Rodentia	Heteromyidae		Dipodomys	sp	upper M1/M2					
-NSF-19-153	A2/L1	Mammalia	Rodentia	cf Geomyidae		cf Thomomys		molar	juv?				
-NSF-19-154	A2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv				
-NSF-19-155	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodomtomys	cf megalotis	lower rt m1					
-NSF-19-156	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus		upper rt M1	juv?				
-NSF-19-157	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2					
-NSF-19-158	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			partial rt dentary					
-NSF-19-159	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			rt maxillary frag					
-NSF-19-160	A2/L1	Mammalia	Carnivora					molar frag					
-NSF-19-161	A2/L1	Mammalia	Rodentia	Sciuridae		Otospermophilus	beecheyi	lower lt p4					
-NSF-19-162	A2/L1	Mammalia	Rodentia	Sciuridae				lower p4 frag					
-NSF-19-163	A2/L1	Mammalia	Rodentia	cf Sciuridae				tooth frag					
-NSF-19-164	A2/L1	Mammalia	Eulipotyphla	Soricidae	Soricinae			posterior lt dentary w/ m2					
-NSF-19-165	A2/L1	Mammalia	Rodentia	cf Sciuridae				tooth frag					
-NSF-19-166	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt tooth					
-NSF-19-167	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower lt tooth					
-NSF-19-168	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper rt P2					
-NSF-19-169	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-170	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower rt p3					
-NSF-19-171	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-172	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-173	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lower tooth frag					
-NSF-19-174	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-175	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	maxillay frag					
-NSF-19-176	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	lt maxillary frag					
-NSF-19-177	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-178	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	Sylvilagus	sp	upper tooth frag					
-NSF-19-179	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	cf Sylvilagus		tooth frag					
-NSF-19-180	B2/L1	Mammalia	Lagomorpha	Leporidae	Leporinae	cf Sylvilagus		tooth frag					
-NSF-19-181	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Neotoma		molar frag					
-NSF-19-182	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	upper lt M1/M2					
-NSF-19-183	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	upper rt M1/M2					
-NSF-19-184	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	Otospermophilus	beecheyi	upper lt M3					
-NSF-19-185	B2/L1	Mammalia	Rodentia	Sciuridae				upper tooth frag					
-NSF-19-186	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	cf Otospermophilus	beecheyi	partial lt dentary	no teeth				
-NSF-19-187	B2/L1	Mammalia	Rodentia	cf Sciuridae				lower tooth frag					
-NSF-19-188	B2/L1	Mammalia	Rodentia	cf Sciuridae				lower tooth frag					
-NSF-19-189	B2/L1	Mammalia	Rodentia	Geomyidae		cf Thomomys		molar	juv				
-NSF-19-190	B2/L1	Mammalia	Rodentia	Heteromyidae		Dipodomys	sp	lower molar					
-NSF-19-191	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv				
-NSF-19-192	B2/L1	Mammalia	Rodentia	cf Geomyidae		cf Thomomys		tooth	juv				
-NSF-19-193	B2/L1	Mammalia	Rodentia	Heteromyidae		Dipodomys	sp	lower p4	juv?				
-NSF-19-194	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv				
-NSF-19-195	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-196	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-197	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-198	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-199	B2/L1	Mammalia	Carnivora					upper canine					
-NSF-19-200	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus		upper right M1	accessory loph 				
-NSF-19-201	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2					
-NSF-19-202	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus		upper lt M1					
-NSF-19-203	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2					
-NSF-19-204	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys		lower lt m1	grade 1+, surface covered				
-NSF-19-205	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	grade 1				
-NSF-19-206	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys		lower rt m1	grade 0				
-NSF-19-207	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	grade 1				
-NSF-19-208	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2					
-NSF-19-209	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2					
-NSF-19-210	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus		upper lt M1					
-NSF-19-211	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2					
-NSF-19-212	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2					
-NSF-19-213	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lt maxillary frag					
-NSF-19-214	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	lower rt m1	grade 1				
-NSF-19-215	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2	juv?				
-NSF-19-216	B3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small accessory loph				
-NSF-19-217	B3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys		lower lt m1	grade 0-1				
-NSF-19-218	B3/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2	juv?				
-NSF-19-219	B3/L1	Mammalia	Rodentia					rt anterior dentary frag					
-NSF-19-220	B3/L1	Mammalia	Carnivora					lower rt m1					
-NSF-19-221	B3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1					
-NSF-19-222	B3/L1	Mammalia	Rodentia	Heteromyidae		Dipodomys	sp	lower rt p4					
-NSF-19-223	B3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv				
-NSF-19-224	B3/L1	Mammalia	Rodentia	Heteromyidae		Dipodomys	sp	molar					
-NSF-19-225	B3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag					
-NSF-19-226	B3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag					
-NSF-19-227	B3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1 frag					
-NSF-19-228	B3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	tooth frag					
-NSF-19-229	B3/L1	Mammalia	Rodentia	Sciuridae				lower rt p4	small for beecheyi				
-NSF-19-230	B3/L1	Mammalia	Rodentia	Sciuridae				lower rt p4	small for beecheyi				
-NSF-19-231	B3/L1	Mammalia	Rodentia	Sciuridae				lower molar frag					
-NSF-19-232	B3/L1	Mammalia	Rodentia	Sciuridae				lower tooth frag					
-NSF-19-233	B3/L1	Mammalia	Rodentia	cf Sciuridae				tooth frag					
-NSF-19-234	B3/L1	Mammalia	cf Rodentia					lt anterior dentary frag					
+Museum_Number	UCM_Number	Canister	Class	Order	Family	Subfamily	Genus	Species	Element_original	Notes	Last ID revision
+	NSF-19-01	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	califoricus	lower lt m1		2/5/2019
+	NSF-19-02	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	califoricus	lower rt m1		2/5/2019
+	NSF-19-03	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	califoricus	lower lt m1		2/5/2019
+	NSF-19-04	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	califoricus	lower rt m1		2/5/2019
+	NSF-19-05	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	califoricus	lower lt m1	juv	2/5/2019
+	NSF-19-06	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m2		
+	NSF-19-07	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M2		
+	NSF-19-08	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2		
+	NSF-19-09	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M3		
+	NSF-19-10	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M1		
+	NSF-19-11	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	?Microtus	sp	lower rt m1 frag	strange re-entrant	
+	NSF-19-12	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2		
+	NSF-19-13	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1 frag		
+	NSF-19-14	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2		
+	NSF-19-15	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m1 frag		
+	NSF-19-16	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2	juv?	
+	NSF-19-17	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M3		
+	NSF-19-18	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m3		
+	NSF-19-19	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	?Microtus	sp	molar frag		
+	NSF-19-20	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		
+	NSF-19-21	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		
+	NSF-19-22	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt dentary	no teeth	
+	NSF-19-23	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M3 frag		
+	NSF-19-24	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		
+	NSF-19-25	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt P2		
+	NSF-19-26	A3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower lt m1/m2		
+	NSF-19-27	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt P2		
+	NSF-19-28	A3/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower (lt?) m1/m2		
+	NSF-19-29	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower lt m1/m2		
+	NSF-19-30	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m1	anteroconid grade 2 	
+	NSF-19-31	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lower rt m1	small anteroconid grade 0, juv?	
+	NSF-19-32	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	small anteroloph	
+	NSF-19-33	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	upper rt M1	weathered	
+	NSF-19-34	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		
+	NSF-19-35	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf. maniculatus	upper lt M1	large anteroloph	
+	NSF-19-36	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		
+	NSF-19-37	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	small anteroloph	
+	NSF-19-38	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower rt m1		2/5/2019
+	NSF-19-39	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1		2/5/2019
+	NSF-19-40	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2	worn	
+	NSF-19-41	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-42	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth		
+	NSF-19-43	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-44	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt tooth		
+	NSF-19-45	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-46	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth		
+	NSF-19-47	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-48	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-49	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	audubonii	lower rt p3		
+	NSF-19-50	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt tooth		
+	NSF-19-51	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt tooth		
+	NSF-19-52	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt tooth		
+	NSF-19-53	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth		
+	NSF-19-54	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-55	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth		
+	NSF-19-56	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth		
+	NSF-19-57	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-58	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-59	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-60	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-61	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth		
+	NSF-19-62	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-63	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-64	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-65	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower p3 frag		
+	NSF-19-66	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-67	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-68	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-69	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower m3		
+	NSF-19-70	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth 		
+	NSF-19-71	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-72	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag	waterworn	
+	NSF-19-73	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-74	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-75	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-76	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	upper rt M3		
+	NSF-19-77	A3/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower m3 frag		
+	NSF-19-78	A3/L3	Mammalia	Carnivora	Canidae		Canis	?latrans	rt dP2 frag		2/26/2019
+	NSF-19-79	A3/L3	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	upper lt P4 frag		
+	NSF-19-80	A3/L3	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	rt I3		2/26/2019
+	NSF-19-81	A3/L3	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	upper rt M1		
+	NSF-19-82	A3/L3	Mammalia	Carnivora					tooth frag		
+	NSF-19-83	A3/L3	Mammalia	Carnivora					premolar frag		
+	NSF-19-84	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower lt m1/m2		
+	NSF-19-85	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	upper lt P4 		
+	NSF-19-86	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower rt m1/m2		
+	NSF-19-87	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower lt m1/m2		
+	NSF-19-88	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	partial lower rt molar		
+	NSF-19-89	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower rt p4		
+	NSF-19-90	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower rt m3		
+	NSF-19-91	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae			lower lt p4	small for beechyi	
+	NSF-19-92	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower lt m1/m2		
+	NSF-19-93	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower rt p4		
+	NSF-19-94	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower rt m3		
+	NSF-19-95	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	partial lower lt molar		
+	NSF-19-96	A3/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	upper lt P4		
+	NSF-19-97	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lt dentary w/ m2		2/5/2019
+	NSF-19-98	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		
+	NSF-19-99	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower molar	broken in 2 frags, worn	
+	NSF-19-100	A3/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	partial upper M1/M2		
+	NSF-19-101	A3/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower lt m1/m2		
+	NSF-19-102	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv	
+	NSF-19-103	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-104	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-105	A3/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	molar frag		
+	NSF-19-106	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-107	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	partial upper rt M1		
+	NSF-19-108	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2	juv?	
+	NSF-19-109	A3/L3	Mammalia	Rodentia	?Sciuridae				lower tooth frag		
+	NSF-19-110	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	?audubonii	lower rt p3	water-worn, juv	
+	NSF-19-111	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt p3	simple-moderate crenulation, juv	
+	NSF-19-112	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-113	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-114	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-115	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth frag		
+	NSF-19-116	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-117	A3/L1	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	tooth frag		
+	NSF-19-118	A3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower m3 frag		
+	NSF-19-119	A3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M3 frag		
+	NSF-19-120	A3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		
+	NSF-19-121	A3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		
+	NSF-19-122	A3/L1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	upper rt P4		
+	NSF-19-123	A3/L1	Mammalia	Rodentia	Sciuridae	Xerinae			partial upper lt M1/M2	square/spatulate-shaped, large	
+	NSF-19-124	A3/L1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	upper rt M1/M2		
+	NSF-19-125	A3/L1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	upper lt M3	worn	
+	NSF-19-126	A3/L1	Mammalia	Rodentia	Sciuridae	Xerinae			lower lt p4	juv	
+	NSF-19-127	A3/L1	Mammalia	Rodentia	Sciuridae	Xerinae	Tamias	sp	upper rt M1/M2		
+	NSF-19-128	A3/L1	Mammalia	Rodentia	?Sciuridae	Xerinae			tooth frag		
+	NSF-19-129	A3/L1	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	rt P3		2/26/2019
+	NSF-19-130	A3/L1	Mammalia	Carnivora	Mephitidae		?Mephitis	mephitis	lower lt incisor		2/26/2019
+	NSF-19-131	A3/L1	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower m1/m2	weathered	
+	NSF-19-132	A3/L1	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	partial lower m1/m2		
+	NSF-19-133	A3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-134	A3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-135	A3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-136	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small accessory loph	
+	NSF-19-137	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower rt m1		2/5/2019
+	NSF-19-138	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper lt M1		2/5/2019
+	NSF-19-139	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m1	surface covered, m1 grade 0	
+	NSF-19-140	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		
+	NSF-19-141	A3/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		
+	NSF-19-142	A3/L1	Mammalia	Lagomorpha	Leporidae				lower m3	large for Sylvilagus	
+	NSF-19-143	A2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	californicus	lower rt m1		2/5/2019
+	NSF-19-144	A2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	molar frag		
+	NSF-19-145	A2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-146	A2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-147	A2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-148	A2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-149	A2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-150	A2/L1	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	tooth frag		
+	NSF-19-151	A2/L1	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	tooth frag		
+	NSF-19-152	A2/L1	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	upper M1/M2		
+	NSF-19-153	A2/L1	Mammalia	Rodentia	?Geomyidae				molar	juv?	2/5/2019
+	NSF-19-154	A2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv	
+	NSF-19-155	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodomtomys	cf megalotis	lower rt m1		
+	NSF-19-156	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	upper rt M1	juv?	
+	NSF-19-157	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		
+	NSF-19-158	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			partial rt dentary		
+	NSF-19-159	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			rt maxillary frag		
+	NSF-19-160	A2/L1	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	rt? P4 frag		2/26/2019
+	NSF-19-161	A2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower lt p4		
+	NSF-19-162	A2/L1	Mammalia	Rodentia	Sciuridae	Xerinae			lower p4 frag		
+	NSF-19-163	A2/L1	Mammalia	Rodentia	?Sciuridae				tooth frag		
+	NSF-19-164	A2/L1	Mammalia	Eulipotyphla	Soricidae	Soricinae			posterior lt dentary w/ m2		
+	NSF-19-165	A2/L1	Mammalia	Rodentia	?Sciuridae				tooth frag		
+	NSF-19-166	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-167	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-168	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt P2		
+	NSF-19-169	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-170	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt p3		
+	NSF-19-171	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-172	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-173	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-174	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-175	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	maxillay frag		
+	NSF-19-176	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lt maxillary frag		
+	NSF-19-177	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-178	B2/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-179	B2/L1	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	tooth frag		
+	NSF-19-180	B2/L1	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	tooth frag		
+	NSF-19-181	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	?Neotoma	sp	molar frag		
+	NSF-19-182	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	upper lt M1/M2		
+	NSF-19-183	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	upper rt M1/M2		
+	NSF-19-184	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	upper lt M3		
+	NSF-19-185	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae			upper tooth frag		
+	NSF-19-186	B2/L1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	partial lt dentary	no teeth	
+	NSF-19-187	B2/L1	Mammalia	Rodentia	?Sciuridae				lower tooth frag		
+	NSF-19-188	B2/L1	Mammalia	Rodentia	?Sciuridae				lower tooth frag		
+	NSF-19-189	B2/L1	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	molar	juv	
+	NSF-19-190	B2/L1	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower molar		
+	NSF-19-191	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv	
+	NSF-19-192	B2/L1	Mammalia	Rodentia	?Geomyidae				tooth	juv	2/5/2019
+	NSF-19-193	B2/L1	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower p4	juv?	
+	NSF-19-194	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv	
+	NSF-19-195	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-196	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-197	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-198	B2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-199	B2/L1	Mammalia	Carnivora	Mustelidae		?Mustela	frenata	upper (rt?) C1		2/26/2019
+	NSF-19-200	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	upper rt M1	accessory loph 	
+	NSF-19-201	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		
+	NSF-19-202	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	upper lt M1		
+	NSF-19-203	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		
+	NSF-19-204	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1	grade 1+, surface covered	2/5/2019
+	NSF-19-205	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	grade 1	
+	NSF-19-206	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower rt m1	grade 0	2/5/2019
+	NSF-19-207	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	grade 1	
+	NSF-19-208	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		
+	NSF-19-209	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		
+	NSF-19-210	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	upper lt M1		
+	NSF-19-211	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		
+	NSF-19-212	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		
+	NSF-19-213	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lt maxillary frag		
+	NSF-19-214	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	lower rt m1	grade 1	
+	NSF-19-215	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2	juv?	
+	NSF-19-216	B3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small accessory loph	
+	NSF-19-217	B3/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1	grade 0-1	2/5/2019
+	NSF-19-218	B3/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2	juv?	
+	NSF-19-219	B3/L1	Mammalia	Rodentia					rt anterior dentary frag		
+	NSF-19-220	B3/L1	Mammalia	Carnivora	Canidae		Canis	dirus	rt dP3		2/26/2019
+	NSF-19-221	B3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	californicus	lower rt m1		2/5/2019
+	NSF-19-222	B3/L1	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower rt p4		
+	NSF-19-223	B3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv	
+	NSF-19-224	B3/L1	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar		
+	NSF-19-225	B3/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-226	B3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-227	B3/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1 frag		
+	NSF-19-228	B3/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	tooth frag		
+	NSF-19-229	B3/L1	Mammalia	Rodentia	Sciuridae	Xerinae			lower rt p4	small for beecheyi	
+	NSF-19-230	B3/L1	Mammalia	Rodentia	Sciuridae	Xerinae			lower rt p4	small for beecheyi	
+	NSF-19-231	B3/L1	Mammalia	Rodentia	Sciuridae	Xerinae			lower molar frag		
+	NSF-19-232	B3/L1	Mammalia	Rodentia	Sciuridae	Xerinae			lower tooth frag		
+	NSF-19-233	B3/L1	Mammalia	Rodentia	?Sciuridae				tooth frag		
+	NSF-19-234	B3/L1	Mammalia	cf Rodentia					lt anterior dentary frag		
+	NSF-19-235	A2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	californicus	lower rt m1		
+	NSF-19-236	A2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	partial lower lt m1		
+	NSF-19-237	A2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M2		
+	NSF-19-238	A2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt dentary frag		
+	NSF-19-239	A2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1 frag		
+	NSF-19-240	A2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	molar frag		
+	NSF-19-241	A2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	molar frag		
+	NSF-19-242	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower rt p4		
+	NSF-19-243	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower lt m1/m2		
+	NSF-19-244	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	cf Tamias	sp	lower rt dp4		
+	NSF-19-245	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae			upper tooth frag		
+	NSF-19-246	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae			upper tooth frag		
+	NSF-19-247	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae			lower tooth frag		
+	NSF-19-248	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae			upper tooth frag		
+	NSF-19-249	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae			lower tooth frag		
+	NSF-19-250	A2/L2	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	lower lt p2		2/26/2019
+	NSF-19-251	A2/L2	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	lower lt p3		
+	NSF-19-252	A2/L2	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	lt I3		2/26/2019
+	NSF-19-253	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper lt M1		
+	NSF-19-254	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		
+	NSF-19-255	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m1	grade 0	
+	NSF-19-256	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m1	grade 0	
+	NSF-19-257	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	grade 0	
+	NSF-19-258	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M1		
+	NSF-19-259	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1		
+	NSF-19-260	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		
+	NSF-19-261	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	lower lt m1		
+	NSF-19-262	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		
+	NSF-19-263	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper rt M1		
+	NSF-19-264	A2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		
+	NSF-19-265	A2/L2	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower lt p4		
+	NSF-19-266	A2/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-267	A2/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-268	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-269	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt P2		
+	NSF-19-270	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	audubonii	partial lt p3	juv?	
+	NSF-19-271	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt tooth	juv?	
+	NSF-19-272	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-273	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-274	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower m3		
+	NSF-19-275	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-276	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	tooth frag		
+	NSF-19-277	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-278	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	audubonii	lt anterior dentary frag w/ p3,p4,m2		
+	NSF-19-279	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lt posterior dentary frag w/ m1-m2		
+	NSF-19-280	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	rt posterior dentary frag w/ m1		
+	NSF-19-281	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lt anterior dentary frag		
+	NSF-19-282	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	cf audubonii	lt maxilla w/ P3-M2		
+	NSF-19-283	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	rt maxilla w/ P3+M1	juv?	
+	NSF-19-284	B2/L3	Mammalia	Rodentia	Sciuridae	Xerinae	cf Otospermophilus	beecheyi	rt maxilla frag		
+	NSF-19-285	B3/L2-T1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lt posterior dentary frag 		
+	NSF-19-286	B3/L2-T1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	audubonii	rt anterior dentary frag w/ p3-m1		
+	NSF-19-287	B3/L2-T1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	rt anterior dentary frag w/ p3-m2	juv?	
+	NSF-19-288	B3/L2-T1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	rt anterior dentary frag w/ m1		
+	NSF-19-289	B3/L2-T1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lt dentary frag w/ p4-m2		
+	NSF-19-290	B3/L2-T1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	rt posterior dentary frag w/ p4		
+	NSF-19-291	B3/L2-T1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt anterior dentary frag w/ p4		
+	NSF-19-292	B3/L2-T2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt dentary w/ i1		
+	NSF-19-293	B3/L2-T2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	rt maxillary frag w/ tooth (P4?)		
+	NSF-19-294	B3/L2-T1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt dentary frag	juv?	
+	NSF-19-295	B3/L3-T1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lt maxilla w/ P3+M1		
+	NSF-19-296	B3/L3-T1	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	rt maxilla 		
+	NSF-19-297	B3/L3-T1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt dentary w/ m1		
+	NSF-19-298	B3/L3-T1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt maxilla w/ dP4, unerupted P4, and M1	juv	
+	NSF-19-299	B3/L3-T1	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt? maxilla frag		
+	NSF-19-300	B3/L3-T1	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	rt dentary w/ m1		
+	NSF-19-301	B3/L3-T1	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	lt dentary frag w/ m1		
+	NSF-19-302	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lt M1	small, accessory loph present	
+	NSF-19-303	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	rt M1		
+	NSF-19-304	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	rt M1		
+	NSF-19-305	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m1	worn	
+	NSF-19-306	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	rt m1	grade 0	
+	NSF-19-307	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lt m1	grade 0	
+	NSF-19-308	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	rt m1	grade 0	
+	NSF-19-309	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	rt m1	grade 1-2	
+	NSF-19-310	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lt m1	grade 0	
+	NSF-19-311	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lt m1	grade 0	
+	NSF-19-312	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	rt m1	grade 2	
+	NSF-19-313	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lt m1	grade 0	
+	NSF-19-314	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lt dentary		
+	NSF-19-315	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys        	cf megalotis	lt m1	grade 2	
+	NSF-19-316	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m1	worn	
+	NSF-19-317	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			partial rt m1	grade 1	
+	NSF-19-318	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			m1 frag		
+	NSF-19-319	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			partial lt M1		
+	NSF-19-320	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m2		
+	NSF-19-321	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m2		
+	NSF-19-322	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m2		
+	NSF-19-323	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m2		
+	NSF-19-324	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m2		
+	NSF-19-325	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m2		
+	NSF-19-326	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m2		
+	NSF-19-327	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m2		
+	NSF-19-328	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m2		
+	NSF-19-329	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m2		
+	NSF-19-330	A3/L2	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lt? p4		
+	NSF-19-331	A3/L2	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar		
+	NSF-19-332	A3/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-333	A3/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv	
+	NSF-19-334	A3/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv	
+	NSF-19-335	A3/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag	juv	
+	NSF-19-336	A3/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag	juv	
+	NSF-19-337	A3/L2	Mammalia	Rodentia	Heteromyidae				p4	juv	
+	NSF-19-338	A3/L2	Mammalia	Carnivora					partial premolar?		
+	NSF-19-339	A3/L2	Mammalia	Carnivora	Mustelidae		?Mustela	frenata	lt p3		2/26/2019
+	NSF-19-340	A3/L2	Mammalia	Carnivora	Mephitidae		?Mephitis	mephitis	partial rt p2		2/26/2019
+	NSF-19-341	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	Tamias	cf merriami	rt p4		
+	NSF-19-342	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt dp4		
+	NSF-19-343	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt dp4		
+	NSF-19-344	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt m1/m2		
+	NSF-19-345	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt M1/M2		
+	NSF-19-346	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt M1/M2		
+	NSF-19-347	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt M1/M2		
+	NSF-19-348	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt M1/M2		
+	NSF-19-349	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt M3		
+	NSF-19-350	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt M3 frag		
+	NSF-19-351	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt M3 frag		
+	NSF-19-352	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lt P4 frag		
+	NSF-19-353	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt P4		
+	NSF-19-354	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt P4 frag		
+	NSF-19-355	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae			upper tooth frag		
+	NSF-19-356	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae			upper tooth frag		
+	NSF-19-357	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae			upper tooth frag		
+	NSF-19-358	A3/L2	Mammalia	Rodentia	Sciuridae	Xerinae			upper tooth frag		
+	NSF-19-359	A3/L2	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	cf bottae	rt p4		
+	NSF-19-360	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth	juv	
+	NSF-19-361	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	lower lt molar (m2?)	juv	
+	NSF-19-362	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	molar frag (lt M1?)		
+	NSF-19-363	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-364	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-365	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-366	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-367	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-368	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-369	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-370	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-371	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-372	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-373	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-374	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-375	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower molar frag		
+	NSF-19-376	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt m1		
+	NSF-19-377	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt m1		
+	NSF-19-378	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	partial lt m1		
+	NSF-19-379	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	partial rt m1		
+	NSF-19-380	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt m1 frag		
+	NSF-19-381	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt m1 frag		
+	NSF-19-382	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt m3		
+	NSF-19-383	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt M1	juv?	
+	NSF-19-384	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt M1		
+	NSF-19-385	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt M2		
+	NSF-19-386	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt M2		
+	NSF-19-387	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt M2		
+	NSF-19-388	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt M3 		
+	NSF-19-389	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt M3 		
+	NSF-19-390	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt M3 		
+	NSF-19-391	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt m3		
+	NSF-19-392	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt m3		
+	NSF-19-393	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		
+	NSF-19-394	A3/L2	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp			
+	NSF-19-395	A3/L2	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp			
+	NSF-19-396	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	audubonii	partial rt p3	waterworn	
+	NSF-19-397	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	?audubonii	lt p3	waterworn	
+	NSF-19-398	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-399	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-400	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth		
+	NSF-19-401	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth		
+	NSF-19-402	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	m3		
+	NSF-19-403	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-404	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-405	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-406	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-407	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-408	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-409	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag		
+	NSF-19-410	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lt P2		
+	NSF-19-411	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lt P2	juv?	
+	NSF-19-412	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth		
+	NSF-19-413	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth		
+	NSF-19-414	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper right tooth	juv	
+	NSF-19-415	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-416	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-417	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-418	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-419	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-420	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-421	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-422	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-423	A3/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag		
+	NSF-19-424	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys 	cf megalotis	rt m1		
+	NSF-19-425	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lt m1		
+	NSF-19-426	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus              	sp	lt m1	juv?	
+	NSF-19-427	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus                      	sp	rt m1	juv?	
+	NSF-19-428	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m1		
+	NSF-19-429	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m1		
+	NSF-19-430	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m2		
+	NSF-19-431	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt m2		
+	NSF-19-432	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m2		
+	NSF-19-433	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m2		
+	NSF-19-434	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m2	juv?	
+	NSF-19-435	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt m3		
+	NSF-19-436	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lt M1		
+	NSF-19-437	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	rt M1		
+	NSF-19-438	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maniculatus	rt M1	large accessory loph	
+	NSF-19-439	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	rt M1	juv	
+	NSF-19-440	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt M3		
+	NSF-19-441	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt dentary frag		
+	NSF-19-442	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt maxilla		
+	NSF-19-443	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt maxilla frag		
+	NSF-19-444	B2/L2	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lt M1/M2		
+	NSF-19-445	B2/L2	Mammalia	Rodentia	?Geomyidae				molar	juv	
+	NSF-19-446	B2/L2	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lt m1/m2		
+	NSF-19-447	B2/L2	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lt m1/m2		
+	NSF-19-448	B2/L2	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower lt molar (m2?)		
+	NSF-19-449	B2/L2	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lt M1/M2		
+	NSF-19-450	B2/L2	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar	juv	
+	NSF-19-451	B2/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				molar	juv	
+	NSF-19-452	B2/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				molar	juv	
+	NSF-19-453	B2/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-454	B2/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag		
+	NSF-19-455	B2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otosperomophilus	beecheyi	lt m3		
+	NSF-19-456	B2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otosperomophilus	beecheyi	lt m1/m2		
+	NSF-19-457	B2/L2	Mammalia	Rodentia	Sciuridae				lower molar frag		
+	NSF-19-458	B2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	Tamias	cf merriami	lt P4		
+	NSF-19-459	B2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Tamias	sp	lt P4		
+	NSF-19-460	B2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otosperomophilus	beecheyi	rt M1/M2		
+	NSF-19-461	B2/L2	Mammalia	Rodentia	Sciuridae	Xerinae			rt upper molar frag		
+	NSF-19-462	B2/L2	Mammalia	Rodentia	Sciuridae	Xerinae			lt upper molar frag		
+	NSF-19-463	B2/L2	Mammalia	Rodentia	Sciuridae	Xerinae	?Otosperomophilus	beecheyi	rt M1/M2		
+	NSF-19-464	B2/L2	Mammalia	Carnivora	Mustelidae	Mustelinae	?Mustela	frenata	rt? c1		2/26/2019
+	NSF-19-465	B2/L2	Mammalia	Carnivora	Canidae		Canis	latrans	lt M1	juv	2/26/2019
+	NSF-19-466	B2/L2	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	lt I3		2/26/2019
+	NSF-19-467	B2/L2	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	rt m2		
+	NSF-19-468	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	macrotis	rt m1		
+	NSF-19-469	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	molar frag		
+	NSF-19-470	B2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	rt anterior dentary frag		
+	NSF-19-471	B2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	californicus	rt m1		
+	NSF-19-472	B2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	rt M3		
+	NSF-19-473	B2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		
+	NSF-19-474	B2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		
+	NSF-19-475	B2/L2	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lt M1/M2		
+	NSF-19-476	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	partial lt dentary w/ m1	juv?	
+	NSF-19-477	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lt dentary frag w/ p4+m2		
+	NSF-19-478	B2/L2	Mammalia	Lagomorpha			Sylvilagus	audubonii	rt p3		
+	NSF-19-479	B2/L2	Mammalia	Lagomorpha			Sylvilagus	audubonii	lt p3	worn	
+	NSF-19-480	B2/L2	Mammalia	Lagomorpha			Sylvilagus	audubonii	partial rt p3		
+	NSF-19-481	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lower lt tooth		
+	NSF-19-482	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lower lt tooth		
+	NSF-19-483	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lower lt tooth		
+	NSF-19-484	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lower lt tooth		
+	NSF-19-485	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	partial lower rt? tooth		
+	NSF-19-486	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lower lt tooth		
+	NSF-19-487	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	m3		
+	NSF-19-488	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	m3		
+	NSF-19-489	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lower tooth frag		
+	NSF-19-490	B2/L2	Mammalia	Lagomorpha			?Sylvilagus	sp	maxilla frag		
+	NSF-19-491	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lt P2		
+	NSF-19-492	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lt P2	juv?	
+	NSF-19-493	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lt P2		
+	NSF-19-494	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	upper right tooth		
+	NSF-19-495	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	partial upper lt tooth		
+	NSF-19-496	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	upper tooth frag		
+	NSF-19-497	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	upper tooth frag		
+	NSF-19-498	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	upper tooth frag		
+	NSF-19-499	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	upper tooth frag		
+	NSF-19-500	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	upper tooth frag		
+	NSF-19-501	B2/L2	Mammalia	Lagomorpha			Sylvilagus	sp	lt p3 frag		
+	NSF-19-502	B2/L2	Mammalia	Lagomorpha			?Sylvilagus	sp	lower tooth frag		
+	NSF-19-503	B2/L2	Mammalia	Lagomorpha					tooth frag		
+	NSF-19-504	B2/L2	Mammalia	Lagomorpha					tooth frag		
+	NSF-19-505	B2/L2	Mammalia	Lagomorpha					tooth frag		
+	NSF-19-506	B2/L2	Mammalia	Rodentia	?Cricetidae				maxilla frag	Neotoma?	
+	NSF-19-507	B2/L2	Mammalia	?Carnivora					dentary frag		
