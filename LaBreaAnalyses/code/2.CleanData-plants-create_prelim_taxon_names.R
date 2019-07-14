@@ -1,7 +1,7 @@
 library(readr)
 
 # Read in data exported from Google Drive ----
-deposits <- c("1","17","7b","13")
+deposits <- c("1","14","7b","13")
 files <- list.files(
   "data/original_data/GoogleDriveExports-plants", 
   full=T)
@@ -21,7 +21,14 @@ for (i in 1:length(files)){
   
   data <- original[,colsToKeep]
   
+  # change names
+  colnames(data) <- c("SpecimenNumber", "Species", "NISP")
+  
   # data cleaning ----
+  allSpecies <- unique(data$Species)
+  allSpecies <- allSpecies[order(allSpecies)]
+  
+  
   # if sp. has a period, remove it!
   if (length(which(data$Species=="sp.")) > 0){
     data$Species[which(data$Species == "sp.")] <- "sp"
@@ -35,33 +42,14 @@ for (i in 1:length(files)){
     data$Genus[grep("cf. ", data$Genus)] <- gsub("cf. ", "cf ", data$Genus[grep("cf. ", data$Genus)])
   }
   
-  # figure out prelim_taxon_name ----
-  allRows <- seq(1, nrow(data))
-  rowsToSpecies <- intersect(which(data$Species != "sp"), which(data$Species != "")) #which rows have been identified to species?
-  rowsToGenus <- intersect(which(data$Species == "sp"), which(data$Genus != "")) #which rows have been identified only to genus?
-  rowsToSubfamily <- intersect(which(data$Subfamily != ""), which(data$Genus == ""))
-  rowsToFamily <- intersect(which(data$Family != ""), which(data$Genus == ""))
-  rowsToFamily <- rowsToFamily[-match(intersect(rowsToFamily, rowsToSubfamily), rowsToFamily)]
-  otherRows <- allRows[-c(rowsToSpecies, rowsToGenus, rowsToSubfamily, rowsToFamily)]
-  
-  if (length(allRows) == length(otherRows) + length(rowsToSpecies) + length(rowsToGenus) + length(rowsToSubfamily) + length(rowsToFamily)){
-    print(paste0(i, ": PROCEED: All rows accounted for"))
-  }else{
-    print(paste0(i, ": STOP: Not all rows accounted for"))
-  }
-  
-  # assign preliminary taxon name
-  data$prelim_taxon_name <- vector(length=nrow(data))
-  data$prelim_taxon_name[rowsToSpecies] <- paste(data$Genus[rowsToSpecies], data$Species[rowsToSpecies], sep=" ")
-  data$prelim_taxon_name[rowsToGenus] <- paste(data$Genus[rowsToGenus], data$Species[rowsToGenus], sep=" ")
-  data$prelim_taxon_name[rowsToSubfamily] <- paste0(data$Family[rowsToSubfamily], " (", data$Subfamily[rowsToSubfamily], ")")
-  data$prelim_taxon_name[rowsToFamily] <- as.character(data$Family[rowsToFamily])
-  data$prelim_taxon_name[otherRows] <- paste(data$Class[otherRows], data$Order[otherRows], sep="-")
-  
   # Add Box number to dataframe
-  box <- sub('.*Deposit ', '', files[i])
-  box <- sub(".tsv", '', box)
-  data$box <- box 
+  box <- sub('.*Box ', '', files[i])
+  if (grep("Loan", box) == 1){
+    box <- gsub(' Loan.*', '', box)}else{
+    box <- gsub(".tsv", '', box)
+  }
+
+  data$box <- as.numeric(as.character(box))
   
   # Add onto the master spreadsheet
   if (i ==1){
@@ -77,6 +65,25 @@ for (i in 1:length(files)){
   }
   
 }
+
+
+# merge with master - delete old row, add new rows
+# have to do this outside the loop, otherwise rownumbers get thrown off
+master <- master[-rowsWithRepeats,]
+master <- rbind(master, newRowsMaster)
+
+
+# This block of code can be used for the taxonomy matching file
+unique_names <- unique(master$prelim_taxon_name)
+unique_names <- sort(unique_names)
+unique_names
+
+# export master file ----
+write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
+
+
+
+### OLD CODE
 
 # deal with specimens with repeated catalog numbers ----
 
@@ -107,18 +114,4 @@ for (i in 1:length(rowsWithRepeats)){
   newRowsMaster <- rbind(newRowsMaster, newRows)
   rm(oldRow, newRows)
 }
-
-# merge with master - delete old row, add new rows
-# have to do this outside the loop, otherwise rownumbers get thrown off
-master <- master[-rowsWithRepeats,]
-master <- rbind(master, newRowsMaster)
-
-
-# This block of code can be used for the taxonomy matching file
-unique_names <- unique(master$prelim_taxon_name)
-unique_names <- sort(unique_names)
-unique_names
-
-# export master file ----
-write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
 
