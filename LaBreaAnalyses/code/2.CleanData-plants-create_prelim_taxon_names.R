@@ -13,43 +13,27 @@ for (i in 1:length(files)){
   original<- read_tsv(files[i], trim_ws=T) 
   
   # change column names
-  if (grep("Box 1 Loan 1", files[i]) == 1){
-    colnames(original)[match(c('Gill temporary #', "identification"), colnames(original))] <- c("Number", "Identification")}
+  if (length(grep("Box 1 Loan 1", files[i])) == 1){
+    colnames(original)[match(c('Gill temporary #', "identification", 'how many'), colnames(original))] <- c("Number", "Identification", "NISP")}else{
+      colnames(original)[match(c('how many'), colnames(original))] <- c("NISP")
+    }
   
   # keep the relevant columns and make sure in same order
-  colsToKeep <- match(c("Number", "Identification", "how many"), colnames(original))
+  colsToKeep <- match(c("Number", "Identification", "NISP"), colnames(original))
   
   data <- original[,colsToKeep]
   
   # change names
   colnames(data) <- c("SpecimenNumber", "Species", "NISP")
   
-  # data cleaning ----
-  allSpecies <- unique(data$Species)
-  allSpecies <- allSpecies[order(allSpecies)]
-  
-  
-  # if sp. has a period, remove it!
-  if (length(which(data$Species=="sp.")) > 0){
-    data$Species[which(data$Species == "sp.")] <- "sp"
-  }
-  
-  # replace cf. with cf
-  if (length(grep("cf. ", data$Species)>0)){
-    data$Species[grep("cf. ", data$Species)] <- gsub("cf. ", "cf ", data$Species[grep("cf. ", data$Species)])
-  }
-  if (length(grep("cf. ", data$Genus)>0)){
-    data$Genus[grep("cf. ", data$Genus)] <- gsub("cf. ", "cf ", data$Genus[grep("cf. ", data$Genus)])
-  }
-  
   # Add Box number to dataframe
   box <- sub('.*Box ', '', files[i])
-  if (grep("Loan", box) == 1){
+  if (length(grep("Loan", box)) == 1){
     box <- gsub(' Loan.*', '', box)}else{
     box <- gsub(".tsv", '', box)
   }
 
-  data$box <- as.numeric(as.character(box))
+  data$box <- box
   
   # Add onto the master spreadsheet
   if (i ==1){
@@ -65,6 +49,11 @@ for (i in 1:length(files)){
   }
   
 }
+
+# data cleaning ----
+allSpecies <- unique(master$Species)
+allSpecies <- allSpecies[order(allSpecies)]
+
 
 
 # merge with master - delete old row, add new rows
@@ -84,6 +73,24 @@ write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
 
 
 ### OLD CODE
+
+
+
+# if sp. has a period, remove it!
+if (length(which(data$Species=="sp.")) > 0){
+  data$Species[which(data$Species == "sp.")] <- "sp"
+}
+
+# replace cf. with cf
+if (length(grep("cf. ", data$Species)>0)){
+  data$Species[grep("cf. ", data$Species)] <- gsub("cf. ", "cf ", data$Species[grep("cf. ", data$Species)])
+}
+if (length(grep("cf. ", data$Genus)>0)){
+  data$Genus[grep("cf. ", data$Genus)] <- gsub("cf. ", "cf ", data$Genus[grep("cf. ", data$Genus)])
+}
+
+
+
 
 # deal with specimens with repeated catalog numbers ----
 
