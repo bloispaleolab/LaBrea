@@ -1,7 +1,5 @@
 library(readr)
 
-# test modification for working from a fork
-
 # Read in data exported from Google Drive ----
 deposits <- c("1","17","7b","13")
 files <- list.files(
