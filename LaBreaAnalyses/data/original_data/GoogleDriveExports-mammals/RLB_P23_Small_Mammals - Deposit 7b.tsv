@@ -12,18 +12,18 @@ LACMP23-35561	NSF-18-10	B1/L1	Mammalia	Lagomorpha	Leporidae		Sylvilagus 	sp	toot
 LACMP23-35562	NSF-18-11	B1/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				partial tooth	juv		y
 LACMP23-37335	NSF-18-12	B1/L1	Mammalia	Carnivora					upper lt M1 frag	2 associated frags, Bassariscus??	9/27/2018	n
 LACMP23-35563	NSF-18-14	B1/L1	Mammalia	Carnivora	Mephitidae		?Mephitis	mephitis	upper lt P3 frag		9/27/2018	y
-LACMP23-35564	NSF-18-15	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1		2/2/2019	y
+LACMP23-35564	NSF-18-15	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	Grade 1, ~Pcal sized	8/3/2019	y
 LACMP23-35565	NSF-18-16	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		2/2/2019	y
-LACMP23-35566	NSF-18-17	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		2/2/2019	y
-LACMP23-35567	NSF-18-18	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		2/2/2019	y
-LACMP23-35568	NSF-18-19	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	lower lt m1			y
-LACMP23-35569	NSF-18-20	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		2/2/2019	y
-LACMP23-35570	NSF-18-21	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae			molar frag			y
+LACMP23-35566	NSF-18-17	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m2		8/3/2019	y
+LACMP23-35567	NSF-18-18	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M2		8/3/2019	y
+LACMP23-35568	NSF-18-19	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	Grade 2, ~Pcal sized	8/3/2019	y
+LACMP23-35569	NSF-18-20	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	lower rt m2		8/3/2019	y
+LACMP23-35570	NSF-18-21	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	lt M1 frag	Size >> Pman, small accessory loph	8/3/2019	y
 LACMP23-35571	NSF-18-22	B1/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lt anterior dentary frag			y
 LACMP23-35572	NSF-18-23	B1/L1	Mammalia	Rodentia	Cricetidae	?Neotominae			rt anterior dentary frag			y
 LACMP23-35573	NSF-18-24	B1/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	rt anterior dentary frag			y
-LACMP23-35574	NSF-18-25	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		2/2/2019	y
-LACMP23-35575	NSF-18-26	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		2/2/2019	y
+LACMP23-35574	NSF-18-25	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m2		8/3/2019	y
+LACMP23-35575	NSF-18-26	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m2		8/3/2019	y
 LACMP23-35576	NSF-18-27	A2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma 	sp	upper rt M2			y
 LACMP23-35577	NSF-18-28	A2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M1			y
 LACMP23-35578	NSF-18-29	A2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	tooth frag			y
@@ -49,15 +49,15 @@ LACMP23-35596	NSF-18-47	A2/L1	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth 
 LACMP23-35597	NSF-18-48	A2/L1	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	tooth frag	juv		y
 LACMP23-35598	NSF-18-49	A3/L2	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y
 LACMP23-35599	NSF-18-50	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper lt M1		2/2/2019	y
-LACMP23-35600	NSF-18-51	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		2/2/2019	y
-LACMP23-35601	NSF-18-52	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m2			y
+LACMP23-35599	NSF-18-50	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	upper lt M1	surface covered	8/3/2019	y
+LACMP23-35600	NSF-18-51	A3/L2	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	lower rt m2	juv?	8/3/2019	y
 LACMP23-35602	NSF-18-53	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag			y
 LACMP23-35603	NSF-18-54	A3/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	molar frag			y
 LACMP23-35604	NSF-18-55	A2/L2	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper lt M1/M2			y
 LACMP23-35605	NSF-18-56	A2/L2	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	P4/p4 frag			y
 LACMP23-35606	NSF-18-57	A2/L2	Mammalia	Rodentia	?Heteromyidae				molar	juv?	2/2/2019	y
 LACMP23-35607	NSF-18-58	A2/L2	Mammalia	Rodentia	?Geomyidae/Heteromyidae				tooth frag	juv, strange shape		y
-LACMP23-35608	NSF-18-59	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	audubonii	lower lt p3	juv	9/28/2018	y
+LACMP23-35608	NSF-18-59	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	audubonii	lower lt p3	subadult?	6/6/2019	y
 LACMP23-35609	NSF-18-60	A2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth frag			y
 LACMP23-35610	NSF-18-61	A2/L2	Mammalia	Rodentia	Sciuridae	Xerinae			upper rt M1/M2 frag			y
 LACMP23-35611	NSF-18-62	A2/L2	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	californicus	lower lt m1		2/2/2019	y
@@ -79,12 +79,12 @@ LACMP23-35626	NSF-18-77	B2/L1	Mammalia	Carnivora	Mephitidae		Mephitis	mephitis	l
 LACMP23-35627	NSF-18-78	B2/L1	Mammalia	Eulipotyphla	Soricidae	Soricinae			upper rt maxillary frag w/ P4			y
 LACMP23-35628	NSF-18-79	B2/L1	Mammalia	Artiodactyla	Antilocapridae		Capromeryx	minor	molariform tooth frag			n
 LACMP23-35629	NSF-18-80	B2/L1	Mammalia	Artiodactyla	Antilocapridae		cf Capromeryx		molariform tooth frag			n
-LACMP23-35630	NSF-18-81	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maniculatus	upper rt M1			y
-LACMP23-35631	NSF-18-82	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1	occlusal surface covered	2/2/2019	y
-LACMP23-35632	NSF-18-83	B2/L1	Mammalia	Rodentia	Cricetidae				lower rt m1	strange anterior/anteriolingual cusps		n
-LACMP23-35633	NSF-18-84	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1			y
-LACMP23-35634	NSF-18-85	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maniculatus	upper rt M1			y
-LACMP23-35635	NSF-18-86	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1			y
+LACMP23-35630	NSF-18-81	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maniculatus	upper rt M1	Prominent accessory loph, slighly large for Pman	8/3/2019	y
+LACMP23-35631	NSF-18-82	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	lower lt m1	occlusal surface covered	8/3/2019	y
+LACMP23-35632	NSF-18-83	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	lower rt m1	strange anteriolingual cusp, grade 0, diminutive anterconid. Possibly Onychomys	8/3/2019	n
+LACMP23-35633	NSF-18-84	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	small accessory loph	8/3/2019	y
+LACMP23-35634	NSF-18-85	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	upper rt M1	accessory loph, worn, slightly large for Pman	8/3/2019	y
+LACMP23-35635	NSF-18-86	B2/L1	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	worn, prominent accessory loph	8/3/2019	y
 LACMP23-35636	NSF-18-87	B2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m1			y
 LACMP23-35637	NSF-18-88	B2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m1			y
 LACMP23-35638	NSF-18-89	B2/L1	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lt anterior dentary frag w/ incisor			y
@@ -156,23 +156,23 @@ LACMP23-35703	NSF-18-154	B2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	uppe
 LACMP23-35704	NSF-18-155	B2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth			y
 LACMP23-35705	NSF-18-156	B2/L2	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper tooth frag			y
 LACMP23-35706	NSF-18-157	B2/L2	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	upper tooth frag			y
-LACMP23-35707	NSF-18-158	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt dentary w/ incisor			y
-LACMP23-35708	NSF-18-159	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt dentary frag			y
-LACMP23-35709	NSF-18-160	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt dentary frag			y
-LACMP23-35710	NSF-18-161	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt dentary frag			y
-LACMP23-35711	NSF-18-162	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt posterior dentary frag			y
-LACMP23-35712	NSF-18-163	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maniculatus	upper lt M1			y
-LACMP23-35713	NSF-18-164	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1	strange anterior cusps	2/2/2019	y
-LACMP23-35714	NSF-18-165	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	surface covered		y
-LACMP23-35715	NSF-18-166	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper rt M1		2/2/2019	y
-LACMP23-35716	NSF-18-167	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper rt M1		2/2/2019	y
-LACMP23-35717	NSF-18-168	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1		2/2/2019	y
-LACMP23-35718	NSF-18-169	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		2/2/2019	y
-LACMP23-35719	NSF-18-170	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	upper lt M1	strage accessory posterior loph		y
-LACMP23-35720	NSF-18-171	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	upper lt M1			y
-LACMP23-35721	NSF-18-172	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	lower lt m1			y
-LACMP23-35722	NSF-18-173	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		2/2/2019	y
-LACMP23-35723	NSF-18-174	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	upper rt M1			y
+LACMP23-35707	NSF-18-158	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt dentary w/ incisor	~Pman sized	8/3/2019	y
+LACMP23-35708	NSF-18-159	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			lt dentary frag	~Pman sized	8/3/2019	y
+LACMP23-35709	NSF-18-160	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt dentary frag	> than Pman	8/3/2019	y
+LACMP23-35710	NSF-18-161	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt dentary frag	~Pman sized	8/3/2019	y
+LACMP23-35711	NSF-18-162	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae			rt posterior dentary frag	~Pman sized	8/3/2019	y
+LACMP23-35712	NSF-18-163	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	upper lt M1	Prominent accessory loph	8/3/2019	y
+LACMP23-35713	NSF-18-164	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	lower lt m1	Buccal accessory loph present, high crowned, slighly larger than Pman	8/3/2019	y
+LACMP23-35714	NSF-18-165	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	surface partially covered	8/3/2019	y
+LACMP23-35715	NSF-18-166	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	small accessory loph	8/3/2019	y
+LACMP23-35716	NSF-18-167	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	small accessory loph	8/3/2019	y
+LACMP23-35717	NSF-18-168	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	grade 0, worn, size intermediate b/w Pman and Pcali	8/3/2019	y
+LACMP23-35718	NSF-18-169	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m2		8/3/2019	y
+LACMP23-35719	NSF-18-170	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small anterior accessory loph, strange accessory posterior loph, worn	8/3/2019	y
+LACMP23-35720	NSF-18-171	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	larger than Pman	8/3/2019	y
+LACMP23-35721	NSF-18-172	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	grade1-2	8/3/2019	y
+LACMP23-35722	NSF-18-173	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M2		8/3/2019	y
+LACMP23-35723	NSF-18-174	B2/L2	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	upper rt M1	prominent accessory loph	8/3/2019	y
 LACMP23-35724	NSF-18-175	B2/L2	Mammalia	Rodentia	Heteromyidae	Perognathinae			rt anterior dentary w/ p4		2/2/2019	y
 LACMP23-35725	NSF-18-176	B2/L2	Mammalia	Rodentia	?Neotominae				posterior dentary frag			y
 LACMP23-35726	NSF-18-177	B2/L2	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	rt anterior dentary frag			y
@@ -184,15 +184,15 @@ LACMP23-35731	NSF-18-182	A3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipo
 LACMP23-35732	NSF-18-183	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag			y
 LACMP23-35733	NSF-18-184	A3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag			y
 LACMP23-35734	NSF-18-185	A3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys 	sp	partial lower (rt?) p4			y
-LACMP23-35735	NSF-18-186	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	worn		y
-LACMP23-35736	NSF-18-187	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	partial upper lt M1/M2		2/2/2019	y
+LACMP23-35735	NSF-18-186	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	worn, grade 0, size intermediate b/w Pman and Pcali	8/3/2019	y
+LACMP23-35736	NSF-18-187	A3/L3	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	lt M1 frag		8/3/2019	y
 LACMP23-35737	NSF-18-188	A3/L3	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	upper tooth frag	weathered		y
 LACMP23-35738	NSF-18-189	A3/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M1			y
 LACMP23-35739	NSF-18-190	A3/L3	Mammalia						tooth frag			n
 LACMP23-35740	NSF-18-191	A2/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	tooth frag			y
 LACMP23-35741	NSF-18-192	A2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus 	sp	lower lt tooth		9/13/2018	y
-LACMP23-35742	NSF-18-193	A2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1			y
-LACMP23-35743	NSF-18-194	A2/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2	worn		y
+LACMP23-35742	NSF-18-193	A2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	>>Pman, worn	8/3/2019	y
+LACMP23-35743	NSF-18-194	A2/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2	worn, size intermediate b/w Pman and Reithro	8/3/2019	y
 LACMP23-35744	NSF-18-195	A2/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper lt P4		2/2/2019	y
 LACMP23-35745	NSF-18-196	A2/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys 	sp	upper (lt?) M1			y
 LACMP23-35746	NSF-18-197	A2/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys 	sp	lower p4 frag			y
@@ -201,7 +201,7 @@ LACMP23-35748	NSF-18-199	A2/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipo
 LACMP23-35749	NSF-18-200	A2/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys 	sp	tooth frag			y
 LACMP23-35750	NSF-18-201	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lower lt m1			y
 LACMP23-35751	NSF-18-202	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		2/2/2019	y
-LACMP23-35752	NSF-18-203	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maiculatus	upper lt M1			y
+LACMP23-35752	NSF-18-203	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maniculatus	upper lt M1			y
 LACMP23-35753	NSF-18-204	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		2/2/2019	y
 LACMP23-35754	NSF-18-205	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	lower rt m1			y
 LACMP23-35755	NSF-18-206	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae			rt anterior dentary w/ incisor			y
@@ -243,13 +243,13 @@ LACMP23-35790	NSF-18-241	B2/L3	Mammalia	Rodentia/Lagomorpha					rt anterior dent
 LACMP23-35791	NSF-18-242	B2/L3	Mammalia	Rodentia					rt posterior dentary frag			n
 LACMP23-35792	NSF-18-243	B2/L3	Mammalia	Rodentia					rt anterior dentary frag			n
 LACMP23-35793	NSF-18-244	A3/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper rt M1/M2			y
-LACMP23-35794	NSF-18-245	A3/L4	Mammalia	Rodentia	Neotominae				upper lt M1	worn		y
+LACMP23-35794	NSF-18-245	A3/L4	Mammalia	Rodentia	Neotominae				upper lt M1	very worn, ~Reithro sized	8/3/2019	y
 LACMP23-35795	NSF-18-246	A3/L4	Mammalia	Rodentia	?Neotominae				molar frag			y
 LACMP23-35796	NSF-18-247	A3/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	lt ant. dentary frag			y
 LACMP23-35797	NSF-18-248	A3/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	cf Microtus	sp	tooth frag			y
-LACMP23-35798	NSF-18-249	A2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper rt M1		2/2/2019	y
-LACMP23-35799	NSF-18-250	A2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper rt M1		2/2/2019	y
-LACMP23-35800	NSF-18-251	A2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	upper lt M1			y
+LACMP23-35798	NSF-18-249	A2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	small accessory loph	8/3/2019	y
+LACMP23-35799	NSF-18-250	A2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	megalotis	upper rt M1		8/3/2019	y
+LACMP23-35800	NSF-18-251	A2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	megalotis	upper lt M1		8/3/2019	y
 LACMP23-35801	NSF-18-252	A2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m3			y
 LACMP23-35802	NSF-18-253	A2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M1			y
 LACMP23-35803	NSF-18-254	A2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag			y
@@ -277,14 +277,14 @@ LACMP23-35824	NSF-18-275	B2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth
 LACMP23-35825	NSF-18-276	B2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	molar frag			y
 LACMP23-35826	NSF-18-277	B2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	molar frag			y
 LACMP23-35827	NSF-18-278	B2/L4	Mammalia	Rodentia	Heteromyidae	Perognathinae			upper molar		2/2/2019	y
-LACMP23-35828	NSF-18-279	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	lower lt m1			y
-LACMP23-35829	NSF-18-280	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			rt anterior dentary frag			y
-LACMP23-35830	NSF-18-281	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			lt maxillary frag			y
-LACMP23-35831	NSF-18-282	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lower lt m1			y
-LACMP23-35832	NSF-18-283	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1		2/2/2019	y
-LACMP23-35833	NSF-18-284	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		2/2/2019	y
-LACMP23-35834	NSF-18-285	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		2/2/2019	y
-LACMP23-35835	NSF-18-286	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		2/2/2019	y
+LACMP23-35828	NSF-18-279	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	grade 1	8/3/2019	y
+LACMP23-35829	NSF-18-280	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			rt anterior dentary frag	~Pman sized	8/3/2019	y
+LACMP23-35830	NSF-18-281	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			rt maxilla frag	Large -~Pcal sized	8/3/2019	y
+LACMP23-35831	NSF-18-282	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	Worn, large ~Pcal sized, grade 0	8/3/2019	y
+LACMP23-35832	NSF-18-283	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	lower lt m1	grade 0, small anteroconid	8/3/2019	y
+LACMP23-35833	NSF-18-284	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m2		8/3/2019	y
+LACMP23-35834	NSF-18-285	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m2		8/3/2019	y
+LACMP23-35835	NSF-18-286	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M2		8/3/2019	y
 LACMP23-35836	NSF-18-287	B2/L4	Mammalia	Lagomorpha	Leporidae		Sylvilagus	audubonii	lower rt p3	large for Sylvilagus		y
 LACMP23-35837	NSF-18-288	B2/L4	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper (rt?) tooth			y
 LACMP23-35838	NSF-18-289	B2/L4	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth			y
@@ -302,7 +302,7 @@ LACMP23-35849	NSF-18-300	B2/L4	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lowe
 LACMP23-35850	NSF-18-301	B2/L4	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt tooth			y
 LACMP23-35851	NSF-18-302	B2/L4	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth			y
 LACMP23-35852	NSF-18-303	B2/L4	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper lt tooth			y
-LACMP23-35853	NSF-18-304	B2/L4	Mammalia	Eulipotyphla	Talpidae	Scalopini	Scapanus	latimus 	lower lt m1/m2			y
+LACMP23-35853	NSF-18-304	B2/L4	Mammalia	Eulipotyphla	Talpidae	Scalopini	Scapanus	latimanus 	lower lt m1/m2			y
 LACMP23-35854	NSF-18-305	B2/L4	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	rt anterior dentary frag			y
 LACMP23-35855	NSF-18-306	B2/L4	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	lt anterior dentary frag			y
 LACMP23-35856	NSF-18-307	B2/L4	Mammalia	Rodentia					dentary frag			n
@@ -312,17 +312,17 @@ LACMP23-35859	NSF-18-310	B2/L4	Mammalia	?Rodentia					maxilla frag			n
 LACMP23-35860	NSF-18-311	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	lower lt m2			y
 LACMP23-35861	NSF-18-312	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	upper rt M3			y
 LACMP23-35862	NSF-18-313	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	lower (lt?) m3			y
-LACMP23-35863	NSF-18-314	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis 	lower rt m1			y
-LACMP23-35864	NSF-18-315	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis 	lower rt m1			y
-LACMP23-35865	NSF-18-316	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maniculatus	upper rt M1			y
-LACMP23-35866	NSF-18-317	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower rt m1		2/2/2019	y
-LACMP23-35867	NSF-18-318	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		2/2/2019	y
-LACMP23-35868	NSF-18-319	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		2/2/2019	y
-LACMP23-35869	NSF-18-320	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		2/2/2019	y
-LACMP23-35870	NSF-18-321	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	upper lt M1			y
-LACMP23-35871	NSF-18-322	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower rt m1		2/2/2019	y
-LACMP23-35872	NSF-18-323	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		2/2/2019	y
-LACMP23-35873	NSF-18-324	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		2/2/2019	y
+LACMP23-35863	NSF-18-314	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m1	grade 0	8/3/2019	y
+LACMP23-35864	NSF-18-315	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m1	grade 2, ~Pman sized	8/3/2019	y
+LACMP23-35865	NSF-18-316	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	upper rt M1	accessory lophs present	8/3/2019	y
+LACMP23-35866	NSF-18-317	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	lower rt m1	grade 0, diminutive anterconid	8/3/2019	y
+LACMP23-35867	NSF-18-318	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m2		8/3/2019	y
+LACMP23-35868	NSF-18-319	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m2		8/3/2019	y
+LACMP23-35869	NSF-18-320	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M2		8/3/2019	y
+LACMP23-35870	NSF-18-321	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small accessory loph	8/3/2019	y
+LACMP23-35871	NSF-18-322	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	?Reithrodontomys	megalotis	lower rt m1	surface covered	8/3/2019	y
+LACMP23-35872	NSF-18-323	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m2	size intermediate b/w Pman and Pcal	8/3/2019	y
+LACMP23-35873	NSF-18-324	B2/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m2		8/3/2019	y
 LACMP23-35874	NSF-18-325	B2/L5	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper rt M3			y
 LACMP23-35875	NSF-18-326	B2/L5	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m3			y
 LACMP23-35876	NSF-18-327	B2/L5	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m2			y
@@ -362,11 +362,11 @@ LACMP23-35909	NSF-18-360	B2/L5	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	
 LACMP23-35910	NSF-18-361	B2/L5	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y
 LACMP23-35911	NSF-18-362	B2/L5	Mammalia	Carnivora	Mustelidae	Mustelinae	Mustela	frenata	lt anterior dentary frag		9/27/2018	y
 LACMP23-35912	NSF-18-363	B2/L5	Mammalia	Rodentia	Sciuridae	Xerinae	Tamias	cf merriami	upper lt tooth (P4?)		2/2/2019	y
-LACMP23-35913	NSF-18-364	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper lt M1		2/2/2019	y
-LACMP23-35914	NSF-18-365	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	upper lt M1			y
-LACMP23-35915	NSF-18-366	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		2/2/2019	y
-LACMP23-35916	NSF-18-367	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		2/2/2019	y
-LACMP23-35917	NSF-18-368	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	lower lt m1		2/2/2019	y
+LACMP23-35913	NSF-18-364	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small accessory lophs, size intermediate b/w Pman and Pcal	8/3/2019	y
+LACMP23-35914	NSF-18-365	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	upper lt M1	prominent accessory loph	8/3/2019	y
+LACMP23-35915	NSF-18-366	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M2		8/3/2019	y
+LACMP23-35916	NSF-18-367	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M2		8/3/2019	y
+LACMP23-35917	NSF-18-368	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	grade 1	8/3/2019	y
 LACMP23-35918	NSF-18-369	B1/L5+6	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	upper lt M3			y
 LACMP23-35919	NSF-18-370	B1/L5+6	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar			y
 LACMP23-35920	NSF-18-371	B1/L5+6	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y
@@ -396,17 +396,17 @@ LACMP23-35943	NSF-18-394	B2/L6	Mammalia	Rodentia	Sciuridae	Xerinae			upper lt P4
 LACMP23-35944	NSF-18-395	B2/L6	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower lt p4			y
 LACMP23-35945	NSF-18-396	B2/L6	Mammalia	Rodentia	Sciuridae	?Sciurinae			partial upper rt M1/M2		2/2/2019	y
 LACMP23-35946	NSF-18-397	B2/L6	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	partial lt maxilla w/ P4	juv	2/2/2019	y
-LACMP23-35947	NSF-18-398	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	lower lt m1			y
-LACMP23-35948	NSF-18-399	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m2		2/2/2019	y
-LACMP23-35949	NSF-18-400	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	upper lt M1			y
-LACMP23-35950	NSF-18-401	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper lt M1	surface covered	2/2/2019	y
-LACMP23-35951	NSF-18-402	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		2/2/2019	y
-LACMP23-35952	NSF-18-403	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		2/2/2019	y
-LACMP23-35953	NSF-18-404	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		2/2/2019	y
-LACMP23-35954	NSF-18-405	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	cf Reithrodontomys	megalotis	upper lt M1		2/2/2019	y
-LACMP23-35955	NSF-18-406	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		2/2/2019	y
-LACMP23-35956	NSF-18-407	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	upper rt M1			y
-LACMP23-35957	NSF-18-408	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		2/2/2019	y
+LACMP23-35947	NSF-18-398	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	lower lt m1	small anteroconid, grade 0	8/3/2019	y
+LACMP23-35948	NSF-18-399	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m2		8/3/2019	y
+LACMP23-35949	NSF-18-400	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small accessory lophs	8/3/2019	y
+LACMP23-35950	NSF-18-401	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	surface covered	8/3/2019	y
+LACMP23-35951	NSF-18-402	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M2		8/3/2019	y
+LACMP23-35952	NSF-18-403	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M2		8/3/2019	y
+LACMP23-35953	NSF-18-404	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M2		8/3/2019	y
+LACMP23-35954	NSF-18-405	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1		8/3/2019	y
+LACMP23-35955	NSF-18-406	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	upper rt M2	Juv?	8/3/2019	y
+LACMP23-35956	NSF-18-407	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	upper rt M1	prominent accessory lophs	8/3/2019	y
+LACMP23-35957	NSF-18-408	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2	size intermediate b/w Pman and Reithro	8/3/2019	y
 LACMP23-35958	NSF-18-409	B2/L6	Mammalia	Rodentia					dentary frag			n
 LACMP23-35959	NSF-18-410	B2/L6	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M2			y
 LACMP23-35960	NSF-18-411	B2/L6	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	partial upper lt M2			y
@@ -442,10 +442,10 @@ LACMP23-36315	NSF-18-440	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lowe
 LACMP23-36316	NSF-18-441	B2/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper M1/M2 frag		9/13/2018	y
 LACMP23-36317	NSF-18-442	B2/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				molar frag		9/13/2018	y
 LACMP23-36318	NSF-18-443	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt tooth		9/13/2018	y
-LACMP23-36326	NSF-18-444	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		2/2/2019	y
+LACMP23-36326	NSF-18-444	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	upper lt M2		8/3/2019	y
 LACMP23-36327	NSF-18-445	B2/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	P4/p4	juv?, digested?	9/13/2018	y
-LACMP23-36328	NSF-18-446	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt m1		9/13/2018	y
-LACMP23-36329	NSF-18-447	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Reithrodontomys	cf megalotis	upper lt M1	juv	2/2/2019	y
+LACMP23-36328	NSF-18-446	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lt m1	grade 0, worn	8/3/2019	y
+LACMP23-36329	NSF-18-447	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	small accessory loph	8/3/2019	y
 LACMP23-36333	NSF-18-448	B2/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	rt dentary w/ m1 frag	very juv	9/13/2018	y
 LACMP23-36334	NSF-18-449	B2/L3	Mammalia	Carnivora					incisor	juv?	9/13/2018	n
 LACMP23-36600	NSF-18-450	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt tooth		9/13/2018	y
@@ -458,8 +458,8 @@ LACMP23-36606	NSF-18-456	B2/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	
 LACMP23-36607	NSF-18-457	B2/L3	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper rt M1		9/13/2018	y
 LACMP23-36608	NSF-18-458	B2/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag		9/13/2018	y
 LACMP23-36609	NSF-18-459	B2/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m3		9/13/2018	y
-LACMP23-36610	NSF-18-460	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m1		9/13/2018	y
-LACMP23-36611	NSF-18-461	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		9/13/2018	y
+LACMP23-36610	NSF-18-460	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m1	grade 1	8/3/2019	y
+LACMP23-36611	NSF-18-461	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2	very worn, ~Pman sized	8/3/2019	y
 LACMP23-36612	NSF-18-462	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	upper rt M1 frag		9/13/2018	y
 LACMP23-36613	NSF-18-463	B2/L3	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower rt p4		9/13/2018	y
 LACMP23-36335	NSF-18-464	B2/L4	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	ant. rt dentary w/ p4-m1	juv	9/13/2018	y
@@ -468,5 +468,5 @@ LACMP23-36319	NSF-18-466	B2/L6	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	upp
 LACMP23-36320	NSF-18-467	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			partial rt dentary		9/13/2018	y
 LACMP23-36321	NSF-18-468	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2	surface covered w/ matrix	9/13/2018	y
 LACMP23-36322	NSF-18-469	B2/L6	Mammalia	Rodentia	Heteromyidae	Perognathinae			upper rt? molar		2/2/2019	y
-LACMP23-36323	NSF-18-470	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt tooth	surface covered w/ matrix	9/13/2018	y
+LACMP23-36323	NSF-18-470	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	?Reithrodontomys	megalotis	upper lt M1	surface covered w/ matrix	8/3/2019	y
 LACMP23-36324	NSF-18-471	B2/L6	Mammalia	Rodentia	Heteromyidae				tooth		9/13/2018	y

@@ -1,7 +1,7 @@
 library(readr)
 
 # Read in data exported from Google Drive ----
-deposits <- c("1","17","7b","13")
+deposits <- c("1","17","7b","13", "HC")
 files <- list.files(
   "data/original_data/GoogleDriveExports-mammals", 
   full=T)
@@ -57,6 +57,9 @@ for (i in 1:length(files)){
   # Add Box number to dataframe
   box <- sub('.*Deposit ', '', files[i])
   box <- sub(".tsv", '', box)
+  if (length(grep("Hancock", files[i]))>0) { 
+    box <- "HC"}else{
+      box <- box}
   data$box <- box 
   
   # Add onto the master spreadsheet
@@ -108,7 +111,6 @@ for (i in 1:length(rowsWithRepeats)){
 # have to do this outside the loop, otherwise rownumbers get thrown off
 master <- master[-rowsWithRepeats,]
 master <- rbind(master, newRowsMaster)
-
 
 # This block of code can be used for the taxonomy matching file
 unique_names <- unique(master$prelim_taxon_name)
