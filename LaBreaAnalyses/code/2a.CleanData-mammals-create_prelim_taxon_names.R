@@ -117,6 +117,10 @@ unique_names <- unique(master$prelim_taxon_name)
 unique_names <- sort(unique_names)
 unique_names
 
+# replace "7B" with "7b"
+master$box[which(master$box == "7B")] <- "7b"
+
+
 # export master file ----
 write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
 
