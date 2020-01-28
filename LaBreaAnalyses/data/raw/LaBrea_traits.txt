@@ -1,0 +1,15 @@
+Species	Precip_affinity	Temp_affinity	Diet_group	Diet_breadth
+Sylvilagus audubonii	Xeric	T_neutral	Herbivore	Intermediate
+Sylvilagus bachmani	P_neutral	T_neutral	Herbivore	Intermediate
+Microtus californicus	P_neutral	T_neutral	Herbivore	Intermediate
+Onychomys torridus	Xeric	Warm	Insectivore	Specialist
+Reithrodontomys megalotis	P_neutral	T_neutral	Granivore	Intermediate
+Peromyscus 	P_neutral	T_neutral	Omnivore	Generalist
+Scapanus latimanus	P_neutral	T_neutral	Insectivore	Specialist
+Thomomys bottae	Xeric	Warm	Herbivore	Intermediate
+Spermophilus beecheyi	P_neutral	T_neutral	Granivore	Generalist
+Sorex ornatus	P_neutral	T_neutral	Insectivore	Specialist
+Mephitis mephitis	Mesic	Cool	Omnivore	Generalist
+Spilogale gracilis	P_neutral	T_neutral	Omnivore	Generalist
+Mustela frenata	Mesic	T_neutral	Carnivore	Specialist
+Neotoma macrotis	Mesic	T_neutral	Herbivore	Generalist

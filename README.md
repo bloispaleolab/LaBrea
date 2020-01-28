@@ -1,2 +1,2 @@
 # LaBrea
-Repository to store project related code, primarily
+Repository to store project related code 

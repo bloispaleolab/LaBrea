@@ -1,0 +1,66 @@
+UCIAMS_Number	Original_sample_name	Museum_Number	Other_ID	SampleType	d13C_permil	d13C_error	fraction_Modern	fraction_Modern_error	D14C_permil	D14C_error	14C_age_BP	14C_age_error	Original_data_sheet	Sample_Notes	UseSample	Other_Notes
+191095	P23-5233 Dep1 B-2 L2 sylvilagus	LACMP23-5233		mammal	-21.3	0.1	0.0117	0.0009	-988.3	0.9	35750	610	FoxBloisJul16_17.xls		Y	
+191096	P23-18270 Dep1 A-2 L5 sylvilagus	LACMP23-18270		mammal	-22.5	0.1	0.0121	0.0009	-987.9	0.9	35440	580	FoxBloisJul16_17.xls		Y	
+191097	P23-22009 Dep1 A-2 L4 sylvilagus	LACMP23-22009		mammal	-22.4	0.1	0.0126	0.0009	-987.4	0.9	35150	580	FoxBloisJul16_17.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+191098	P23-25476 Dep1 A-2 L4 sylvilagus	LACMP23-25476		mammal	-21.4	0.1	0.0112	0.0009	-988.8	0.9	36050	630	FoxBloisJul16_17.xls		Y	
+191099	P23-28903 Dep1 A-1 L7 sylvilagus	LACMP23-28903		mammal	-21.1	0.1	0.0148	0.0009	-985.2	0.9	33830	480	FoxBloisJul16_17.xls		Y	
+191100	P23-30238 Dep1 B-1 L2 sylvilagus	LACMP23-30238		mammal	-21.5	0.1	0.0116	0.0009	-988.4	0.9	35780	600	FoxBloisJul16_17.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+191101	P23-31269 Dep1 B-4 L3 sylvilagus	LACMP23-31269		mammal	-20.5	0.1	0.0032	0.0009	-996.8	0.9	46200	2200	FoxBloisJul16_17.xls		Y	
+191102	P23-31423 Dep1 B-2 L2 sylvilagus	LACMP23-31423		mammal	-21.3	0.1	0.0122	0.0009	-987.8	0.9	35420	580	FoxBloisJul16_17.xls		Y	
+191103	P23-31033 Dep14 D-2 L4 sylvilagus .32mgC	LACMP23-31033		mammal	-21.7	0.1	-0.0011	-0.0013	-1001.1	-1.3	>47800		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	
+191104	P23-31036 Dep14 C-2 L7 sylvilagus	LACMP23-31036		mammal	-22.3	0.1	0.0002	0.0009	-999.8	0.9	>49900		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	
+191105	P23-31056 Dep14 D-3 L6 sylvilagus	LACMP23-31056		mammal	-21.7	0.1	0.0002	0.0009	-999.8	0.9	>49900		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	
+191242	P23-31031 Dep14 C-3 L7 sylvilagus	LACMP23-31031		mammal	-21.1	0.1	0	-0.0009	-1000	-0.9	>50800		FoxBloisJul19_17.xls	The 14C/C ratio for this sample was within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages is quoted as a 2 sigma lower limit.	Y	
+198199	P23 2046 C. latrans Dep 1 B-1 L3	LACMP23-2046		mammal	-17	0.1	0.0116	0.0008	-988.4	0.8	35770	550	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198200	P23 11485 C. latrans Dep 1 B-1 L7	LACMP23-11485		mammal	-19.9	0.1	0.0127	0.0008	-987.3	0.8	35050	510	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198201	P23 17139 S. beecheyi Dep. 1 B-2 L8	LACMP23-17139		mammal	-20.4	0.1	0.0175	0.0008	-982.5	0.8	32500	370	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198202	P23 20172 S. beecheyi Dep. 1 B-1 L8	LACMP23-20172		mammal	-21.4	0.1	0.0115	0.0008	-988.5	0.8	35900	560	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198203	P23 26592 S. beecheyi Dep. 1 B-1 L4	LACMP23-26592		mammal	-21	0.1	0.0162	0.0012	-983.8	1.2	33100	620	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198204	P23 30796 S. beecheyi Dep. 1 B-2 L4	LACMP23-30796		mammal	-21.1	0.1	0.0111	0.0012	-988.9	1.2	36160	910	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198205	P23 33227 S. beecheyi Dep. 1 B-2 L3	LACMP23-33227		mammal	-20.7	0.1	0.0105	0.0008	-989.5	0.8	36580	610	Blois_FoxJan03_18.xls		MAYBE	
+198206	P23 33228 S. beecheyi Dep. 1 B-1 L3	LACMP23-33228		mammal	-20.7	0.1	0.0225	0.0008	-977.5	0.8	30480	290	Blois_FoxJan03_18.xls		MAYBE	
+198207	P23 33229 S. beecheyi Dep. 1 B-2 L2	LACMP23-33229		mammal	-20.9	0.1	0.019	0.0008	-981	0.8	31830	340	Blois_FoxJan03_18.xls		Y	
+198208	P23 33233 Neotoma sp. Dep. 14	LACMP23-33233		mammal	-21.1	0.1	0.0412	0.0008	-958.8	0.8	25620	160	Blois_FoxJan03_18.xls		MAYBE	
+198294	P23 28902 Sylvilagus Dep. 1 A-1 L7 .28mgC	LACMP23-28902		mammal	-20.9	0.1	0.0071	0.0007	-992.9	0.7	39700	810	BloisFoxJan06_18.xls		Y	
+198295	P23 31113 S. beecheyi Dep. 14 D-3 L5	LACMP23-31113		mammal	-20.8	0.1	0.0163	0.0007	-983.7	0.7	33070	350	BloisFoxJan06_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198296	P23 31118 S. beecheyi Dep. 14 C-3 L4 .30mgC	LACMP23-31118		mammal	-19.3	0.1	0.0028	0.0007	-997.2	0.7	47400	2000	BloisFoxJan06_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198297	P23 33232 Thomomys sp. Dep. 14	LACMP23-33232		mammal	-21.6	0.1	0.0284	0.0007	-971.6	0.7	28600	210	BloisFoxJan06_18.xls		Y	
+198298	P23 33235 S. beecheyi Dep. 14	LACMP23-33235		mammal	-20.9	0.1	0.0378	0.0007	-962.2	0.7	26310	150	BloisFoxJan06_18.xls		Y	
+198302	P23 33228 S. beecheyi Dep. 1 B-1 L3 test	LACMP23-33228		mammal	-20.2	0.1	0.0214	0.0007	-978.6	0.7	30870	270	Southon_Blois_Fox_testJan06_18.xls	"New aliquot. The P23 33228 sample run on 1/3/18 gave a golden brown extract and collagen that was light tan not white. A new aliquot was prepared and the decalcified collagen was treated with a 1:1 mixture of 0.1N HCl and 0.1M NaClO2 (2 hrs, rm temp) prior to gelatinization and ultrafiltration. The brown color of the new aliquot of decalcified bone lightened significantly, the ultrafiltered gelatin was clear, the freeze-dried collagen was white, and the yield was unchanged. The 14C result was similar to that of the initial aliquot and the C:N ratio was identical to that of well preserved bone"	Y	
+216760	HC 11534 Sylvilagus Pit 10 E-8 9ft	LACMHC-11534		mammal	-20.8	0.1	0.4783	0.0011	-521.7	1.1	5925	20	Blois_Fox_SouthonApr14_19.xls		Y	
+216761	HC 11587 Spermophilus Pit 10 E-8 9ft	LACMHC-11587		mammal	-21.1	0.1	0.2509	0.0008	-749.1	0.8	11105	25	Blois_Fox_SouthonApr14_19.xls		Y	
+216762	HC 130857 Spermophilus Bliss 29  	LACMHC-130857		mammal	-21.2	0.1	0.0043	0.0008	-995.7	0.8	43700	1600	Blois_Fox_SouthonApr14_19.xls		Y	
+216763	HC 142763 Sylvilagus Pit 16  	LACMHC-142763		mammal	-21.4	0.1	0.0101	0.0008	-989.9	0.8	36880	660	Blois_Fox_SouthonApr14_19.xls		Y	
+216764	HC 142764 Sylvilagus Pit 16  	LACMHC-142764		mammal	-21	0.1	0.0108	0.0008	-989.2	0.8	36350	620	Blois_Fox_SouthonApr14_19.xls		Y	
+216765	HC 142766 Sylvilagus Pit 16  	LACMHC-142766		mammal	-21.3	0.1	0.0284	0.0008	-971.6	0.8	28600	240	Blois_Fox_SouthonApr14_19.xls		Y	
+216766	HC 142767 Sylvilagus   	LACMHC-142767		mammal	-22	0.1	0.1752	0.0008	-824.8	0.8	13990	40	Blois_Fox_SouthonApr14_19.xls		Y	
+216767	HC 142772 Sylvilagus (juv)   	LACMHC-142772		mammal	-21.9	0.1	0.1667	0.0008	-833.3	0.8	14390	40	Blois_Fox_SouthonApr14_19.xls		Y	
+216768	HC 142773 Sylvilagus Pit A  	LACMHC-142773		mammal	-21.8	0.1	0.006	0.0008	-994	0.8	41000	1100	Blois_Fox_SouthonApr14_19.xls		Y	
+216769	HC 142778 Sylvilagus Pit A  	LACMHC-142778		mammal	-21.3	0.1	0.0048	0.0008	-995.2	0.8	42900	1400	Blois_Fox_SouthonApr14_19.xls		Y	
+216770	HC 142779 Sylvilagus (juv) Pit A  	LACMHC-142779		mammal	-22.1	0.1	0.0117	0.0008	-988.3	0.8	35740	570	Blois_Fox_SouthonApr14_19.xls		Y	
+216771	V 2173 Sylvilagus Pit 16  	LACMV-2173		mammal	-22.5	0.1	0.0229	0.0008	-977.1	0.8	30320	290	Blois_Fox_SouthonApr14_19.xls		Y	
+216772	V 4516 Spermophilus   	LACMV-4516		mammal	-20.7	0.1	0.7443	0.0013	-255.7	1.3	2375	15	Blois_Fox_SouthonApr14_19.xls		Y	
+216773	V 4520 Spermophilus   	LACMV-4520		mammal	-20.4	0.1	0.0202	0.0008	-979.8	0.8	31340	330	Blois_Fox_SouthonApr14_19.xls		Y	
+216779	V 4524 Spermophilus   	LACMV-4524		mammal	-20.7	0.1	0.0211	0.0008	-978.9	0.8	31000	320	Blois_Fox_SouthonApr14_19.xls		Y	
+216780	V 4531 Spermophilus Pit 16	LACMV-4531		mammal	-21.4	0.1	0.0213	0.0008	-978.7	0.8	30900	320	Blois_Fox_SouthonApr14_19.xls		Y	
+216781	P23 35670 Spermophilus Dep. 7B B-2 L2	LACMP23-35670		mammal	-21.5	0.1	0.0212	0.0008	-978.8	0.8	30970	320	Blois_Fox_SouthonApr14_19.xls		Y	
+216782	P23 35691 Mustela Dep. 7B B-2 L2	LACMP23-35691		mammal	-20.2	0.1	0.008	0.0008	-992	0.8	38750	840	Blois_Fox_SouthonApr14_19.xls		Y	
+216783	P23 35774 Lepus Dep. 7B B-2 L3	LACMP23-35774		mammal	-21.6	0.1	0.005	0.0008	-995	0.8	42600	1400	Blois_Fox_SouthonApr14_19.xls		Y	
+216784	P23 36332 Sylvilagus Dep. 7B B-2 L3	LACMP23-36332		mammal	-21.7	0.1	0.0057	0.0008	-994.3	0.8	41500	1200	Blois_Fox_SouthonApr14_19.xls		Y	
+216785	P23 36336 Sylvilagus Dep. 7B B-2 L4	LACMP23-36336		mammal	-22.1	0.1	0.0019	0.0008	-998.1	0.8	50200	3500	Blois_Fox_SouthonApr14_19.xls		Y	
+217076	HC 142773 Sylvilagus Pit A	LACMHC-142773		mammal	-21.7	0.1	0.0048	0.0008	-995.2	0.8	42900	1400	Blois_Fox_SouthonApr14_21.xls	These samples were run to check samples that previously gave insufficient collagen yields (V 2174 and P23 36331) or where the yields from aliquots run on 4/14/19 were marginal.	N	
+217077	HC 142779 Sylvilagus (juv) Pit A .35mgC	LACMHC-142779		mammal	-22.2	0.1	0.012	0.0008	-988	0.8	35550	560	Blois_Fox_SouthonApr14_21.xls	These samples were run to check samples that previously gave insufficient collagen yields (V 2174 and P23 36331) or where the yields from aliquots run on 4/14/19 were marginal.	N	
+217078	V 2174 Sylvilagus Pit 16	LACMV-2174		mammal	-22.3	0.1	0.0288	0.0008	-971.2	0.8	28500	240	Blois_Fox_SouthonApr14_21.xls	These samples were run to check samples that previously gave insufficient collagen yields (V 2174 and P23 36331) or where the yields from aliquots run on 4/14/19 were marginal.	Y	
+217079	P23 36331 Sylvilagus Dep. 7B B-2 L3 .23mgC	LACMP23-36331		mammal	-21.4	0.1	0.0032	0.0009	-996.8	0.9	46200	2400	Blois_Fox_SouthonApr14_21.xls	These samples were run to check samples that previously gave insufficient collagen yields (V 2174 and P23 36331) or where the yields from aliquots run on 4/14/19 were marginal.	Y	
+212670	P23 36033 Xanthium seed Box1 B-2 L3	LACMP23-36033		plant			0.0156	0.0005	-984.4	0.5	33430	280	Southon_Gill_BloisJan05_19			
+212671	P23 36037 Xanthium seed Box1 B-2 L4	LACMP23-36037		plant			0.0061	0.0005	-993.9	0.5	40940	690	Southon_Gill_BloisJan05_19			
+212672	P23 37485 Plantae charcoal Box1 A-1 L1	LACMP23-37485		plant			0.0029	0.0005	-997.1	0.5	46900	1500	Southon_Gill_BloisJan05_19			
+212673	P23 37492 Plantae charcoal Box1 A-1 L1	LACMP23-37492		plant			0.0191	0.0005	-980.9	0.5	31800	230	Southon_Gill_BloisJan05_19			
+212674	P23 37499 Quercus acorn Box1 B-1 L2	LACMP23-37499		plant			0.0041	0.0005	-995.9	0.5	44200	1000	Southon_Gill_BloisJan05_19			
+212675	P23 37500 Arctostaphylos seed Box1 B-1 L2	LACMP23-37500		plant			0.0119	0.0005	-988.1	0.5	35570	360	Southon_Gill_BloisJan05_19			
+212676	P23 37505 Juniperus seed Box1 B-1 L3	LACMP23-37505		plant			0.0112	0.0005	-988.8	0.5	36090	380	Southon_Gill_BloisJan05_19			
+212677	P23 37506 Quercus acorn cap Box1 B-1 L3 .033mgC	LACMP23-37506		plant			0.0034	0.0063	-996.6	6.3	>33200		Southon_Gill_BloisJan05_19	"1) 14C/C ratios for P23 37506 Quercus acorn cap Box1 B-1 L3 , P23 37520 Juniperus  twig Box1 B-1 L4, P23 37553 Juniperus eed Box1 A-1 L6,  and P23 37566 Juniperus seed Box1 B-1 L8  were within 2 standard deviations of zero after background subtraction.  The corresponding radiocarbon ages are quoted as 2 sigma lower limits. 2) The young limiting age for P23 37506 is due to the very small sample size. "		
+212678	P23 37520 Juniperus twig Box1 B-1 L4 .19mgC	LACMP23-37520		plant			0	-0.0009	-1000	-0.9	>50800		Southon_Gill_BloisJan05_19	"1) 14C/C ratios for P23 37506 Quercus acorn cap Box1 B-1 L3 , P23 37520 Juniperus  twig Box1 B-1 L4, P23 37553 Juniperus eed Box1 A-1 L6,  and P23 37566 Juniperus seed Box1 B-1 L8  were within 2 standard deviations of zero after background subtraction.  The corresponding radiocarbon ages are quoted as 2 sigma lower limits. "		
+212679	P23 37553 Juniperus seed Box1 A-1 L6	LACMP23-37553		plant			0.0117	0.0005	-988.3	0.5	35720	360	Southon_Gill_BloisJan05_19	"1) 14C/C ratios for P23 37506 Quercus acorn cap Box1 B-1 L3 , P23 37520 Juniperus  twig Box1 B-1 L4, P23 37553 Juniperus eed Box1 A-1 L6,  and P23 37566 Juniperus seed Box1 B-1 L8  were within 2 standard deviations of zero after background subtraction.  The corresponding radiocarbon ages are quoted as 2 sigma lower limits. "		
+212680	P23 37562 Arctostaphylos seed Box1 A-1 L7	LACMP23-37562		plant			0.0119	0.0005	-988.1	0.5	35580	370	Southon_Gill_BloisJan05_19			
+212681	P23 37566 Juniperus seed Box1 B-1 L8	LACMP23-37566		plant			0.0007	0.0005	-999.3	0.5	>51200		Southon_Gill_BloisJan05_19	"1) 14C/C ratios for P23 37506 Quercus acorn cap Box1 B-1 L3 , P23 37520 Juniperus  twig Box1 B-1 L4, P23 37553 Juniperus eed Box1 A-1 L6,  and P23 37566 Juniperus seed Box1 B-1 L8  were within 2 standard deviations of zero after background subtraction.  The corresponding radiocarbon ages are quoted as 2 sigma lower limits. "		
