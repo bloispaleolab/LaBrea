@@ -1,12 +1,16 @@
+<<<<<<< HEAD
 
 
 ### This section is just of main Deposit samples for diversity analysis ####
 
+=======
+>>>>>>> 09baea1e92501e201171a0b68b3c5a1586650a01
 library(readr)
 
 # Read in data exported from Google Drive ----
 deposits <- c("1","17","7b","13")
 files <- list.files(
+<<<<<<< HEAD
   "data/original_data/GoogleDriveExports-mammals/NISP", 
   full=T)
 
@@ -130,6 +134,8 @@ library(readr)
 # Read in data exported from Google Drive ----
 deposits <- c("1","14","7b","13","HC")
 files <- list.files(
+=======
+>>>>>>> 09baea1e92501e201171a0b68b3c5a1586650a01
   "data/original_data/GoogleDriveExports-mammals", 
   full=T)
 
@@ -138,12 +144,20 @@ master <- NULL
 for (i in 1:length(files)){
   # read in data ----
   original<- read_tsv(files[i], trim_ws=T) 
+<<<<<<< HEAD
   
+=======
+ 
+>>>>>>> 09baea1e92501e201171a0b68b3c5a1586650a01
   # keep the relevant columns and make sure in same order
   colsToKeep <- match(c("Museum_Number", "UCM_Number", "Canister", "Class", "Order", "Family", "Subfamily", "Genus", "Species"), colnames(original))
   
   data <- original[,colsToKeep]
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 09baea1e92501e201171a0b68b3c5a1586650a01
   # data cleaning ----
   # if sp. has a period, remove it!
   if (length(which(data$Species=="sp.")) > 0){
@@ -245,4 +259,7 @@ unique_names
 # export master file ----
 write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 09baea1e92501e201171a0b68b3c5a1586650a01
