@@ -7,11 +7,7 @@ mammals <- read.delim("data/processed/master_mammal_file.txt", sep="\t")
 
 # radiocarbon dates and isotopes
 files <- list.files(
-<<<<<<< HEAD
   "data/original_data/GoogleDriveExports-dates_isotopes", 
-=======
-  "/Users/jessicablois/Documents/GitHub/LaBrea/original_data/GoogleDriveExports-dates_isotopes", 
->>>>>>> 09baea1e92501e201171a0b68b3c5a1586650a01
   full=T)
 dates <- read.delim(file=files[grep("Dates_Master", files)], sep="\t")
 isotopes <- read.delim(file=files[grep("Isotopes_Master", files)], sep="\t")

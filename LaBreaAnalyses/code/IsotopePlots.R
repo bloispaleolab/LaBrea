@@ -34,23 +34,17 @@ iso$prelim_taxon_name[c(grep("Sylvilagus audubonii", iso$prelim_taxon_name),
   grep("Sylvilagus cf. auduboni", iso$prelim_taxon_name),
   grep("Sylvilagus cf audubonii", iso$prelim_taxon_name))] <- "Sylvilagus audubonii"
 
-<<<<<<< HEAD
 #Same for squirrels
 iso$prelim_taxon_name[c(grep("Otospermophilus beecheyi", iso$prelim_taxon_name),
   grep("Sciuridae", iso$prelim_taxon_name))] <- "Otospermophilus beecheyi"
 
-=======
->>>>>>> 09baea1e92501e201171a0b68b3c5a1586650a01
 iso$prelim_taxon_name <- as.factor(iso$prelim_taxon_name)
 
 select(iso, Species = prelim_taxon_name, N15 = del15N_permil, C13 = del13C_permil, box, Age_14C= X14C_age_BP, Error_14C = X14C_age_error)
 
 iso_filtered <- select(iso, Species = prelim_taxon_name, N15 = del15N_permil, C13 = del13C_permil, Box=box, Age_14C= X14C_age_BP, Error_14C = X14C_age_error) 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 09baea1e92501e201171a0b68b3c5a1586650a01
 iso_filtered <- iso_filtered %>%
   filter(Species == "Sylvilagus audubonii" | Species == "Otospermophilus beecheyi")
 
