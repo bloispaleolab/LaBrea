@@ -4,16 +4,20 @@
 
 # master mammal data 
 mammals <- read.delim("data/processed/master_mammal_file.txt", sep="\t")
+levels(mammals$Museum_Number)[grep("LAMMP23", levels(mammals$Museum_Number))] <- "LACMP23-30238"
+mammals[grep("LAMMP23", mammals$Museum_Number),'Museum_Number'] <- "LACMP23-30238"
 
 # radiocarbon dates and isotopes
 files <- list.files(
-  "/Users/jessicablois/Documents/GitHub/LaBrea/original_data/GoogleDriveExports-dates_isotopes", 
+  "data/original_data/GoogleDriveExports-dates_isotopes", 
   full=T)
-dates <- read.delim(file=files[grep("Dates_Master", files)], sep="\t")
-isotopes <- read.delim(file=files[grep("Isotopes_Master", files)], sep="\t")
 
-# remove extra Museum_Number column
-dates <- dates[, -match('Museum_Number.1', colnames(dates))]
+dates_all <- read.delim(file=files[grep("Dates_Master", files)], sep="\t")
+isotopes_all <- read.delim(file=files[grep("Isotopes_Master", files)], sep="\t")
+
+dates <-dates_all[which(dates_all$SampleType=="mammal"),] 
+isotopes <-isotopes_all[which(isotopes_all$SampleType=="mammal"),] 
+
 
 # match specimens with dates ----
 
@@ -21,7 +25,7 @@ dates <- dates[, -match('Museum_Number.1', colnames(dates))]
 tempD <- dates[which(!is.na(match(dates$Museum_Number, mammals$Museum_Number))),]
 tempM <- mammals[na.omit(match(dates$Museum_Number, mammals$Museum_Number)), ]
 if (all(as.character(tempD$Museum_Number) == as.character(tempM$Museum_Number))){
-  tempDates <- cbind(tempD, tempM[,c('prelim_taxon_name', 'box')])
+  tempDates <- cbind(tempD, tempM[,c('prelim_taxon_name', 'box', 'Canister')])
 }else{
   print("STOP: specimens not matching!")
 }
@@ -29,10 +33,14 @@ if (all(as.character(tempD$Museum_Number) == as.character(tempM$Museum_Number)))
 # dates without catalog number matches - add box and taxon to the date dataframe manually
 ### NEED TO FIX THIS CODE ONCE THE CATALOG NUMBER ISSUE IS RESOLVED! ####
 tempD <- dates[which(is.na(match(dates$Museum_Number, mammals$Museum_Number))),]
-prelim_taxon_name <- c("Sylvilagus sp.", "Sylvilagus sp.", "Canis latrans", "Canis latrans", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Sciuridae", "Sciuridae")
-box <- c(1,1,1,1,1,1,1,1,14,14)
 
-tempD <- cbind(tempD, prelim_taxon_name, box)
+prelim_taxon_name <- c("Canis latrans", "Canis latrans", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Otospermophilus beecheyi", "Otospermophilus beecheyi") # assigning the Spermpophilus to "Otospermophilus beecheyi" for now.
+
+box <- c(1,1,1,1,1,1,4,4, 999, 999, 10, 999)
+Canister <- c("B1/L3", "B1/L7", "B2/L8", "B1/L8", "B1/L4", "B2/L4", rep("NA", 6))
+
+tempD <- cbind(tempD, prelim_taxon_name, box, Canister)
+levels(tempDates$box) <- c(levels(tempDates$box),4,10,999)
 tempDates <- rbind(tempDates, tempD)
 
 # write dates to processed files
@@ -52,10 +60,13 @@ if (all(as.character(tempI$Museum_Number) == as.character(tempM$Museum_Number)))
 # dates without catalog number matches - add box and taxon to the date dataframe manually
 ### NEED TO FIX THIS CODE ONCE THE CATALOG NUMBER ISSUE IS RESOLVED! ####
 tempI <- isotopes[which(is.na(match(isotopes$Museum_Number, mammals$Museum_Number))),]
-prelim_taxon_name <- c("Sylvilagus sp.", "Sylvilagus sp.", "Canis latrans", "Canis latrans", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Sciuridae", "Sciuridae", "Sciuridae")
-box <- c(1,1,1,1,1,1,1,1,14,14,14)
+prelim_taxon_name <- c("Canis latrans", "Canis latrans", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Otospermophilus beecheyi", "Otospermophilus beecheyi") # assigning the Spermpophilus to "Otospermophilus beecheyi" for now.
+
+box <- c(1,1,1,1,1,1,4,4, 999, 999, 10, 999)
+Canister <- c("B1/L3", "B1/L7", "B2/L8", "B1/L8", "B1/L4", "B2/L4", rep("NA", 6))
 
 tempI <- cbind(tempI, prelim_taxon_name, box)
+levels(tempIsotopes$box) <- c(levels(tempIsotopes$box),4,10,999)
 tempIsotopes <- rbind(tempIsotopes, tempI)
 
 # write dates to processed files
