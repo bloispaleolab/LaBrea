@@ -1,9 +1,9 @@
 library(readr)
 
 # Read in data exported from Google Drive ----
-deposits <- c("1","17","7b","13", "HC")
+deposits <- c("1","7b","13","14", "misc_1", "misc_7b", "misc_13", "misc_14", "HC")
 files <- list.files(
-  "data/original_data/GoogleDriveExports-mammals", 
+  "data/original_google_data/GoogleDriveExports-mammals/Old_versions", #Remove "Old_versions" when error is resolved 
   full=T)
 
 # create a master spreadsheet with standardized taxonomic names ----
@@ -57,8 +57,8 @@ for (i in 1:length(files)){
   # Add Box number to dataframe
   box <- sub('.*Deposit ', '', files[i])
   box <- sub(".tsv", '', box)
-  if (length(grep("Hancock", files[i]))>0) { 
-    box <- "HC"}else{
+  if (length(grep("Misc", files[i]))>0) { 
+    box <- "misc"}else{
       box <- box}
   data$box <- box 
   
@@ -75,7 +75,7 @@ for (i in 1:length(files)){
     }
   }
   
-}
+} #ERROR HERE WITH UPDATED DATAFILES - nothing unusual about updated datafile structure, just minor edits to "Misc Dep 1" and "Hancock"
 
 # deal with specimens with repeated catalog numbers ----
 
