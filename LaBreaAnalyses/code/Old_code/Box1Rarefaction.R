@@ -1,10 +1,10 @@
 ### Read in initial data ####
 
 # Read in original file
-dat <- read.csv("input/raw/P23_Dep1_SmallMammals.csv", header=T)
+dat <- read.csv("data/raw/old_files/P23_Dep1_SmallMammals.csv", header=T)
 
 # Read in taxon matching file
-taxonomy <- read.delim("input/raw/TaxonomyMatchingFile.txt", sep="\t", header=T)
+taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", header=T)
 
 ### Match original taxa with revised names ####
 # create new species name that combines genus and species
@@ -21,11 +21,7 @@ unique(dat$name)
 
 ### Write the revised file to the processed folder ####
 # Finish doing the name match, then write the file as a clean file
-write.csv(dat, file="input/processed/P23_Dep1_SmallMammals-clean.csv")
-
-
-
-
+write.csv(dat, file="data/processed/Old_files/P23_Dep1_SmallMammals-clean.csv")
 
 
 ### OLD CODE ####
