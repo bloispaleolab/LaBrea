@@ -7,7 +7,12 @@ library(scales)
 mammals_orig <- read.delim("data/processed/master_mammal_file.txt", sep="\t", stringsAsFactors = F)
 
 # get rid of hancock collection stuff for now
-mammals <- mammals_orig[-which(mammals_orig$box == "misc"),]
+# Jessica query: your note on line 9 says you want to get rid of Hancock collection stuff, but I think the previous changes you made to the "misc" changed specimens in more than just the HC, right? Weren't some of those misc from the main deposits too? 
+# Given this, I have made two changes: 
+# 1) in your original code (line 14), I changed "misc" to "HC" based on my previous code changes and commented it out 
+# 2) I added a line (line 15, which I think is what you want to use) to remove all misc
+#mammals <- mammals_orig[-which(mammals_orig$box == "HC"),]
+mammals <- mammals_orig[-which(mammals_orig$misc == "y"),]
 
 taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsFactors = F)
 

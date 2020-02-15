@@ -1,0 +1,183 @@
+UCIAMS_Number	Original_sample_name	Museum_Number	Other_ID	SampleType	d13C_permil	d13C_error	fraction_Modern	fraction_Modern_error	D14C_permil	D14C_error	14C_age_BP	14C_age_error	Original_data_sheet	Sample_Notes	UseSample	Other_Notes
+191095	P23-5233 Dep1 B-2 L2 sylvilagus	LACMP23-5233		mammal	-21.3	0.1	0.0117	0.0009	-988.3	0.9	35750	610	FoxBloisJul16_17.xls		Y	
+191096	P23-18270 Dep1 A-2 L5 sylvilagus	LACMP23-18270		mammal	-22.5	0.1	0.0121	0.0009	-987.9	0.9	35440	580	FoxBloisJul16_17.xls		Y	
+191097	P23-22009 Dep1 A-2 L4 sylvilagus	LACMP23-22009		mammal	-22.4	0.1	0.0126	0.0009	-987.4	0.9	35150	580	FoxBloisJul16_17.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+191098	P23-25476 Dep1 A-2 L4 sylvilagus	LACMP23-25476		mammal	-21.4	0.1	0.0112	0.0009	-988.8	0.9	36050	630	FoxBloisJul16_17.xls		Y	
+191099	P23-28903 Dep1 A-1 L7 sylvilagus	LACMP23-28903		mammal	-21.1	0.1	0.0148	0.0009	-985.2	0.9	33830	480	FoxBloisJul16_17.xls		Y	
+191100	P23-30238 Dep1 B-1 L2 sylvilagus	LACMP23-30238		mammal	-21.5	0.1	0.0116	0.0009	-988.4	0.9	35780	600	FoxBloisJul16_17.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+191101	P23-31269 Dep1 B-4 L3 sylvilagus	LACMP23-31269		mammal	-20.5	0.1	0.0032	0.0009	-996.8	0.9	46200	2200	FoxBloisJul16_17.xls		Y	
+191102	P23-31423 Dep1 B-2 L2 sylvilagus	LACMP23-31423		mammal	-21.3	0.1	0.0122	0.0009	-987.8	0.9	35420	580	FoxBloisJul16_17.xls		Y	
+191103	P23-31033 Dep14 D-2 L4 sylvilagus .32mgC	LACMP23-31033		mammal	-21.7	0.1	-0.0011	-0.0013	-1001.1	-1.3	>47800		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	
+191104	P23-31036 Dep14 C-2 L7 sylvilagus	LACMP23-31036		mammal	-22.3	0.1	0.0002	0.0009	-999.8	0.9	>49900		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	
+191105	P23-31056 Dep14 D-3 L6 sylvilagus	LACMP23-31056		mammal	-21.7	0.1	0.0002	0.0009	-999.8	0.9	>49900		FoxBloisJul16_17.xls	"14C/C ratios for the P23-31033, P23-31036, P23-31056 samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits."	Y	
+191242	P23-31031 Dep14 C-3 L7 sylvilagus	LACMP23-31031		mammal	-21.1	0.1	0	-0.0009	-1000	-0.9	>50800		FoxBloisJul19_17.xls	The 14C/C ratio for this sample was within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages is quoted as a 2 sigma lower limit.	Y	
+198199	P23 2046 C. latrans Dep 1 B-1 L3	LACMP23-2046		mammal	-17	0.1	0.0116	0.0008	-988.4	0.8	35770	550	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198200	P23 11485 C. latrans Dep 1 B-1 L7	LACMP23-11485		mammal	-19.9	0.1	0.0127	0.0008	-987.3	0.8	35050	510	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198201	P23 17139 S. beecheyi Dep. 1 B-2 L8	LACMP23-17139		mammal	-20.4	0.1	0.0175	0.0008	-982.5	0.8	32500	370	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198202	P23 20172 S. beecheyi Dep. 1 B-1 L8	LACMP23-20172		mammal	-21.4	0.1	0.0115	0.0008	-988.5	0.8	35900	560	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198203	P23 26592 S. beecheyi Dep. 1 B-1 L4	LACMP23-26592		mammal	-21	0.1	0.0162	0.0012	-983.8	1.2	33100	620	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198204	P23 30796 S. beecheyi Dep. 1 B-2 L4	LACMP23-30796		mammal	-21.1	0.1	0.0111	0.0012	-988.9	1.2	36160	910	Blois_FoxJan03_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198205	P23 33227 S. beecheyi Dep. 1 B-2 L3	LACMP23-33227		mammal	-20.7	0.1	0.0105	0.0008	-989.5	0.8	36580	610	Blois_FoxJan03_18.xls		MAYBE	
+198206	P23 33228 S. beecheyi Dep. 1 B-1 L3	LACMP23-33228		mammal	-20.7	0.1	0.0225	0.0008	-977.5	0.8	30480	290	Blois_FoxJan03_18.xls		MAYBE	
+198207	P23 33229 S. beecheyi Dep. 1 B-2 L2	LACMP23-33229		mammal	-20.9	0.1	0.019	0.0008	-981	0.8	31830	340	Blois_FoxJan03_18.xls		Y	
+198208	P23 33233 Neotoma sp. Dep. 14	LACMP23-33233		mammal	-21.1	0.1	0.0412	0.0008	-958.8	0.8	25620	160	Blois_FoxJan03_18.xls		MAYBE	
+198294	P23 28902 Sylvilagus Dep. 1 A-1 L7 .28mgC	LACMP23-28902		mammal	-20.9	0.1	0.0071	0.0007	-992.9	0.7	39700	810	BloisFoxJan06_18.xls		Y	
+198295	P23 31113 Sciuridae Dep. 14 D-3 L5	LACMP23-31113		mammal	-20.8	0.1	0.0163	0.0007	-983.7	0.7	33070	350	BloisFoxJan06_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198296	P23 31118 Sciuridae Dep. 14 C-3 L4 .30mgC	LACMP23-31118		mammal	-19.3	0.1	0.0028	0.0007	-997.2	0.7	47400	2000	BloisFoxJan06_18.xls		Y	Specimen is not listed in the master mammal spreadsheet!
+198297	P23 33232 Thomomys sp. Dep. 14	LACMP23-33232		mammal	-21.6	0.1	0.0284	0.0007	-971.6	0.7	28600	210	BloisFoxJan06_18.xls		Y	
+198298	P23 33235 S. beecheyi Dep. 14	LACMP23-33235		mammal	-20.9	0.1	0.0378	0.0007	-962.2	0.7	26310	150	BloisFoxJan06_18.xls		Y	
+198302	P23 33228 S. beecheyi Dep. 1 B-1 L3 test	LACMP23-33228		mammal	-20.2	0.1	0.0214	0.0007	-978.6	0.7	30870	270	Southon_Blois_Fox_testJan06_18.xls	"New aliquot. The P23 33228 sample run on 1/3/18 gave a golden brown extract and collagen that was light tan not white. A new aliquot was prepared and the decalcified collagen was treated with a 1:1 mixture of 0.1N HCl and 0.1M NaClO2 (2 hrs, rm temp) prior to gelatinization and ultrafiltration. The brown color of the new aliquot of decalcified bone lightened significantly, the ultrafiltered gelatin was clear, the freeze-dried collagen was white, and the yield was unchanged. The 14C result was similar to that of the initial aliquot and the C:N ratio was identical to that of well preserved bone"	Y	
+216760	HC 11534 Sylvilagus Pit 10 E-8 9ft	LACMHC-11534		mammal	-20.8	0.1	0.4783	0.0011	-521.7	1.1	5925	20	Blois_Fox_SouthonApr14_19.xls		Y	
+216761	HC 11587 Spermophilus Pit 10 E-8 9ft	LACMHC-11587		mammal	-21.1	0.1	0.2509	0.0008	-749.1	0.8	11105	25	Blois_Fox_SouthonApr14_19.xls		Y	
+216762	HC 130857 Spermophilus Bliss 29  	LACMHC-130857		mammal	-21.2	0.1	0.0043	0.0008	-995.7	0.8	43700	1600	Blois_Fox_SouthonApr14_19.xls		Y	
+216763	HC 142763 Sylvilagus Pit 16  	LACMHC-142763		mammal	-21.4	0.1	0.0101	0.0008	-989.9	0.8	36880	660	Blois_Fox_SouthonApr14_19.xls		Y	
+216764	HC 142764 Sylvilagus Pit 16  	LACMHC-142764		mammal	-21	0.1	0.0108	0.0008	-989.2	0.8	36350	620	Blois_Fox_SouthonApr14_19.xls		Y	
+216765	HC 142766 Sylvilagus Pit 16  	LACMHC-142766		mammal	-21.3	0.1	0.0284	0.0008	-971.6	0.8	28600	240	Blois_Fox_SouthonApr14_19.xls		Y	
+216766	HC 142767 Sylvilagus   	LACMHC-142767		mammal	-22	0.1	0.1752	0.0008	-824.8	0.8	13990	40	Blois_Fox_SouthonApr14_19.xls		Y	
+216767	HC 142772 Sylvilagus (juv)   	LACMHC-142772		mammal	-21.9	0.1	0.1667	0.0008	-833.3	0.8	14390	40	Blois_Fox_SouthonApr14_19.xls		Y	
+216768	HC 142773 Sylvilagus Pit A  	LACMHC-142773		mammal	-21.8	0.1	0.006	0.0008	-994	0.8	41000	1100	Blois_Fox_SouthonApr14_19.xls		Y	
+216769	HC 142778 Sylvilagus Pit A  	LACMHC-142778		mammal	-21.3	0.1	0.0048	0.0008	-995.2	0.8	42900	1400	Blois_Fox_SouthonApr14_19.xls		Y	
+216770	HC 142779 Sylvilagus (juv) Pit A  	LACMHC-142779		mammal	-22.1	0.1	0.0117	0.0008	-988.3	0.8	35740	570	Blois_Fox_SouthonApr14_19.xls		Y	
+216771	V 2173 Sylvilagus Pit 16  	LACMV-2173		mammal	-22.5	0.1	0.0229	0.0008	-977.1	0.8	30320	290	Blois_Fox_SouthonApr14_19.xls		Y	
+216772	V 4516 Spermophilus   	LACMV-4516		mammal	-20.7	0.1	0.7443	0.0013	-255.7	1.3	2375	15	Blois_Fox_SouthonApr14_19.xls		Y	
+216773	V 4520 Spermophilus   	LACMV-4520		mammal	-20.4	0.1	0.0202	0.0008	-979.8	0.8	31340	330	Blois_Fox_SouthonApr14_19.xls		Y	
+216779	V 4524 Spermophilus   	LACMV-4524		mammal	-20.7	0.1	0.0211	0.0008	-978.9	0.8	31000	320	Blois_Fox_SouthonApr14_19.xls		Y	
+216780	V 4531 Spermophilus Pit 16	LACMV-4531		mammal	-21.4	0.1	0.0213	0.0008	-978.7	0.8	30900	320	Blois_Fox_SouthonApr14_19.xls		Y	
+216781	P23 35670 Spermophilus Dep. 7B B-2 L2	LACMP23-35670		mammal	-21.5	0.1	0.0212	0.0008	-978.8	0.8	30970	320	Blois_Fox_SouthonApr14_19.xls		Y	
+216782	P23 35691 Mustela Dep. 7B B-2 L2	LACMP23-35691		mammal	-20.2	0.1	0.008	0.0008	-992	0.8	38750	840	Blois_Fox_SouthonApr14_19.xls		Y	
+216783	P23 35774 Lepus Dep. 7B B-2 L3	LACMP23-35774		mammal	-21.6	0.1	0.005	0.0008	-995	0.8	42600	1400	Blois_Fox_SouthonApr14_19.xls		Y	
+216784	P23 36332 Sylvilagus Dep. 7B B-2 L3	LACMP23-36332		mammal	-21.7	0.1	0.0057	0.0008	-994.3	0.8	41500	1200	Blois_Fox_SouthonApr14_19.xls		Y	
+216785	P23 36336 Sylvilagus Dep. 7B B-2 L4	LACMP23-36336		mammal	-22.1	0.1	0.0019	0.0008	-998.1	0.8	50200	3500	Blois_Fox_SouthonApr14_19.xls		Y	
+217076	HC 142773 Sylvilagus Pit A	LACMHC-142773		mammal	-21.7	0.1	0.0048	0.0008	-995.2	0.8	42900	1400	Blois_Fox_SouthonApr14_21.xls	These samples were run to check samples that previously gave insufficient collagen yields (V 2174 and P23 36331) or where the yields from aliquots run on 4/14/19 were marginal.	N	
+217077	HC 142779 Sylvilagus (juv) Pit A .35mgC	LACMHC-142779		mammal	-22.2	0.1	0.012	0.0008	-988	0.8	35550	560	Blois_Fox_SouthonApr14_21.xls	These samples were run to check samples that previously gave insufficient collagen yields (V 2174 and P23 36331) or where the yields from aliquots run on 4/14/19 were marginal.	N	
+217078	V 2174 Sylvilagus Pit 16	LACMV-2174		mammal	-22.3	0.1	0.0288	0.0008	-971.2	0.8	28500	240	Blois_Fox_SouthonApr14_21.xls	These samples were run to check samples that previously gave insufficient collagen yields (V 2174 and P23 36331) or where the yields from aliquots run on 4/14/19 were marginal.	Y	
+217079	P23 36331 Sylvilagus Dep. 7B B-2 L3 .23mgC	LACMP23-36331		mammal	-21.4	0.1	0.0032	0.0009	-996.8	0.9	46200	2400	Blois_Fox_SouthonApr14_21.xls	These samples were run to check samples that previously gave insufficient collagen yields (V 2174 and P23 36331) or where the yields from aliquots run on 4/14/19 were marginal.	Y	
+212670	P23 36033 Xanthium seed Box1 B-2 L3	LACMP23-36033		plant			0.0156	0.0005	-984.4	0.5	33430	280	Southon_Gill_BloisJan05_19		Y	
+212671	P23 36037 Xanthium seed Box1 B-2 L4	LACMP23-36037		plant			0.0061	0.0005	-993.9	0.5	40940	690	Southon_Gill_BloisJan05_19		Y	
+212672	P23 37485 Plantae charcoal Box1 A-1 L1	LACMP23-37485		plant			0.0029	0.0005	-997.1	0.5	46900	1500	Southon_Gill_BloisJan05_19		Y	
+212673	P23 37492 Plantae charcoal Box1 A-1 L1	LACMP23-37492		plant			0.0191	0.0005	-980.9	0.5	31800	230	Southon_Gill_BloisJan05_19		Y	
+212674	P23 37499 Quercus acorn Box1 B-1 L2	LACMP23-37499		plant			0.0041	0.0005	-995.9	0.5	44200	1000	Southon_Gill_BloisJan05_19		Y	
+212675	P23 37500 Arctostaphylos seed Box1 B-1 L2	LACMP23-37500		plant			0.0119	0.0005	-988.1	0.5	35570	360	Southon_Gill_BloisJan05_19		Y	
+212676	P23 37505 Juniperus seed Box1 B-1 L3	LACMP23-37505		plant			0.0112	0.0005	-988.8	0.5	36090	380	Southon_Gill_BloisJan05_19		Y	
+212677	P23 37506 Quercus acorn cap Box1 B-1 L3 .033mgC	LACMP23-37506		plant			0.0034	0.0063	-996.6	6.3	>33200		Southon_Gill_BloisJan05_19	"1) 14C/C ratios for P23 37506 Quercus acorn cap Box1 B-1 L3 , P23 37520 Juniperus  twig Box1 B-1 L4, P23 37553 Juniperus eed Box1 A-1 L6,  and P23 37566 Juniperus seed Box1 B-1 L8  were within 2 standard deviations of zero after background subtraction.  The corresponding radiocarbon ages are quoted as 2 sigma lower limits. 2) The young limiting age for P23 37506 is due to the very small sample size. "	Y	
+212678	P23 37520 Juniperus twig Box1 B-1 L4 .19mgC	LACMP23-37520		plant			0	-0.0009	-1000	-0.9	>50800		Southon_Gill_BloisJan05_19	"1) 14C/C ratios for P23 37506 Quercus acorn cap Box1 B-1 L3 , P23 37520 Juniperus  twig Box1 B-1 L4, P23 37553 Juniperus eed Box1 A-1 L6,  and P23 37566 Juniperus seed Box1 B-1 L8  were within 2 standard deviations of zero after background subtraction.  The corresponding radiocarbon ages are quoted as 2 sigma lower limits. "	Y	
+212679	P23 37553 Juniperus seed Box1 A-1 L6	LACMP23-37553		plant			0.0117	0.0005	-988.3	0.5	35720	360	Southon_Gill_BloisJan05_19	"1) 14C/C ratios for P23 37506 Quercus acorn cap Box1 B-1 L3 , P23 37520 Juniperus  twig Box1 B-1 L4, P23 37553 Juniperus eed Box1 A-1 L6,  and P23 37566 Juniperus seed Box1 B-1 L8  were within 2 standard deviations of zero after background subtraction.  The corresponding radiocarbon ages are quoted as 2 sigma lower limits. "	Y	
+212680	P23 37562 Arctostaphylos seed Box1 A-1 L7	LACMP23-37562		plant			0.0119	0.0005	-988.1	0.5	35580	370	Southon_Gill_BloisJan05_19		Y	
+212681	P23 37566 Juniperus seed Box1 B-1 L8	LACMP23-37566		plant			0.0007	0.0005	-999.3	0.5	>51200		Southon_Gill_BloisJan05_19	"1) 14C/C ratios for P23 37506 Quercus acorn cap Box1 B-1 L3 , P23 37520 Juniperus  twig Box1 B-1 L4, P23 37553 Juniperus eed Box1 A-1 L6,  and P23 37566 Juniperus seed Box1 B-1 L8  were within 2 standard deviations of zero after background subtraction.  The corresponding radiocarbon ages are quoted as 2 sigma lower limits. "	Y	
+219982	P23 36005 Quercus doug. Box 1 B-2 L2	LACMP23-36005		plant			0.006	0.0006	-994	0.6	41060	750	Southon_Blois_GillJul08_19		Y	
+219983	P23 36023 Malvaceae Box 1 B-2 L2	LACMP23-36023		plant			0.02	0.0006	-980	0.6	31420	230	Southon_Blois_GillJul08_19		Y	
+219984	P23 36043 Quercus doug.  Box 1 B-2 L6	LACMP23-36043		plant			0.003	0.0005	-997	0.5	46700	1400	Southon_Blois_GillJul08_19		Y	
+219985	P23 37514 Cupressaceae Box 1 B-1 L3	LACMP23-37514		plant			0.015	0.0005	-985	0.5	33720	290	Southon_Blois_GillJul08_19		Y	
+219986	P23 39199 Ambrosia Box 14 B-2 L2	LACMP23-39199		plant			1.0022	0.002	2.2	2	Modern		Southon_Blois_GillJul08_19	"The Box 14 P23 39199 Ambrosia and P23 39458 Platanus racemosa samples are contemporary contaminants, introduced during or subsequent to the initial excavatiuon of the Box 14 block. The finite 14C age of the latter reflects increased exposure to fossil fuel CO2, due to a more polluted growth location or more recent growth, or perhaps both."	N	
+219987	P23 39206 Rosaceae Box 14 B-2 L3	LACMP23-39206		plant			0.0007	0.0005	-999.3	0.5	>51200		Southon_Blois_GillJul08_19		Y	
+219988	P23 39217 Themidaceae Box 14 B-2 L3	LACMP23-39217		plant			0.0002	0.0005	-999.8	0.5	>54000		Southon_Blois_GillJul08_19		Y	
+219989	P23 39241 Ferocactus Box 14 B-3 L5	LACMP23-39241		plant			-0.0002	-0.0005	-1000.2	-0.5	>55500		Southon_Blois_GillJul08_19		Y	
+219990	P23 39264 Sisyrinchium Box 14 C-2 L4	LACMP23-39264		plant			0.001	0.0005	-999	0.5	>49900		Southon_Blois_GillJul08_19		Y	
+219992	P23 39268 Quercus Box 14 C-2 L4  .20mgC	LACMP23-39268		plant			0.0015	0.0006	-998.5	0.6	52000	3300	Southon_Blois_GillJul08_19		Y	
+219993	P23 39296 Berberis Box 14 C-3 L1	LACMP23-39296		plant			0	-0.0005	-1000	-0.5	>55500		Southon_Blois_GillJul08_19		Y	
+219994	P23 39398 Arctostaph. Box 14 C-3 L4	LACMP23-39398		plant			0.0004	0.0005	-999.6	0.5	>52800		Southon_Blois_GillJul08_19		Y	
+219995	P23 39458 Platanus rac. Box 14 D-2 L8	LACMP23-39458		plant			0.9674	0.0018	-32.6	1.8	265	20	Southon_Blois_GillJul08_19	"The Box 14 P23 39199 Ambrosia and P23 39458 Platanus racemosa samples are contemporary contaminants, introduced during or subsequent to the initial excavatiuon of the Box 14 block. The finite 14C age of the latter reflects increased exposure to fossil fuel CO2, due to a more polluted growth location or more recent growth, or perhaps both."	N	
+219996	P23 39471 Plantae Box 14 D-3 L7	LACMP23-39471		plant			0.0221	0.0005	-977.9	0.5	30630	200	Southon_Blois_GillJul08_19		Y	
+219997	P23 39506 Polygonum Box 14 B-2 L4	LACMP23-39506		plant			-0.0001	-0.0005	-1000.1	-0.5	>55500		Southon_Blois_GillJul08_19		Y	
+219998	P23 39512 Arctostaph. Box 14 B-2 L2	LACMP23-39512		plant			-0.0002	-0.0005	-1000.2	-0.5	>55500		Southon_Blois_GillJul08_19		Y	
+219999	P23 39513 Juniperus Box 14 B-2 L5	LACMP23-39513		plant			0.0281	0.0006	-971.9	0.6	28700	180	Southon_Blois_GillJul08_19		Y	
+220000	P23 39514 Plantae Box 14 B-2 L5	LACMP23-39514		plant			0.0099	0.0005	-990.1	0.5	37050	440	Southon_Blois_GillJul08_19		Y	
+220001	P23 39515 Juniperus cal. Box 14 B-3 L5	LACMP23-39515		plant			-0.0004	-0.0005	-1000.4	-0.5	>55500		Southon_Blois_GillJul08_19		Y	
+220004	P23 39516 Juniperus cal. Box 14 C-3 L2	LACMP23-39516		plant			-0.0007	-0.0005	-1000.7	-0.5	>55500		Southon_Blois_GillJul08_19		Y	
+220005	P23 39517 Juniperus Box 14 C-3 L2	LACMP23-39517		plant			0	0.0005	-1000	0.5	>55500		Southon_Blois_GillJul08_19		Y	
+220006	P23 39518 Juniperus cal. Box 14 D-3 L4	LACMP23-39518		plant			-0.0003	-0.0005	-1000.3	-0.5	>55500		Southon_Blois_GillJul08_19		Y	
+220007	P23 39519 Quercus Box 14 D-3 L3	LACMP23-39519		plant			0.0002	0.0006	-999.8	0.6	>52800		Southon_Blois_GillJul08_19		Y	
+220008	P23 39520 Juniperus Box 14 C-2 L5	LACMP23-39520		plant			-0.0005	-0.0005	-1000.5	-0.5	>55500		Southon_Blois_GillJul08_19		Y	
+220009	P23 39521 Betulaceae Box 1 A-1 L1	LACMP23-39521		plant			0.016	0.0005	-984	0.5	33230	270	Southon_Blois_GillJul08_19		Y	
+223493	HC 11584 Spermophilus  Pit 10  E+F-8 9-13.5'	LACMHC-11584		mammal	-18.5	0.1	0.5708	0.0013	-429.2	1.3	4505	20	Fox_Blois_SouthonOct10_19.xls			
+223494	HC 143517 Sylvilagus 	LACMHC-143517		mammal	-18.8	0.1	0.7189	0.0018	-281.1	1.8	2650	25	Fox_Blois_SouthonOct10_19.xls			
+223495	P23-35541 Sylvilagus Box 13 B-2 L4	LACMP23-35541		mammal	-21.5	0.1	0.008	0.0006	-992	0.6	38740	640	Fox_Blois_SouthonOct10_19.xls			
+223496	P23-36572 Spermophilus  Box 13 A-3 L3	LACMP23-36572		mammal	-20.9	0.1	0.0064	0.0006	-993.6	0.6	40640	800	Fox_Blois_SouthonOct10_19.xls	"The following samples gave very low yields of ultrafiltered collagen and could not be measured: HC 11541 Sylvilagus Pit 10, P23-36572 Spermophilus Box 13, P23-37097 Spermophilus  Box 13, P23-40643 Spermophilus Box 14, P23-40645 Spermophilus (juv) Box 14, P23-40646 Sylvilagus Box 14, V 2645 Sylvilagus  Pit 4. JLB Notes: Not sure why there's a date here then!!"		
+223497	P23-36693 Sylvilagus Box 13 B-2 L3	LACMP23-36693		mammal	-22	0.1	0.0076	0.0006	-992.4	0.6	39240	670	Fox_Blois_SouthonOct10_19.xls			
+223498	P23-36859 Spermophilus Box 13 B-3 L4	LACMP23-36859		mammal	-21.2	0.1	0.0131	0.0006	-986.9	0.6	34800	390	Fox_Blois_SouthonOct10_19.xls			
+223499	P23-36896 Sylvilagus Box 13 A-3 L3	LACMP23-36896		mammal	-21.5	0.1	0.0153	0.0006	-984.7	0.6	33590	340	Fox_Blois_SouthonOct10_19.xls			
+223500	P23-36907 Spermophilus Box 13 A-3 L3	LACMP23-36907		mammal	-21	0.1	0.0125	0.0006	-987.5	0.6	35230	410	Fox_Blois_SouthonOct10_19.xls			
+223501	P23-36910 Spermophilus Box 13 A-3 L3	LACMP23-36910		mammal	-21.2	0.1	0.0124	0.0006	-987.6	0.6	35270	410	Fox_Blois_SouthonOct10_19.xls			
+223502	P23-36989 Sylvilagus Box 13 B-2 L4	LACMP23-36989		mammal	-21.4	0.1	0.0042	0.0006	-995.8	0.6	44000	1200	Fox_Blois_SouthonOct10_19.xls			
+223503	P23-37612 Sylvilagus Box 13 B-2 L4	LACMP23-37612		mammal	-21.4	0.1	0.0032	0.0006	-996.8	0.6	46200	1600	Fox_Blois_SouthonOct10_19.xls			
+223504	P23-37651 Spermophilus Box 13 B-2 L4	LACMP23-37651		mammal	-20.1	0.1	0.0027	0.0006	-997.3	0.6	47400	1800	Fox_Blois_SouthonOct10_19.xls			
+223505	P23-39811 Sylvilagus aud. Box 13 B-2 L3	LACMP23-39811		mammal	-21.9	0.1	0.0159	0.0006	-984.1	0.6	33260	320	Fox_Blois_SouthonOct10_19.xls			
+223506	P23-39812 Sylvilagus Box 13 B-2 L3	LACMP23-39812		mammal	-21.2	0.1	0.011	0.0006	-989	0.6	36260	470	Fox_Blois_SouthonOct10_19.xls			
+223507	P23-39818 Sylvilagus Box 13 B-3 L2	LACMP23-39818		mammal	-22.2	0.1	0.0205	0.0007	-979.5	0.7	31230	270	Fox_Blois_SouthonOct10_19.xls			
+223508	P23-39822 Sylvilagus aud. Box 13 B-2 L2	LACMP23-39822		mammal	-21.1	0.1	0.0187	0.0007	-981.3	0.7	31980	280	Fox_Blois_SouthonOct10_19.xls			
+223509	P23-39825 Spermophilus (juv) Box 13 B-3 L2	LACMP23-39825		mammal	-21.2	0.1	0.0171	0.0006	-982.9	0.6	32660	300	Fox_Blois_SouthonOct10_19.xls			
+223513	P23-40634 Sylvilagus Box 14 	LACMP23-40634		mammal	-21.3	0.1	0.0402	0.0007	-959.8	0.7	25830	140	Fox_Blois_SouthonOct10_19.xls			
+223514	P23-40635 Sylvilagus Box 14 B-3 L5	LACMP23-40635		mammal	-21.6	0.1	0.0004	0.0006	-999.6	0.6	>51700		Fox_Blois_SouthonOct10_19.xls	14C/C ratios for the P23-40635 Sylvilagus Box 14 B-3 L5 and P23-40647 Sylvilagus aud. Box 14  samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits.		
+223515	P23-40636 Sylvilagus Box 14 	LACMP23-40636		mammal			0.0338	0.0006	-966.2	0.6	27200	160	Fox_Blois_SouthonOct10_19.xls			
+223516	P23-40637 Sylvilagus Box 14 B-3 L3	LACMP23-40637		mammal	-20.9	0.1	0.0357	0.0007	-964.3	0.7	26780	160	Fox_Blois_SouthonOct10_19.xls			
+223517	P23-40638 Sylvilagus Box 14 	LACMP23-40638		mammal	-21.4	0.1	0.0101	0.0006	-989.9	0.6	36870	500	Fox_Blois_SouthonOct10_19.xls			
+223518	P23-40639 Sylvilagus Box 14 	LACMP23-40639		mammal	-21.7	0.1	0.002	0.0006	-998	0.6	49800	2500	Fox_Blois_SouthonOct10_19.xls			
+223519	P23-40640 Sylvilagus Box 14 	LACMP23-40640		mammal			0.0021	0.0006	-997.9	0.6	49400	2400	Fox_Blois_SouthonOct10_19.xls			
+223520	P23-40641 Neotoma  Box 14 	LACMP23-40641		mammal			0.0279	0.0007	-972.1	0.7	28750	190	Fox_Blois_SouthonOct10_19.xls			
+223521	P23-40642 Spermophilus Box 14  .10mgC	LACMP23-40642		mammal	-20.3	0.1	0.0349	0.0014	-965.1	1.4	26940	320	Fox_Blois_SouthonOct10_19.xls	"Much of the CO2 from the P23-40642 Spermophilus Box 14 sample was lost, and a new aliquot will be combusted and measured."		
+223522	P23-40644 Spermophilus Box 14 	LACMP23-40644		mammal			0.0083	0.0006	-991.7	0.6	38490	610	Fox_Blois_SouthonOct10_19.xls			
+223523	P23-40647 Sylvilagus aud. Box 14 	LACMP23-40647		mammal	-21	0.1	0.0008	0.0006	-999.2	0.6	>49900		Fox_Blois_SouthonOct10_19.xls	14C/C ratios for the P23-40635 Sylvilagus Box 14 B-3 L5 and P23-40647 Sylvilagus aud. Box 14  samples were within 2 standard deviations of zero after background subtraction. The corresponding radiocarbon ages are quoted as 2 sigma lower limits.		
+223524	V 2641 Sylvilagus  Pit 4  F-4+5 9-10'	LACMV-2641		mammal	-20.9	0.1	0.0303	0.0007	-969.7	0.7	28090	180	Fox_Blois_SouthonOct10_19.xls			
+223525	V 2644 Sylvilagus  Pit 4  F-4+5 10-11'	LACMV-2644		mammal	-21.1	0.1	0.0199	0.0006	-980.1	0.6	31460	260	Fox_Blois_SouthonOct10_19.xls			
+223526	V 2737 Sylvilagus 	LACMV-2737		mammal	-21.2	0.1	0.0223	0.0006	-977.7	0.6	30540	240	Fox_Blois_SouthonOct10_19.xls			
+223527	V 2751 Sylvilagus 	LACMV-2751		mammal	-21.3	0.1	0.0115	0.0006	-988.5	0.6	35870	450	Fox_Blois_SouthonOct10_19.xls			
+223528	V 4509 Spermophilus  Pit 10 	LACMV-4509		mammal	-18.6	0.1	0.4649	0.0012	-535.1	1.2	6155	25	Fox_Blois_SouthonOct10_19.xls			
+223529	V 4519 Spermophilus 	LACMV-4519		mammal	-19.3	0.1	0.0293	0.0006	-970.7	0.6	28370	180	Fox_Blois_SouthonOct10_19.xls			
+223585	P23-35541 Sylvilagus Box 13 B-2 L4	LACMP23-35541		mammal	-21.4	0.1	0.0076	0.0004	-992.4	0.4	39220	460	Fox_Blois_SouthonOct07_19.xls	"These samples were duplicates of samples run 10/7/19. Note that UCIAMS-223585 is a new collagen preparation, while UCIAMS-223587 is a new combusted aliquot from UCIAMS-223521, run 10/7/19."		
+223587	P23-40642 Spermophilus Box 14	LACMP23-40642		mammal	-20.3	0.1	0.036	0.0005	-964	0.5	26710	110	Fox_Blois_SouthonOct07_19.xls	"These samples were duplicates of samples run 10/7/19. Note that UCIAMS-223585 is a new collagen preparation, while UCIAMS-223587 is a new combusted aliquot from UCIAMS-223521, run 10/7/19."		
+219982	P23 36005 Quercus doug. Box 1 B-2 L2	LACMP23-36005		plant			0.006	0.0006	-994	0.6	41060	750	Southon_Blois_GillJul08_19.xls			Quercus doug. Box 1 B-2 L2
+219983	P23 36023 Malvaceae Box 1 B-2 L2	LACMP23-36023		plant			0.02	0.0006	-980	0.6	31420	230	Southon_Blois_GillJul08_19.xls			Malvaceae Box 1 B-2 L2
+219984	P23 36043 Quercus doug.  Box 1 B-2 L6	LACMP23-36043		plant			0.003	0.0005	-997	0.5	46700	1400	Southon_Blois_GillJul08_19.xls			Quercus doug.  Box 1 B-2 L6
+219985	P23 37514 Cupressaceae Box 1 B-1 L3	LACMP23-37514		plant			0.015	0.0005	-985	0.5	33720	290	Southon_Blois_GillJul08_19.xls			Cupressaceae Box 1 B-1 L3
+219986	P23 39199 Ambrosia Box 14 B-2 L2	LACMP23-39199		plant			1.0022	0.002	2.2	2	Modern		Southon_Blois_GillJul08_19.xls	"Contemporary contaminants, introduced during or subsequent to the initial excavatiuon of the Box 14 block. The finite 14C age of the latter reflects increased exposure to fossil fuel CO2, due to a more polluted growth location or more recent growth, or perhaps both."		Ambrosia Box 14 B-2 L2
+219987	P23 39206 Rosaceae Box 14 B-2 L3	LACMP23-39206		plant			0.0007	0.0005	-999.3	0.5	>51200		Southon_Blois_GillJul08_19.xls			Rosaceae Box 14 B-2 L3
+219988	P23 39217 Themidaceae Box 14 B-2 L3	LACMP23-39217		plant			0.0002	0.0005	-999.8	0.5	>54000		Southon_Blois_GillJul08_19.xls			Themidaceae Box 14 B-2 L3
+219989	P23 39241 Ferocactus Box 14 B-3 L5	LACMP23-39241		plant			-0.0002	-0.0005	-1000.2	-0.5	>55500		Southon_Blois_GillJul08_19.xls			Ferocactus Box 14 B-3 L5
+219990	P23 39264 Sisyrinchium Box 14 C-2 L4	LACMP23-39264		plant			0.001	0.0005	-999	0.5	>49900		Southon_Blois_GillJul08_19.xls			Sisyrinchium Box 14 C-2 L4
+219992	P23 39268 Quercus Box 14 C-2 L4  .20mgC	LACMP23-39268		plant			0.0015	0.0006	-998.5	0.6	52000	3300	Southon_Blois_GillJul08_19.xls			Quercus Box 14 C-2 L4  .20mgC
+219993	P23 39296 Berberis Box 14 C-3 L1	LACMP23-39296		plant			0	-0.0005	-1000	-0.5	>55500		Southon_Blois_GillJul08_19.xls			Berberis Box 14 C-3 L1
+219994	P23 39398 Arctostaph. Box 14 C-3 L4	LACMP23-39398		plant			0.0004	0.0005	-999.6	0.5	>52800		Southon_Blois_GillJul08_19.xls			Arctostaph. Box 14 C-3 L4
+219995	P23 39458 Platanus rac. Box 14 D-2 L8	LACMP23-39458		plant			0.9674	0.0018	-32.6	1.8	265	20	Southon_Blois_GillJul08_19.xls	"Contemporary contaminants, introduced during or subsequent to the initial excavatiuon of the Box 14 block. The finite 14C age of the latter reflects increased exposure to fossil fuel CO2, due to a more polluted growth location or more recent growth, or perhaps both."		Platanus rac. Box 14 D-2 L8
+219996	P23 39471 Plantae Box 14 D-3 L7	LACMP23-39471		plant			0.0221	0.0005	-977.9	0.5	30630	200	Southon_Blois_GillJul08_19.xls			Plantae Box 14 D-3 L7
+219997	P23 39506 Polygonum Box 14 B-2 L4	LACMP23-39506		plant			-0.0001	-0.0005	-1000.1	-0.5	>55500		Southon_Blois_GillJul08_19.xls			Polygonum Box 14 B-2 L4
+219998	P23 39512 Arctostaph. Box 14 B-2 L2	LACMP23-39512		plant			-0.0002	-0.0005	-1000.2	-0.5	>55500		Southon_Blois_GillJul08_19.xls			Arctostaph. Box 14 B-2 L2
+219999	P23 39513 Juniperus Box 14 B-2 L5	LACMP23-39513		plant			0.0281	0.0006	-971.9	0.6	28700	180	Southon_Blois_GillJul08_19.xls			Juniperus Box 14 B-2 L5
+220000	P23 39514 Plantae Box 14 B-2 L5	LACMP23-39514		plant			0.0099	0.0005	-990.1	0.5	37050	440	Southon_Blois_GillJul08_19.xls			Plantae Box 14 B-2 L5
+220001	P23 39515 Juniperus cal. Box 14 B-3 L5	LACMP23-39515		plant			-0.0004	-0.0005	-1000.4	-0.5	>55500		Southon_Blois_GillJul08_19.xls			Juniperus cal. Box 14 B-3 L5
+220004	P23 39516 Juniperus cal. Box 14 C-3 L2	LACMP23-39516		plant			-0.0007	-0.0005	-1000.7	-0.5	>55500		Southon_Blois_GillJul08_19.xls			Juniperus cal. Box 14 C-3 L2
+220005	P23 39517 Juniperus Box 14 C-3 L2	LACMP23-39517		plant			0	0.0005	-1000	0.5	>55500		Southon_Blois_GillJul08_19.xls			Juniperus Box 14 C-3 L2
+220006	P23 39518 Juniperus cal. Box 14 D-3 L4	LACMP23-39518		plant			-0.0003	-0.0005	-1000.3	-0.5	>55500		Southon_Blois_GillJul08_19.xls			Juniperus cal. Box 14 D-3 L4
+220007	P23 39519 Quercus Box 14 D-3 L3	LACMP23-39519		plant			0.0002	0.0006	-999.8	0.6	>52800		Southon_Blois_GillJul08_19.xls			Quercus Box 14 D-3 L3
+220008	P23 39520 Juniperus Box 14 C-2 L5	LACMP23-39520		plant			-0.0005	-0.0005	-1000.5	-0.5	>55500		Southon_Blois_GillJul08_19.xls			Juniperus Box 14 C-2 L5
+220009	P23 39521 Betulaceae Box 1 A-1 L1	LACMP23-39521		plant			0.016	0.0005	-984	0.5	33230	270	Southon_Blois_GillJul08_19.xls			Betulaceae Box 1 A-1 L1
+225199	P23 41950 Xanthium Box 13 A-3 L 1	LACMP23-41950		plant			0.0169	0.0003	-983.1	0.3	32770	170	Southon_Blois_GillNov20_19.xls			Xanthium Box 13 A-3 L 1
+225200	P23 42132 Juniperus Box 13 A-3 L 1	LACMP23-42132		plant			0.0404	0.0004	-959.6	0.4	25770	80	Southon_Blois_GillNov20_19.xls			Juniperus Box 13 A-3 L 1
+225201	P23 42133 Juniperus cal. Box 13 A-3 L 2	LACMP23-42133		plant	-20.4	0.1	0.0417	0.0004	-958.3	0.4	25530	70	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 13 A-3 L 2
+225202	P23 41972 Berberis Box 13 A-3 L 3	LACMP23-41972		plant			0.0738	0.0005	-926.2	0.5	20940	60	Southon_Blois_GillNov20_19.xls			Berberis Box 13 A-3 L 3
+225203	P23 42134 Juniperus cal. Box 13 A-3 L 3	LACMP23-42134		plant	-21.6	0.1	0.0043	0.0003	-995.7	0.3	43800	600	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 13 A-3 L 3
+225204	P23 41981 Quercus du. Box 13 A-3 L 4	LACMP23-41981		plant	-23.1	0.1	0.0013	0.0003	-998.7	0.3	53600	2000	Southon_Blois_GillNov20_19.xls	completely charred 		Quercus du. Box 13 A-3 L 4
+225205	P23 41984 Quercus lob. Box 13 A-3 L 4	LACMP23-41984		plant			0.0025	0.0003	-997.5	0.3	48100	1000	Southon_Blois_GillNov20_19.xls	appeared to have been at least scorched.		Quercus lob. Box 13 A-3 L 4
+225206	P23 41998 Quercus du. Box 13 B-2 L 1	LACMP23-41998		plant	-17.9	0.1	0.0431	0.0004	-956.9	0.4	25250	70	Southon_Blois_GillNov20_19.xls			Quercus du. Box 13 B-2 L 1
+225207	P23 42135 Juniperus cal. Box 13 B-2 L 1	LACMP23-42135		plant	-17	0.1	0.0723	0.0005	-927.7	0.5	21110	60	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 13 B-2 L 1
+225208	P23 42010 Xanthium Box 13 B-2 L 2	LACMP23-42010		plant	-24.5	0.1	0.0154	0.0003	-984.6	0.3	33510	180	Southon_Blois_GillNov20_19.xls			Xanthium Box 13 B-2 L 2
+225209	P23 42136 Juniperus cal. Box 13 B-2 L 2	LACMP23-42136		plant	-18	0.1	0.0623	0.0004	-937.7	0.4	22300	50	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 13 B-2 L 2
+225210	P23 42137 Juniperus cal. Box 13 B-2 L 3	LACMP23-42137		plant	-19.7	0.1	0.0046	0.0003	-995.4	0.3	43150	560	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 13 B-2 L 3
+225211	P23 42027 Arctostaphylos Box 13 B-2 L 4	LACMP23-42027		plant	-21	0.1	0.0165	0.0003	-983.5	0.3	32970	170	Southon_Blois_GillNov20_19.xls			Arctostaphylos Box 13 B-2 L 4
+225212	P23 42139 Juniperus cal. Box 13 B-3 L 1	LACMP23-42139		plant	-20.8	0.1	0.0426	0.0004	-957.4	0.4	25350	70	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 13 B-3 L 1
+225213	P23 42140 Xanthium Box 13 B-3 L 2	LACMP23-42140		plant	-23.1	0.1	0.0002	0.0003	-999.8	0.3	>57300		Southon_Blois_GillNov20_19.xls			Xanthium Box 13 B-3 L 2
+225214	P23 42141 Juniperus cal. Box 13 B-3 L 3	LACMP23-42141		plant	-19.1	0.1	0.0629	0.0004	-937.1	0.4	22230	60	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 13 B-3 L 3
+225215	P23 42142 Ambrosia Box 13 B-3 L 3	LACMP23-42142		plant	-21.7	0.1	0.0002	0.0003	-999.8	0.3	>57300		Southon_Blois_GillNov20_19.xls	completely charred 		Ambrosia Box 13 B-3 L 3
+225216	P23 42076 Arctostaphylos Box 13 B-3 L 4	LACMP23-42076		plant	-22.1	0.1	0.0157	0.0003	-984.3	0.3	33390	180	Southon_Blois_GillNov20_19.xls			Arctostaphylos Box 13 B-3 L 4
+225221	P23 39723 Quercus chry. Box 7B A-2 L 1	LACMP23-39723		plant	-21.9	0.1	0.0163	0.0003	-983.7	0.3	33070	170	Southon_Blois_GillNov20_19.xls			Quercus chry. Box 7B A-2 L 1
+225222	P23 42080 Juniperus cal. Box 7B A-2 L 1	LACMP23-42080		plant			0.0008	0.0003	-999.2	0.3	57500	3200	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 7B A-2 L 1
+225223	P23 39754 Xanthium Box 7B A-2 L 3	LACMP23-39754		plant	-20.1	0.1	0.0003	0.0003	-999.7	0.3	>56300		Southon_Blois_GillNov20_19.xls			Xanthium Box 7B A-2 L 3
+225224	P23 42081 Purshia Box 7B A-2 L 3	LACMP23-42081		plant	-20.4	0.1	0	-0.0003	-1000	-0.3	>59600		Southon_Blois_GillNov20_19.xls			Purshia Box 7B A-2 L 3
+225225	P23 42083 Xanthium Box 7B A-3 L 4	LACMP23-42083		plant	-23.2	0.1	-0.0001	-0.0003	-1000.1	-0.3	>59600		Southon_Blois_GillNov20_19.xls			Xanthium Box 7B A-3 L 4
+225226	P23 42084 Juniperus cal. Box 7B B-1 L 5	LACMP23-42084		plant	-19.9	0.1	0.0002	0.0003	-999.8	0.3	>57300		Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 7B B-1 L 5
+225227	P23 42085 Juniperus cal. Box 7B B-2 L 1	LACMP23-42085		plant	-18.3	0.1	0.001	0.0003	-999	0.3	55300	2500	Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 7B B-2 L 1
+225228	P23 42086 Juniperus cal. Box 7B B-2 L 3	LACMP23-42086		plant	-20.4	0.1	-0.0002	-0.0003	-1000.2	-0.3	>59600		Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 7B B-2 L 3
+225229	P23 42087 Juniperus. Box 7B B-2 L 3	LACMP23-42087		plant			0.0007	0.0003	-999.3	0.3	58900	3900	Southon_Blois_GillNov20_19.xls			Juniperus. Box 7B B-2 L 3
+225230	P23 42088 Macrocarpa Box 7B B-2 L 3	LACMP23-42088		plant	-21.8	0.1	0.0002	0.0003	-999.8	0.3	>57300		Southon_Blois_GillNov20_19.xls			Macrocarpa Box 7B B-2 L 3
+225231	P23 42089 Macrocarpa Box 7B B-2 L 5	LACMP23-42089		plant	-21.8	0.1	0.0004	0.0003	-999.6	0.3	>55500		Southon_Blois_GillNov20_19.xls	appeared to have been at least scorched.		Macrocarpa Box 7B B-2 L 5
+225232	P23 42090 Juniperus cal. Box 7B B-2 L 6	LACMP23-42090		plant	-21.5	0.1	0.0002	0.0003	-999.8	0.3	>57300		Southon_Blois_GillNov20_19.xls			Juniperus cal. Box 7B B-2 L 6
+225233	P23 42091 Juniperus. Box 7B B-2 L 6 .088mgC	LACMP23-42091		plant			0.0064	0.0012	-993.6	1.2	40500	1400	Southon_Blois_GillNov20_19.xls			Juniperus. Box 7B B-2 L 6 .088mgC
