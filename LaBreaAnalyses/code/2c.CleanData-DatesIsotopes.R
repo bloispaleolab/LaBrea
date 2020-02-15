@@ -15,9 +15,11 @@ files <- list.files(
 dates_all <- read.delim(file=files[grep("Dates_Master", files)], sep="\t")
 isotopes_all <- read.delim(file=files[grep("Isotopes_Master", files)], sep="\t")
 
-dates <-dates_all[which(dates_all$SampleType=="mammal"),] 
-isotopes <-isotopes_all[which(isotopes_all$SampleType=="mammal"),] 
+mammal_dates <-dates_all[which(dates_all$SampleType=="mammal"),] 
+mammal_isotopes <-isotopes_all[which(isotopes_all$SampleType=="mammal"),] 
 
+plant_dates <-dates_all[which(dates_all$SampleType=="plant"),] 
+plant_isotopes <-isotopes_all[which(isotopes_all$SampleType=="plant"),] 
 
 # match specimens with dates ----
 
