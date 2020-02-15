@@ -15,57 +15,62 @@ files <- list.files(
 dates_all <- read.delim(file=files[grep("Dates_Master", files)], sep="\t")
 isotopes_all <- read.delim(file=files[grep("Isotopes_Master", files)], sep="\t")
 
-dates <-dates_all[which(dates_all$SampleType=="mammal"),] 
-isotopes <-isotopes_all[which(isotopes_all$SampleType=="mammal"),] 
+mammal_dates <-dates_all[which(dates_all$SampleType=="mammal"),] 
+mammal_isotopes <-isotopes_all[which(isotopes_all$SampleType=="mammal"),] 
 
+plant_dates <-dates_all[which(dates_all$SampleType=="plant"),] 
+plant_isotopes <-isotopes_all[which(isotopes_all$SampleType=="plant"),] 
 
-# match specimens with dates ----
+# match specimens with dates - mammals ----
+
 
 # dates with catalog number matches - add box and taxon to the date dataframe
-tempD <- dates[which(!is.na(match(dates$Museum_Number, mammals$Museum_Number))),]
-tempM <- mammals[na.omit(match(dates$Museum_Number, mammals$Museum_Number)), ]
+tempD <- mammal_dates[which(!is.na(match(mammal_dates$Museum_Number, mammals$Museum_Number))),]
+tempM <- mammals[na.omit(match(mammal_dates$Museum_Number, mammals$Museum_Number)), ]
 if (all(as.character(tempD$Museum_Number) == as.character(tempM$Museum_Number))){
-  tempDates <- cbind(tempD, tempM[,c('prelim_taxon_name', 'box', 'Canister')])
+  tempDates <- cbind(tempD, tempM[,c('prelim_taxon_name', 'box', 'Canister', 'misc')])
 }else{
   print("STOP: specimens not matching!")
 }
 
 # dates without catalog number matches - add box and taxon to the date dataframe manually
 ### NEED TO FIX THIS CODE ONCE THE CATALOG NUMBER ISSUE IS RESOLVED! ####
-tempD <- dates[which(is.na(match(dates$Museum_Number, mammals$Museum_Number))),]
+tempD <- mammal_dates[which(is.na(match(mammal_dates$Museum_Number, mammals$Museum_Number))),]
 
 prelim_taxon_name <- c("Canis latrans", "Canis latrans", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Otospermophilus beecheyi", "Otospermophilus beecheyi") # assigning the Spermpophilus to "Otospermophilus beecheyi" for now.
 
 box <- c(1,1,1,1,1,1,4,4, 999, 999, 10, 999)
 Canister <- c("B1/L3", "B1/L7", "B2/L8", "B1/L8", "B1/L4", "B2/L4", rep("NA", 6))
+misc <- rep("y?", nrow(tempD))
 
-tempD <- cbind(tempD, prelim_taxon_name, box, Canister)
+tempD <- cbind(tempD, prelim_taxon_name, box, Canister, misc)
 levels(tempDates$box) <- c(levels(tempDates$box),4,10,999)
 tempDates <- rbind(tempDates, tempD)
 
 # write dates to processed files
 write.table(tempDates, file="data/processed/master_dates_file.txt", sep="\t")
 
-# match specimens with isotopes ----
+# match specimens with isotopes - mammals ----
 
 # isotopes with catalog number matches - add box and taxon to the date dataframe
-tempI <- isotopes[which(!is.na(match(isotopes$Museum_Number, mammals$Museum_Number))),]
-tempM <- mammals[na.omit(match(isotopes$Museum_Number, mammals$Museum_Number)), ]
+tempI <- mammal_isotopes[which(!is.na(match(mammal_isotopes$Museum_Number, mammals$Museum_Number))),]
+tempM <- mammals[na.omit(match(mammal_isotopes$Museum_Number, mammals$Museum_Number)), ]
 if (all(as.character(tempI$Museum_Number) == as.character(tempM$Museum_Number))){
-  tempIsotopes <- cbind(tempI, tempM[,c('prelim_taxon_name', 'box')])
+  tempIsotopes <- cbind(tempI, tempM[,c('prelim_taxon_name', 'box', 'misc')])
 }else{
   print("STOP: specimens not matching!")
 }
 
 # dates without catalog number matches - add box and taxon to the date dataframe manually
 ### NEED TO FIX THIS CODE ONCE THE CATALOG NUMBER ISSUE IS RESOLVED! ####
-tempI <- isotopes[which(is.na(match(isotopes$Museum_Number, mammals$Museum_Number))),]
+tempI <- mammal_isotopes[which(is.na(match(mammal_isotopes$Museum_Number, mammals$Museum_Number))),]
 prelim_taxon_name <- c("Canis latrans", "Canis latrans", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Otospermophilus beecheyi", "Otospermophilus beecheyi") # assigning the Spermpophilus to "Otospermophilus beecheyi" for now.
 
 box <- c(1,1,1,1,1,1,4,4, 999, 999, 10, 999)
 Canister <- c("B1/L3", "B1/L7", "B2/L8", "B1/L8", "B1/L4", "B2/L4", rep("NA", 6))
+misc <- rep("y?", nrow(tempI))
 
-tempI <- cbind(tempI, prelim_taxon_name, box)
+tempI <- cbind(tempI, prelim_taxon_name, box, misc)
 levels(tempIsotopes$box) <- c(levels(tempIsotopes$box),4,10,999)
 tempIsotopes <- rbind(tempIsotopes, tempI)
 

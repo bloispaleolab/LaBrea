@@ -3,8 +3,9 @@ library(readr)
 # Read in data exported from Google Drive ----
 deposits <- c("1","7b","13","14", "misc_1", "misc_7b", "misc_13", "misc_14", "HC")
 files <- list.files(
-  "data/original_google_data/GoogleDriveExports-mammals/Old_versions", #Remove "Old_versions" when error is resolved 
-  full=T)
+  "data/original_google_data/GoogleDriveExports-mammals", 
+  full=T) #Remove "Old_versions" when error is resolved 
+files <- files[-1] #when the "old versions" issue is dealt with, delete that folder and this line
 
 # create a master spreadsheet with standardized taxonomic names ----
 master <- NULL
@@ -57,11 +58,18 @@ for (i in 1:length(files)){
   # Add Box number to dataframe
   box <- sub('.*Deposit ', '', files[i])
   box <- sub(".tsv", '', box)
-  if (length(grep("Misc", files[i]))>0) { 
-    box <- "misc"}else{
-      box <- box}
+  if (length(grep("Hancock", files[i]))>0) { 
+  box <- "HC"}  
   data$box <- box 
-  
+
+  # Add Misc bones indicator dataframe
+  if (length(grep("Misc", files[i]))>0) { 
+    misc <- "y"
+  }else{
+    misc <- "n"}
+  data$misc <- misc 
+
+    
   # Add onto the master spreadsheet
   if (i ==1){
     master <- rbind(master, data)
@@ -75,7 +83,10 @@ for (i in 1:length(files)){
     }
   }
   
-} #ERROR HERE WITH UPDATED DATAFILES - nothing unusual about updated datafile structure, just minor edits to "Misc Dep 1" and "Hancock"
+} 
+
+#ERROR HERE WITH UPDATED DATAFILES - nothing unusual about updated datafile structure, just minor edits to "Misc Dep 1" and "Hancock"
+# Jessica discussion: I don't see any issues with running this with the updated files. Is the error here, or in a different (downstream) script?
 
 # deal with specimens with repeated catalog numbers ----
 
