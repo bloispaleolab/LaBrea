@@ -7,7 +7,7 @@ library(scales)
 mammals_orig <- read.delim("data/processed/master_mammal_file.txt", sep="\t", stringsAsFactors = F)
 
 # get rid of hancock collection stuff for now
-mammals <- mammals_orig[-which(mammals_orig$box == "HC"),]
+mammals <- mammals_orig[-which(mammals_orig$box == "misc"),]
 
 taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsFactors = F)
 
@@ -27,8 +27,11 @@ mammals_trim$box <- as.factor(mammals_trim$box)
 
 mammals_filtered <- mammals_trim %>% 
   filter(!is.na(Family)) %>%
-  filter(Order != "Carnivora") %>%
   filter(Order != "Artiodactyla") %>%
+  filter(Genus != "Canis") %>%
+  filter(Genus != "Taxidea") %>%
+  filter(Genus != "Urocyon") %>%
+  filter(Genus != "Lepus") %>%
   filter(!is.na(Genus))
 mammals_filtered$Order <- droplevels(mammals_filtered$Order)
 mammals_filtered$Family <- droplevels(mammals_filtered$Family)
@@ -76,16 +79,3 @@ bp<- ggplot(mammals_filtered, aes(x="", y=n, fill= Genus)) +
 pdf(file="output/mammal_nisp.pdf", width=12, height=6, encoding="MacRoman") 
   bp  
 dev.off()
-
-
-# rarefaction curves
-library(iNEXT)
-mamm <- list(mammals_filtered$'box', mammals_filtered$'n')
-str(mamm)
-names(mamm) <- c("box", "abundance")
-out <- iNEXT(mamm, q=0, datatype="abundance")
-spider.girdled <- iNEXT(spider$Girdled, q=0, datatype="abundance")
-
-
-# Sample-size-based R/E curves, separating by "site""
-ggiNEXT(out, type=1, facet.var=box)

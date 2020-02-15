@@ -9,7 +9,7 @@ mammals[grep("LAMMP23", mammals$Museum_Number),'Museum_Number'] <- "LACMP23-3023
 
 # radiocarbon dates and isotopes
 files <- list.files(
-  "data/original_data/GoogleDriveExports-dates_isotopes", 
+  "data/original_google_data/GoogleDriveExports-dates_isotopes", 
   full=T)
 
 dates_all <- read.delim(file=files[grep("Dates_Master", files)], sep="\t")

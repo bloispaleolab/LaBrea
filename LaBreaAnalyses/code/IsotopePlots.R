@@ -29,10 +29,23 @@ for (i in 1:nrow(iso)){
 iso$X14C_age_BP <- as.numeric(iso$X14C_age_BP)
 iso$box <- as.factor(iso$box)
 
-#rename audubonii so it's standardized
+#rename audubonii so it's standardized  # Delete this and add script below once plot is fixed
 iso$prelim_taxon_name[c(grep("Sylvilagus audubonii", iso$prelim_taxon_name),
   grep("Sylvilagus cf. auduboni", iso$prelim_taxon_name),
   grep("Sylvilagus cf audubonii", iso$prelim_taxon_name))] <- "Sylvilagus audubonii"
+
+
+##change lines 32-35 to this once output plot is fixed so all Sylvilagus are included, total iso_filtered specimens should = 82 but I can't get LACMP23-31423 to "grep"
+#iso$prelim_taxon_name[c(grep("Sylvilagus audubonii", iso$prelim_taxon_name),
+#grep("Sylvilagus cf audubonii", iso$prelim_taxon_name),
+#grep("Sylvilagus ?audubonii", iso$prelim_taxon_name), #not grepping this specimen, LACMP23-31423, for some reason 
+#grep("Sylvilagus bachmani", iso$prelim_taxon_name),
+#grep("Sylvilagus sp", iso$prelim_taxon_name),
+#grep("Sylvilagus cf bachmani", iso$prelim_taxon_name))] <- "Sylvilagus"
+
+#Include all squirrels
+iso$prelim_taxon_name[c(grep("Otospermophilus beecheyi", iso$prelim_taxon_name),
+grep("Sciuridae", iso$prelim_taxon_name))] <- "Otospermophilus beecheyi"
 
 iso$prelim_taxon_name <- as.factor(iso$prelim_taxon_name)
 
@@ -62,7 +75,7 @@ par <- ggplot(long_iso, aes(x=Age_14C,
                                 color=Species,
                                 shape=Box)) +
   geom_point() +
-  geom_smooth(method="lm") +
+  geom_smooth(method="loess", span=0.75) + #Doesn't seem appropriate to force a linear fit on the plot since climate isnt linear
   scale_x_reverse() +
   scale_color_manual(values= c("Otospermophilus beecheyi"='#00BDD1', "Sylvilagus audubonii"='#00BE67')) +
   xlab("Age (14C)") +
@@ -75,7 +88,8 @@ par +
   facet_grid(Isotope ~ ., scales="free", labeller=facet_labeller) +
   theme(strip.text.y = element_text(size = 12, colour = "black", angle = -90))
 dev.off()
-
-
+# current plot doesnt accomidate all 81-82 rabbit and squirrel specimens 
+# Also, I'm confused why Otospermophilus gets two trend lines. Is each "greped" taxon treated as a unique group? 
+# If so, would it be easier to just filter out the non-Sylvilagus/Otospermophilus taxa from "iso"?
 
   
