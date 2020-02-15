@@ -28,7 +28,7 @@ plant_isotopes <-isotopes_all[which(isotopes_all$SampleType=="plant"),]
 tempD <- mammal_dates[which(!is.na(match(mammal_dates$Museum_Number, mammals$Museum_Number))),]
 tempM <- mammals[na.omit(match(mammal_dates$Museum_Number, mammals$Museum_Number)), ]
 if (all(as.character(tempD$Museum_Number) == as.character(tempM$Museum_Number))){
-  tempDates <- cbind(tempD, tempM[,c('prelim_taxon_name', 'box', 'Canister')])
+  tempDates <- cbind(tempD, tempM[,c('prelim_taxon_name', 'box', 'Canister', 'misc')])
 }else{
   print("STOP: specimens not matching!")
 }
@@ -41,8 +41,9 @@ prelim_taxon_name <- c("Canis latrans", "Canis latrans", "Otospermophilus beeche
 
 box <- c(1,1,1,1,1,1,4,4, 999, 999, 10, 999)
 Canister <- c("B1/L3", "B1/L7", "B2/L8", "B1/L8", "B1/L4", "B2/L4", rep("NA", 6))
+misc <- rep("y?", nrow(tempD))
 
-tempD <- cbind(tempD, prelim_taxon_name, box, Canister)
+tempD <- cbind(tempD, prelim_taxon_name, box, Canister, misc)
 levels(tempDates$box) <- c(levels(tempDates$box),4,10,999)
 tempDates <- rbind(tempDates, tempD)
 
@@ -52,10 +53,10 @@ write.table(tempDates, file="data/processed/master_dates_file.txt", sep="\t")
 # match specimens with isotopes - mammals ----
 
 # isotopes with catalog number matches - add box and taxon to the date dataframe
-tempI <- isotopes[which(!is.na(match(isotopes$Museum_Number, mammals$Museum_Number))),]
-tempM <- mammals[na.omit(match(isotopes$Museum_Number, mammals$Museum_Number)), ]
+tempI <- mammal_isotopes[which(!is.na(match(mammal_isotopes$Museum_Number, mammals$Museum_Number))),]
+tempM <- mammals[na.omit(match(mammal_isotopes$Museum_Number, mammals$Museum_Number)), ]
 if (all(as.character(tempI$Museum_Number) == as.character(tempM$Museum_Number))){
-  tempIsotopes <- cbind(tempI, tempM[,c('prelim_taxon_name', 'box')])
+  tempIsotopes <- cbind(tempI, tempM[,c('prelim_taxon_name', 'box', 'misc')])
 }else{
   print("STOP: specimens not matching!")
 }
@@ -67,8 +68,9 @@ prelim_taxon_name <- c("Canis latrans", "Canis latrans", "Otospermophilus beeche
 
 box <- c(1,1,1,1,1,1,4,4, 999, 999, 10, 999)
 Canister <- c("B1/L3", "B1/L7", "B2/L8", "B1/L8", "B1/L4", "B2/L4", rep("NA", 6))
+misc <- rep("y?", nrow(tempI))
 
-tempI <- cbind(tempI, prelim_taxon_name, box)
+tempI <- cbind(tempI, prelim_taxon_name, box, misc)
 levels(tempIsotopes$box) <- c(levels(tempIsotopes$box),4,10,999)
 tempIsotopes <- rbind(tempIsotopes, tempI)
 
