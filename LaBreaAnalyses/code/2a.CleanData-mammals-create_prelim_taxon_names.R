@@ -57,11 +57,16 @@ for (i in 1:length(files)){
   # Add Box number to dataframe
   box <- sub('.*Deposit ', '', files[i])
   box <- sub(".tsv", '', box)
-  if (length(grep("Misc", files[i]))>0) { 
-    box <- "misc"}else{
-      box <- box}
   data$box <- box 
-  
+
+  # Add Misc bones indicator dataframe
+  if (length(grep("Misc", files[i]))>0) { 
+    misc <- "y"
+  }else{
+    misc <- "n"}
+  data$misc <- misc 
+
+    
   # Add onto the master spreadsheet
   if (i ==1){
     master <- rbind(master, data)

@@ -21,11 +21,12 @@ mammal_isotopes <-isotopes_all[which(isotopes_all$SampleType=="mammal"),]
 plant_dates <-dates_all[which(dates_all$SampleType=="plant"),] 
 plant_isotopes <-isotopes_all[which(isotopes_all$SampleType=="plant"),] 
 
-# match specimens with dates ----
+# match specimens with dates - mammals ----
+
 
 # dates with catalog number matches - add box and taxon to the date dataframe
-tempD <- dates[which(!is.na(match(dates$Museum_Number, mammals$Museum_Number))),]
-tempM <- mammals[na.omit(match(dates$Museum_Number, mammals$Museum_Number)), ]
+tempD <- mammal_dates[which(!is.na(match(mammal_dates$Museum_Number, mammals$Museum_Number))),]
+tempM <- mammals[na.omit(match(mammal_dates$Museum_Number, mammals$Museum_Number)), ]
 if (all(as.character(tempD$Museum_Number) == as.character(tempM$Museum_Number))){
   tempDates <- cbind(tempD, tempM[,c('prelim_taxon_name', 'box', 'Canister')])
 }else{
@@ -34,7 +35,7 @@ if (all(as.character(tempD$Museum_Number) == as.character(tempM$Museum_Number)))
 
 # dates without catalog number matches - add box and taxon to the date dataframe manually
 ### NEED TO FIX THIS CODE ONCE THE CATALOG NUMBER ISSUE IS RESOLVED! ####
-tempD <- dates[which(is.na(match(dates$Museum_Number, mammals$Museum_Number))),]
+tempD <- mammal_dates[which(is.na(match(mammal_dates$Museum_Number, mammals$Museum_Number))),]
 
 prelim_taxon_name <- c("Canis latrans", "Canis latrans", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Otospermophilus beecheyi", "Otospermophilus beecheyi") # assigning the Spermpophilus to "Otospermophilus beecheyi" for now.
 
@@ -48,7 +49,7 @@ tempDates <- rbind(tempDates, tempD)
 # write dates to processed files
 write.table(tempDates, file="data/processed/master_dates_file.txt", sep="\t")
 
-# match specimens with isotopes ----
+# match specimens with isotopes - mammals ----
 
 # isotopes with catalog number matches - add box and taxon to the date dataframe
 tempI <- isotopes[which(!is.na(match(isotopes$Museum_Number, mammals$Museum_Number))),]
@@ -61,7 +62,7 @@ if (all(as.character(tempI$Museum_Number) == as.character(tempM$Museum_Number)))
 
 # dates without catalog number matches - add box and taxon to the date dataframe manually
 ### NEED TO FIX THIS CODE ONCE THE CATALOG NUMBER ISSUE IS RESOLVED! ####
-tempI <- isotopes[which(is.na(match(isotopes$Museum_Number, mammals$Museum_Number))),]
+tempI <- mammal_isotopes[which(is.na(match(mammal_isotopes$Museum_Number, mammals$Museum_Number))),]
 prelim_taxon_name <- c("Canis latrans", "Canis latrans", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Otospermophilus beecheyi", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Sylvilagus sp", "Otospermophilus beecheyi", "Otospermophilus beecheyi") # assigning the Spermpophilus to "Otospermophilus beecheyi" for now.
 
 box <- c(1,1,1,1,1,1,4,4, 999, 999, 10, 999)
