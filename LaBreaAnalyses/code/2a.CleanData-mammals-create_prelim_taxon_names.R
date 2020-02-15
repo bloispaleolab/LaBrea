@@ -58,6 +58,8 @@ for (i in 1:length(files)){
   # Add Box number to dataframe
   box <- sub('.*Deposit ', '', files[i])
   box <- sub(".tsv", '', box)
+  if (length(grep("Hancock", files[i]))>0) { 
+  box <- "HC"}  
   data$box <- box 
 
   # Add Misc bones indicator dataframe
