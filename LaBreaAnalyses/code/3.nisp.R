@@ -12,6 +12,8 @@ mammals_orig <- read.delim("data/processed/master_mammal_file.txt", sep="\t", st
 # 1) in your original code (line 14), I changed "misc" to "HC" based on my previous code changes and commented it out 
 # 2) I added a line (line 15, which I think is what you want to use) to remove all misc
 #mammals <- mammals_orig[-which(mammals_orig$box == "HC"),]
+# Nate discussion: yes, my goal was to get rid of all "misc" specimens from P23 and HC so that taxon abundances reflect our standaized sampling efforts. So your latest edits should solve this issue
+
 mammals <- mammals_orig[-which(mammals_orig$misc == "y"),]
 
 taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsFactors = F)
