@@ -1,5 +1,5 @@
 ## install the latest version from github
-#install_github('JohnsonHsieh/iNEXT')
+install_github('JohnsonHsieh/iNEXT')
 library(iNEXT)
 library(ggplot2)
 library(vegan)
@@ -95,14 +95,13 @@ rankabunplot(RankAbun.1, scale='logabun', addit=FALSE, specnames=c(1:15),
 
 ## install the latest version from github
 
-iNEXT.data <- read.csv("data/processed/P23_diversity_iNEXT_spp.csv", row.names = 1)
+iNEXT.data <- read.csv("data/processed/P23_diversity_iNEXT.csv", row.names = 1)
 
-out <- iNEXT(iNEXT.data, q=c(1), datatype="abundance", conf=0.95, endpoint=1000)
+out <- iNEXT(iNEXT.data, q=c(0,1,2), datatype="abundance", conf=0.95, endpoint=1000)
 # q=0 = taxon richness, q=1 = shannon diversity, q=2 = Simpson diversity 
 # Hill numbers can be viewed all togther or individually
 
-div_plot<-ggiNEXT(out, type=1, se=TRUE, facet.var="order")
-div_plot + labs(y = "Species diversity")
+ggiNEXT(out, type=1, se=TRUE, facet.var="order") 
 # type can be changed from 1-3
 # type=1 = Sample-size-based R/E curve
 # type=2 = Sample completeness curve

@@ -70,7 +70,7 @@ colnames(Genus_Colors)[2] <- "color"
 # reorder Genus levels to match taxonomy in Genus_Colors
 mammals_filtered$Genus <- factor(mammals_filtered$Genus,levels(mammals_filtered$Genus)[match(Genus_Colors[,'Genus'], levels(mammals_filtered$Genus))])
 
-mammals_filtered$box <- factor(mammals_filtered$box, levels = c("7b", "14", "13", "1"))
+mammals_filtered$box <- factor(mammals_filtered$box, levels = c("14", "7b", "13", "1"))
 
 bp<- ggplot(mammals_filtered, aes(x="", y=n, fill= Genus)) +
   scale_fill_manual(values=rgb(t(col2rgb(Genus_Colors$color, alpha = FALSE)/255))) +
