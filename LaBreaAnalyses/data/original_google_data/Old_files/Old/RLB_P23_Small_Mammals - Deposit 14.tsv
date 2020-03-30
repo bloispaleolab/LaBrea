@@ -18,8 +18,8 @@ LACMP23-31503	NSF-17-03	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodo
 LACMP23-31504	NSF-17-04	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar	juv		y					
 LACMP23-31505	NSF-17-05	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar	occlusal surface obstructed by adhesive		y					
 LACMP23-31506	NSF-17-06	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	P4/p4?	occlusal surface broken		y					
-LACMP23-31507	NSF-17-07	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar		3/4/2020	y					
-LACMP23-31508	NSF-17-08	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar	occlusal surface broken		y					
+LACMP23-31507	NSF-17-07	C3/L5	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower (lt?) m1/m2			y					
+LACMP23-31508	NSF-17-08	C3/L5	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	molar	occlusal surface broken		y					
 LACMP23-31509	NSF-17-09	C3/L5	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower rt m3?			y					
 LACMP23-31510	NSF-17-10	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	upper rt M1	occlusal surface partially broken		y					
 LACMP23-31511	NSF-17-11	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	upper molar frag			y					
@@ -28,7 +28,7 @@ LACMP23-31513	NSF-17-13	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus
 LACMP23-31514	NSF-17-14	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		1/29/2019	y					
 LACMP23-31515	NSF-17-15	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	lower lt m1	small anteroconid, grade 0	8/6/2019	y					
 LACMP23-31516	NSF-17-16	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	lower lt m1	small anteroconid, grade 0	8/6/2019	y					
-LACMP23-31517	NSF-17-17	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	upper lt M1	~Pcal sized	2/20/2020	y					
+LACMP23-31517	NSF-17-17	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	~Pcal sized	8/6/2019	y					
 LACMP23-31518	NSF-17-18	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt molar (m2?)	worn		y					
 LACMP23-31519	NSF-17-19	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	partial upper rt M1	slightly small for Pman	8/6/2019	y					
 LACMP23-31520	NSF-17-20	C3/L5	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		1/29/2019	y					
@@ -210,7 +210,7 @@ LACMP23-31695	NSF-17-195	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipo
 LACMP23-31696	NSF-17-196	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	lower rt m1			y					
 LACMP23-31697	NSF-17-197	C3/L5	Mammalia	Rodentia	Geomyidae	Dipodomyinae	?Dipodomys	sp	partial tooth			y					
 LACMP23-31698	NSF-17-198	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar			y					
-LACMP23-31699	NSF-17-199	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar	3/4/2020		y					
+LACMP23-31699	NSF-17-199	C3/L5	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper rt M1/M2			y					
 LACMP23-31700	NSF-17-200	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower rt p4			y					
 LACMP23-31701	NSF-17-201	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	tooth	juv		y					
 LACMP23-31702	NSF-17-202	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	tooth	juv		y					
@@ -220,7 +220,7 @@ LACMP23-31705	NSF-17-205	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipod
 LACMP23-31706	NSF-17-206	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	tooth	juv		y					
 LACMP23-31707	NSF-17-207	C3/L5	Mammalia	Rodentia					worn tooth			n					
 LACMP23-31708	NSF-17-208	C3/L5	Mammalia	Rodentia	?Heteromyidae				tooth	juv?		y					
-LACMP23-31709	NSF-17-209	C3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	upper rt P4	juv, broken in two frags	3/4/2020	y					
+LACMP23-31709	NSF-17-209	C3/L5	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	upper (rt?) DP4	broken in two frags		y					
 LACMP23-31710	NSF-17-210	C3/L5	Mammalia	Rodentia	Sciuridae	Xerinae	?Otospermophilus	beecheyi	lower rt m3			y					
 LACMP23-31711	NSF-17-211	C3/L5	Mammalia	Eulipotyphla	Soricidae	Soricinae			upper rt M1			y					
 LACMP23-31712	NSF-17-212	C3/L5	Mammalia	Eulipotyphla	Soricidae	Soricinae			dentary frag			y					
@@ -267,7 +267,7 @@ LACMP23-31751	NSF-17-252	B3/L5	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus
 LACMP23-31752	NSF-17-253	B3/L5	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m3			y					
 LACMP23-31753	NSF-17-254	B3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys 	sp	lower rt p4 frag	juv	1/17/2019	y					
 LACMP23-31754	NSF-17-255	B3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys 	sp	lower rt m1/m2	2 frags		y					
-LACMP23-31755	NSF-17-256	B3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys 	sp	molar		3/4/2020	y					
+LACMP23-31755	NSF-17-256	B3/L5	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper rt M1/M2			y					
 LACMP23-31756	NSF-17-257	B3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys 	sp	tooth 	juv		y					
 LACMP23-31757	NSF-17-258	B3/L5	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
 LACMP23-31758	NSF-17-259	B3/L5	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys 	sp	lower lt m2			y					
@@ -319,7 +319,7 @@ LACMP23-31803	NSF-17-304	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	
 LACMP23-31804	NSF-17-305	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower rt m1/m2			y					
 LACMP23-31805	NSF-17-306	D2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				broken tooth	several frags		y					
 LACMP23-31806	NSF-17-307	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower lt m1/m2			y					
-LACMP23-31807	NSF-17-308	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	lower molar		3/4/2020	y					
+LACMP23-31807	NSF-17-308	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	lower lt tooth	strange shape		y					
 LACMP23-31808	NSF-17-309	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower rt m1/m2			y					
 LACMP23-31809	NSF-17-310	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower rt m1/m2			y					
 LACMP23-31810	NSF-17-311	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	upper M1/M2			y					
@@ -330,23 +330,23 @@ LACMP23-31814	NSF-17-315	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipod
 LACMP23-31815	NSF-17-316	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower p4			y					
 LACMP23-31816	NSF-17-317	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar			y					
 LACMP23-31817	NSF-17-318	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	lower molar	worn, digested?		y					
-LACMP23-31818	NSF-17-319	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar		3/4/2020	y					
-LACMP23-31819	NSF-17-320	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar		3/4/2020	y					
-LACMP23-31820	NSF-17-321	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar		3/4/2020	y					
+LACMP23-31818	NSF-17-319	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	lower lt m1/m2			y					
+LACMP23-31819	NSF-17-320	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper rt M1/M2			y					
+LACMP23-31820	NSF-17-321	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower lt m1/m2			y					
 LACMP23-31821	NSF-17-322	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	upper lt P4			y					
 LACMP23-31822	NSF-17-323	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	upper tooth			y					
 LACMP23-31823	NSF-17-324	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower rt m1/m2			y					
-LACMP23-31824	NSF-17-325	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar		3/4/2020	y					
-LACMP23-31825	NSF-17-326	D2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				molar		3/4/2020	y					
-LACMP23-31826	NSF-17-327	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar		3/4/2020	y					
+LACMP23-31824	NSF-17-325	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower rt m1/m2			y					
+LACMP23-31825	NSF-17-326	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower rt m1/m2			y					
+LACMP23-31826	NSF-17-327	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	upper lt M1/M2			y					
 LACMP23-31827	NSF-17-328	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper rt M1/M2			y					
-LACMP23-31828	NSF-17-329	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	lower rt m1/m2			y					
+LACMP23-31828	NSF-17-329	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower rt m1/m2			y					
 LACMP23-31829	NSF-17-330	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	tooth	juv		y					
 LACMP23-31830	NSF-17-331	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	lower lt m1/m2			y					
 LACMP23-31831	NSF-17-332	D2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
 LACMP23-31832	NSF-17-333	D2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
 LACMP23-31833	NSF-17-334	D2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
-LACMP23-31834	NSF-17-335	D2/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	partial tooth			y					
+LACMP23-31834	NSF-17-335	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	M3/m3			y					
 LACMP23-31835	NSF-17-336	D2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
 LACMP23-31836	NSF-17-337	D2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
 LACMP23-31837	NSF-17-338	D2/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys	sp	upper rt M1/M2			y					
@@ -399,7 +399,7 @@ LACMP23-31883	NSF-17-384	D2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus
 LACMP23-31884	NSF-17-385	D2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m2			y					
 LACMP23-31885	NSF-17-386	D2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m3			y					
 LACMP23-31886	NSF-17-387	D2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m3			y					
-LACMP23-31887	NSF-17-388	D2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	upper lt M1	~Pcal sized	2/20/2020	y					
+LACMP23-31887	NSF-17-388	D2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	~Pcal sized	8/6/2019	y					
 LACMP23-31888	NSF-17-389	D2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	Surface covered	8/6/2019	y					
 LACMP23-31889	NSF-17-390	D2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	Small accessory loph, worn	8/6/2019	y					
 LACMP23-31890	NSF-17-391	D2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m1	grade 0	8/6/2019	y					
@@ -618,7 +618,7 @@ LACMP23-33820	NSF-17-603	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscu
 LACMP23-33821	NSF-17-604	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M2		1/29/2019	y					
 LACMP23-33822	NSF-17-605	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	small accessory loph, surface covered	8/6/2019	y					
 LACMP23-33823	NSF-17-606	C2/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				maxillary frag			y					
-LACMP23-33824	NSF-17-607	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	upper lt M1	Size ~Pcal	2/20/2020	y					
+LACMP23-33824	NSF-17-607	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	Size ~Pcal	8/6/2019	y					
 LACMP23-33825	NSF-17-608	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	size intermediate b/w Pman and Pcal	8/6/2019	y					
 LACMP23-33826	NSF-17-609	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		1/29/2019	y					
 LACMP23-33827	NSF-17-610	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			upper lt M1	Suface covered; Pero or Onychomys	8/5/2019	y					
@@ -633,7 +633,7 @@ LACMP23-33835	NSF-17-618	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			upper l
 LACMP23-33836	NSF-17-619	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	?Peromyscus	sp	lower lt m1	grade 1, surface covered	8/6/2019	y					
 LACMP23-33837	NSF-17-620	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m1	grade 1+, juv?	8/6/2019	y					
 specimen missing-not cataloged	NSF-17-621	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	worn		y					
-LACMP23-33838	NSF-17-622	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus 	cf P. californicus	rt maxilla	large	2/20/2020	y					
+LACMP23-33838	NSF-17-622	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus 	sp	rt maxilla	large		y					
 LACMP23-33839	NSF-17-623	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	rt maxilla frag w/ M1	M1 covered with matrix	8/6/2019	y					
 LACMP23-33840	NSF-17-624	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			lt maxillary frag			y					
 LACMP23-33841	NSF-17-625	C2/L4	Mammalia	Rodentia	Cricetidae	Neotominae			lt maxillary frag			y					
@@ -858,9 +858,9 @@ LACMP23-34058	NSF-17-843	B3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower l
 LACMP23-34059	NSF-17-844	B3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower rt m2		1/29/2019	y					
 LACMP23-34060	NSF-17-845	B3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			lower lt m1	strange cusps, very small, juv?	8/6/2019	y					
 LACMP23-34061	NSF-17-846	B3/L3	Mammalia	Rodentia	Cricetidae	Neotominae			rt dentary frag	no teeth		y					
-LACMP23-34062	NSF-17-847	B3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	upper molar			y					
-LACMP23-34063	NSF-17-848	B3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar			y					
-LACMP23-34064	NSF-17-849	B3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower molar			y					
+LACMP23-34062	NSF-17-847	B3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	upper molar			y					
+LACMP23-34063	NSF-17-848	B3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar			y					
+LACMP23-34064	NSF-17-849	B3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	lower molar			y					
 LACMP23-34065	NSF-17-850	B3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	upper molar			y					
 LACMP23-34066	NSF-17-851	B3/L3	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower molar			y					
 LACMP23-34067	NSF-17-852	B3/L3	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
@@ -918,7 +918,7 @@ LACMP23-34118	NSF-17-903	D3/L6	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipod
 LACMP23-34119	NSF-17-904	D3/L6	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower rt m1/m2			y					
 LACMP23-34120	NSF-17-905	D3/L6	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
 LACMP23-34121	NSF-17-906	D3/L6	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					
-LACMP23-34122	NSF-17-907	D3/L6	Mammalia	Rodentia	?Heteromyidae	Dipodomyinae	?Dipodomys	sp	tooth, p4?	juv		y					
+LACMP23-34122	NSF-17-907	D3/L6	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth, p4?	juv		y					
 LACMP23-34123	NSF-17-908	D3/L6	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	broken, 2 frags		y					
 LACMP23-34124	NSF-17-909	D3/L6	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag			y					
 LACMP23-34125	NSF-17-910	D3/L6	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag			y					
@@ -1011,7 +1011,7 @@ LACMP23-34211	NSF-17-996	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			maxilla
 LACMP23-34212	NSF-17-997	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			lt maxillary frag			y					
 LACMP23-34213	NSF-17-998	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lt dentary w/ incisor 		10/1/2018	y					
 LACMP23-34214	NSF-17-999	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			lt dentary w/ incisor 			y					
-LACMP23-34215	NSF-17-1000	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	lower lt m1	size ~Pcal, grade 2	2/20/2020	y					
+LACMP23-34215	NSF-17-1000	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	size ~Pcal, grade 2	8/6/2019	y					
 LACMP23-34216	NSF-17-1001	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			lower m2	worn, broken in two frags		y					
 LACMP23-34217	NSF-17-1002	B2/L6	Mammalia	Rodentia	Cricetidae	Neotominae			upper rt M2		1/29/2019	y					
 LACMP23-34218	NSF-17-1003	B2/L6	Mammalia	Rodentia	Cricetidae	?Neotominae			tooth frag			y					
@@ -1091,7 +1091,7 @@ LACMP23-34289	NSF-17-1075	C3/L4	Mammalia	Rodentia	Heteromyidae	Perognathinae			l
 LACMP23-34290	NSF-17-1076	C3/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	lower lt m1	grade 0, small anteroconid	8/6/2019	y					
 LACMP23-34291	NSF-17-1077	C3/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M1	size intermediate b/w Pman and Pcal, surface covered	8/6/2019	y					
 LACMP23-34292	NSF-17-1078	C3/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	surface covered	8/6/2019	y					
-LACMP23-34293	NSF-17-1079	C3/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	upper rt M1	~Pcal sized	2/20/2020	y					
+LACMP23-34293	NSF-17-1079	C3/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	~Pcal sized	8/6/2019	y					
 LACMP23-34294	NSF-17-1080	C3/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	grade 0	8/6/2019	y					
 LACMP23-34295	NSF-17-1081	C3/L4	Mammalia	Rodentia	Sciuridae	Xerinae	Tamias/Neotamias	sp	lower lt p4		8/6/2019	y					
 LACMP23-34296	NSF-17-1082	C3/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	?maniculatus	upper rt M1	prominent accessory lophs	8/6/2019	y					
@@ -1116,11 +1116,11 @@ LACMP23-34314	NSF-17-1100	C3/L4	Mammalia	Rodentia	?Heteromyidae				lower p4	juv?
 LACMP23-34315	NSF-17-1101	C3/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth frag			y					
 LACMP23-34316	NSF-17-1102	C3/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	Thomomys 	sp	partial upper M1/M2			y					
 LACMP23-34317	NSF-17-1103	C3/L4	Mammalia	Rodentia	Geomyidae	Thomomyinae	?Thomomys	sp	upper M1/M2			y					
-LACMP23-34318	NSF-17-1104	C3/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	lower p4	juv?	1/29/2019	y					
-LACMP23-34319	NSF-17-1105	C3/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	molar		1/29/2019	y					
-LACMP23-34320	NSF-17-1106	C3/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower p4	juv?	1/29/2019	y					
+LACMP23-34318	NSF-17-1104	C3/L4	Mammalia	Rodentia	?Heteromyidae				lower p4	juv?	1/29/2019	y					
+LACMP23-34319	NSF-17-1105	C3/L4	Mammalia	Rodentia	?Geomyidae				upper M1/M2		1/29/2019	y					
+LACMP23-34320	NSF-17-1106	C3/L4	Mammalia	Rodentia	?Heteromyidae				lower p4	juv?	1/29/2019	y					
 LACMP23-34321	NSF-17-1107	C3/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	lower lt m1/m2			y					
-LACMP23-34322	NSF-17-1108	C3/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	?Dipodomys	sp	molar		1/29/2019	y					
+LACMP23-34322	NSF-17-1108	C3/L4	Mammalia	Rodentia	?Geomyidae	Thomomyinae	?Thomomys	sp	lower m1/m2		1/29/2019	y					
 LACMP23-34323	NSF-17-1109	C3/L4	Mammalia	Rodentia	?Geomyidae	Thomomyinae	?Thomomys	sp	upper M1/M2		1/29/2019	y					
 LACMP23-34324	NSF-17-1110	C3/L4	Mammalia	Rodentia	Heteromyidae	Dipodomyinae	Dipodomys	sp	upper M1/M2			y					
 LACMP23-34325	NSF-17-1111	C3/L4	Mammalia	Rodentia	Geomyidae/Heteromyidae				tooth	juv		y					

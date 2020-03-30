@@ -24,6 +24,7 @@ Capromeryx minor	Capromeryx minor	Artiodactyla	Antilocapridae	Capromeryx
 cf Lepus sp	Lepus sp	Lagomorpha	Leporidae	Lepus
 cf Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus
 cf Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus
+cf Peromyscus cf californicus	Peromyscus californicus	Rodentia	Cricetidae	Peromyscus
 cf Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus
 cf Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys
 cf Spilogale gracilis	Spilogale gracilis	Carnivora	Mephitidae	Spilogale
@@ -58,6 +59,7 @@ Neotoma sp	Neotoma sp	Rodentia	Cricetidae	Neotoma
 Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus
 Otospermophilus cf beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus
 Peromyscus ?maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus
+Peromyscus cf californicus	Peromyscus californicus	Rodentia	Cricetidae	Peromyscus
 Peromyscus cf maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus
 Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus
 Reithrodontomys cf megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys
@@ -77,6 +79,7 @@ Tamias cf merriami	Tamias merriami	Rodentia	Sciuridae	Tamias
 Tamias sp	Tamias sp	Rodentia	Sciuridae	Tamias
 Tamias/Neotamias sp	Tamias sp	Rodentia	Sciuridae	Tamias
 Taxidea taxus	Taxidea taxus	Carnivora	Mustelidae	Taxidea
+Thomomys ?bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys
 Thomomys bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys
 Thomomys cf bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys
 Thomomys sp	Thomomys sp	Rodentia	Geomyidae	Thomomys
