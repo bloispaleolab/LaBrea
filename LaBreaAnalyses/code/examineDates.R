@@ -105,17 +105,10 @@ plot <- base +
 plot(plot)
 
 
-anova_1 <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="1"),])
-summary(anova_1)
-
-anova_14 <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="14"),])
-summary(anova_14)
-
-anova_13 <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="13"),])
-summary(anova_13)
-
-anova_7 <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="7b"),])
-summary(anova_7) 
+anova <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="1"),])
+anova <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="14"),])
+anova <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="13"),])
+anova <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="7b"),])
 
 # Plot each box separately and run stats
 P23_boxes <- c("14", "7b", "13", "1")
@@ -128,7 +121,7 @@ Sbach14 <- P23_dates %>% filter(RevisedName == "Sylvilagus bachmani", box==P23_b
 Obeech24 <- P23_dates %>% filter(RevisedName == "Otospermophilus beecheyi", box==P23_boxes[i])
 
 
-base <- ggplot(P23_dates)#Nate discussion: error here, did you mean "P23_dates_taxa"?
+base <- ggplot(P23_dates) 
 base +
   geom_boxplot(aes(x = box, y = C14_age_BP, fill = box), alpha = 0.7) +
   geom_point(aes(x = box, y = C14_age_BP, fill = box), 
