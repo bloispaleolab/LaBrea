@@ -11,12 +11,20 @@ pdf(file="output/ClimateCurve-updated.pdf", height=6, width=8)
   dat2<- read.delim("data/raw/climate/hendy2002data.txt")
   plot(pach.d18O~HendyAge, dat=dat2, type="l", 
        xlab="Years before 2000", ylab="d18O Neogloboquadrina pachyderma",
-       bty="n", xlim=c(55000, 25000), ylim=c(3.1, 0.25), # modifiy to time bin relevant to P23. Original set from 75000 to 0 BP
+       bty="n", xlim=c(55000, 0), ylim=c(3.1, 0.25), # modifiy to time bin relevant to P23. Original set from 75000 to 0 BP
        lab=c(12, 8, 7), xaxs="i", yaxs="r", col="gray")
   x1.05<- loess(dat2$pach.d18O~dat2$HendyAge, span=0.05)
   lines(x1.05$fitted~x1.05$x, type="l", col="red")
 dev.off()
 
 
+# Interpolate climate to calibrated radiocarbon ages of small mammals 
 
+dat2<- read.delim("data/raw/climate/hendy2002data.txt")
+ages <- read.delim("data/processed/Interpolation/Calibrated_dates.txt") # mean, error, 
 
+xout <- ages$Calibrated.age
+Hendy_extracted <- approx(x=dat2$HendyAge, y=dat2$pach.d18O, method="linear", xout=xout)
+Hendy_extracted$y # interpolated d18O at each radiocarbon date
+
+write.csv(Hendy_extracted$y, file = "data/processed/Interpolation/interpolated_d18O.csv")
