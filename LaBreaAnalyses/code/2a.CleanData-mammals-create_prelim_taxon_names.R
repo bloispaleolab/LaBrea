@@ -14,7 +14,8 @@ for (i in 1:length(files)){
   original<- read_tsv(files[i], trim_ws=T) 
  
   # keep the relevant columns and make sure in same order
-  colsToKeep <- match(c("Museum_Number", "UCM_Number", "Canister", "Class", "Order", "Family", "Subfamily", "Genus", "Species"), colnames(original))
+  colsToKeep <- match(c("Museum_Number", "UCM_Number", "Canister", "Class", "Order", "Family", "Subfamily", "Genus", "Species"), 
+                      colnames(original))
   
   data <- original[,colsToKeep]
 
@@ -22,6 +23,10 @@ for (i in 1:length(files)){
   # if sp. has a period, remove it!
   if (length(which(data$Species=="sp.")) > 0){
     data$Species[which(data$Species == "sp.")] <- "sp"
+  }
+  
+  if (length(which(data$Species=="cf P. californicus")) > 0){
+    data$Species[which(data$Species == "cf P. californicus")] <- "cf californicus"
   }
   
   # replace cf. with cf
@@ -127,6 +132,8 @@ master <- rbind(master, newRowsMaster)
 unique_names <- unique(master$prelim_taxon_name)
 unique_names <- sort(unique_names)
 unique_names
+
+write.csv(unique_names, file = "data/raw/TaxonomyMatchingFile.csv")
 
 # replace "7B" with "7b"
 master$box[which(master$box == "7B")] <- "7b"

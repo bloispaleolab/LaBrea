@@ -139,7 +139,7 @@ LACMP23-28234	NSF-16-118g	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	low
 LACMP23-28235	NSF-16-118h	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower lt tooth	juv		y
 LACMP23-28236	NSF-16-118i	B2/L3	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	upper tooth frag			y
 LACMP23-28237	NSF-16-119	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf maniculatus	upper rt M1	large accessory loph, ~2mm	2/27/2019	y
-LACMP23-28238	NSF-16-120	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	upper lt M2	large	2/20/2020	y
+LACMP23-28238	NSF-16-120	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M2	large	2/27/2019	y
 LACMP23-28239	NSF-16-121	B2/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower rt m2			y
 LACMP23-28240	NSF-16-122	B2/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M3			y
 LACMP23-28241	NSF-16-123a	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	upper rt tooth	juv		y
@@ -151,15 +151,15 @@ LACMP23-28246	NSF-16-127	B2/L3	Mammalia	Rodentia	?Heteromyidae				tooth frag		2/
 LACMP23-28247	NSF-16-128a	B2/L3	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	tooth frag	juv		y
 LACMP23-28248	NSF-16-128b	B2/L3	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	upper tooth frag	juv		y
 LACMP23-28249	NSF-16-129	B2/L3	Mammalia	Lagomorpha	Leporidae		?Sylvilagus	sp	tooth frag	juv		y
-LACMP23-28250	NSF-16-130	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	lower lt m1	grade 1, posterior accessory loph, P. califoricus?	2/20/2020	y
-LACMP23-28251	NSF-16-131	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	rt m2	acid etched?; large - P. californicus?	2/20/2020	y
+LACMP23-28250	NSF-16-130	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m1	grade 1, posterior accessory loph, P. califoricus?		y
+LACMP23-28251	NSF-16-131	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	rt m2	acid etched?; large - P. californicus?	2/27/2019	y
 LACMP23-28252	NSF-16-132	B2/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	upper lt M2			y
 LACMP23-28253	NSF-16-133a	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower rt p3	occlusal surface broken, juv		y
 LACMP23-28254	NSF-16-133b	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower tooth	juv		y
-LACMP23-28255	NSF-16-134	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	upper rt M2	large	2/20/2020	y
+LACMP23-28255	NSF-16-134	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M2	large	2/27/2019	y
 LACMP23-28256	NSF-16-135	B2/L3	Mammalia	Lagomorpha	Leporidae				tooth frag			y
 LACMP23-28257	NSF-16-136	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M1	acid etched?, large for P.man ~2mm	2/27/2019	y
-LACMP23-28258	NSF-16-137	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	lower rt m1	grade 1, acid etched?, posterior accessory loph, P. califoricus?	2/20/2020	y
+LACMP23-28258	NSF-16-137	B2/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower rt m1	grade 1, acid etched?, posterior accessory loph, P. califoricus?		y
 LACMP23-28259	NSF-16-138	B2/L3	Mammalia	Lagomorpha	Leporidae		Sylvilagus	sp	lower (lt?) p3	juv, poorly preserved		y
 Not Cataloged	NSF-16-139	B2/L3	Mammalia	Rodentia/Lagomorpha					Misc. partial teeth, incisors, and dentary frags			n
 LACMP23-28260	NSF-16-140	B2/L3	Mammalia						baculum?			n
@@ -270,7 +270,7 @@ LACMP23-28510	NSF-16-237	B1/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus
 LACMP23-28511	NSF-16-238	B1/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	lower lt m3			y
 LACMP23-28512	NSF-16-239	B1/L3	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	molar frag			y
 LACMP23-28513	NSF-16-240	B1/L3	Mammalia	Rodentia	Cricetidae	Neotominae			partial rt dentary		2/27/2019	y
-LACMP23-28514	NSF-16-241	B1/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	upper lt M2	large, juv?	2/20/2020	y
+LACMP23-28514	NSF-16-241	B1/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper lt M2	large, juv?	2/27/2019	y
 LACMP23-28515	NSF-16-242	B1/L3	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lower rt m1	grade 0		y
 LACMP23-28516	NSF-16-243	B1/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m2			y
 LACMP23-28517	NSF-16-244	B1/L3	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	lower lt m2 frag		2/27/2019	y
@@ -408,7 +408,7 @@ LACMP23-28843	NSF-16-375	B2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus
 LACMP23-28844	NSF-16-376	B2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	tooth frag			y
 LACMP23-28845	NSF-16-377	B2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	tooth frag			y
 LACMP23-28846	NSF-16-378	B2/L4	Mammalia	Rodentia	Cricetidae	Arvicolinae	Microtus	sp	tooth frag			y
-LACMP23-28847	NSF-16-379	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	cf P. californicus	upper rt M2	large	2/20/2020	y
+LACMP23-28847	NSF-16-379	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Peromyscus	sp	upper rt M2	large	2/27/2019	y
 LACMP23-28848	NSF-16-380	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus	sp	lower lt m1	grade 0	2/27/2019	y
 LACMP23-28849	NSF-16-381	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	cf Peromyscus		lower rt m2	very worn	2/27/2019	y
 LACMP23-28850	NSF-16-382	B2/L4	Mammalia	Rodentia	Cricetidae	Neotominae	Neotoma	sp	upper lt M3	strange isolated lophs. Juv?	2/27/2019	y
