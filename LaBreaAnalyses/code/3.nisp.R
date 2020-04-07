@@ -7,11 +7,6 @@ library(scales)
 mammals_orig <- read.delim("data/processed/master_mammal_file.txt", sep="\t", stringsAsFactors = F)
 
 # get rid of hancock collection stuff for now
-# Jessica query: your note on line 9 says you want to get rid of Hancock collection stuff, but I think the previous changes you made to the "misc" changed specimens in more than just the HC, right? Weren't some of those misc from the main deposits too? 
-# Given this, I have made two changes: 
-# 1) in your original code (line 14), I changed "misc" to "HC" based on my previous code changes and commented it out 
-# 2) I added a line (line 15, which I think is what you want to use) to remove all misc
-#mammals <- mammals_orig[-which(mammals_orig$box == "HC"),]
 mammals <- mammals_orig[-which(mammals_orig$misc == "y"),]
 
 taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsFactors = F)
@@ -19,33 +14,55 @@ taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsF
 taxon <- as.data.frame(matrix(ncol=4, nrow=nrow(mammals)))
 colnames(taxon) <- c('RevisedName', "Order", "Family", "Genus") 
 
+# for each row (specimen), retrieve the revised taxonomic name, as well as the Order, Family, and Genus info
 for (i in 1:nrow(taxon)){
   taxon[i,] <- taxonomy[which(taxonomy$'OriginalName' == mammals$prelim_taxon_name[i]),c('RevisedName', "Order", "Family", "Genus")] 
 }
 
-mammals_trim <- select(mammals, "prelim_taxon_name", "box")
-mammals_trim <- cbind(mammals_trim, taxon)
-mammals_trim$Family <- as.factor(mammals_trim$Family)
-mammals_trim$Order <- as.factor(mammals_trim$Order)
-mammals_trim$Genus <- as.factor(mammals_trim$Genus)
-mammals_trim$box <- as.factor(mammals_trim$box)
+# Code check - make sure all the specimens are matched with new names for analysis
+if (any(is.na(taxon$RevisedName))==F){
+  print("All rows match a name in our taxon matching file! PROCEED")
+}else{
+  # examine which specimens in the original mammal data don't match up with our revised taxonomy name:
+  mammals[which(is.na(taxon$RevisedName)),]
+  # If these mismatches are OK, then PROCEED
+  # Otherwise, troubleshoot and fix
+}
 
+mammals_trim <- select(mammals, "prelim_taxon_name", "box") # trim down original mammal data to only prelim_taxon_name and box
+mammals_trim <- cbind(mammals_trim, taxon) # bind on the updated taxonomy
+mammals_trim$Family <- as.factor(mammals_trim$Family) #convert to factor for later filtering
+mammals_trim$Order <- as.factor(mammals_trim$Order) #convert to factor for later filtering
+mammals_trim$Genus <- as.factor(mammals_trim$Genus) #convert to factor for later filtering
+mammals_trim$box <- as.factor(mammals_trim$box) #convert to factor for later filtering
+
+# remove the taxa we don't want to include, this should be verified/changed based on user decisions
 mammals_filtered <- mammals_trim %>% 
   filter(!is.na(Family)) %>%
   filter(Order != "Artiodactyla") %>%
   filter(Genus != "Canis") %>%
   filter(Genus != "Taxidea") %>%
   filter(Genus != "Urocyon") %>%
-  filter(Genus != "Lepus") %>%
+  filter(Genus != "Lepus") %>% ## JESSICA AND NATE check: Why did we include Lepus here? Because it is only to genus?
   filter(!is.na(Genus))
+
+# remove the factor levels that were dropped
 mammals_filtered$Order <- droplevels(mammals_filtered$Order)
 mammals_filtered$Family <- droplevels(mammals_filtered$Family)
 mammals_filtered$Genus <- droplevels(mammals_filtered$Genus)
 
+# count up the specimens to create NISP
 mammals_filtered <- mammals_filtered %>%   
   group_by(box, RevisedName, Family, Genus) %>%
   summarise(n=n())
 
+# covert the data from "long" to "wide" format
+mammals_nisp <- spread(mammals_filtered, box, n)
+mammals_nisp <- mammals_nisp[order(mammals_nisp$Family, mammals_nisp$Genus),]
+colnames(mammals_nisp)[4:7] <- paste0("Box_", colnames(mammals_nisp)[4:7])
+write.table(mammals_nisp, file="data/processed/mammal_nisp.txt", sep="\t", row.names=F)
+
+### PLOT the NISP data ###
 Genus_Colors <- NULL
 start <- 0
 stop <- 0
