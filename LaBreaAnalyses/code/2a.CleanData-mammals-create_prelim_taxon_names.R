@@ -12,13 +12,13 @@ master <- NULL
 for (i in 1:length(files)){
   # read in data ----
   original<- read_tsv(files[i], trim_ws=T) 
- 
+  
   # keep the relevant columns and make sure in same order
   colsToKeep <- match(c("Museum_Number", "UCM_Number", "Canister", "Class", "Order", "Family", "Subfamily", "Genus", "Species"), 
                       colnames(original))
   
   data <- original[,colsToKeep]
-
+  
   # data cleaning ----
   # if sp. has a period, remove it!
   if (length(which(data$Species=="sp.")) > 0){
@@ -64,17 +64,17 @@ for (i in 1:length(files)){
   box <- sub('.*Deposit ', '', files[i])
   box <- sub(".tsv", '', box)
   if (length(grep("Hancock", files[i]))>0) { 
-  box <- "HC"}  
+    box <- "HC"}  
   data$box <- box 
-
+  
   # Add Misc bones indicator dataframe
   if (length(grep("Misc", files[i]))>0) { 
     misc <- "y"
   }else{
     misc <- "n"}
   data$misc <- misc 
-
-    
+  
+  
   # Add onto the master spreadsheet
   if (i ==1){
     master <- rbind(master, data)
@@ -141,4 +141,3 @@ master$box[which(master$box == "7B")] <- "7b"
 
 # export master file ----
 write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
-
