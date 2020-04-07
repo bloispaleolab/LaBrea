@@ -4,8 +4,7 @@ library(readr)
 deposits <- c("1","7b","13","14", "misc_1", "misc_7b", "misc_13", "misc_14", "HC")
 files <- list.files(
   "data/original_google_data/GoogleDriveExports-mammals", 
-  full=T) #Remove "Old_versions" when error is resolved 
-files <- files[-1] #when the "old versions" issue is dealt with, delete that folder and this line
+  full=T) 
 
 # create a master spreadsheet with standardized taxonomic names ----
 master <- NULL
@@ -25,6 +24,7 @@ for (i in 1:length(files)){
     data$Species[which(data$Species == "sp.")] <- "sp"
   }
   
+  # fix terminology for Peromyscus cf. californicus
   if (length(which(data$Species=="cf P. californicus")) > 0){
     data$Species[which(data$Species == "cf P. californicus")] <- "cf californicus"
   }
@@ -90,9 +90,6 @@ for (i in 1:length(files)){
   
 } 
 
-#ERROR HERE WITH UPDATED DATAFILES - nothing unusual about updated datafile structure, just minor edits to "Misc Dep 1" and "Hancock"
-# Jessica discussion: I don't see any issues with running this with the updated files. Is the error here, or in a different (downstream) script?
-
 # deal with specimens with repeated catalog numbers ----
 
 # first, clean up so Museum_Number so it matches. Most of the time, repeats separated with a semi-colon.
@@ -128,7 +125,7 @@ for (i in 1:length(rowsWithRepeats)){
 master <- master[-rowsWithRepeats,]
 master <- rbind(master, newRowsMaster)
 
-# This block of code can be used for the taxonomy matching file
+# This block of code is used to generate (part of) the taxonomy matching file
 unique_names <- unique(master$prelim_taxon_name)
 unique_names <- sort(unique_names)
 unique_names
@@ -140,4 +137,4 @@ master$box[which(master$box == "7B")] <- "7b"
 
 
 # export master file ----
-write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
+write.table(master, file="data/processed/master_mammal_file.txt", sep="\t", row.names = F)
