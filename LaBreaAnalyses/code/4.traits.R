@@ -29,14 +29,14 @@ taxonomy_traits <- read.delim("data/processed/TaxonomyTraitsFile_Reg_est.txt", s
 
 taxon <- as.data.frame(matrix(ncol=9, nrow=nrow(mammals)))
 colnames(taxon) <- c('RevisedName', "Order", "Family", "Genus", "Species", 
-  "BodyMass_Mean", "Precip_Mean", "Temp_Mean", "NDVI_Mean") 
+                     "BodyMass_Mean", "Precip_Mean", "Temp_Mean", "NDVI_Mean") 
 
 
 
 for (i in 1:nrow(taxon)){
   taxon[i,] <- taxonomy_traits[which(taxonomy_traits$'OriginalName' == mammals$prelim_taxon_name[i]),
-  c('RevisedName', "Order", "Family", "Genus", "Species", "BodyMass_Mean", "Precip_Mean", 
-  "Temp_Mean", "NDVI_Mean")] 
+                               c('RevisedName', "Order", "Family", "Genus", "Species", "BodyMass_Mean", "Precip_Mean", 
+                                 "Temp_Mean", "NDVI_Mean")] 
 }
 
 
