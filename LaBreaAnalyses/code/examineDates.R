@@ -93,7 +93,7 @@ P23_dates_taxa <- P23_dates_taxa[c(which(P23_dates_taxa$RevisedName ==
                               which(P23_dates_taxa$RevisedName==
                                       "Otospermophilus beecheyi")),]
 P23_dates_taxa <- droplevels(P23_dates_taxa)
-levels(P23_dates_taxa$box)<- c("14", "7b", "13", "1")
+#levels(P23_dates_taxa$box)<- c("14", "7b", "13", "1")
 
 ## NEED to remove legend OR remove labels from X axis and change legend title (better option)
 base <- ggplot(P23_dates_taxa, aes(y = RevisedName, x=C14_age_BP))
@@ -115,7 +115,7 @@ plot <- base +
                alpha = 0.7) +
   geom_point(aes(y = Genus, x = C14_age_BP, fill = Genus), 
              size = 3, shape = 21, position = position_jitterdodge()) +
-  facet_grid(box ~ .) +
+  facet_grid(fct_rev(box) ~ .) +
   theme_light() +
   ylab("Taxon") + 
   xlab("C14 years BP")
