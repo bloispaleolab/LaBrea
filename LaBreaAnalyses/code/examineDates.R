@@ -76,7 +76,7 @@ all <- base +
         panel.grid.minor.x = element_blank(),
         panel.grid.major.x = element_blank())
   
-all + coord_flip() + scale_y_reverse()
+all + scale_y_reverse() + coord_flip()
 dev.off()
 
 ## start working with individual taxa. For this, focus only on the P23 boxes
@@ -89,20 +89,65 @@ P23_dates_taxa <- P23_dates_taxa[c(which(P23_dates_taxa$RevisedName ==
                               which(P23_dates_taxa$RevisedName==
                                       "Sylvilagus bachmani"), 
                               which(P23_dates_taxa$RevisedName==
+                                      "Sylvilagus sp"), 
+                              which(P23_dates_taxa$RevisedName==
                                       "Otospermophilus beecheyi")),]
+P23_dates_taxa <- droplevels(P23_dates_taxa)
+#levels(P23_dates_taxa$box)<- c("14", "7b", "13", "1")
 
 ## NEED to remove legend OR remove labels from X axis and change legend title (better option)
-base <- ggplot(P23_dates_taxa, aes(y=C14_age_BP, x = RevisedName))
+base <- ggplot(P23_dates_taxa, aes(y = RevisedName, x=C14_age_BP))
 plot <- base + 
-  geom_boxplot(aes(y = C14_age_BP, x = RevisedName, fill = RevisedName), 
+  geom_boxplot(aes(y = RevisedName, x = C14_age_BP, fill = RevisedName), 
                alpha = 0.7) +
-  geom_point(aes(y = C14_age_BP, x = RevisedName, fill = RevisedName), 
+  geom_point(aes(y = RevisedName, x = C14_age_BP, fill = RevisedName), 
              size = 3, shape = 21, position = position_jitterdodge()) +
-  facet_grid(. ~ box) +
+  facet_grid(box ~ .) +
   theme_light() +
-  xlab("Taxon") + 
+  ylab("Taxon") + 
+  xlab("C14 years BP")
+plot + scale_x_reverse() 
+
+# Plot at genus level to group Sylvilagus together
+base <- ggplot(P23_dates_taxa, aes(y = Genus, x=C14_age_BP))
+plot <- base + 
+  geom_boxplot(aes(y = Genus, x = C14_age_BP, fill = Genus), 
+               alpha = 0.7) +
+  geom_point(aes(y = Genus, x = C14_age_BP, fill = Genus), 
+             size = 3, shape = 21, position = position_jitterdodge()) +
+  facet_grid(fct_rev(box) ~ .) +
+  theme_light() +
+  ylab("Taxon") + 
+  xlab("C14 years BP")
+pdf(file="output/boxplot-Sylv_Oto.pdf", height=6, width=12)
+plot + scale_x_reverse()
+dev.off()
+
+# Plot only the P23 boxes
+P23_dates <- dates[c(which(dates$box == "1"), 
+which(dates$box == "7b"), 
+which(dates$box == "13"), 
+which(dates$box == "14")),]
+
+base <- ggplot(P23_dates) +
+  geom_boxplot(aes(x = box, y = C14_age_BP, fill = box), alpha = 0.7, show.legend = FALSE) +
+  geom_point(aes(x = box, y = C14_age_BP, fill = box), 
+             size = 3, shape = 21, position = position_jitterdodge(), show.legend = FALSE) +  #
+  #  geom_point(data=highlight_df, aes(x = box, y = C14_age_BP), fill="gray", size = 3, shape = 21, show.legend = FALSE) +
+  xlab("Box") + 
   ylab("C14 years BP")
-plot(plot)
+all <- base + 
+  theme_light()+
+  theme(axis.text.x=element_text(size=18),
+        axis.text.y=element_text(size=18),
+        axis.title=element_text(size=28,face="bold"),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.x = element_blank())
+
+pdf(file="output/boxplot-P23_dates.pdf", height=6, width=12)
+all + coord_flip() + scale_y_reverse()
+dev.off()
+
 
 
 anova <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="1"),])
