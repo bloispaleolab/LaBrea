@@ -5,7 +5,7 @@ library(scales)
 mammals_nisp <- read.delim("data/processed/mammal_nisp.txt", sep="\t", stringsAsFactors = F)
 mammals_nisp[is.na(mammals_nisp)] <- 0 # convert the NAs to 0
 
-taxonomy_traits <- read.delim("data/processed/TaxonomyTraitsFile_Reg_est.txt", sep="\t", stringsAsFactors = F)
+taxonomy_traits <- read.delim("data/processed/TaxonomyTraits_Reg_est_Bioclim.txt", sep="\t", stringsAsFactors = F)
 
 # merge trait data with nisp ----
 dat <- cbind(mammals_nisp, taxonomy_traits[match(mammals_nisp$RevisedName, taxonomy_traits$RevisedName),-c(1:5)])
@@ -31,7 +31,8 @@ dat <- dat[-which(dat$RevisedName == "Sylvilagus sp"),]
 # calculate weighted trait averages ----
 
 # for each trait, first remove the taxa with no trait data
-traits <- c("BodyMass_Mean", "Precip_Mean", "Temp_Mean", "NDVI_Mean")
+traits <- c("BodyMass_Mean", "Precip_Mean", "Temp_Mean", "NDVI_Mean", "Temp_SD",	"Temp_max",	"Temp_min"
+)
 trait_weighted_mean <- as.data.frame(matrix(NA, nrow=length(traits), ncol=length(colsForBoxes)))
 colnames(trait_weighted_mean) <- colnames(dat)[colsForBoxes]
 rownames(trait_weighted_mean) <- traits

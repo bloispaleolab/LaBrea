@@ -1,0 +1,88 @@
+OriginalName	RevisedName	Order	Family	Genus	Species	BodyMass_Mean	Precip_Mean	Temp_Mean	NDVI_Mean	Temp_SD	Temp_max	Temp_min
+?Dipodomys sp	Dipodomys sp	Rodentia	Heteromyidae	Dipodomys	D.agilis 	60.21	32.27	15.33232	3134	615.2212	43.08	-9.809
+?Mephitis mephitis	Mephitis mephitis	Carnivora	Mephitidae	Mephitis	M.mephitis	2399.99	NA	NA	NA			
+?Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus	M.californicus	57.42	43.86	13.65802	4589	594.9268	45.658	-13.767
+?Mustela frenata	Mustela frenata	Carnivora	Mustelidae	Mustela	M.frenata	190.03	NA	NA	NA			
+?Neotoma sp	Neotoma sp	Rodentia	Cricetidae	Neotoma	N.macrotis	NA	NA	NA	3607	574.7685	43.137	-13.809
+?Onychomys torridus	Onychomys torridus	Rodentia	Cricetidae	Onychomys	O.torridus	21.68	22.33	16.87196	2474	726.206	45.658	-13.67
+?Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	O.beecheyi	597.82	49.14	12.13961	4755	594.8531	45.111	-13.839
+?Peromyscus maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus	P.maniculatus	19.98	NA	NA	NA			
+?Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus	P.maniculatus	19.98	NA	NA	NA			
+?Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys	R.megalotis	10.72	40.68	11.49901	3195	819.5379	45.658	-21.704
+?Sorex sp	Sorex sp	Eulipotyphla	Soricidae	Sorex	S.ornatus	5.31	35.99	15.36991	4072	566.7494	43.08	-9.848
+?Spilogale gracilis	Spilogale gracilis	Carnivora	Mephitidae	Spilogale	S.gracilis	462.5	34.13	12.35109	2971	715.1216	45.658	-21.763
+?Sylvilagus sp	Sylvilagus sp	Lagomorpha	Leporidae	Sylvilagus	NA	NA	NA	NA	NA			
+?Tamias sp	Tamias sp	Rodentia	Sciuridae	Tamias	T.merriami	74.77	39.04	12.89756	4050	594.8071	39.61	-14.003
+?Thomomys sp	Thomomys sp	Rodentia	Geomyidae	Thomomys	T.bottae	122.7	26.71	14.67789	2644	715.7075	45.658	-21.209
+Aves-NA	Aves	NA	NA	NA	NA	NA	NA	NA	NA			
+Canis cf dirus	Canis dirus	Carnivora	Canidae	Canis	C.dirus	NA	NA	NA	NA			
+Canis cf latrans	Canis latrans	Carnivora	Canidae	Canis	C.latrans	NA	NA	NA	NA			
+Canis dirus	Canis dirus	Carnivora	Canidae	Canis	C.dirus	NA	NA	NA	NA			
+Canis latrans	Canis latrans	Carnivora	Canidae	Canis	C.latrans	NA	NA	NA	NA			
+Canis sp	Canis sp	Carnivora	Canidae	Canis	NA	NA	NA	NA	NA			
+Capromeryx minor	Capromeryx minor	Artiodactyla	Antilocapridae	Capromeryx	C.minor	NA	NA	NA	NA			
+cf Lepus sp	Lepus sp	Lagomorpha	Leporidae	Lepus	L.californicus	NA	NA	NA	NA			
+cf Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus	M.californicus	57.42	43.86	13.65802	4589	594.9268	45.658	-13.767
+cf Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	O.beecheyi	597.82	49.14	12.13961	4755	594.8531	45.111	-13.839
+cf Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus	P.maniculatus	19.98	NA	NA	NA			
+cf Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys	R.megalotis	10.72	40.68	11.49901	3195	819.5379	45.658	-21.704
+cf Spilogale gracilis	Spilogale gracilis	Carnivora	Mephitidae	Spilogale	S.gracilis	462.5	34.13	12.35109	2971	715.1216	45.658	-21.763
+cf Tamias sp	Tamias sp	Rodentia	Sciuridae	Tamias	T.merriami	74.77	39.04	12.89756	4050	594.8071	39.61	-14.003
+cf Taxidea taxus	Taxidea taxus	Carnivora	Mustelidae	Taxidea	T.taxus	NA	NA	NA	NA			
+Dipodomys sp	Dipodomys sp	Rodentia	Heteromyidae	Dipodomys	D.agilis 	60.21	32.27	15.33232	3134	615.2212	43.08	-9.809
+Insecta-Hymenoptera	Hymenoptera	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-??	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-???	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-?Carnivora	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-?Eulipotyphla	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-?Lagomorpha	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-?Rodentia	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-Artiodactyla	Artiodactyla	Artiodactyla	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-Carnivora	Carnivora	Carnivora	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-cf Carnivora	Carnivora	Carnivora	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-cf Rodentia	Rodentia	Rodentia	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-Eulipotyphla	Eulipotyphla	Eulipotyphla	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-Lagomorpha	Lagomorpha	Lagomorpha	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-Lagomorpha/Rodentia	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-Misc	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-NA	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-Rodentia	Rodentia	Rodentia	NA	NA	NA	NA	NA	NA	NA			
+Mammalia-Rodentia/Lagomorpha	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Mephitis mephitis	Mephitis mephitis	Carnivora	Mephitidae	Mephitis	M.mephitis	2399.99	NA	NA	NA			
+Microtus californicus	Microtus californicus	Rodentia	Cricetidae	Microtus	M.californicus	57.42	43.86	13.65802	4589	594.9268	45.658	-13.767
+Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus	M.californicus	57.42	43.86	13.65802	4589	594.9268	45.658	-13.767
+Mustela frenata	Mustela frenata	Carnivora	Mustelidae	Mustela	M.frenata	190.03	NA	NA	NA			
+NA-NA	NA	NA	NA	NA	NA	NA	NA	NA	NA			
+Neotoma macrotis	Neotoma macrotis	Rodentia	Cricetidae	Neotoma	N.macrotis	NA	NA	NA	3607	574.7685	43.137	-13.809
+Neotoma sp	Neotoma sp	Rodentia	Cricetidae	Neotoma	N.macrotis	NA	NA	NA	3607	574.7685	43.137	-13.809
+Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	O.beecheyi	597.82	49.14	12.13961	4755	594.8531	45.111	-13.839
+Otospermophilus cf beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	O.beecheyi	597.82	49.14	12.13961	4755	594.8531	45.111	-13.839
+Peromyscus ?maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus	P.maniculatus	19.98	NA	NA	NA			
+Peromyscus cf maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus	P.maniculatus	19.98	NA	NA	NA			
+Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus	P.maniculatus	19.98	NA	NA	NA			
+Reithrodontomys cf megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys	R.megalotis	10.72	40.68	11.49901	3195	819.5379	45.658	-21.704
+Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys	R.megalotis	10.72	40.68	11.49901	3195	819.5379	45.658	-21.704
+Scapanus latimanus	Scapanus latimus	Eulipotyphla	Talpidae	Scapanus	S.latimanus	62.46	43.2	11.77622	4284	620.3155	43.108	-13.809
+Sorex cf ornatus	Sorex ornatus	Eulipotyphla	Soricidae	Sorex	S.ornatus	5.31	35.99	15.36991	4072	566.7494	43.08	-9.848
+Sorex sp	Sorex sp	Eulipotyphla	Soricidae	Sorex	S.ornatus	5.31	35.99	15.36991	4072	566.7494	43.08	-9.848
+Spermophilus sp	Spermophilus sp	Rodentia	Sciuridae	Spermophilus	O.beecheyi	597.82	49.14	12.13961	4755	594.8531	45.111	-13.839
+Spilogale gracilis	Spilogale gracilis	Carnivora	Mephitidae	Spilogale	S.gracilis	462.5	34.13	12.35109	2971	715.1216	45.658	-21.763
+Sylvilagus ?audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus	S.audubonii	880.88	31.66	13.65566	2756	750.2503	45.658	-21.763
+Sylvilagus audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus	S.audubonii	880.88	31.66	13.65566	2756	750.2503	45.658	-21.763
+Sylvilagus bachmani	Sylvilagus bachmani	Lagomorpha	Leporidae	Sylvilagus	S. bachmani	714.53	45.6	15.06738	4433	526.1245	43.08	-8.969
+Sylvilagus cf audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus	S.audubonii	880.88	31.66	13.65566	2756	750.2503	45.658	-21.763
+Sylvilagus cf bachmani	Sylvilagus bachmani	Lagomorpha	Leporidae	Sylvilagus	S. bachmani	714.53	45.6	15.06738	4433	526.1245	43.08	-8.969
+Sylvilagus sp	Sylvilagus sp	Lagomorpha	Leporidae	Sylvilagus	NA	NA	NA	NA	NA			
+Tamias cf merriami	Tamias merriami	Rodentia	Sciuridae	Tamias	T.merriami	74.77	39.04	12.89756	4050	594.8071	39.61	-14.003
+Tamias sp	Tamias sp	Rodentia	Sciuridae	Tamias	T.merriami	74.77	39.04	12.89756	4050	594.8071	39.61	-14.003
+Tamias/Neotamias sp	Tamias sp	Rodentia	Sciuridae	Tamias	T.merriami	74.77	39.04	12.89756	4050	594.8071	39.61	-14.003
+Taxidea taxus	Taxidea taxus	Carnivora	Mustelidae	Taxidea	T.taxus	NA	NA	NA	NA			
+Thomomys bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys	T.bottae	122.7	26.71	14.67789	2644	715.7075	45.658	-21.209
+Thomomys cf bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys	T.bottae	122.7	26.71	14.67789	2644	715.7075	45.658	-21.209
+Thomomys sp	Thomomys sp	Rodentia	Geomyidae	Thomomys	T.bottae	122.7	26.71	14.67789	2644	715.7075	45.658	-21.209
+Urocyon cinereoargenteus	Urocyon cinereoargenteus	Carnivora	Canidae	Urocyon	U.cinereoargenteus	NA	NA	NA	NA			
+Vertebrata-NA	Vertebrata	NA	NA	NA	NA	NA	NA	NA	NA			
+Vertebrata cf Mammalia-NA	Mammalia	NA	NA	NA	NA	NA	NA	NA	NA			
+Peromyscus cf californicus	Peromyscus californicus	Rodentia	Cricetidae	Peromyscus	P.californicus	42.68	31.03	15.34363	3750	552.7551	43.137	-11.867
+cf Peromyscus cf californicus	Peromyscus californicus	Rodentia	Cricetidae	Peromyscus	P.californicus	42.68	31.03	15.34363	3750	552.7551	43.137	-11.867
+Thomomys ?bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys	T.bottae	122.7	26.71	14.67789	2644	715.7075	45.658	-21.209
