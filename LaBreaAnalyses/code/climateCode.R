@@ -31,3 +31,15 @@ Hendy_extracted <- approx(x=dat2$HendyAge, y=dat2$pach.d18O, method="linear", xo
 Hendy_extracted$y # interpolated d18O at each radiocarbon date
 
 write.csv(Hendy_extracted$y, file = "data/processed/Interpolation/interpolated_d18O.csv")
+
+
+# weighted mean test
+dat2<- read.delim("data/raw/climate/hendy2002data.txt")
+ages <- read.delim("data/processed/Interpolation/P23_calibrated.txt") 
+xout <- seq(29770, 48810, by=10)
+
+seq_extracted <- approx(x=dat2$HendyAge, y=dat2$pach.d18O, method="linear", xout=xout)
+seq_extracted$y
+interpolated_seq<-cbind(seq_extracted$y, xout)
+write.csv(interpolated_seq, file = "data/processed/Interpolation/interpolated_seq.csv")
+
