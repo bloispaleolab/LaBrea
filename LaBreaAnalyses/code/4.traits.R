@@ -5,7 +5,7 @@ library(scales)
 mammals_nisp <- read.delim("data/processed/mammal_nisp.txt", sep="\t", stringsAsFactors = F)
 mammals_nisp[is.na(mammals_nisp)] <- 0 # convert the NAs to 0
 
-taxonomy_traits <- read.delim("data/processed/TaxonomyTraits_Reg_est_Bioclim.txt", sep="\t", stringsAsFactors = F)
+taxonomy_traits <- read.delim("data/processed/TaxonomyTraits_Reg_est_Bioclim.txt", sep="\t", stringsAsFactors = F)  # TO DO FOR NEXT TIME: Create this file through coding rather than assembling de novo - pull trait data from Pantheria and the newly generated bioclim summary stats files, need to match names from bioclim files back to master taxonomy.
 
 # merge trait data with nisp ----
 dat <- cbind(mammals_nisp, taxonomy_traits[match(mammals_nisp$RevisedName, taxonomy_traits$RevisedName),-c(1:5)])
