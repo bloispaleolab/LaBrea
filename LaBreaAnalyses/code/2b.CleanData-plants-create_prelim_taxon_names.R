@@ -1,39 +1,44 @@
 library(readr)
+library(stringr)
 
 # Read in data exported from Google Drive ----
 deposits <- c("1","14","7b","13")
 files <- list.files(
-  "data/original_data/GoogleDriveExports-plants", 
+  "data/original_google_data/GoogleDriveExports-plants", 
   full=T)
 
 # create a master spreadsheet with standardized taxonomic names ----
 master <- NULL
 for (i in 1:length(files)){
   # read in data ----
-  original<- read_tsv(files[i], trim_ws=T) 
+  original<- read_tsv(files[i], trim_ws=T, skip=1) 
   
-  # change column names
+  # standardize column names
   if (length(grep("Box 1 Loan 1", files[i])) == 1){
-    colnames(original)[match(c('Gill temporary #', "identification", 'how many'), colnames(original))] <- c("Number", "Identification", "NISP")}else{
-      colnames(original)[match(c('how many'), colnames(original))] <- c("NISP")
+    colnames(original)[match(c('Gill temporary #', "identification"), colnames(original))] <- c("Lab_Number", "Identification")}else{
+      colnames(original)[match(c('Number'), colnames(original))] <- c("Lab_Number")
     }
   
+  colnames(original)[match(c('how many', "New Museum catalog # to be used"), colnames(original))] <-  
+    c("NISP", 'Catalog_Number')
+  
+  
+  # split out Box, grid, level and attach as new columns
+  original$'Box, grid, level' <- sub('Box ', 'Split ', original$'Box, grid, level')
+  original$'Box, grid, level' <- sub('grid ', 'Split ', original$'Box, grid, level')
+  original$'Box, grid, level' <- sub('level ', 'Split ', original$'Box, grid, level')
+  out <- strsplit(original$'Box, grid, level', "Split")
+  out <- lapply(out, function(x){x[!x ==""]})
+  out <- lapply(out, function(x){str_trim(x, side = "both")})
+  out <- t(data.frame(out))
+  rownames(out) <- seq(1:nrow(out))
+  colnames(out) <- c("Box", "Grid", "Level")
+  original <-cbind(original, out) 
+  
   # keep the relevant columns and make sure in same order
-  colsToKeep <- match(c("Number", "Identification", "NISP"), colnames(original))
+  colsToKeep <- match(c("Lab_Number", "Catalog_Number", "Box", "Grid", "Level", "Identification", "NISP"), colnames(original))
   
   data <- original[,colsToKeep]
-  
-  # change names
-  colnames(data) <- c("SpecimenNumber", "Species", "NISP")
-  
-  # Add Box number to dataframe
-  box <- sub('.*Box ', '', files[i])
-  if (length(grep("Loan", box)) == 1){
-    box <- gsub(' Loan.*', '', box)}else{
-    box <- gsub(".tsv", '', box)
-  }
-
-  data$box <- box
   
   # Add onto the master spreadsheet
   if (i ==1){
@@ -47,78 +52,12 @@ for (i in 1:length(files)){
       print(paste0(i, ": CHECK COLNAMES"))
     }
   }
-  
 }
 
 # data cleaning ----
-allSpecies <- unique(master$Species)
+allSpecies <- unique(master$Identification)
 allSpecies <- allSpecies[order(allSpecies)]
 
-
-
-# merge with master - delete old row, add new rows
-# have to do this outside the loop, otherwise rownumbers get thrown off
-master <- master[-rowsWithRepeats,]
-master <- rbind(master, newRowsMaster)
-
-
-# This block of code can be used for the taxonomy matching file
-unique_names <- unique(master$prelim_taxon_name)
-unique_names <- sort(unique_names)
-unique_names
-
 # export master file ----
-write.table(master, file="data/processed/master_mammal_file.txt", sep="\t")
-
-
-
-### OLD CODE
-
-
-
-# if sp. has a period, remove it!
-if (length(which(data$Species=="sp.")) > 0){
-  data$Species[which(data$Species == "sp.")] <- "sp"
-}
-
-# replace cf. with cf
-if (length(grep("cf. ", data$Species)>0)){
-  data$Species[grep("cf. ", data$Species)] <- gsub("cf. ", "cf ", data$Species[grep("cf. ", data$Species)])
-}
-if (length(grep("cf. ", data$Genus)>0)){
-  data$Genus[grep("cf. ", data$Genus)] <- gsub("cf. ", "cf ", data$Genus[grep("cf. ", data$Genus)])
-}
-
-
-
-
-# deal with specimens with repeated catalog numbers ----
-
-# first, clean up so Museum_Number so it matches. Most of the time, repeats separated with a semi-colon.
-if (any(grep(":", master$Museum_Number))){
-  master$Museum_Number[grep(":", master$Museum_Number)] <- gsub(":", ";", master$Museum_Number[grep(":", master$Museum_Number)])
-}
-
-# then find all rows with repeats
-rowsWithRepeats <- grep(";", master$Museum_Number)
-
-# scroll through each, copy row to end and separate catalog numbers
-newRowsMaster <- NULL
-for (i in 1:length(rowsWithRepeats)){
-  # find row with repeats and split out catalog number
-  oldRow <- master[rowsWithRepeats[i],]
-  splitNumbers <-strsplit(as.character(oldRow$Museum_Number), "; ")[[1]] 
-  
-  # create new rows and assign individual catalog numbers
-  l <- length(splitNumbers)
-  newRows <- oldRow[1,]
-  for (j in 2:l){
-    newRows <- rbind(newRows, oldRow)
-  }
-  newRows$Museum_Number <- splitNumbers
-  
-  # add to master newRows dataframe
-  newRowsMaster <- rbind(newRowsMaster, newRows)
-  rm(oldRow, newRows)
-}
-
+write.table(master, file="data/processed/plant macros/master_plant_file.txt", sep="\t", row.names=F)
+write.table(allSpecies, file="data/processed/plant macros/master_plant_taxa.txt", sep="\t", row.names=F, col.names=c("Original_Identification"))
