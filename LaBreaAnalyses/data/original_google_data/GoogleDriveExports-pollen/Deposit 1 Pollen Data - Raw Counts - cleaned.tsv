@@ -1,0 +1,41 @@
+	B-1	C-2	C-3	C-1	C-3	D-2	B-2	B-3	B-4	A-2	A-1	A-3	B-2	D-4	E-4	Include
+Tracers/Exotics	142	48	64	118	112	85	54	65	33	92	93	15	20	14	297	tracer
+Pinus Undif.	39	43	52	55	29	22	33	42	32	31	25	7	31	32	55	yes
+Pinus subg. Pinus				2										1	7	yes
+Abies sp.	4	4	8	3		2		3	2	1			1	5	4	yes
+Picea sp.			4	9	2	6		9	3	1			2			yes
+Cupressaceae	21	32	30	23	15	37	22	31	28	17	17	16	47	50	96	yes
+Alnus sp.	15	18	18	15	7	19	17	16	17	3	10	9	8	6	9	yes
+Betula sp.	6	4	3		4	5	5	7	9	6	1	1	12	4	4	yes
+Salix sp.	4		1								2	1	6	2	6	yes
+Ericaceae	3	8	8	9	6	7	10	7	4		2	17		7		yes
+Rosaceae (Dryas-type)		2	1	2	4	4	3	3	4			3	1	2	2	yes
+Fabaceae	2		2		3			1	5				2			yes
+Onagraceae	8	2		5	2		3	2	4	5	6	5	9	4	2	yes
+Convolvulaceae							1									yes
+Papaveraceae					1		2				4	1				yes
+Berberidaceae															4	yes
+Caryophyllaceae	1			4	2		3		2			1				yes
+Poaceae	12	19	26	25	19	41	13	27	25	5	9	11	34	18	33	yes
+Cyperaceae	23	32	43	29	34	60	10	37	28	15	14	20	71	37	35	yes
+Ranunculaceae - Thalictrum-type	12	11	10	4	35	7	32	31	44	40	40	83	5		1	yes
+Artemisia sp.	37	38	70	44	66	61	51	39	47	15	25	33	34	117	73	yes
+Tubiflora-type (high spine Aster)	31	13	7	25	48	24	33	27	12	36	54	3	17	30	33	yes
+Liguliflorae-type (lettuce type)	16	4	2	2	5	1	4		2	3	11	2	2	5	5	yes
+Ambrosia-type (low spine Aster)	46	44	17	44	35	40	45	29	23	78	49	26	32	40	61	yes
+Polygonaceae 	19	35	34	17	43	14	23	38	50	16	21	43	5	6	5	yes
+Chenopodiaceae	55	69	43	35	48	29	60	34	55	84	73	89	30	33	16	yes
+Yucca sp.?																yes
+Cactaceae																yes
+Brassicaceae																yes
+Ephedraceae?																yes
+Apiaceae														9	3	yes
+Unknown/Crumpled	2		1	3			2	3	4							yes
+Equisetaceae			8			2							1	2		no
+Typha sp. 	2	1		2	2	5	4	1		3	5	1		1	1	no
+Potamogeton sp. 		4														no
+Trilete spore											2		1			no
+Pteridaceae					1		2						3	1		no
+Diporate spore													1	1		no
+large reticulate spore								1								no
+monolete					1											no
