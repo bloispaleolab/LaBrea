@@ -44,12 +44,12 @@ for (i in 1:length(uniqueSp)){
     bioclim_data <- extract(bioclim_stack, range)
     bioclim_data <- ldply(bioclim_data, rbind)
     # calculate various summary statistics on the range-wide climate data
-    range_summary[1,] <- apply(bioclim_data, 2, mean)
-    range_summary[2,] <- apply(bioclim_data, 2, median)
-    range_summary[3,] <- apply(bioclim_data, 2, var)
-    range_summary[4,] <- apply(bioclim_data, 2, sd)
-    range_summary[5,] <- apply(bioclim_data, 2, max)
-    range_summary[6,] <- apply(bioclim_data, 2, min)
+    range_summary[1,] <- apply(bioclim_data, 2, mean, na.rm=TRUE)#Added na.rm=TRUE, this is what messed up M. frenata
+    range_summary[2,] <- apply(bioclim_data, 2, median, na.rm=TRUE)
+    range_summary[3,] <- apply(bioclim_data, 2, var, na.rm=TRUE)
+    range_summary[4,] <- apply(bioclim_data, 2, sd, na.rm=TRUE)
+    range_summary[5,] <- apply(bioclim_data, 2, max, na.rm=TRUE)
+    range_summary[6,] <- apply(bioclim_data, 2, min, na.rm=TRUE)
     colnames(range_summary) <- colnames(bioclim_data) 
     
     # save the file

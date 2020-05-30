@@ -98,8 +98,7 @@ for (i in 1:length(tax_scales)){
     rownames(trait_weighted_mean) <- traits
     
     for (t in 1:length(traits)){
-      trait_weighted_mean[t,] <- colSums(matched_nisp[,colsForBoxes]*trait_dat[,t+1], na.rm=T)/total_nisp
-      ### NATE: once you deal with M. frenata, remove the ", na.rm=T" from this line of code!
+      trait_weighted_mean[t,] <- colSums(matched_nisp[,colsForBoxes]*trait_dat[,t+1])/total_nisp
     }
     
     rownames(trait_weighted_mean) <- traits
