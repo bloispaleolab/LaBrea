@@ -24,14 +24,21 @@ dat2<- read.delim("data/raw/climate/hendy2002data.txt")
 #HendyAge_corr<-dat2$HendyAge -50 #correct for difference between RC age (before 1950) and Hendy Age (before 2000)
 #dat2_corrected<-cbind(dat2, HendyAge_corr)
 
-ages <- read.delim("data/processed/Interpolation/Calibrated_dates.txt") # mean, error, 
+ages <- read.delim("data/processed/Interpolation/P23_calibrated.txt") # mean, error, 
 
-xout <- ages$Calibrated.age
+xout <- ages$Median
 Hendy_extracted <- approx(x=dat2$HendyAge, y=dat2$pach.d18O, method="linear", xout=xout)
 Hendy_extracted$y # interpolated d18O at each radiocarbon date
 
-write.csv(Hendy_extracted$y, file = "data/processed/Interpolation/interpolated_d18O.csv")
-
+matched_ages<-cbind(ages, Hendy_extracted$y)
+colnames(matched_ages)[ncol(matched_ages)]<-"P23_d18O"
+matched_ages$Deposit<-as.factor(matched_ages$Deposit)
+d18O_mean<-aggregate(matched_ages$P23_d18O ~ matched_ages$Deposit, FUN=mean)
+d18O_med<-aggregate(matched_ages$P23_d18O ~ matched_ages$Deposit, FUN=median)
+Box_d18O_summary<-cbind(d18O_mean, d18O_med[,2])
+colnames(Box_d18O_summary)<-c("Deposit", "P23_d18O_mean", "P23_d18O_med")
+write.csv(matched_ages, file = "data/processed/Interpolation/matched_ages.csv", row.names = FALSE)
+write.csv(Box_d18O_summary, file = "data/processed/Interpolation/Box_summary.csv", row.names = FALSE)
 
 # weighted mean test
 dat2<- read.delim("data/raw/climate/hendy2002data.txt")
