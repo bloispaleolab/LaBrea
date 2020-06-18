@@ -90,15 +90,15 @@ for (i in 1:length(uniqueSp)){
     
     # extract ndvi data from the range
     ndvi_data <- extract(ndvi_mean, range)
-    ndvi_data <- ldply(ndvi_data, rbind)
+    ndvi_data <- unlist(ndvi_data)
     # calculate various summary statistics on the range-wide climate data
-    range_summary[1,] <- apply(ndvi_data, 2, mean, na.rm=TRUE)#Added na.rm=TRUE, this is what messed up M. frenata
-    range_summary[2,] <- apply(ndvi_data, 2, median, na.rm=TRUE)
-    range_summary[3,] <- apply(ndvi_data, 2, var, na.rm=TRUE)
-    range_summary[4,] <- apply(ndvi_data, 2, sd, na.rm=TRUE)
-    range_summary[5,] <- apply(ndvi_data, 2, max, na.rm=TRUE)
-    range_summary[6,] <- apply(ndvi_data, 2, min, na.rm=TRUE)
-    colnames(range_summary) <- colnames(ndvi_data) 
+    range_summary[1,] <- mean(ndvi_data, na.rm=TRUE)#Added na.rm=TRUE, this is what messed up M. frenata
+    range_summary[2,] <- median(ndvi_data, na.rm=TRUE)
+    range_summary[3,] <- var(ndvi_data, na.rm=TRUE)
+    range_summary[4,] <- sd(ndvi_data, na.rm=TRUE)
+    range_summary[5,] <- max(ndvi_data, na.rm=TRUE)
+    range_summary[6,] <- min(ndvi_data, na.rm=TRUE)
+    colnames(range_summary) <- "ndvi"
     
     # save the file
     write.csv(range_summary, file=paste0("data/processed/range_wide_ndvi_stats/range_wide_ndvi_stats_", uniqueSp[i], ".csv"), row.names=T)
