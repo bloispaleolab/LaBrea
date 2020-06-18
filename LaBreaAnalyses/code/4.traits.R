@@ -110,4 +110,22 @@ for (i in 1:length(tax_scales)){
 
 
 
+#Calculate NDVI ----
+library(grassmapr)
+data(ndvi_NA)#all months of 2001
+plot(ndvi_NA)
+
+# Calculate mean
+ndvi_mean <- calc(ndvi_NA, mean)
+
+writeRaster(ndvi_mean, filename="ndvi.asc", format = "ascii", overwrite=TRUE)
+ndvi_avg <- raster("ndvi.asc")
+
+Mcali_range <- readOGR(dsn=path.expand("Cricetidae/micr_cali_pl.shp"))
+Mcali_range <- gSimplify(Mcali_range, tol=0.01, topologyPreserve=FALSE)
+plot(Mcali_range, add=T)
+
+Mcali_ndvi <- extract(ndvi_avg, Mcali_range)
+Mcali_ndvi_all <- unlist(Mcali_ndvi)
+mean(Mcali_ndvi_all)#na.rm=TRUE)
 

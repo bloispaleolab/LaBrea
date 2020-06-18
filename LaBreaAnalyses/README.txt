@@ -10,7 +10,6 @@ Our master workflow for mammals looks like this:
 	- *This isn’t entirely true because the data aren’t 100% clean, so we deal with this in the data cleanup step in R
 - Each row in the dates or isotopes sheet is a measurement (date) or set of measurements (isotopes) from a single individual
 
-
 Step 1: Make sure you have the most up-to-date version of the original data downloaded from Google Drive
 
 - Github: LaBreaAnalyses/data/original_google_data
