@@ -3,7 +3,6 @@ spat_scales <- c("local", "regional", "continental")
 
 # read in the d180 box-level climate data
 d180 <- read.csv("data/processed/Interpolation/Box_summary.csv")
-d180 <- d180[,-1] # NATE DELETE THIS LINE OF CODE ONCE YOUVE FIXED 
 
 # discard Box 14 data
 d180 <- d180[-which(d180$Deposit==14),]
@@ -15,7 +14,7 @@ d180 <- d180[c(1,3,2),]
 i <- 1
 j <- 1  
 
-pdf(file="output/sensitivy_results_bioclim4.pdf")
+pdf(file="output/sensitivy_results_bioclim1.pdf")
 
 par(mfrow=c(3,3), mar=c(4,4,1,1)+0.1)
 
