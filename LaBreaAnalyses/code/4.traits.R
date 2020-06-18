@@ -52,12 +52,12 @@ for (i in 1:length(tax_scales)){
     taxon_list <- taxon_list[which(dat$include[match(taxon_list, dat$Species)]=="y")]
 
     # now that we have a taxon list, create a blank dataframe to store the trait data
-    trait_dat <- as.data.frame(matrix(nrow=length(taxon_list), ncol=49))
+    trait_dat <- as.data.frame(matrix(nrow=length(taxon_list), ncol=55))
     
     #we want to associate the bioclim data for each species
     for (s in 1:length(taxon_list)){
     
-    # read in bioclim summary file, arrange, and store in trait dat
+    # read in bioclim and ndvis summary file, arrange, and store in trait dat
       bioclim <- read.csv(paste0("data/processed/range_wide_bioclim_stats/range_wide_bioclim_stats_", taxon_list[s], ".csv"), header=T)
       colnames(bioclim)[1] <- "statistic"
       bioclim_long <- reshape(bioclim, idvar = "statistic", varying=colnames(bioclim)[2:ncol(bioclim)], direction = "long")
@@ -67,6 +67,13 @@ for (i in 1:length(tax_scales)){
       
       trait_dat[s, 1:length(bioclim_colnames)]<- bioclim_long$value
       colnames(trait_dat)[1:length(bioclim_colnames)] <- bioclim_colnames
+      
+      ndvi <- read.csv(paste0("data/processed/range_wide_ndvi_stats/range_wide_ndvi_stats_", taxon_list[s], ".csv"), header=T)
+      ndvi_transposed <- t(ndvi[,2])
+      colnames(ndvi_transposed) <- paste0(ndvi[,1], "_ndvi")
+      
+      trait_dat[s, 49:54]<- ndvi_transposed
+      colnames(trait_dat)[49:54] <- colnames(ndvi_transposed)
       
       }
 
@@ -108,24 +115,4 @@ for (i in 1:length(tax_scales)){
   }
 }
 
-
-
-#Calculate NDVI ----
-library(grassmapr)
-data(ndvi_NA)#all months of 2001
-plot(ndvi_NA)
-
-# Calculate mean
-ndvi_mean <- calc(ndvi_NA, mean)
-
-writeRaster(ndvi_mean, filename="ndvi.asc", format = "ascii", overwrite=TRUE)
-ndvi_avg <- raster("ndvi.asc")
-
-Mcali_range <- readOGR(dsn=path.expand("Cricetidae/micr_cali_pl.shp"))
-Mcali_range <- gSimplify(Mcali_range, tol=0.01, topologyPreserve=FALSE)
-plot(Mcali_range, add=T)
-
-Mcali_ndvi <- extract(ndvi_avg, Mcali_range)
-Mcali_ndvi_all <- unlist(Mcali_ndvi)
-mean(Mcali_ndvi_all)#na.rm=TRUE)
 
