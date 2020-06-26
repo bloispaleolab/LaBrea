@@ -36,7 +36,7 @@ plot(precip)
 #Mustela frenata
 Mfren_range <- readOGR(dsn=path.expand("data/raw/SpeciesRangeShapefiles/must_fren_pl.shp"))
 Mfren_range <- gSimplify(Mfren_range, tol=0.01, topologyPreserve=FALSE)
-plot(Mcali_range, add=T)
+plot(Mfren_range, add=T)
 
 #temp
 Mfren_temp <- extract(temp, Mfren_range)
@@ -48,13 +48,58 @@ max(Mfren_temp_all, na.rm=TRUE)
 min(Mfren_temp_all, na.rm=TRUE)
 
 #precip
-Mcali_precip <- extract(precip, Mcali_range)
+Mfren_precip <- extract(precip, Mfren_range)
 
-Mcali_precip_all <- unlist(Mcali_precip)
+Mfren_precip_all <- unlist(Mfren_precip)
+Mfren_precip_all
+mean(Mfren_precip_all)#na.rm=TRUE
+max(Mfren_precip_all, na.rm=TRUE)
+min(Mfren_precip_all, na.rm=TRUE)
+
+
+#Peromyscus maniculatus
+Pcali_range <- readOGR(dsn=path.expand("data/raw/SpeciesRangeShapefiles/pero_mani_pl.shp"))
+Pcali_range <- gSimplify(Pcali_range, tol=0.01, topologyPreserve=FALSE)
+plot(Pcali_range, add=T)
+
+Pcali_temp <- extract(temp, Pcali_range)
+
+Pcali_temp_all <- unlist(Pcali_temp)
+Pcali_temp_all
+mean(Pcali_temp_all)#na.rm=TRUE
+max(Pcali_temp_all)
+min(Pcali_temp_all)
+
+#precip
+Pcali_precip <- extract(precip, Pcali_range)
+
+Pcali_precip_all <- unlist(Pcali_precip)
 Mcali_precip_all
-mean(Mcali_precip_all)#na.rm=TRUE
-max(Mcali_precip_all)
-min(Mcali_precip_all)
+mean(Pcali_precip_all)#na.rm=TRUE
+max(Pcali_precip_all)
+min(Pcali_precip_all)
+
+
+#Mephitis mephitis
+Sgrac_range <- readOGR(dsn=path.expand("data/raw/SpeciesRangeShapefiles/Meph_meph_pl.shp"))
+Sgrac_range <- gSimplify(Sgrac_range, tol=0.01, topologyPreserve=FALSE)
+plot(Sgrac_range, add=T)
+
+Sgrac_temp <- extract(temp, Sgrac_range)
+
+Sgrac_temp_all <- unlist(Sgrac_temp)
+Sgrac_temp_all
+mean(Sgrac_temp_all)#na.rm=TRUE
+max(Sgrac_temp_all)
+min(Sgrac_temp_all)
+#Precip
+Sgrac_precip <- extract(precip, Sgrac_range)
+
+Sgrac_precip_all <- unlist(Sgrac_precip)
+Sgrac_precip_all
+mean(Sgrac_precip_all)#na.rm=TRUE
+max(Sgrac_precip_all)
+min(Sgrac_precip_all)
 
 
 
@@ -94,6 +139,7 @@ Pcali_temp_all
 mean(Pcali_temp_all)#na.rm=TRUE
 max(Pcali_temp_all)
 min(Pcali_temp_all)
+
 
 #precip
 Pcali_precip <- extract(precip, Pcali_range)

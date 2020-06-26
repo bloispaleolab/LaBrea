@@ -14,7 +14,7 @@ d180 <- d180[c(1,3,2),]
 i <- 1
 j <- 1  
 
-pdf(file="output/sensitivy_results_bioclim1.pdf")
+pdf(file="output/sensitivy_results_NDVI.pdf")
 
 par(mfrow=c(3,3), mar=c(4,4,1,1)+0.1)
 
@@ -36,8 +36,8 @@ for (i in 1:length(tax_scales)){
     
     
     # plot just temp (bio 1)
-    plot(median_bio_1 ~ P23_d18O_med, data=merged, pch=16)
-    with(merged, text(median_bio_1 ~ P23_d18O_med, labels=Deposit, pos=c(1, 4, 2)))
+    plot(median_ndvi ~ P23_d18O_med, data=merged, pch=16)
+    with(merged, text(median_ndvi ~ P23_d18O_med, labels=Deposit, pos=c(1, 4, 2)))
     mtext(paste0("taxonomic scale = ", tax_scales[i], "; spatial scale = ", spat_scales[j]), side=3, line=0, cex=0.5)
   }
 }
