@@ -1,4 +1,4 @@
-UCIAMS_Number	Original_sample_name	Taxon	del15N_permil	del13C_permil	Calibrated age	Sigma	Cal_median_age	14C_age_BP	14C_age_error
+UCIAMS_Number	Original_sample_name	Taxon	del15N_permil	del13C_permil	Calibrated_mean_age	Sigma	Cal_median_age	14C_age_BP	14C_age_error
 216772	V 4516 Spermophilus   	O. beecheyi	3.8	-20.7	2377	30	2362	2375	15
 223494	HC 143517 Sylvilagus 	Sylvilagus sp	6.2	-18.8	2765	17	2762	2650	25
 223493	HC 11584 Spermophilus  Pit 10  E8 9-13.5'	O. beecheyi	9.9	-18.5	5166	73	5161	4505	20
@@ -10,7 +10,7 @@ UCIAMS_Number	Original_sample_name	Taxon	del15N_permil	del13C_permil	Calibrated 
 223513	P23-40634 Sylvilagus Box 14 	Sylvilagus sp	7.2	-21.3	30054	249	30053	25830	140
 198298	P23 33235 S. beecheyi Dep. 14	O. beecheyi	7	-20.9	30615	179	30633	26310	150
 223516	P23-40637 Sylvilagus Box 14 B-3 L3	Sylvilagus sp	7.9	-20.9	30940	115	30945	26780	160
-223521	P23-40642 Spermophilus Box 14  .10mgC	O. beecheyi	6.4	-20.3	31018	209	31022	26940	320
+223587	P23-40642 Spermophilus Box 14  .10mgC	O. beecheyi	6.4	-20.3	30908	99	30911	26710	110
 223524	V 2641 Sylvilagus  Pit 4  F-4 9-10'	Sylvilagus sp	7.2	-20.9	31927	310	31883	28090	180
 223529	V 4519 Spermophilus 	O. beecheyi	9.4	-19.3	32275	333	32274	28370	180
 217078	V 2174 Sylvilagus Pit 16	S. bachmani	8.2	-22.3	32461	408	32472	28500	240
@@ -52,7 +52,7 @@ UCIAMS_Number	Original_sample_name	Taxon	del15N_permil	del13C_permil	Calibrated 
 198205	P23 33227 S. beecheyi Dep. 1 B-2 L3	O. beecheyi	7	-20.7	41133	552	41162	36580	610
 216763	HC 142763 Sylvilagus Pit 16  	S. audubonii	7.6	-21.4	41382	563	41415	36880	660
 223517	P23-40638 Sylvilagus Box 14 	Sylvilagus sp	7.2	-21.4	41406	434	41434	36870	500
-223495	P23-35541 Sylvilagus Box 13 B-2 L4	Sylvilagus sp	5.6	-21.5	42795	488	42748	38740	640
+223585	P23-35541 Sylvilagus Box 13 B-2 L4	Sylvilagus sp	5.2	-21.4	43079	376	43041	39220	460
 223497	P23-36693 Sylvilagus Box 13 B-2 L3	Sylvilagus sp	7	-22	43188	549	43123	39240	670
 198294	P23 28902 Sylvilagus Dep. 1 A-1 L7 .28mgC	S. bachmani	5.5	-20.9	43589	676	43526	39700	810
 223496	P23-36572 Spermophilus  Box 13 A-3 L3	O. beecheyi	6.2	-20.9	44279	709	44244	40640	800

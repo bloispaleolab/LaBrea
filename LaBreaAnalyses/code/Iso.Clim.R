@@ -4,117 +4,118 @@ library(tidyverse)
 library(scales)
 library(RColorBrewer)
 
-iso_dat<-read.csv("data/processed/Interpolation/IsoClim_interpolated.csv")# All rabbits and Squirrels with mean calibrated ages < 50 ka BP
+iso_dat<-read.csv("data/processed/Interpolation/IsoClim_interpolated_rev.csv")# All rabbits and Squirrels with mean calibrated ages < 50 ka BP
 
 ####Intraspecific diet ###
 
 ## Compare desert cottontails to brush rabbits
 
-iso_rabbits<- iso_dat[grep("S. audubonii|S. bachmani", iso_dat$Taxon), c(3:5)]
-rownames(iso_rabbits) <- NULL
-levels(iso_rabbits$Taxon)
-iso_rabbits$Taxon<-droplevels(iso_rabbits$Taxon)# iso_rabbits$Taxon<-factor(iso_rabbits$Taxon)
-levels(iso_rabbits$Taxon)
+iso_rabbits<- iso_dat[grep("S. audubonii|S. bachmani", iso_dat$Species), c(3:6)]
+
+#data normally distributed?
+C_aud <- iso_rabbits$d13C[which(iso_rabbits$Species=="S. audubonii")] #yes
+C_bach <- iso_rabbits$d13C[which(iso_rabbits$Species=="S. bachmani")] #No
+N_aud <- iso_rabbits$d15N[which(iso_rabbits$Species=="S. audubonii")] #sort of
+N_bach <- iso_rabbits$d15N[which(iso_rabbits$Species=="S. bachmani")] #sort of
+#Use non-parametric tests
+
+library(e1071)
+library(ggpubr)
+
+ggqqplot(N_bach)
+shapiro.test(N_bach) # if > 0.05, then yes  
+kurtosis(N_bach) # if within -2 and 2, then yes 
+skewness(C_bach) # if within -2 and 2, then yes
+mean(C_bach)
+median(C_bach) #if similar to mean, than yes 
+
 
 #carbon
-boxplot(d13C~Taxon, data=iso_rabbits, main="Rabbit diet niche", 
-        xlab="Taxon", ylab="d13C", col = "purple")
-wilcox.test(d13C~Taxon, data=iso_rabbits, correct = TRUE)
+pdf("output/Isoplots/Rabbit_spp_d13C.pdf", width=5, height=4)
+boxplot(d13C~Species, data=iso_rabbits, ylab= expression({delta}^13*C~'\u2030'))
+dev.off()
+wilcox.test(d13C~Species, data=iso_rabbits, correct = TRUE, alternative = "two.sided")
+#t.test(d13C~Taxon, mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F, data=iso_rabbits)
 
 #nitrogen
-boxplot(d15N~Taxon,data=iso_rabbits, main="Rabbit diet niche", 
-        xlab="Species", ylab="d15N", col = "purple")
-wilcox.test(d15N~Taxon, data=iso_rabbits, correct = TRUE)
-
-
-hull_species <- iso_rabbits %>%
-  group_by(Taxon) %>%
-  slice(chull(d13C, d15N))
-
-p<-ggplot(iso_rabbits, aes(x = d13C, y = d15N)) +
-  geom_point()+
-  labs(x= expression({delta}^13*C~'\u2030'), y= expression({delta}^15*N~'\u2030'))
-
-p + aes(fill = factor(Taxon)) + 
-  geom_polygon(data = hull_species, alpha = 0.5)+
-  scale_fill_discrete(name = "Taxon", 
-                      labels = c("Desert Cottontail", "Brush Rabbit"))
+pdf("output/Isoplots/Rabbit_spp_d15N.pdf", width=5, height=4)
+boxplot(d15N~Species,data=iso_rabbits, ylab=expression({delta}^15*N~'\u2030'))
+dev.off()
+wilcox.test(d15N~Species, data=iso_rabbits, correct = TRUE)
 
 
 ## compare all rabbits to squirrels
-iso_dat_2<-read.csv("data/processed/Interpolation/IsoClim_interpolated.csv")
-levels(iso_dat_2$Taxon) 
-levels(iso_dat_2$Taxon)[levels(iso_dat_2$Taxon)=="S. audubonii"] <- "Sylvilagus"
-levels(iso_dat_2$Taxon)[levels(iso_dat_2$Taxon)=="S. bachmani"] <- "Sylvilagus"
-levels(iso_dat_2$Taxon)[levels(iso_dat_2$Taxon)=="Leporidae"] <- "Sylvilagus"
-levels(iso_dat_2$Taxon)[levels(iso_dat_2$Taxon)=="Sylvilagus sp"] <- "Sylvilagus"
-levels(iso_dat_2$Taxon)
+C_syl <- iso_dat$d13C[which(iso_dat$Taxon=="Sylvilagus ")] #No
+C_oto <- iso_dat$d13C[which(iso_dat$Taxon=="Otospermophilus")] #No
+N_syl <- iso_dat$d15N[which(iso_dat$Taxon=="Sylvilagus ")] #Yes
+N_oto <- iso_dat$d15N[which(iso_dat$Taxon=="Otospermophilus")] #sort of
+#Use non-parametric test
+
+ggqqplot(N_oto)
+shapiro.test(N_oto) # if > 0.05, then yes  
+kurtosis(N_oto) # if within -2 and 2, then yes 
+skewness(N_oto) # if within -2 and 2, then yes
+mean(N_oto)
+median(N_oto) #if similar to mean, than yes 
+
 
 #carbon
-boxplot(d13C~Taxon,data=iso_dat_2, main="Rabbit and Squirrel diet niche", 
-        xlab="Species", ylab="d13C", col = "purple")
-
-wilcox.test(d13C~Taxon, data=iso_dat_2, correct = TRUE)
+pdf("output/Isoplots/Rabbit_squirrel_d13C.pdf", width=5, height=4)
+boxplot(d13C~Taxon,data=iso_dat, ylab=expression({delta}^13*C~'\u2030'))
+dev.off()
+wilcox.test(d13C~Taxon, data=iso_dat, correct = TRUE)
 
 #nitrogen
-boxplot(d15N~Taxon,data=iso_dat_2, main="Rabbit and Squirrel diet niche", 
-        xlab="Species", ylab="d15N", col = "purple")
-
-wilcox.test(d15N~Taxon, data=iso_dat_2, correct = TRUE)
-
-
-hull_species <- iso_dat_2 %>%
-  group_by(Taxon) %>%
-  slice(chull(d13C, d15N))
-
-p<-ggplot(iso_dat_2, aes(x = d13C, y = d15N)) +
-  geom_point()+
-  labs(x= expression({delta}^13*C~'\u2030'), y= expression({delta}^15*N~'\u2030'))
-
-p + aes(fill = factor(Taxon)) + 
-  geom_polygon(data = hull_species, alpha = 0.5)+
-  scale_fill_discrete(name = "Taxon", 
-                      labels = c("Rabbit", "Squirrel"))
-
+pdf("output/Isoplots/Rabbit_squirrel_d15N.pdf", width=5, height=4)
+boxplot(d15N~Taxon,data=iso_dat, ylab=expression({delta}^15*N~'\u2030'))
+dev.off()
+wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
 
 
 #### Isotopes and Climate ###
 
-data0<-read.csv("data/processed/Interpolation/IsoClim_interpolated.csv")# All rabbits and Squirrels with mean calibrated ages < 50 ka BP
-
 ### all taxa ###
 
 #carbon and climate
-plot(d13C~pach.d18O, data=data0, pch=16)
-carbon.lm<-lm(d13C~pach.d18O, data=data0)
+pdf("output/Isoplots/lm_carbon_all.pdf", width=5, height=4)
+plot(d13C~pach.d18O_mean, data=iso_dat, pch=16, 
+     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^13*C~'\u2030'))
+carbon.lm<-lm(d13C~pach.d18O_mean, data=iso_dat)
 summary(carbon.lm)
-abline(lm(d13C~pach.d18O, data=data0))
-ccf(data0$pach.d18O, data0$d13C)
+abline(lm(d13C~pach.d18O_mean, data=iso_dat))
+dev.off()
+
+ccf(iso_dat$pach.d18O_mean, iso_dat$d13C)
 
 #nitrogen and climate
-plot(d15N~pach.d18O, data=data0, pch=16)
-nitrogen.lm<-lm(d15N~pach.d18O, data=data0)
+pdf("output/Isoplots/lm_nitrogen_all.pdf", width=5, height=4)
+plot(d15N~pach.d18O_mean, data=iso_dat, pch=16,
+     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^15*N~'\u2030'))
+nitrogen.lm<-lm(d15N~pach.d18O_mean, data=iso_dat)
 summary(nitrogen.lm)
-abline(lm(d15N~pach.d18O, data=data0))
-ccf(data0$pach.d18O, data0$d15N)
+abline(lm(d15N~pach.d18O_mean, data=iso_dat))
+dev.off()
+
+ccf(data0$pach.d18O_mean, data0$d15N)
 
 #plot carbon and climate thru time
-data0<-read.csv("P23_IsoClim_interpolated.csv")
+
 ylim.prim <- c(0, 3)   
 ylim.sec <- c(-23, -17)
 
 b <- diff(ylim.prim)/diff(ylim.sec)
 a <- b*(ylim.prim[1] - ylim.sec[1])
 
-C<-ggplot(data0, aes(Cal_age, pach.d18O)) +
+pdf("output/Isoplots/carbon_climate_time.pdf", width=7, height=4)
+C<-ggplot(iso_dat, aes(Calibrated_mean_age, pach.d18O_mean)) +
   geom_line(aes(y = a + d13C*b), color = "brown") +
-  geom_line(aes(y = pach.d18O), color = "blue") +
-  scale_y_reverse("d18O Neogloboquadrina pachyderma", sec.axis = sec_axis(~ (. - a)/b, name = expression({delta}^13*C~'\u2030'))) +
+  geom_line(aes(y = pach.d18O_mean), color = "blue") +
+  scale_y_reverse(name = expression({delta}^18*O~'\u2030'), sec.axis = sec_axis(~ (. - a)/b, name = expression({delta}^13*C~'\u2030'))) +
   scale_x_reverse("Calibrated Years Before Present")+
-  ggtitle("RLB Small Mammal Carbon and Climate")+
   theme_light() 
 C + theme(axis.text.y.left = element_text(color="blue"),
           axis.text.y.right = element_text(color="brown"))
+ dev.off()
  
 #plot nitrogen thru time
 ylim.prim <- c(0, 3)   
@@ -123,9 +124,9 @@ ylim.sec <- c(3, 14)
 b <- diff(ylim.prim)/diff(ylim.sec)
 a <- b*(ylim.prim[1] - ylim.sec[1])
 
-p<-ggplot(data0, aes(Cal_age, pach.d18O)) +
+p<-ggplot(data0, aes(Calibrated_mean_age, pach.d18O_mean)) +
   geom_line(aes(y = a + d15N*b), color = "red") +
-  geom_line(aes(y = pach.d18O), color = "blue") +
+  geom_line(aes(y = pach.d18O_mean), color = "blue") +
   scale_y_reverse("d18O Neogloboquadrina pachyderma", sec.axis = sec_axis(~ (. - a)/b, name = expression({delta}^15*N~'\u2030'))) +
   scale_x_reverse("Calibrated Years Before Present")+
   ggtitle("RLB Small Mammal Nitrogen and Climate")+
@@ -137,18 +138,28 @@ p + theme(axis.text.y.left = element_text(color="blue"),
 ### Just squirrles ###
 
 #carbon and climate
-plot(d13C[Taxon=='O. beecheyi']~pach.d18O[Taxon=='O. beecheyi'], data=data0, pch=16)
-carbon.lm<-lm(d13C[Taxon=='O. beecheyi']~pach.d18O[Taxon=='O. beecheyi'], data=data0)
+pdf("output/Isoplots/lm_carbon_Oto.pdf", width=5, height=4)
+plot(d13C[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], 
+     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^13*C~'\u2030'),
+     data=iso_dat, pch=16)
+carbon.lm<-lm(d13C[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], data=iso_dat)
 summary(carbon.lm)
-abline(lm(d13C[Taxon=='O. beecheyi']~pach.d18O[Taxon=='O. beecheyi'], data=data0))
-#ccf(data0$pach.d18O[Taxon=='O. beecheyi'], data0$d13C[Taxon=='O. beecheyi'])
+abline(lm(d13C[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], data=iso_dat))
+dev.off()
+
+#ccf(iso_dat$pach.d18O[Taxon=='O. beecheyi'], iso_dat$d13C[Taxon=='O. beecheyi'])
 
 #nitrogen and climate
-plot(d15N[Taxon=='O. beecheyi']~pach.d18O[Taxon=='O. beecheyi'], data=data0, pch=16)
-carbon.lm<-lm(d15N[Taxon=='O. beecheyi']~pach.d18O[Taxon=='O. beecheyi'], data=data0)
+pdf("output/Isoplots/lm_nitrogen_Oto.pdf", width=5, height=4)
+plot(d15N[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], 
+     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^15*N~'\u2030'), 
+     data=iso_dat, pch=16)
+carbon.lm<-lm(d15N[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], data=iso_dat)
 summary(carbon.lm)
-abline(lm(d15N[Taxon=='O. beecheyi']~pach.d18O[Taxon=='O. beecheyi'], data=data0))
-#ccf(data0$pach.d18O[Taxon=='O. beecheyi'], data0$d13C[Taxon=='O. beecheyi'])
+abline(lm(d15N[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], data=iso_dat))
+dev.off()
+
+#ccf(iso_dat$pach.d18O[Taxon=='O. beecheyi'], iso_dat$d13C[Taxon=='O. beecheyi'])
 
 #plot squirrel carbon and climate thru time
 ylim.prim <- c(0, 3)   
@@ -187,16 +198,24 @@ n + theme(axis.text.y.left = element_text(color="blue"),
 ### Rabbits (all) ###
 
 #carbon and climate
-plot(d13C[Taxon=='Sylvilagus']~pach.d18O[Taxon=='Sylvilagus'], data=iso_dat_2, pch=16)
-carbon.lm<-lm(d13C[Taxon=='Sylvilagus']~pach.d18O[Taxon=='Sylvilagus'], data=iso_dat_2)
+pdf("output/Isoplots/lm_carbon_Syl.pdf", width=5, height=4)
+plot(d13C[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], 
+     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^13*C~'\u2030'),
+     data=iso_dat, pch=16)
+carbon.lm<-lm(d13C[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], data=iso_dat)
 summary(carbon.lm)
-abline(lm(d13C[Taxon=='Sylvilagus']~pach.d18O[Taxon=='Sylvilagus'], data=iso_dat_2))
+abline(lm(d13C[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], data=iso_dat))
+dev.off()
 
 #nitrogen and climate
-plot(d15N[Taxon=='Sylvilagus']~pach.d18O[Taxon=='Sylvilagus'], data=iso_dat_2, pch=16)
-carbon.lm<-lm(d15N[Taxon=='Sylvilagus']~pach.d18O[Taxon=='Sylvilagus'], data=iso_dat_2)
-summary(carbon.lm)
-abline(lm(d15N[Taxon=='Sylvilagus']~pach.d18O[Taxon=='Sylvilagus'], data=iso_dat_2))
+pdf("output/Isoplots/lm_nitrogen_Syl.pdf", width=5, height=4)
+plot(d15N[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], 
+     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^15*N~'\u2030'),
+     data=iso_dat, pch=16)
+nitrogen.lm<-lm(d15N[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], data=iso_dat)
+summary(nitrogen.lm)
+abline(lm(d15N[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], data=iso_dat))
+dev.off()
 
 #plot rabbit carbon and climate thru time
 ylim.prim <- c(0, 3)   
@@ -334,11 +353,11 @@ n + theme(axis.text.y.left = element_text(color="blue"),
 #p3 length and climate
 data1<-na.omit(data0)
 
-plot(P3_L~pach.d18O, data=data1, xlim=rev(c(0, 3)), pch=16)
-size.lm<-lm(P3_L~pach.d18O, data=data1)
+plot(P3_L~pach.d18O_mean, data=data1, xlim=rev(c(0, 3)), pch=16)
+size.lm<-lm(P3_L~pach.d18O_mean, data=data1)
 summary(size.lm)
-abline(lm(P3_L~pach.d18O, data=data1))
-ccf(data1$pach.d18O, data1$P3_L)
+abline(lm(P3_L~pach.d18O_mean, data=data1))
+ccf(data1$pach.d18O_mean, data1$P3_L)
 
 pach.d18O_lag = lag(data1$pach.d18O,-6)
 
