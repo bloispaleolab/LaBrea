@@ -1,0 +1,78 @@
+UCIAMS_Number,Original_sample_name,Species,Taxon,d15N,d13C,Calibrated_mean_age,Sigma,Cal_median_age,X14C_age_BP,X14C_age_error,pach.d18O_mean,pach.d18O_median,P3_L
+216772,V 4516 Spermophilus   ,Otospermophilus,Otospermophilus,3.8,-20.7,2377,30,2362,2375,15,0.519901503,0.520377295,
+223494,HC 143517 Sylvilagus ,Sylvilagus sp,Sylvilagus ,6.2,-18.8,2765,17,2762,2650,25,0.420258065,0.421341935,
+223493,HC 11584 Spermophilus  Pit 10  E8 9-13.5',Otospermophilus,Otospermophilus,9.9,-18.5,5166,73,5161,4505,20,0.615359447,0.616764977,
+216760,HC 11534 Sylvilagus Pit 10 E-8 9ft,S. audubonii,Sylvilagus ,3.6,-20.8,6743,32,6745,5925,20,0.489146628,0.487844575,2.79
+223528,V 4509 Spermophilus  Pit 10 ,Otospermophilus,Otospermophilus,4.4,-18.6,7069,56,7070,6155,25,0.312150685,0.312452055,
+216761,HC 11587 Spermophilus Pit 10 E-8 9ft,Otospermophilus,Otospermophilus,5.9,-21.1,12990,55,13003,11105,25,1.441719298,1.462701754,
+216766,HC 142767 Sylvilagus   ,S. audubonii,Sylvilagus ,7.6,-22,16980,107,16990,13990,40,2.709241379,2.678206897,2.69
+216767,HC 142772 Sylvilagus (juv)   ,S. audubonii,Sylvilagus ,4.9,-21.9,17538,85,17539,14390,40,2.704714286,2.705,2.35
+223513,P23-40634 Sylvilagus Box 14 ,Sylvilagus sp,Sylvilagus ,7.2,-21.3,30054,249,30053,25830,140,2.504463415,2.501195122,
+198298,P23 33235 S. beecheyi Dep. 14,Otospermophilus,Otospermophilus,7,-20.9,30615,179,30633,26310,150,2.451225806,2.527041096,
+223516,P23-40637 Sylvilagus Box 14 B-3 L3,Sylvilagus sp,Sylvilagus ,7.9,-20.9,30940,115,30945,26780,160,2.268068493,2.28169863,
+223587,P23-40642 Spermophilus Box 14  .10mgC,Otospermophilus,Otospermophilus,6.4,-20.3,30908,99,30911,26710,110,2.305,2.286571429,
+223524,V 2641 Sylvilagus  Pit 4  F-4 9-10',Sylvilagus sp,Sylvilagus ,7.2,-20.9,31927,310,31883,28090,180,1.948803279,2.124652174,
+223529,V 4519 Spermophilus ,Otospermophilus,Otospermophilus,9.4,-19.3,32275,333,32274,28370,180,1.876146597,1.875492147,
+217078,V 2174 Sylvilagus Pit 16,S. bachmani,Sylvilagus ,8.2,-22.3,32461,408,32472,28500,240,2.383727273,2.330727273,2.46
+216765,HC 142766 Sylvilagus Pit 16  ,S. audubonii,Sylvilagus ,8.4,-21.3,32609,413,32635,28600,240,2.229487179,2.237290323,2.83
+216771,V 2173 Sylvilagus Pit 16  ,S. audubonii,Sylvilagus ,6.9,-22.5,34341,251,34335,30320,290,2.190882353,2.2095,2.63
+198206,P23 33228 S. beecheyi Dep. 1 B-1 L3,Otospermophilus,Otospermophilus,6.4,-20.7,34458,260,34454,30480,290,2.144,2.143529412,
+223526,V 2737 Sylvilagus ,Sylvilagus sp,Sylvilagus ,8.1,-21.2,34497,226,34498,30540,240,1.916,1.905545455,
+198302,P23 33228 S. beecheyi Dep. 1 B-1 L3 test,Otospermophilus,Otospermophilus,6.7,-20.2,34806,274,34795,30870,270,1.584,1.65,
+216780,V 4531 Spermophilus Pit 16,Otospermophilus,Otospermophilus,4.5,-21.4,34849,323,34833,30900,320,1.44304,1.422,
+216781,P23 35670 Spermophilus Dep. 7B B-2 L2,Otospermophilus,Otospermophilus,6.6,-21.5,34919,326,34900,30970,320,1.578105263,1.550105263,
+216779,V 4524 Spermophilus   ,Otospermophilus,Otospermophilus,5.3,-20.7,34949,326,34929,31000,320,1.622315789,1.592842105,
+223507,P23-39818 Sylvilagus Box 13 B-3 L2,Sylvilagus sp,Sylvilagus ,6.4,-22.2,35151,286,35132,31230,270,1.652219512,1.648512195,
+216773,V 4520 Spermophilus   ,Otospermophilus,Otospermophilus,6.3,-20.4,35269,343,35250,31340,330,1.698632653,1.684673469,
+223525,V 2644 Sylvilagus  Pit 4  F-4 10-11',Sylvilagus sp,Sylvilagus ,8.6,-21.1,35358,292,35347,31460,260,1.466714286,1.438982456,
+198207,P23 33229 S. beecheyi Dep. 1 B-2 L2,Otospermophilus,Otospermophilus,8.5,-20.9,35726,369,35729,31830,340,2.260925,2.26265,
+223508,P23-39822 Sylvilagus aud. Box 13 B-2 L2,S. audubonii,Sylvilagus ,9.4,-21.1,35872,307,35879,31980,280,2.298111111,2.274,
+198201,P23 17139 S. beecheyi Dep. 1 B-2 L8,Otospermophilus,Otospermophilus,7.6,-20.4,36571,532,36492,32500,370,1.423073529,1.354282051,
+223509,P23-39825 Spermophilus (juv) Box 13 B-3 L2,Otospermophilus,Otospermophilus,6.2,-21.2,36737,460,36660,32660,300,1.565345361,1.515731959,
+198295,P23 31113 Sciuridae Dep. 14 D-3 L5,Otospermophilus,Otospermophilus,8.8,-20.8,37286,535,37260,33070,350,1.700384615,1.748384615,
+198203,P23 26592 S. beecheyi Dep. 1 B-1 L4,Otospermophilus,Otospermophilus,4,-21,37367,620,37345,33100,620,1.760689655,1.739610169,
+223505,P23-39811 Sylvilagus aud. Box 13 B-2 L3,S. audubonii,Sylvilagus ,7.3,-21.9,37498,506,37505,33260,320,1.654263158,1.7196,
+223499,P23-36896 Sylvilagus Box 13 A-3 L3,Sylvilagus sp,Sylvilagus ,4.2,-21.5,37878,502,37934,33590,340,1.854133504,1.829979461,
+191099,P23-28903 Dep1 A-1 L7 sylvilagus,S. audubonii,Sylvilagus ,9.1,-21.1,38163,660,38214,33830,480,1.731206675,1.709209243,2.9
+223498,P23-36859 Spermophilus Box 13 B-3 L4,Otospermophilus,Otospermophilus,8.7,-21.2,39360,437,39338,34800,390,2.401333333,2.322,
+191097,P23-22009 Dep1 A-2 L4 sylvilagus,S. bachmani,Sylvilagus ,6.7,-22.4,39770,640,39745,35150,580,2.271857143,2.2812,2.22
+223500,P23-36907 Spermophilus Box 13 A-3 L3,Otospermophilus,Otospermophilus,3.7,-21,39815,486,39809,35230,410,2.376,2.3544,
+223501,P23-36910 Spermophilus Box 13 A-3 L3,Otospermophilus,Otospermophilus,3.9,-21.2,39861,487,39855,35270,410,2.41045,2.41075,
+191102,P23-31423 Dep1 B-2 L2 sylvilagus,S. audubonii,Sylvilagus ,7.3,-21.3,40046,638,40036,35420,580,2.323285714,2.406857143,
+191096,P23-18270 Dep1 A-2 L5 sylvilagus,S. bachmani,Sylvilagus ,4.5,-22.5,40067,637,40058,35440,580,2.147785714,2.223,2.38
+216770,HC 142779 Sylvilagus (juv) Pit A  ,S. bachmani,Sylvilagus ,6.9,-22.1,40372,607,40377,35740,570,2.284909091,2.316727273,2.53
+191095,P23-5233 Dep1 B-2 L2 sylvilagus,S. audubonii,Sylvilagus ,8.4,-21.3,40379,640,40385,35750,610,2.329454545,2.367636364,2.78
+191100,P23-30238 Dep1 B-1 L2 sylvilagus,S. audubonii,Sylvilagus ,7.3,-21.5,40410,628,40416,35780,600,2.072454545,2.124818182,2.28
+223527,V 2751 Sylvilagus ,Sylvilagus sp,Sylvilagus ,4.5,-21.3,40513,487,40515,35870,450,2.227727273,2.235181818,
+198202,P23 20172 S. beecheyi Dep. 1 B-1 L8,Otospermophilus,Otospermophilus,4.4,-21.4,40530,581,40539,35900,560,2.251318182,2.233727273,
+191098,P23-25476 Dep1 A-2 L4 sylvilagus,S. audubonii,Sylvilagus ,7.4,-21.4,40662,623,40678,36050,630,2.233032258,2.231818182,3.13
+198204,P23 30796 S. beecheyi Dep. 1 B-2 L4,Otospermophilus,Otospermophilus,3.8,-21.1,40731,846,40752,36160,910,2.238818182,2.194571429,
+223506,P23-39812 Sylvilagus Box 13 B-2 L3,Sylvilagus sp,Sylvilagus ,8.2,-21.2,40875,468,40891,36260,470,1.867040816,1.816102041,
+216764,HC 142764 Sylvilagus Pit 16  ,S. audubonii,Sylvilagus ,6.9,-21,40932,582,40955,36350,620,1.437609756,1.471270833,2.83
+198205,P23 33227 S. beecheyi Dep. 1 B-2 L3,Otospermophilus,Otospermophilus,7,-20.7,41133,552,41162,36580,610,1.595916667,1.536708333,
+216763,HC 142763 Sylvilagus Pit 16  ,S. audubonii,Sylvilagus ,7.6,-21.4,41382,563,41415,36880,660,1.896045643,1.95026971,2.71
+223517,P23-40638 Sylvilagus Box 14 ,Sylvilagus sp,Sylvilagus ,7.2,-21.4,41406,434,41434,36870,500,1.935481328,1.981489627,
+223585,P23-35541 Sylvilagus Box 13 B-2 L4,Sylvilagus sp,Sylvilagus ,5.2,-21.4,43079,376,43041,39220,460,2.047,2.097,
+223497,P23-36693 Sylvilagus Box 13 B-2 L3,Sylvilagus sp,Sylvilagus ,7,-22,43188,549,43123,39240,670,2.305666667,2.139857143,
+198294,P23 28902 Sylvilagus Dep. 1 A-1 L7 .28mgC,S. bachmani,Sylvilagus ,5.5,-20.9,43589,676,43526,39700,810,2.03045679,2.108303704,2.14
+223496,P23-36572 Spermophilus  Box 13 A-3 L3,Otospermophilus,Otospermophilus,6.2,-20.9,44279,709,44244,40640,800,1.519314815,1.504407407,
+216768,HC 142773 Sylvilagus Pit A  ,S. audubonii,Sylvilagus ,7.8,-21.8,44724,1050,44627,41000,1100,1.894560976,2.022625,2.61
+216784,P23 36332 Sylvilagus Dep. 7B B-2 L3,Sylvilagus sp,Sylvilagus ,5.6,-21.7,45239,1212,45104,41500,1200,1.72612766,1.477915789,
+216783,P23 35774 Lepus Dep. 7B B-2 L3,Leporidae,Sylvilagus ,4.9,-21.6,46371,1395,46221,42600,1400,2.097107143,2.289881356,
+216769,HC 142778 Sylvilagus Pit A  ,S. audubonii,Sylvilagus ,5.2,-21.3,46632,1369,46501,42900,1400,1.810503401,1.574184466,2.84
+216762,HC 130857 Spermophilus Bliss 29  ,Otospermophilus,Otospermophilus,4.5,-21.2,47258,1363,47214,43700,1600,1.973174757,1.900126214,
+223502,P23-36989 Sylvilagus Box 13 B-2 L4,Sylvilagus sp,Sylvilagus ,7.2,-21.4,47495,1147,47439,44000,1200,1.92484466,1.881615385,
+217079,P23 36331 Sylvilagus Dep. 7B B-2 L3 .23mgC,Sylvilagus sp,Sylvilagus ,6.6,-21.4,48255,1178,48419,46200,2400,1.753825243,1.587737864,
+191101,P23-31269 Dep1 B-4 L3 sylvilagus,S. audubonii,Sylvilagus ,8.1,-20.5,48345,1123,48507,46200,2200,1.629576923,1.647941176,2.85
+223503,P23-37612 Sylvilagus Box 13 B-2 L4,Sylvilagus sp,Sylvilagus ,5.7,-21.4,48653,938,48804,46200,1600,1.877841629,1.478346154,
+223514,P23-40635,Sylvilagus sp,Sylvilagus ,6.2,-21.6,,,,>51700,,,,
+191242,P23-31031,S. audubonii,Sylvilagus ,4.3,-21.1,,,,>50800,,,,
+191104,P23-31036,S. bachmani,Sylvilagus ,7.3,-22.3,,,,>49900,,,,
+191105,P23-31056,S. audubonii,Sylvilagus ,7.3,-21.7,,,,>49900,,,,
+223523,P23-40647,S. audubonii,Sylvilagus ,9.6,-21,,,,>49900,,,,
+191103,P23-31033,S. audubonii,Sylvilagus ,8.5,-21.7,,,,>47800,,,,
+,P23-31115,Otospermophilus,Otospermophilus,7.1,-19,,,,,,,,
+216785,P23-36336,Sylvilagus sp,Sylvilagus ,5.3,-22.1,,,,,,,,
+223518,P23-40639,Sylvilagus sp,Sylvilagus ,6.9,-21.7,,,,,,,,
+198296,P23-31118,Otospermophilus,Otospermophilus,3.2,-19.3,,,,,,,,
+223504,P23-37651,Otospermophilus,Otospermophilus,6.8,-20.1,,,,,,,,

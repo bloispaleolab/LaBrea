@@ -19,12 +19,12 @@ community.hulls.args <- list(col = 1, lty = 1, lwd = 1)
 group.ellipses.args  <- list(n = 100, p.interval = 0.68, lty = 1, lwd = 2)
 group.hull.args      <- list(lty = 2, col = "grey20")
 
-
+pdf("output/Isoplots/SIBER.pdf", width=5, height=4)
 par(mfrow=c(1,1), mar=c(5,5,4,1)+0.01)
 plotSiberObject(siber.RLB,
                 ax.pad = 2, 
-                hulls = F, community.hulls.args, 
-                ellipses = T, group.ellipses.args,
+                hulls = T, community.hulls.args, 
+                ellipses = F, group.ellipses.args,
                 group.hulls = T, group.hull.args,
                 bty = "L",
                 iso.order = c(1,2),
@@ -33,14 +33,14 @@ plotSiberObject(siber.RLB,
                
 )
 
-legend("topleft", legend = c("Otospermophilus Pre-LGM", "Sylvilagus Pre-LGM"),
+legend("bottomleft", legend = c("Otospermophilus Pre-LGM", "Sylvilagus Pre-LGM"),
        col = palette(c("royalblue2","orange")), pch = 1, 
        bty = "n", cex = 0.8)
 
 legend("topright", legend = c("Otospermophilus Post-LGM", "Sylvilagus Post-LGM"),
        col = palette(c("royalblue2", "orange")), pch = 2,
        bty = "n", cex = 0.8)
-
+dev.off()
 
 
 
