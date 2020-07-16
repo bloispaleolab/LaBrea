@@ -10,7 +10,7 @@ plot(-smoothed~Y2Kage, data=dat, type="l",
 pdf(file="output/ClimateCurve-updated.pdf", height=6, width=8)
   dat2<- read.delim("data/raw/climate/hendy2002data.txt")
   plot(pach.d18O~HendyAge, dat=dat2, type="l", 
-       xlab="Years before 2000", ylab="d18O Neogloboquadrina pachyderma",
+       xlab="Years before 2000", ylab = expression({delta}^18*O~'\u2030'),
        bty="n", xlim=c(60000, 0), ylim=c(3.1, 0.25), # modifiy to time bin relevant to P23. Original set from 75000 to 0 BP
        lab=c(12, 8, 7), xaxs="i", yaxs="r", col="gray")
   x1.05<- loess(dat2$pach.d18O~dat2$HendyAge, span=0.05)
