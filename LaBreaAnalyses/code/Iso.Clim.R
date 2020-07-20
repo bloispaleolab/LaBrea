@@ -79,11 +79,24 @@ wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
 #carbon and climate
 pdf("output/Isoplots/lm_carbon_all.pdf", width=5, height=4)
 plot(d13C~pach.d18O_mean, data=iso_dat, pch=16, 
-     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^13*C~'\u2030'))
+     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^13*C~'\u2030'), type="n")
+points(d13C~pach.d18O_mean, data=iso_dat[which(iso_dat$Taxon == "Sylvilagus "),], pch=16, col="orange")
+points(d13C~pach.d18O_mean, data=iso_dat[which(iso_dat$Taxon == "Otospermophilus"),], pch=16, col="royalblue2")
 carbon.lm<-lm(d13C~pach.d18O_mean, data=iso_dat)
 summary(carbon.lm)
 abline(lm(d13C~pach.d18O_mean, data=iso_dat))
+legend("bottomleft", legend = c("Otospermophilus", "Sylvilagus"),
+       col = c("royalblue2","orange"), pch = 16, 
+       bty = "n", cex = 0.8)
+
 dev.off()
+
+# plot the residuals from the linear model by taxon
+boxplot(carbon.lm$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))],
+        xlab="Taxon", 
+        ylab=expression('Residuals from the '~{delta}^13*C~'\u2030'~' linear model'))
+stripchart(carbon.lm$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","orange"), pch=16)
+t.test(carbon.lm$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))])
 
 ccf(iso_dat$pach.d18O_mean, iso_dat$d13C)
 
