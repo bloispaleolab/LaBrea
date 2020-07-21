@@ -16,7 +16,7 @@ d180 <- d180[c(1,3,2),]
 i <- 1
 j <- 1  
 
-xvars <- c("P23_d18O_mean", "median_ndvi")
+xvars <- c("P23_d18O_med", "median_ndvi")
 yvars <- c("median_bio_1", "median_bio_12", "AdultBodyMass_g")
 
 for (k in 1:length(xvars)){
