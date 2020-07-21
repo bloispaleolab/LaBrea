@@ -92,20 +92,23 @@ legend("bottomleft", legend = c("Otospermophilus", "Sylvilagus"),
 dev.off()
 
 # plot the residuals from the linear model by taxon
+pdf("output/Isoplots/carbon_residuals.pdf", width=5, height=4)
 boxplot(carbon.lm$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))],
         xlab="Taxon", 
         ylab=expression('Residuals from the '~{delta}^13*C~'\u2030'~' linear model'))
 stripchart(carbon.lm$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","orange"), pch=16)
 t.test(carbon.lm$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))])
+dev.off()
 
-ccf(iso_dat$pach.d18O_mean, iso_dat$d13C)
 
 #nitrogen and climate
 pdf("output/Isoplots/lm_nitrogen_all.pdf", width=5, height=4)
-plot(d15N~pach.d18O_mean, data=iso_dat, pch=16,
-     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^15*N~'\u2030'))
-nitrogen.lm<-lm(d15N~pach.d18O_mean, data=iso_dat)
-summary(nitrogen.lm)
+plot(d15N~pach.d18O_mean, data=iso_dat, pch=16, 
+     xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^15*N~'\u2030'), type="n")
+points(d15N~pach.d18O_mean, data=iso_dat[which(iso_dat$Taxon == "Sylvilagus "),], pch=16, col="orange")
+points(d15N~pach.d18O_mean, data=iso_dat[which(iso_dat$Taxon == "Otospermophilus"),], pch=16, col="royalblue2")
+carbon.lm<-lm(d15N~pach.d18O_mean, data=iso_dat)
+summary(carbon.lm)
 abline(lm(d15N~pach.d18O_mean, data=iso_dat))
 dev.off()
 
@@ -154,7 +157,7 @@ p + theme(axis.text.y.left = element_text(color="blue"),
 pdf("output/Isoplots/lm_carbon_Oto.pdf", width=5, height=4)
 plot(d13C[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], 
      xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^13*C~'\u2030'),
-     data=iso_dat, pch=16)
+     data=iso_dat, pch=16, col="royalblue2")
 carbon.lm<-lm(d13C[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], data=iso_dat)
 summary(carbon.lm)
 abline(lm(d13C[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], data=iso_dat))
@@ -166,7 +169,7 @@ dev.off()
 pdf("output/Isoplots/lm_nitrogen_Oto.pdf", width=5, height=4)
 plot(d15N[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], 
      xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^15*N~'\u2030'), 
-     data=iso_dat, pch=16)
+     data=iso_dat, pch=16, col="royalblue2")
 carbon.lm<-lm(d15N[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], data=iso_dat)
 summary(carbon.lm)
 abline(lm(d15N[Taxon=='Otospermophilus']~pach.d18O_mean[Taxon=='Otospermophilus'], data=iso_dat))
@@ -214,7 +217,7 @@ n + theme(axis.text.y.left = element_text(color="blue"),
 pdf("output/Isoplots/lm_carbon_Syl.pdf", width=5, height=4)
 plot(d13C[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], 
      xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^13*C~'\u2030'),
-     data=iso_dat, pch=16)
+     data=iso_dat, pch=16, col="orange")
 carbon.lm<-lm(d13C[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], data=iso_dat)
 summary(carbon.lm)
 abline(lm(d13C[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], data=iso_dat))
@@ -224,7 +227,7 @@ dev.off()
 pdf("output/Isoplots/lm_nitrogen_Syl.pdf", width=5, height=4)
 plot(d15N[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], 
      xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^15*N~'\u2030'),
-     data=iso_dat, pch=16)
+     data=iso_dat, pch=16, col="orange")
 nitrogen.lm<-lm(d15N[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], data=iso_dat)
 summary(nitrogen.lm)
 abline(lm(d15N[Taxon=='Sylvilagus ']~pach.d18O_mean[Taxon=='Sylvilagus '], data=iso_dat))
