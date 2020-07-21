@@ -74,6 +74,129 @@ wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
 
 #### Isotopes and Climate ###
 
+# Methods potential text:
+# For carbon and nitrogen, I fit a linear model that originally included oxygen, taxon, and the interaction between the two variables as independent variables. I then performed stepwise regression to determine a final model. 
+# Results potential text
+# Stepwise regression indicated that there was no significant interaction between 18O and taxon for either carbon or nitrogen stable isotope values. For carbon, variation in 13C was significantly associated with both 18O and taxon (stats from summary(carbon.lm.final)). For nitrogen, neither 18O nor taxon explained significant variation in 15N, though taxon as a single variable was marginally significant (stats from summary(nitrogen.lm.taxon)).
+
+
+# models - Carbon
+
+# model with interaction term included
+carbon.lm.all.interaction<-lm(d13C~pach.d18O_mean * Taxon, data=iso_dat)
+summary(carbon.lm.all.interaction)
+
+# model with no interaction term 
+# NOTE: this is what the final model is in the end, so THIS  IS WHAT YOU SHOULD REPORT IN THE PAPER.
+carbon.lm.all<-lm(d13C~pach.d18O_mean + Taxon, data=iso_dat)
+summary(carbon.lm.all)
+
+# climate-only model
+carbon.lm.clim<-lm(d13C~pach.d18O_mean, data=iso_dat)
+summary(carbon.lm.clim)
+
+# taxon-only model
+carbon.lm.taxon<-lm(d13C~Taxon, data=iso_dat)
+summary(carbon.lm.taxon)
+
+#stepwise regression 
+carbon.lm.final <- step(lm(d13C~pach.d18O_mean*Taxon, data=iso_dat, direction="both"))
+summary(carbon.lm.final)
+# --> this shows that the d180 + Taxon model (no interaction) is the best final model. 
+
+# t-test of residuals from climate only model
+c.t.clim <- t.test(carbon.lm.clim$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))])
+
+
+# models - Nitrogen
+
+# model with interaction term included
+nitrogen.lm.all.interaction<-lm(d15N~pach.d18O_mean * Taxon, data=iso_dat)
+summary(nitrogen.lm.all.interaction)
+
+# model with no interaction term 
+nitrogen.lm.all.additive<-lm(d15N~pach.d18O_mean + Taxon, data=iso_dat)
+summary(nitrogen.lm.all.additive)
+
+# climate-only model
+nitrogen.lm.clim<-lm(d15N~pach.d18O_mean, data=iso_dat)
+summary(nitrogen.lm.clim)
+
+# taxon-only model
+nitrogen.lm.taxon<-lm(d15N~Taxon, data=iso_dat)
+summary(nitrogen.lm.taxon)
+
+#stepwise regression --> this shows that there is not a good final model
+nitrogen.lm.final <- step(lm(d15N~pach.d18O_mean*Taxon, data=iso_dat, direction="both"))
+# --> there is not a good final model, so I am just going to treat nitrogen the same as carbon for plotting.
+nitrogen.lm.final <- nitrogen.lm.all.additive
+
+# t-test of residuals from climate-only model
+n.t.clim <- t.test(nitrogen.lm.clim$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))])
+
+
+# JESSICA's NEW final plot ####
+
+pdf("output/Isoplots/lm_carbon_nitrogen_all.pdf", width=8, height=8)
+
+par(mfcol=c(2,2), mar=c(4,4,1,1), cex.axis=0.8)
+
+# carbon
+plot(d13C~pach.d18O_mean, data=iso_dat, pch=16, type="n", xlab="", ylab="")
+points(d13C~pach.d18O_mean, 
+       data=iso_dat[which(iso_dat$Taxon == "Sylvilagus "),], 
+       pch=16, col="orange")
+points(d13C~pach.d18O_mean, 
+       data=iso_dat[which(iso_dat$Taxon == "Otospermophilus"),], 
+       pch=16, col="royalblue2")
+abline(carbon.lm.final, lty=2)
+abline(lm(d13C~pach.d18O_mean, data=iso_dat), lty=1)
+mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25) 
+mtext(expression({delta}^13*C~'\u2030'), side=2, line=2) 
+legend("bottomleft", legend = c("Otospermophilus", "Sylvilagus"),
+       col = c("royalblue2","orange"), pch = 16, 
+       bty = "n", cex = 0.8)
+
+boxplot(carbon.lm.clim$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))], 
+        xlab="", ylab="")
+stripchart(carbon.lm.clim$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","orange"), pch=16)
+mtext("Taxon", side=1, line=2.25)
+mtext(expression('Residuals ('~{delta}^13*C~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
+legend("topright", legend=paste0("t=", round(c.t.clim$statistic,2), "; df=", round(c.t.clim$parameter,2), "; p=", round(c.t.clim$p.value,2)), bty = "n", cex = 0.8)
+
+
+# nitrogen
+plot(d15N~pach.d18O_mean, data=iso_dat, pch=16, 
+     xlab = "", ylab = "", type="n")
+points(d15N~pach.d18O_mean, 
+       data=iso_dat[which(iso_dat$Taxon == "Sylvilagus "),], 
+       pch=16, col="orange")
+points(d15N~pach.d18O_mean, 
+       data=iso_dat[which(iso_dat$Taxon == "Otospermophilus"),], 
+       pch=16, col="royalblue2")
+abline(nitrogen.lm.final, lty=2)
+abline(lm(d15N~pach.d18O_mean, data=iso_dat), lty=1)
+legend("topleft", legend = c("Otospermophilus", "Sylvilagus"),
+       col = c("royalblue2","orange"), pch = 16, 
+       bty = "n", cex = 0.8)
+mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25)
+mtext(expression({delta}^15*N~'\u2030'), side=2, line=2.25)
+
+boxplot(nitrogen.lm.clim$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))],
+        xlab="", ylab="")
+stripchart(nitrogen.lm.clim$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","orange"), pch=16)
+mtext("Taxon", side=1, line=2.25)
+mtext(expression('Residuals ('~{delta}^15*N~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
+legend("topright", legend=paste0("t=", round(n.t.clim$statistic,2), "; df=", round(n.t.clim$parameter,2), "; p=", round(n.t.clim$p.value,2)), bty = "n", cex = 0.8)
+
+dev.off()
+
+# I haven't put A-D labels on them yet.
+# Figure caption text.
+# Figure 4. The relationship between isotope niche and climate. A) & C) show the relationship between 13C or 15N, respectively, and 18O.  In both panels, the dashed line indicates the fitted relationship between 13C or 15N and 18O from the final model which  includes Taxon as an independent variable. The solid line indicates the fitted relationship between 13C or 15N and 18O from a linear model that just includes 18O as the independent variable. B) & D) indicate the residuals from the climate-only model, plotted by taxon.
+
+
+
 ### all taxa ###
 
 #carbon and climate
@@ -82,14 +205,13 @@ plot(d13C~pach.d18O_mean, data=iso_dat, pch=16,
      xlab = expression({delta}^18*O~'\u2030', ), ylab = expression({delta}^13*C~'\u2030'), type="n")
 points(d13C~pach.d18O_mean, data=iso_dat[which(iso_dat$Taxon == "Sylvilagus "),], pch=16, col="orange")
 points(d13C~pach.d18O_mean, data=iso_dat[which(iso_dat$Taxon == "Otospermophilus"),], pch=16, col="royalblue2")
-carbon.lm<-lm(d13C~pach.d18O_mean, data=iso_dat)
-summary(carbon.lm)
-abline(lm(d13C~pach.d18O_mean, data=iso_dat))
+abline(carbon.lm.final)
+abline(lm(d13C~pach.d18O_mean, data=iso_dat), lty=2, col="red")
 legend("bottomleft", legend = c("Otospermophilus", "Sylvilagus"),
        col = c("royalblue2","orange"), pch = 16, 
        bty = "n", cex = 0.8)
-
 dev.off()
+
 
 # plot the residuals from the linear model by taxon
 pdf("output/Isoplots/carbon_residuals.pdf", width=5, height=4)
