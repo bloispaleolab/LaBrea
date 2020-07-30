@@ -98,6 +98,6 @@ bp<- ggplot(mammals_filtered, aes(x="", y=n, fill= Genus)) +
           size = 18, face = "bold"
         ))
 
-pdf(file="output/mammal_nisp.pdf", width=12, height=6, encoding="MacRoman") 
+pdf(file="output/mammal_nisp_2.pdf", width=12, height=6, encoding="MacRoman") 
   bp  
 dev.off()

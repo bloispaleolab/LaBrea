@@ -1,8 +1,8 @@
 "RevisedName"	"Family"	"Genus"	"Box_1"	"Box_13"	"Box_14"	"Box_7b"
-"Microtus californicus"	"Cricetidae"	"Microtus"	13	7	32	6
-"Microtus sp"	"Cricetidae"	"Microtus"	106	82	222	58
-"Neotoma macrotis"	"Cricetidae"	"Neotoma"	1	1	2	6
-"Neotoma sp"	"Cricetidae"	"Neotoma"	4	6	22	25
+"Microtus californicus"	"Cricetidae"	"Microtus"	12	NA	12	NA
+"Microtus sp"	"Cricetidae"	"Microtus"	107	89	251	64
+"Neotoma macrotis"	"Cricetidae"	"Neotoma"	NA	NA	1	6
+"Neotoma sp"	"Cricetidae"	"Neotoma"	5	7	23	25
 "Onychomys torridus"	"Cricetidae"	"Onychomys"	NA	3	NA	NA
 "Peromyscus californicus"	"Cricetidae"	"Peromyscus"	7	4	6	3
 "Peromyscus maniculatus"	"Cricetidae"	"Peromyscus"	3	12	12	11
@@ -17,10 +17,8 @@
 "Mephitis mephitis"	"Mephitidae"	"Mephitis"	3	3	NA	3
 "Spilogale gracilis"	"Mephitidae"	"Spilogale"	1	NA	1	NA
 "Mustela frenata"	"Mustelidae"	"Mustela"	3	21	4	3
+"Neotamias/Tamias sp"	"Sciuridae"	"Neotamias/Tamias"	1	5	2	NA
 "Otospermophilus beecheyi"	"Sciuridae"	"Otospermophilus"	51	68	49	17
 "Spermophilus sp"	"Sciuridae"	"Spermophilus"	NA	NA	1	NA
-"Tamias merriami"	"Sciuridae"	"Tamias"	1	2	NA	1
-"Tamias sp"	"Sciuridae"	"Tamias"	NA	3	2	NA
-"Sorex ornatus"	"Soricidae"	"Sorex"	NA	NA	5	NA
-"Sorex sp"	"Soricidae"	"Sorex"	2	NA	NA	1
+"Sorex sp"	"Soricidae"	"Sorex"	2	NA	5	1
 "Scapanus latimanus"	"Talpidae"	"Scapanus"	NA	NA	NA	1

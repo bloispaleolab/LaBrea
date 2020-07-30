@@ -3,6 +3,7 @@ OriginalName	RevisedName	Order	Family	Genus
 ?Mephitis mephitis	Mephitis mephitis	Carnivora	Mephitidae	Mephitis
 ?Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus
 ?Mustela frenata	Mustela frenata	Carnivora	Mustelidae	Mustela
+?Neotamias/Tamias sp	Neotamias/Tamias sp	Rodentia	Sciuridae	Neotamias/Tamias
 ?Neotoma sp	Neotoma sp	Rodentia	Cricetidae	Neotoma
 ?Onychomys torridus	Onychomys torridus	Rodentia	Cricetidae	Onychomys
 ?Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus
@@ -23,8 +24,10 @@ Canis sp	Canis sp	Carnivora	Canidae	Canis
 Capromeryx minor	Capromeryx minor	Artiodactyla	Antilocapridae	Capromeryx
 cf Lepus sp	Lepus sp	Lagomorpha	Leporidae	Lepus
 cf Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus
+cf Onychomys torridus	Onychomys torridus	Rodentia	Cricetidae	Onychomys
 cf Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus
 cf Peromyscus cf californicus	Peromyscus californicus	Rodentia	Cricetidae	Peromyscus
+cf Peromyscus maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus
 cf Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus
 cf Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys
 cf Spilogale gracilis	Spilogale gracilis	Carnivora	Mephitidae	Spilogale
@@ -54,14 +57,19 @@ Microtus californicus	Microtus californicus	Rodentia	Cricetidae	Microtus
 Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus
 Mustela frenata	Mustela frenata	Carnivora	Mustelidae	Mustela
 NA-NA	NA	NA	NA	NA
+Neotamias/Tamias sp	Neotamias/Tamias sp	Rodentia	Sciuridae	Neotamias/Tamias
 Neotoma macrotis	Neotoma macrotis	Rodentia	Cricetidae	Neotoma
 Neotoma sp	Neotoma sp	Rodentia	Cricetidae	Neotoma
+Neotomais/Tamias sp	Neotamias/Tamias sp	Rodentia	Sciuridae	Neotamias/Tamias
+Otospermophilus ?beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus
 Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus
 Otospermophilus cf beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus
 Peromyscus ?maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus
 Peromyscus cf californicus	Peromyscus californicus	Rodentia	Cricetidae	Peromyscus
 Peromyscus cf maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus
+Peromyscus cf P. maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus
 Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus
+Scapanus cf latimanus	Scapanus latimanus	Eulipotyphla	Talpidae	Scapanus
 Reithrodontomys cf megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys
 Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys
 Scapanus latimanus	Scapanus latimanus	Eulipotyphla	Talpidae	Scapanus
@@ -74,10 +82,11 @@ Sylvilagus audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus
 Sylvilagus bachmani	Sylvilagus bachmani	Lagomorpha	Leporidae	Sylvilagus
 Sylvilagus cf audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus
 Sylvilagus cf bachmani	Sylvilagus bachmani	Lagomorpha	Leporidae	Sylvilagus
+Sylvilagus cf S. audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus
 Sylvilagus sp	Sylvilagus sp	Lagomorpha	Leporidae	Sylvilagus
+Tamias/Neotamias sp	Neotamias/Tamias sp	Rodentia	Sciuridae	Neotamias/Tamias
 Tamias cf merriami	Tamias merriami	Rodentia	Sciuridae	Tamias
 Tamias sp	Tamias sp	Rodentia	Sciuridae	Tamias
-Tamias/Neotamias sp	Tamias sp	Rodentia	Sciuridae	Tamias
 Taxidea taxus	Taxidea taxus	Carnivora	Mustelidae	Taxidea
 Thomomys ?bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys
 Thomomys bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys
