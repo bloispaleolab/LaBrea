@@ -3,6 +3,7 @@ library(scales)
 
 # arrange taxonomy a bit more
 taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsFactors = F)
+includes.file <- unique(taxonomy$RevisedName)
 includes.file <- as.data.frame(includes.file)
 colnames(includes.file) <- "RevisedName"
 write.csv(includes.file,file="data/processed/includes.file.csv", row.names=F)
