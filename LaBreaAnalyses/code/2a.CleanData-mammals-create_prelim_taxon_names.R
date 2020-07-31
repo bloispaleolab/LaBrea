@@ -135,6 +135,5 @@ write.csv(unique_names, file = "data/raw/TaxonomyMatchingFile.csv")
 # replace "7B" with "7b"
 master$box[which(master$box == "7B")] <- "7b"
 
-
 # export master file ----
 write.table(master, file="data/processed/master_mammal_file.txt", sep="\t", row.names = F)

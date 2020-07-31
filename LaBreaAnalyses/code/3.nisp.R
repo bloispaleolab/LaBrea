@@ -1,15 +1,25 @@
 library(tidyverse)
 library(scales)
 
+# arrange taxonomy a bit more
+taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsFactors = F)
+includes.file <- unique(taxonomy$RevisedName)
+includes.file <- as.data.frame(includes.file)
+colnames(includes.file) <- "RevisedName"
+write.csv(includes.file,file="data/processed/includes.file.csv", row.names=F)
+
+
 # calculate NISP ----
 
 # read in master mammal data 
 mammals_orig <- read.delim("data/processed/master_mammal_file.txt", sep="\t", stringsAsFactors = F)
 
+# read in trait taxon names, then match the names to pull out the "include" column
+dat <- read.delim("data/processed/Master_trait_taxon_names.txt", sep="\t", stringsAsFactors = F)
+
+
 # get rid of hancock collection stuff for now
 mammals <- mammals_orig[-which(mammals_orig$misc == "y"),]
-
-taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsFactors = F)
 
 taxon <- as.data.frame(matrix(ncol=4, nrow=nrow(mammals)))
 colnames(taxon) <- c('RevisedName', "Order", "Family", "Genus") 
