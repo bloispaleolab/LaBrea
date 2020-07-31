@@ -1,44 +1,44 @@
-"RevisedName"
-"Dipodomys sp"
-"Mephitis mephitis"
-"Microtus sp"
-"Mustela frenata"
-"Neotamias/Tamias sp"
-"Neotoma sp"
-"Onychomys torridus"
-"Otospermophilus beecheyi"
-"Peromyscus maniculatus"
-"Peromyscus sp"
-"Reithrodontomys megalotis"
-"Sorex sp"
-"Spilogale gracilis"
-"Sylvilagus sp"
-"Tamias sp"
-"Thomomys sp"
-"Aves"
-"Canis dirus"
-"Canis latrans"
-"Canis sp"
-"Capromeryx minor"
-"Lepus sp"
-"Peromyscus californicus"
-"Taxidea taxus"
-"Hymenoptera"
-"Mammalia"
-"Artiodactyla"
-"Carnivora"
-"Rodentia"
-"Eulipotyphla"
-"Lagomorpha"
-"Microtus californicus"
-NA
-"Neotoma macrotis"
-"Scapanus latimanus"
-"Sorex ornatus"
-"Spermophilus sp"
-"Sylvilagus audubonii"
-"Sylvilagus bachmani"
-"Tamias merriami"
-"Thomomys bottae"
-"Urocyon cinereoargenteus"
-"Vertebrata"
+RevisedName,Include
+Dipodomys sp,y
+Mephitis mephitis,y
+Microtus sp,y
+Mustela frenata,y
+Neotamias/Tamias sp,y
+Neotoma sp,y
+Onychomys torridus,y
+Otospermophilus beecheyi,y
+Peromyscus maniculatus,y
+Peromyscus sp,y
+Reithrodontomys megalotis,y
+Sorex sp,y
+Spilogale gracilis,y
+Sylvilagus sp,y
+Tamias sp,n
+Thomomys sp,y
+Aves,n
+Canis dirus,n
+Canis latrans,n
+Canis sp,n
+Capromeryx minor,n
+Lepus sp,n
+Peromyscus californicus,y
+Taxidea taxus,n
+Hymenoptera,n
+Mammalia,n
+Artiodactyla,n
+Carnivora,n
+Rodentia,n
+Eulipotyphla,n
+Lagomorpha,n
+Microtus californicus,y
+NA,n
+Neotoma macrotis,y
+Scapanus latimanus,y
+Sorex ornatus,n
+Spermophilus sp,n
+Sylvilagus audubonii,y
+Sylvilagus bachmani,y
+Tamias merriami,n
+Thomomys bottae,y
+Urocyon cinereoargenteus,n
+Vertebrata,n
