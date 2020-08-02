@@ -19,6 +19,5 @@
 "Mustela frenata"	"Mustelidae"	"Mustela"	3	21	4	3
 "Neotamias/Tamias sp"	"Sciuridae"	"Neotamias/Tamias"	1	5	2	NA
 "Otospermophilus beecheyi"	"Sciuridae"	"Otospermophilus"	51	68	49	17
-"Spermophilus sp"	"Sciuridae"	"Spermophilus"	NA	NA	1	NA
 "Sorex sp"	"Soricidae"	"Sorex"	2	NA	5	1
 "Scapanus latimanus"	"Talpidae"	"Scapanus"	NA	NA	NA	1

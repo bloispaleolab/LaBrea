@@ -1,9 +1,15 @@
 library(tidyverse)
 library(scales)
 
-
 # read in master file that stores names/assemblages for trait analyses
 dat <- read.delim("data/processed/Master_trait_taxon_names.txt", sep="\t", stringsAsFactors = F)
+dat <- dat[,-which(colnames(dat)=='include')]
+
+# redo the "include" to match new "include" file
+include <- read.csv(file="data/processed/includes.file.csv", header=T)
+
+dat <- cbind(dat, include[match(dat$RevisedName, include$RevisedName),'Include'])
+colnames(dat)[ncol(dat)] <- "include"
 
 # read in master mammal_nisp and process to account for Sylvilagus ----
 
