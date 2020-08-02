@@ -3,22 +3,21 @@ library(scales)
 
 # arrange taxonomy a bit more
 taxonomy <- read.delim("data/raw/TaxonomyMatchingFile.txt", sep="\t", stringsAsFactors = F)
-includes.file <- unique(taxonomy$RevisedName)
-includes.file <- as.data.frame(includes.file)
-colnames(includes.file) <- "RevisedName"
-write.csv(includes.file,file="data/processed/includes.file.csv", row.names=F)
 
+# prep includes file for later use
+# includes.file <- unique(taxonomy$RevisedName)
+# includes.file <- as.data.frame(includes.file)
+# colnames(includes.file) <- "RevisedName"
+# write.csv(includes.file,file="data/processed/includes.file.csv", row.names=F)
+
+include <- read.csv(file="data/processed/includes.file.csv", header=T)
 
 # calculate NISP ----
 
 # read in master mammal data 
 mammals_orig <- read.delim("data/processed/master_mammal_file.txt", sep="\t", stringsAsFactors = F)
 
-# read in trait taxon names, then match the names to pull out the "include" column
-dat <- read.delim("data/processed/Master_trait_taxon_names.txt", sep="\t", stringsAsFactors = F)
-
-
-# get rid of hancock collection stuff for now
+# get rid of hancock collection stuff and the misc specimens for calculation of NISP
 mammals <- mammals_orig[-which(mammals_orig$misc == "y"),]
 
 taxon <- as.data.frame(matrix(ncol=4, nrow=nrow(mammals)))
@@ -28,6 +27,7 @@ colnames(taxon) <- c('RevisedName', "Order", "Family", "Genus")
 for (i in 1:nrow(taxon)){
   taxon[i,] <- taxonomy[which(taxonomy$'OriginalName' == mammals$prelim_taxon_name[i]),c('RevisedName', "Order", "Family", "Genus")] 
 }
+# Note: prelim_taxon_name == OriginalName, should have probably renamed in mammals
 
 # Code check - make sure all the specimens are matched with new names for analysis
 if (any(is.na(taxon$RevisedName))==F){
@@ -47,14 +47,8 @@ mammals_trim$Genus <- as.factor(mammals_trim$Genus) #convert to factor for later
 mammals_trim$box <- as.factor(mammals_trim$box) #convert to factor for later filtering
 
 # remove the taxa we don't want to include, this should be verified/changed based on user decisions
-mammals_filtered <- mammals_trim %>% 
-  filter(!is.na(Family)) %>%
-  filter(Order != "Artiodactyla") %>%
-  filter(Genus != "Canis") %>%
-  filter(Genus != "Taxidea") %>%
-  filter(Genus != "Urocyon") %>%
-  filter(Genus != "Lepus") %>% ## JESSICA AND NATE check: Why did we include Lepus here? Because it is only to genus?
-  filter(!is.na(Genus))
+# Note this produced exactly the same list as the previous block of code, but with Spermophilus removed. So the old filter steps are not necessary now.
+mammals_filtered <- mammals_trim[which(is.na(match(mammals_trim$RevisedName, as.character(include[which(include$Include=='n'), 'RevisedName'])))),]
 
 # remove the factor levels that were dropped
 mammals_filtered$Order <- droplevels(mammals_filtered$Order)
