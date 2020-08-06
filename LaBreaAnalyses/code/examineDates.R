@@ -128,6 +128,8 @@ P23_dates <- dates[c(which(dates$box == "1"),
 which(dates$box == "7b"), 
 which(dates$box == "13"), 
 which(dates$box == "14")),]
+P23_dates$box <- factor(P23_dates$box,
+levels = c('1','13', '14', '7b'),ordered = TRUE)
 
 base <- ggplot(P23_dates) +
   geom_boxplot(aes(x = box, y = C14_age_BP, fill = box), alpha = 0.7, show.legend = FALSE) +
@@ -147,7 +149,6 @@ all <- base +
 pdf(file="output/boxplot-P23_dates.pdf", height=6, width=12)
 all + coord_flip() + scale_y_reverse()
 dev.off()
-
 
 
 anova <- aov(C14_age_BP~RevisedName, data=P23_dates_taxa[which(P23_dates_taxa$box=="1"),])

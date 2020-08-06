@@ -35,7 +35,7 @@ nisp <- cbind(nisp, include[match(nisp$RevisedName, include$RevisedName),'Includ
 colnames(nisp)[ncol(nisp)] <- "include"
 
 nisp <- nisp[which(nisp$include=="y"),] # note all data in nisp are included
-
+nisp[is.na(nisp)] <- 0
 # sum data by Genus
 genus_nisp <- nisp %>%                                            # Specify data frame
   group_by(Genus) %>%                               # Specify group indicator
@@ -113,7 +113,9 @@ Dep7b <- t(as.matrix(Div.data[4, ]))
 RankAbun.1 <- rankabundance(Dep1)#enter deposit of interest
 RankAbun.1
 #rank abundance
+pdf("Output/diversity/Dep1_RA.pdf", width=5, height=5)
 rankabunplot(RankAbun.1, scale='abundance', addit=FALSE, specnames=c(1,2,3,4))
+dev.off()
 #log abundance
 rankabunplot(RankAbun.1, scale='logabun', addit=FALSE, specnames=c(1:15), 
              srt=45, xlim=c(1, 14), ylim=c(1,1000))
@@ -122,7 +124,7 @@ rankabunplot(RankAbun.1, scale='logabun', addit=FALSE, specnames=c(1:15),
 
 ## install the latest version from github
 
-#iNEXT.data <- read.csv("data/processed/P23_diversity_iNEXT_spp.csv", row.names = 1) # Note: this was Nate's original code, replaced below by nisp output
+#iNEXT.data <- read.csv("data/processed/P23_div_iNEXT_spp.csv", row.names = 1) # Note: this was Nate's original code, replaced below by nisp output
 
 iNEXT.data <- nisp[,c('Box_1', 'Box_13', 'Box_14', 'Box_7b')]
 iNEXT.data <- apply(iNEXT.data, 2, function(x) replace_na(x, 0))
@@ -131,9 +133,10 @@ rownames(iNEXT.data) <- nisp$'RevisedName'
 out <- iNEXT(iNEXT.data, q=c(1), datatype="abundance", conf=0.95, endpoint=1000)
 # q=0 = taxon richness, q=1 = shannon diversity, q=2 = Simpson diversity 
 # Hill numbers can be viewed all togther or individually
-
+pdf("Output/diversity/inext_spp.pdf", width=7, height=4)
 div_plot<-ggiNEXT(out, type=1, se=TRUE) 
 div_plot + labs(y = "Species diversity")
+dev.off()
 # type can be changed from 1-3
 # type=1 = Sample-size-based R/E curve
 # type=2 = Sample completeness curve
