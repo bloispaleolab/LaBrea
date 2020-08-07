@@ -190,3 +190,43 @@ Sylv <- P23_dates %>% filter(RevisedName == "Sylvilagus sp")
 
 # Box 14
 P23_dates_taxa[which(is.na(P23_dates_taxa$Canister)),]
+
+
+
+
+
+### Plot only boxes 1, 7b, and 13
+
+# set colors
+scale_fill_manual() for box plot, bar plot, violin plot, etc
+scale_color_manual() for lines and points
+# Box plot
+bp + scale_fill_manual(values=c("yellow", "teal", "purple"))
+# Scatter plot
+sp + scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
+
+# Plot only the P23 boxes
+P23_dates_sub <- dates[c(which(dates$box == "1"), 
+                     which(dates$box == "7b"), 
+                     which(dates$box == "13")),]
+P23_dates_sub$box <- factor(P23_dates_sub$box,
+                        levels = c('1','13', '7b'),ordered = TRUE)
+
+base <- ggplot(P23_dates_sub) +
+  geom_boxplot(aes(x = box, y = C14_age_BP, fill = box), alpha = 0.7, show.legend = FALSE) +
+  geom_point(aes(x = box, y = C14_age_BP, fill = box), 
+             size = 3, shape = 21, position = position_jitterdodge(), show.legend = FALSE) +  
+  xlab("Box") + 
+  ylab("C14 years BP")
+all <- base + 
+  scale_fill_brewer(palette="Set1")+
+  theme_light()+
+  theme(axis.text.x=element_text(size=14),
+        axis.text.y=element_text(size=14),
+        axis.title=element_text(size=18,face="bold"),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.x = element_blank())
+
+pdf(file="output/boxplot-P23_dates_no14.pdf", height=6, width=12)
+all + coord_flip() + scale_y_reverse()
+dev.off()

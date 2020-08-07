@@ -127,7 +127,7 @@ rankabunplot(RankAbun.1, scale='logabun', addit=FALSE, specnames=c(1:15),
 #iNEXT.data <- read.csv("data/processed/P23_div_iNEXT_spp.csv", row.names = 1) # Note: this was Nate's original code, replaced below by nisp output
 
 iNEXT.data <- nisp[,c('Box_1', 'Box_13', 'Box_14', 'Box_7b')]
-iNEXT.data <- apply(iNEXT.data, 2, function(x) replace_na(x, 0))
+# iNEXT.data <- apply(iNEXT.data, 2, function(x) replace_na(x, 0))
 rownames(iNEXT.data) <- nisp$'RevisedName'
 
 out <- iNEXT(iNEXT.data, q=c(1), datatype="abundance", conf=0.95, endpoint=1000)
@@ -145,3 +145,21 @@ dev.off()
 #facet.var = "none", "order", "site" or "both" 
 # removed this from the ggiNEXT code: facet.var="order" 
 # don't need this
+
+# just plot the data without Box 14
+iNEXT.data.sub <- nisp[,c('Box_1', 'Box_13', 'Box_7b')]
+# iNEXT.data <- apply(iNEXT.data, 2, function(x) replace_na(x, 0))
+rownames(iNEXT.data.sub) <- nisp$'RevisedName'
+
+out.sub <- iNEXT(iNEXT.data.sub, q=c(1), datatype="abundance", conf=0.95, endpoint=1000)
+
+pdf("Output/diversity/inext_spp_no14.pdf", width=7, height=4)
+div_plot<-ggiNEXT(out.sub, type=1, se=TRUE, color.var = "site") 
+div_plot +   
+  scale_colour_brewer(palette="Set1") +
+  scale_fill_brewer(palette="Set1") +
+  theme(axis.text.x=element_text(size=14),
+        axis.text.y=element_text(size=14),
+        axis.title=element_text(size=18,face="bold")) +
+  labs(y = "Species diversity")
+dev.off()
