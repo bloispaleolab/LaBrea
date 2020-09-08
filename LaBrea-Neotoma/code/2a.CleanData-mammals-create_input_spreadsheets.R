@@ -1,34 +1,10 @@
 # Convert specimen data from La Brea into a format suitable for entry into Neotoma database
 # We need two files for each deposit:
 # 1) Main data file, which should have the following columns:
-# Name --> Taxon ID
-# Element	 --> "bone/tooth"
-# Units --> "present/absent"
-# Taphonomy	> blank
-# Group	> blank
-# Analysis units --> add one column per analysis unit, which corresponds to canister
-
 # 2) specimen-level spreadsheet, with the following columns  
-# Spec ID
-# element
-# symmetry
-# portion
-# maturity
-# sex
-# domestic status
-# taphonomy
-# preservative
-# nisp
-# repository
-# Spec Nr
-# Field Nr
-# Arctos Nr
-# GenBank Nr
-# Notes
-
 
 library(readr)
-
+library(tidyr)
 
 # STEP 1: Read in data exported from Google Drive and clean in same manner as La Brea project----
 deposits <- c("1","7b","13","14", "misc_1", "misc_7b", "misc_13", "misc_14", "HC")
@@ -164,13 +140,20 @@ master$box[which(master$box == "7B")] <- "7b"
 write.table(master, file="data/output/master_mammal_file - all specimens combined.txt", sep="\t", row.names = F)
 
 # STEP 2: Break cleaned data back into spreadsheets for each box ----
+master <- read.delim(file="data/output/master_mammal_file - all specimens combined.txt", sep="\t")
 
 deposits <- unique(master$box)
 
 for (k in 1:length(deposits)){
-  master_specimens <- NULL
   
-  # First, create main data table
+  # First, create the Tilia main 'Data' table ----
+  # 1) Main data file, which should have the following columns:
+  # Name --> Taxon ID
+  # Element	 --> "bone/tooth"
+  # Units --> "present/absent"
+  # Taphonomy	> blank
+  # Group	> blank
+  # Analysis units --> add one column per analysis unit, which corresponds to canister
   dat <- master[which(master$box == deposits[k]),]
   
   # find unique analysis units
@@ -179,7 +162,7 @@ for (k in 1:length(deposits)){
   
   taxa <- unique(dat$prelim_taxon_name)
   
-  master_data <- matrix(NA, nrow = length(taxa), ncol=length(AnUnits))
+  master_data <- matrix(nrow = length(taxa), ncol=length(AnUnits))
   master_data <- as.data.frame(master_data)
   colnames(master_data) <- AnUnits
   
@@ -191,23 +174,62 @@ for (k in 1:length(deposits)){
   }
   
   # add on misc bones
-  if (any(dat$misc=="y")){
+  # these should only be bones marked 'y' for misc, but without an assigned canister
+  if (length(intersect(which(dat$misc=="y"), which(is.na(dat$Canister))))>0){
     master_data$misc <- NA
-    temp <- dat[which(dat$misc == "y"),]
+    temp <- dat[intersect(which(dat$misc=="y"), which(is.na(dat$Canister))),]
     master_data[match(unique(temp$prelim_taxon_name), taxa), 'misc'] <- 1
     rm(temp)
   }
   
+  # check - all Analysis Units have data?
+  cat("Deposit", as.character(deposits[k]))
+  print(any(colSums(master_data, na.rm=T)==0)) # should be FALSE
+  
+  # delete NAs 
+  master_data[is.na(master_data)] <- ""
+  
   # add on other info for Tilia
-  Taxon <- taxa
+  Name <- taxa
+  Element <- rep("bone/tooth", length(taxa))
   Units <- rep("present/absent", length(taxa))  
   
   # reorder columns:
-  master_data <- cbind(Taxon, Units, master_data) 
+  master_data <- cbind(Name, Element, Units, master_data) 
   
   # all specimens
   write.table(master_data, file=paste0("data/output/Tilia_data-Box", deposits[k], ".txt"), sep="\t", row.names = F)
+ 
+  # Second, arrange the specimen data for easy input into the specimens table of Tilia ----
+  # 2) specimen-level spreadsheet, with the following columns  
+  # Spec ID --> Museum_Number
+  # Depth
+  # Anal Unit --> Canister
+  # Taxon
+  # element --> Element_original
+  # symmetry
+  # portion
+  # maturity
+  # sex
+  # domestic status
+  # taphonomy
+  # preservative
+  # nisp --> 1
+  # repository --> "Los Angeles County Museum of Natural History" (or "LACM")
+  # Spec Nr --> Museum_Number 
+  # Field Nr
+  # Arctos Nr
+  # GenBank Nr
+  # Notes
   
-  ## JESSICA: NEED TO NOW FOCUS ON THE SPECIMEN LEVEL DATA!!
+  # First, replace the "NA" with "misc" in the "Canister"
+  master_specimens <- dat
+  master_specimens[which(is.na(master_specimens$Canister)), 'Canister'] <- "misc"
   
+  
+  # start to deal with elements
+  #symmetry:
+  symmetry <- NULL
+  symmetry[grep("rt", master_specimens$Element_original)] <- "right"
+  symmetry[grep("lt", master_specimens$Element_original)] <- "left"
 }

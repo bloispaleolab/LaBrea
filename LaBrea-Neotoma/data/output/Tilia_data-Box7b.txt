@@ -1,40 +1,40 @@
-"Taxon"	"Units"	"B1/L1"	"A2/L1"	"A3/L2"	"A2/L2"	"B2/L1"	"B2/L2"	"A3/L3"	"A2/L3"	"B2/L3"	"A3/L4"	"A2/L4"	"B2/L4"	"B2/L5"	"B1/L5+6"	"B2/L6"	"Dep. 7B B-2 L3"	"Dep. 7B B-2 L4"	"misc"
-"Microtus sp"	"present/absent"	1	1	1	1	1	1	1	NA	1	NA	1	1	1	1	1	NA	NA	NA
-"Neotoma sp"	"present/absent"	1	1	NA	NA	1	1	NA	NA	1	NA	NA	1	1	1	1	NA	NA	NA
-"Sylvilagus sp"	"present/absent"	1	1	NA	1	1	1	NA	1	1	NA	NA	1	1	1	1	1	1	1
-"?Sylvilagus sp"	"present/absent"	1	1	NA	NA	1	1	1	NA	1	NA	NA	1	1	1	1	NA	NA	NA
-"Mammalia-Rodentia"	"present/absent"	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	NA	NA	NA
-"Mammalia-Carnivora"	"present/absent"	1	NA	NA	NA	1	NA	NA	NA	1	NA	NA	1	NA	NA	NA	NA	NA	NA
-"?Mephitis mephitis"	"present/absent"	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"Peromyscus cf californicus"	"present/absent"	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA
-"Peromyscus sp"	"present/absent"	1	1	NA	NA	1	1	1	1	1	NA	1	1	1	1	1	NA	NA	NA
-"?Peromyscus sp"	"present/absent"	1	NA	1	NA	1	1	1	NA	1	NA	NA	NA	NA	NA	1	NA	NA	NA
-"cf Microtus sp"	"present/absent"	1	NA	1	1	NA	NA	NA	1	1	1	NA	NA	NA	NA	1	NA	NA	NA
-"?Sorex sp"	"present/absent"	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"Otospermophilus ?beecheyi"	"present/absent"	NA	1	NA	NA	NA	1	NA	NA	1	NA	NA	1	NA	NA	1	NA	NA	NA
-"Thomomys sp"	"present/absent"	NA	1	NA	1	NA	1	NA	1	1	1	NA	1	1	NA	1	NA	NA	NA
-"Mammalia-NA"	"present/absent"	NA	1	NA	NA	1	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"cf Reithrodontomys megalotis"	"present/absent"	NA	NA	1	NA	NA	NA	NA	NA	1	NA	1	NA	1	NA	1	NA	NA	NA
-"Sylvilagus audubonii"	"present/absent"	NA	NA	NA	1	1	1	NA	NA	1	NA	NA	1	1	NA	1	NA	NA	NA
-"Mephitis mephitis"	"present/absent"	NA	NA	NA	NA	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"Mammalia-Eulipotyphla"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	1	1	NA	NA	NA
-"Capromeryx minor"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"Mammalia-Artiodactyla"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"Peromyscus cf P. maniculatus"	"present/absent"	NA	NA	NA	NA	1	1	NA	NA	1	NA	NA	1	1	1	1	NA	NA	NA
-"?Thomomys sp"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	1	NA	NA	NA	1	NA	NA	NA	NA	NA
-"Dipodomys sp"	"present/absent"	NA	NA	NA	NA	1	1	1	1	NA	NA	NA	1	1	1	1	NA	NA	NA
-"Neotoma macrotis"	"present/absent"	NA	NA	NA	NA	NA	1	NA	NA	1	NA	NA	1	NA	NA	1	NA	NA	NA
-"Mustela frenata"	"present/absent"	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
-"?Mustela frenata"	"present/absent"	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"?Dipodomys sp"	"present/absent"	NA	NA	NA	NA	NA	NA	1	1	NA	NA	NA	1	1	1	NA	NA	NA	NA
-"cf Peromyscus sp"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"Mammalia-Lagomorpha"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"Thomomys ?bottae"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	1	NA	NA	NA	NA	NA
-"?Neotoma sp"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
-"Mammalia-Rodentia/Lagomorpha"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	1	1	NA	NA	NA
-"Sylvilagus bachmani"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA
-"Scapanus cf latimanus"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA
-"Mammalia-cf Rodentia"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA
-"Mammalia-?Rodentia"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	1	NA	NA	NA
-"Mammalia-?Lagomorpha"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA
-"Mammalia-?Eulipotyphla"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA
+"Name"	"Element"	"Units"	"B1/L1"	"A2/L1"	"A3/L2"	"A2/L2"	"B2/L1"	"B2/L2"	"A3/L3"	"A2/L3"	"B2/L3"	"A3/L4"	"A2/L4"	"B2/L4"	"B2/L5"	"B1/L5+6"	"B2/L6"	"Dep. 7B B-2 L3"	"Dep. 7B B-2 L4"
+"Microtus sp"	"bone/tooth"	"present/absent"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	""	"1"	""	"1"	"1"	"1"	"1"	"1"	""	""
+"Neotoma sp"	"bone/tooth"	"present/absent"	"1"	"1"	""	""	"1"	"1"	""	""	"1"	""	""	"1"	"1"	"1"	"1"	""	""
+"Sylvilagus sp"	"bone/tooth"	"present/absent"	"1"	"1"	""	"1"	"1"	"1"	""	"1"	"1"	""	""	"1"	"1"	"1"	"1"	"1"	"1"
+"?Sylvilagus sp"	"bone/tooth"	"present/absent"	"1"	"1"	""	""	"1"	"1"	"1"	""	"1"	""	""	"1"	"1"	"1"	"1"	""	""
+"Mammalia-Rodentia"	"bone/tooth"	"present/absent"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	"1"	""	""
+"Mammalia-Carnivora"	"bone/tooth"	"present/absent"	"1"	""	""	""	"1"	""	""	""	"1"	""	""	"1"	""	""	""	""	""
+"?Mephitis mephitis"	"bone/tooth"	"present/absent"	"1"	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""
+"Peromyscus cf californicus"	"bone/tooth"	"present/absent"	"1"	""	""	""	""	""	""	""	""	""	""	"1"	""	""	""	""	""
+"Peromyscus sp"	"bone/tooth"	"present/absent"	"1"	"1"	""	""	"1"	"1"	"1"	"1"	"1"	""	"1"	"1"	"1"	"1"	"1"	""	""
+"?Peromyscus sp"	"bone/tooth"	"present/absent"	"1"	""	"1"	""	"1"	"1"	"1"	""	"1"	""	""	""	""	""	"1"	""	""
+"cf Microtus sp"	"bone/tooth"	"present/absent"	"1"	""	"1"	"1"	""	""	""	"1"	"1"	"1"	""	""	""	""	"1"	""	""
+"?Sorex sp"	"bone/tooth"	"present/absent"	""	"1"	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""
+"Otospermophilus ?beecheyi"	"bone/tooth"	"present/absent"	""	"1"	""	""	""	"1"	""	""	"1"	""	""	"1"	""	""	"1"	""	""
+"Thomomys sp"	"bone/tooth"	"present/absent"	""	"1"	""	"1"	""	"1"	""	"1"	"1"	"1"	""	"1"	"1"	""	"1"	""	""
+"Mammalia-NA"	"bone/tooth"	"present/absent"	""	"1"	""	""	"1"	"1"	"1"	""	""	""	""	""	""	""	""	""	""
+"cf Reithrodontomys megalotis"	"bone/tooth"	"present/absent"	""	""	"1"	""	""	""	""	""	"1"	""	"1"	""	"1"	""	"1"	""	""
+"Sylvilagus audubonii"	"bone/tooth"	"present/absent"	""	""	""	"1"	"1"	"1"	""	""	"1"	""	""	"1"	"1"	""	"1"	""	""
+"Mephitis mephitis"	"bone/tooth"	"present/absent"	""	""	""	""	"1"	"1"	""	""	""	""	""	""	""	""	""	""	""
+"Mammalia-Eulipotyphla"	"bone/tooth"	"present/absent"	""	""	""	""	"1"	""	""	""	""	""	""	""	""	"1"	"1"	""	""
+"Capromeryx minor"	"bone/tooth"	"present/absent"	""	""	""	""	"1"	""	""	""	""	""	""	""	""	""	""	""	""
+"Mammalia-Artiodactyla"	"bone/tooth"	"present/absent"	""	""	""	""	"1"	""	""	""	""	""	""	""	""	""	""	""	""
+"Peromyscus cf P. maniculatus"	"bone/tooth"	"present/absent"	""	""	""	""	"1"	"1"	""	""	"1"	""	""	"1"	"1"	"1"	"1"	""	""
+"?Thomomys sp"	"bone/tooth"	"present/absent"	""	""	""	""	"1"	""	""	""	"1"	""	""	""	"1"	""	""	""	""
+"Dipodomys sp"	"bone/tooth"	"present/absent"	""	""	""	""	"1"	"1"	"1"	"1"	""	""	""	"1"	"1"	"1"	"1"	""	""
+"Neotoma macrotis"	"bone/tooth"	"present/absent"	""	""	""	""	""	"1"	""	""	"1"	""	""	"1"	""	""	"1"	""	""
+"Mustela frenata"	"bone/tooth"	"present/absent"	""	""	""	""	""	"1"	""	""	""	""	""	""	"1"	""	""	""	""
+"?Mustela frenata"	"bone/tooth"	"present/absent"	""	""	""	""	""	"1"	""	""	""	""	""	""	""	""	""	""	""
+"?Dipodomys sp"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	"1"	"1"	""	""	""	"1"	"1"	"1"	""	""	""
+"cf Peromyscus sp"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	"1"	""	""	""	""	""	""	""	""
+"Mammalia-Lagomorpha"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	"1"	""	""	""	""	""	""	""	""
+"Thomomys ?bottae"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	"1"	""	""	""	"1"	""	""	""	""
+"?Neotoma sp"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	"1"	""	""	""	""	""	""	""	""
+"Mammalia-Rodentia/Lagomorpha"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	"1"	""	""	""	""	"1"	"1"	""	""
+"Sylvilagus bachmani"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	""	""	""	"1"	""	""	""	""	""
+"Scapanus cf latimanus"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	""	""	""	"1"	""	""	""	""	""
+"Mammalia-cf Rodentia"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	""	""	""	"1"	""	""	""	""	""
+"Mammalia-?Rodentia"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	""	""	""	"1"	""	""	"1"	""	""
+"Mammalia-?Lagomorpha"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	""	""	""	""	""	""	"1"	""	""
+"Mammalia-?Eulipotyphla"	"bone/tooth"	"present/absent"	""	""	""	""	""	""	""	""	""	""	""	""	""	""	"1"	""	""
