@@ -1,4 +1,4 @@
-# Convert specimen data into form suitable for entry into Neotoma database
+# Convert specimen data from La Brea into a format suitable for entry into Neotoma database
 # We need two files for each deposit:
 # 1) Main data file, which should have the following columns:
 # Name --> Taxon ID
@@ -29,16 +29,16 @@
 
 library(readr)
 
-# Read in data exported from Google Drive ----
+
+# STEP 1: Read in data exported from Google Drive and clean in same manner as La Brea project----
 deposits <- c("1","7b","13","14", "misc_1", "misc_7b", "misc_13", "misc_14", "HC")
 files <- list.files(
   "data/GoogleDriveExports-mammals", 
   full=T) 
 
 # create a master spreadsheet with standardized taxonomic names ----
+master <- NULL
 for (i in 1:length(files)){
-master_data <- NULL
-master_specimens <- NULL
   
     # read in data ----
   original<- read_tsv(files[i], trim_ws=T) 
@@ -108,11 +108,11 @@ master_specimens <- NULL
   
   # Add onto the master spreadsheet
   if (i ==1){
-    master_specimens <- rbind(master_specimens, data)
+    master <- rbind(master, data)
     print(paste0(i, ": Rows added"))
   }else{
-    if (all(colnames(data) == colnames(master_specimens))){
-      master_specimens <- rbind(master_specimens, data)
+    if (all(colnames(data) == colnames(master))){
+      master <- rbind(master, data)
       print(paste0(i, ": Rows added"))
     }else{
       print(paste0(i, ": CHECK COLNAMES"))
@@ -156,16 +156,58 @@ for (i in 1:length(rowsWithRepeats)){
 master <- master[-rowsWithRepeats,]
 master <- rbind(master, newRowsMaster)
 
-# This block of code is used to generate (part of) the taxonomy matching file
-unique_names <- unique(master$prelim_taxon_name)
-unique_names <- sort(unique_names)
-unique_names
-
-write.csv(unique_names, file = "data/raw/TaxonomyMatchingFile.csv")
-
 # replace "7B" with "7b"
 master$box[which(master$box == "7B")] <- "7b"
 
-
 # export master file ----
-write.table(master, file="data/processed/master_mammal_file.txt", sep="\t", row.names = F)
+# all specimens
+write.table(master, file="data/output/master_mammal_file - all specimens combined.txt", sep="\t", row.names = F)
+
+# STEP 2: Break cleaned data back into spreadsheets for each box ----
+
+deposits <- unique(master$box)
+
+for (k in 1:length(deposits)){
+  master_specimens <- NULL
+  
+  # First, create main data table
+  dat <- master[which(master$box == deposits[k]),]
+  
+  # find unique analysis units
+  AnUnits <- unique(dat$Canister)
+  AnUnits <- na.omit(AnUnits)
+  
+  taxa <- unique(dat$prelim_taxon_name)
+  
+  master_data <- matrix(NA, nrow = length(taxa), ncol=length(AnUnits))
+  master_data <- as.data.frame(master_data)
+  colnames(master_data) <- AnUnits
+  
+  # assign presences to the main Analysis Units/Canisters
+  for (i in 1:length(AnUnits)){
+    temp <- dat[which(dat$Canister == AnUnits[i]),]
+    master_data[match(unique(temp$prelim_taxon_name), taxa), which(colnames(master_data) == AnUnits[i])] <- 1
+    rm(temp)
+  }
+  
+  # add on misc bones
+  if (any(dat$misc=="y")){
+    master_data$misc <- NA
+    temp <- dat[which(dat$misc == "y"),]
+    master_data[match(unique(temp$prelim_taxon_name), taxa), 'misc'] <- 1
+    rm(temp)
+  }
+  
+  # add on other info for Tilia
+  Taxon <- taxa
+  Units <- rep("present/absent", length(taxa))  
+  
+  # reorder columns:
+  master_data <- cbind(Taxon, Units, master_data) 
+  
+  # all specimens
+  write.table(master_data, file=paste0("data/output/Tilia_data-Box", deposits[k], ".txt"), sep="\t", row.names = F)
+  
+  ## JESSICA: NEED TO NOW FOCUS ON THE SPECIMEN LEVEL DATA!!
+  
+}

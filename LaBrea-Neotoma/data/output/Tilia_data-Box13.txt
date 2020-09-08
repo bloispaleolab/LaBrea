@@ -1,0 +1,44 @@
+"Taxon"	"Units"	"A3/L3"	"A3/L1"	"A2/L1"	"B2/L1"	"B3/L1"	"A2/L2"	"B2/L3"	"B3/L2-T1"	"B3/L2-T2"	"B3/L3-T1"	"A3/L2"	"B2/L2"	"B3/L2"	"B3/L3"	"B2/L4"	"B3/L4"	"misc"
+"Microtus sp"	"present/absent"	1	1	1	NA	1	1	1	NA	NA	NA	1	1	1	1	NA	NA	1
+"?Microtus sp"	"present/absent"	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Sylvilagus sp"	"present/absent"	1	1	1	1	1	1	1	1	1	1	1	1	1	NA	NA	NA	1
+"Dipodomys sp"	"present/absent"	1	1	1	1	1	1	1	NA	NA	NA	1	1	1	NA	NA	NA	NA
+"Thomomys sp"	"present/absent"	1	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
+"Otospermophilus ?beecheyi"	"present/absent"	1	1	1	1	NA	1	1	1	1	1	1	1	1	NA	NA	NA	NA
+"Peromyscus cf californicus"	"present/absent"	1	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
+"?Peromyscus sp"	"present/absent"	1	NA	1	1	NA	NA	1	NA	NA	NA	1	1	NA	NA	NA	NA	NA
+"Peromyscus cf P. maniculatus"	"present/absent"	1	NA	NA	NA	NA	1	1	NA	NA	NA	1	1	NA	NA	NA	NA	NA
+"Peromyscus sp"	"present/absent"	1	1	1	1	1	1	1	NA	NA	NA	1	1	1	NA	NA	NA	NA
+"Mammalia-Rodentia"	"present/absent"	1	1	1	1	1	1	1	NA	NA	NA	1	1	1	NA	NA	1	1
+"Sylvilagus audubonii"	"present/absent"	1	1	NA	NA	NA	1	1	1	NA	NA	1	1	1	NA	NA	NA	NA
+"Neotoma sp"	"present/absent"	1	NA	NA	NA	NA	NA	1	NA	NA	NA	1	1	NA	NA	NA	NA	NA
+"Canis latrans"	"present/absent"	1	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
+"Mustela frenata"	"present/absent"	1	1	1	1	NA	1	1	NA	NA	1	1	1	NA	NA	NA	NA	NA
+"Mammalia-Carnivora"	"present/absent"	1	NA	NA	NA	NA	NA	1	NA	NA	NA	1	NA	NA	NA	1	NA	1
+"?Thomomys sp"	"present/absent"	1	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Sylvilagus sp"	"present/absent"	NA	1	1	1	NA	NA	NA	NA	NA	NA	1	1	NA	NA	NA	NA	NA
+"Neotamias/Tamias sp"	"present/absent"	NA	1	NA	NA	NA	1	NA	NA	NA	NA	1	1	NA	NA	NA	NA	NA
+"?Mephitis mephitis"	"present/absent"	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA
+"Mammalia-Lagomorpha"	"present/absent"	NA	1	NA	NA	NA	NA	1	NA	NA	NA	NA	1	1	NA	NA	NA	NA
+"cf Microtus sp"	"present/absent"	NA	NA	1	NA	NA	1	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
+"Mammalia-Eulipotyphla"	"present/absent"	NA	NA	1	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	1	NA	1
+"?Neotoma sp"	"present/absent"	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Canis dirus"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-?Rodentia"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Sylvilagus cf audubonii"	"present/absent"	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"cf Peromyscus maniculatus"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA
+"Thomomys ?bottae"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA
+"Sylvilagus ?audubonii"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA
+"cf Reithrodontomys megalotis"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	1	NA	NA	NA	NA
+"?Dipodomys sp"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
+"?Neotamias/Tamias sp"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
+"Mammalia-?Carnivora"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA
+"cf Onychomys torridus"	"present/absent"	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Urocyon cinereoargenteus"	"present/absent"	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mephitis mephitis"	"present/absent"	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Mustela frenata"	"present/absent"	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"NA-NA"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-?Lagomorpha"	"present/absent"	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Otospermophilus beecheyi"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1
+"Sorex sp"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	1
+"Neotoma macrotis"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	1

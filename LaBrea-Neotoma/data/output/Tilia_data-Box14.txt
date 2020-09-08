@@ -1,0 +1,50 @@
+"Taxon"	"Units"	"B2/L2"	"C3/L5"	"B3/L5"	"D2/L4"	"C2/L4"	"B2/L5"	"C2/L3"	"B2/L6"	"D2/L6"	"C3/L6"	"B3/L3"	"C2/L2"	"D3/L6"	"B3/L6"	"C3/L4"	"C3/L7"	"D3/L7"	"D2/L7"	"C2/L7"	"B2/L7"	"B3/L7"	"D2/L3"	"misc"	"D3/L5"
+"Canis latrans"	"present/absent"	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Sylvilagus sp"	"present/absent"	1	1	1	1	1	NA	1	1	NA	1	NA	1	1	1	1	NA	NA	NA	NA	NA	NA	NA	1	NA
+"Spermophilus sp"	"present/absent"	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Dipodomys sp"	"present/absent"	1	1	1	1	1	NA	NA	1	NA	NA	1	NA	1	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Peromyscus sp"	"present/absent"	1	1	1	1	1	NA	NA	1	NA	1	1	1	1	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Vertebrata cf Mammalia-NA"	"present/absent"	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Thomomys sp"	"present/absent"	1	1	1	1	1	NA	NA	1	NA	NA	NA	1	NA	1	1	NA	NA	NA	NA	NA	NA	NA	1	NA
+"Mammalia-Rodentia"	"present/absent"	1	1	1	1	1	NA	NA	1	NA	1	1	1	1	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Vertebrata-NA"	"present/absent"	1	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Otospermophilus ?beecheyi"	"present/absent"	NA	1	1	1	1	NA	1	1	1	1	1	NA	1	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Dipodomys sp"	"present/absent"	NA	1	1	1	NA	NA	NA	NA	NA	NA	NA	NA	1	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Neotoma sp"	"present/absent"	NA	1	NA	1	1	NA	NA	1	NA	NA	NA	1	1	1	1	NA	NA	NA	NA	NA	NA	NA	1	NA
+"Peromyscus cf P. maniculatus"	"present/absent"	NA	1	1	1	NA	NA	NA	NA	NA	1	NA	1	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Peromyscus cf californicus"	"present/absent"	NA	1	NA	1	1	NA	NA	1	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Peromyscus sp"	"present/absent"	NA	1	1	1	1	NA	NA	1	NA	1	1	NA	1	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Microtus sp"	"present/absent"	NA	1	1	1	1	NA	NA	1	NA	1	1	1	1	1	1	1	NA	NA	NA	NA	NA	NA	1	NA
+"cf Peromyscus sp"	"present/absent"	NA	1	1	NA	1	NA	NA	1	NA	1	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"cf Microtus sp"	"present/absent"	NA	1	1	1	NA	NA	NA	NA	NA	1	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Sylvilagus sp"	"present/absent"	NA	1	1	1	1	NA	NA	NA	NA	1	NA	NA	NA	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-Eulipotyphla"	"present/absent"	NA	1	NA	NA	1	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Spilogale gracilis"	"present/absent"	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-?Eulipotyphla"	"present/absent"	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-Lagomorpha"	"present/absent"	NA	1	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-Carnivora"	"present/absent"	NA	1	NA	NA	1	NA	NA	1	NA	1	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Sylvilagus audubonii"	"present/absent"	NA	NA	NA	1	1	NA	NA	1	NA	1	NA	NA	1	1	NA	1	NA	1	NA	NA	1	1	1	NA
+"?Thomomys sp"	"present/absent"	NA	NA	NA	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Microtus californicus"	"present/absent"	NA	NA	NA	1	1	NA	NA	1	NA	1	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+"cf Reithrodontomys megalotis"	"present/absent"	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Neotoma macrotis"	"present/absent"	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Thomomys ?bottae"	"present/absent"	NA	NA	NA	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Neotoma sp"	"present/absent"	NA	NA	NA	1	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-NA"	"present/absent"	NA	NA	NA	1	NA	NA	NA	NA	NA	1	NA	NA	1	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"NA-NA"	"present/absent"	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Sylvilagus bachmani"	"present/absent"	NA	NA	NA	NA	1	1	NA	NA	NA	NA	NA	NA	NA	1	NA	1	NA	NA	1	NA	NA	NA	1	NA
+"cf Peromyscus cf californicus"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Sorex sp"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Microtus sp"	"present/absent"	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mustela frenata"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"?Mustela frenata"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Canis cf latrans"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Neotamias/Tamias sp"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-cf Carnivora"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Mammalia-cf Rodentia"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Capromeryx minor"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA
+"Sylvilagus cf bachmani"	"present/absent"	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	1	1	NA	1	1	NA	1	NA
+"Sylvilagus cf audubonii"	"present/absent"	NA	NA	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	1	NA	NA	NA	1	NA
+"Otospermophilus beecheyi"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA
+"Spilogale gracilis"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA
+"?Otospermophilus beecheyi"	"present/absent"	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	1	NA	NA	NA	NA	NA	NA	NA	1	1
