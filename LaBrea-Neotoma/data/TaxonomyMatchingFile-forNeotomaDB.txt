@@ -1,0 +1,97 @@
+OriginalName	RevisedName	Order	Family	Genus	OriginalName_cleaned
+?Dipodomys sp	Dipodomys sp	Rodentia	Heteromyidae	Dipodomys	?Dipodomys sp
+?Mephitis mephitis	Mephitis mephitis	Carnivora	Mephitidae	Mephitis	?Mephitis mephitis
+?Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus	?Microtus sp
+?Mustela frenata	Mustela frenata	Carnivora	Mustelidae	Mustela	?Mustela frenata
+?Neotamias/Tamias sp	Neotamias/Tamias sp	Rodentia	Sciuridae	Neotamias/Tamias	?Neotamias/Tamias sp
+?Neotoma sp	Neotoma sp	Rodentia	Cricetidae	Neotoma	?Neotoma sp
+?Onychomys torridus	Onychomys torridus	Rodentia	Cricetidae	Onychomys	?Onychomys torridus
+?Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	?Otospermophilus beecheyi
+?Peromyscus maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus	?Peromyscus maniculatus
+?Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus	?Peromyscus sp
+?Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys	?Reithrodontomys megalotis
+?Sorex sp	Sorex sp	Eulipotyphla	Soricidae	Sorex	?Sorex sp
+?Spilogale gracilis	Spilogale gracilis	Carnivora	Mephitidae	Spilogale	?Spilogale gracilis
+?Sylvilagus sp	Sylvilagus sp	Lagomorpha	Leporidae	Sylvilagus	?Sylvilagus sp
+?Tamias sp	Tamias sp	Rodentia	Sciuridae	Tamias	?Tamias sp
+?Thomomys sp	Thomomys sp	Rodentia	Geomyidae	Thomomys	?Thomomys sp
+Aves-NA	Aves	NA	NA	NA	Aves
+Canis cf dirus	Canis dirus	Carnivora	Canidae	Canis	Canis cf dirus
+Canis cf latrans	Canis latrans	Carnivora	Canidae	Canis	Canis cf latrans
+Canis dirus	Canis dirus	Carnivora	Canidae	Canis	Canis dirus
+Canis latrans	Canis latrans	Carnivora	Canidae	Canis	Canis latrans
+Canis sp	Canis sp	Carnivora	Canidae	Canis	Canis sp
+Capromeryx minor	Capromeryx minor	Artiodactyla	Antilocapridae	Capromeryx	Capromeryx minor
+cf Lepus sp	Lepus sp	Lagomorpha	Leporidae	Lepus	cf Lepus sp
+cf Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus	cf Microtus sp
+cf Onychomys torridus	Onychomys torridus	Rodentia	Cricetidae	Onychomys	cf Onychomys torridus
+cf Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	cf Otospermophilus beecheyi
+cf Peromyscus cf californicus	Peromyscus californicus	Rodentia	Cricetidae	Peromyscus	cf Peromyscus cf californicus
+cf Peromyscus maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus	cf Peromyscus maniculatus
+cf Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus	cf Peromyscus sp
+cf Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys	cf Reithrodontomys megalotis
+cf Spilogale gracilis	Spilogale gracilis	Carnivora	Mephitidae	Spilogale	cf Spilogale gracilis
+cf Tamias sp	Tamias sp	Rodentia	Sciuridae	Tamias	cf Tamias sp
+cf Taxidea taxus	Taxidea taxus	Carnivora	Mustelidae	Taxidea	cf Taxidea taxus
+Dipodomys sp	Dipodomys sp	Rodentia	Heteromyidae	Dipodomys	Dipodomys sp
+Insecta-Hymenoptera	Hymenoptera	NA	NA	NA	Insecta-Hymenoptera
+Mammalia-??	Mammalia	NA	NA	NA	Mammalia
+Mammalia-???	Mammalia	NA	NA	NA	Mammalia
+Mammalia-?Carnivora	Mammalia	NA	NA	NA	Mammalia ?Carnivora
+Mammalia-?Eulipotyphla	Mammalia	NA	NA	NA	Mammalia ?Eulipotyphla
+Mammalia-?Lagomorpha	Mammalia	NA	NA	NA	Mammalia ?Lagomorpha
+Mammalia-?Rodentia	Mammalia	NA	NA	NA	Mammalia-?Rodentia
+Mammalia-Artiodactyla	Artiodactyla	Artiodactyla	NA	NA	Mammalia-Artiodactyla
+Mammalia-Carnivora	Carnivora	Carnivora	NA	NA	Mammalia-Carnivora
+Mammalia-cf Carnivora	Carnivora	Carnivora	NA	NA	Mammalia cf Carnivora
+Mammalia-cf Rodentia	Rodentia	Rodentia	NA	NA	Mammalia-cf Rodentia
+Mammalia-Eulipotyphla	Eulipotyphla	Eulipotyphla	NA	NA	Mammalia-Eulipotyphla
+Mammalia-Lagomorpha	Lagomorpha	Lagomorpha	NA	NA	Mammalia-Lagomorpha
+Mammalia-Lagomorpha/Rodentia	Mammalia	NA	NA	NA	Mammalia-Lagomorpha/Rodentia
+Mammalia-Misc	Mammalia	NA	NA	NA	Mammalia-Misc
+Mammalia-NA	Mammalia	NA	NA	NA	Mammalia-NA
+Mammalia-Rodentia	Rodentia	Rodentia	NA	NA	Mammalia-Rodentia
+Mammalia-Rodentia/Lagomorpha	Mammalia	NA	NA	NA	Mammalia-Rodentia/Lagomorpha
+Mephitis mephitis	Mephitis mephitis	Carnivora	Mephitidae	Mephitis	Mephitis mephitis
+Microtus californicus	Microtus californicus	Rodentia	Cricetidae	Microtus	Microtus californicus
+Microtus sp	Microtus sp	Rodentia	Cricetidae	Microtus	Microtus sp
+Mustela frenata	Mustela frenata	Carnivora	Mustelidae	Mustela	Mustela frenata
+NA-NA	NA	NA	NA	NA	NA-NA
+Neotamias/Tamias sp	Neotamias/Tamias sp	Rodentia	Sciuridae	Neotamias/Tamias	Neotamias/Tamias sp
+Neotoma macrotis	Neotoma macrotis	Rodentia	Cricetidae	Neotoma	Neotoma macrotis
+Neotoma sp	Neotoma sp	Rodentia	Cricetidae	Neotoma	Neotoma sp
+Neotomais/Tamias sp	Neotamias/Tamias sp	Rodentia	Sciuridae	Neotamias/Tamias	Neotomais/Tamias sp
+Otospermophilus ?beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	Otospermophilus ?beecheyi
+Otospermophilus beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	Otospermophilus beecheyi
+Otospermophilus cf beecheyi	Otospermophilus beecheyi	Rodentia	Sciuridae	Otospermophilus	Otospermophilus cf beecheyi
+Peromyscus ?maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus	Peromyscus ?maniculatus
+Peromyscus cf californicus	Peromyscus californicus	Rodentia	Cricetidae	Peromyscus	Peromyscus cf californicus
+Peromyscus cf maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus	Peromyscus cf maniculatus
+Peromyscus cf P. maniculatus	Peromyscus maniculatus	Rodentia	Cricetidae	Peromyscus	Peromyscus cf P. maniculatus
+Peromyscus sp	Peromyscus sp	Rodentia	Cricetidae	Peromyscus	Peromyscus sp
+Scapanus cf latimanus	Scapanus latimanus	Eulipotyphla	Talpidae	Scapanus	Scapanus cf latimanus
+Reithrodontomys cf megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys	Reithrodontomys cf megalotis
+Reithrodontomys megalotis	Reithrodontomys megalotis	Rodentia	Cricetidae	Reithrodontomys	Reithrodontomys megalotis
+Scapanus latimanus	Scapanus latimanus	Eulipotyphla	Talpidae	Scapanus	Scapanus latimanus
+Sorex cf ornatus	Sorex ornatus	Eulipotyphla	Soricidae	Sorex	Sorex cf ornatus
+Sorex sp	Sorex sp	Eulipotyphla	Soricidae	Sorex	Sorex sp
+Spermophilus sp	Spermophilus sp	Rodentia	Sciuridae	Spermophilus	Spermophilus sp
+Spilogale gracilis	Spilogale gracilis	Carnivora	Mephitidae	Spilogale	Spilogale gracilis
+Sylvilagus ?audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus	Sylvilagus ?audubonii
+Sylvilagus audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus	Sylvilagus audubonii
+Sylvilagus bachmani	Sylvilagus bachmani	Lagomorpha	Leporidae	Sylvilagus	Sylvilagus bachmani
+Sylvilagus cf audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus	Sylvilagus cf audubonii
+Sylvilagus cf bachmani	Sylvilagus bachmani	Lagomorpha	Leporidae	Sylvilagus	Sylvilagus cf bachmani
+Sylvilagus cf S. audubonii	Sylvilagus audubonii	Lagomorpha	Leporidae	Sylvilagus	Sylvilagus cf S. audubonii
+Sylvilagus sp	Sylvilagus sp	Lagomorpha	Leporidae	Sylvilagus	Sylvilagus sp
+Tamias/Neotamias sp	Neotamias/Tamias sp	Rodentia	Sciuridae	Neotamias/Tamias	Tamias/Neotamias sp
+Tamias cf merriami	Tamias merriami	Rodentia	Sciuridae	Tamias	Tamias cf merriami
+Tamias sp	Tamias sp	Rodentia	Sciuridae	Tamias	Tamias sp
+Taxidea taxus	Taxidea taxus	Carnivora	Mustelidae	Taxidea	Taxidea taxus
+Thomomys ?bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys	Thomomys ?bottae
+Thomomys bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys	Thomomys bottae
+Thomomys cf bottae	Thomomys bottae	Rodentia	Geomyidae	Thomomys	Thomomys cf bottae
+Thomomys sp	Thomomys sp	Rodentia	Geomyidae	Thomomys	Thomomys sp
+Urocyon cinereoargenteus	Urocyon cinereoargenteus	Carnivora	Canidae	Urocyon	Urocyon cinereoargenteus
+Vertebrata cf Mammalia-NA	Mammalia	NA	NA	NA	Vertebrata cf Mammalia-NA
+Vertebrata-NA	Vertebrata	NA	NA	NA	Vertebrata-NA

@@ -200,6 +200,10 @@ for (k in 1:length(deposits)){
   # all specimens
   write.table(master_data, file=paste0("data/output/Tilia_data-Box", deposits[k], ".txt"), sep="\t", row.names = F)
  
+  ## JESSICA NOTES: ----
+  ## 1) Do you want to add another set of rows with the NISP data too?
+  ## 2) We still need to do some taxonomy cleanup here - match to lookup file?
+  
   # Second, arrange the specimen data for easy input into the specimens table of Tilia ----
   # 2) specimen-level spreadsheet, with the following columns  
   # Spec ID --> Museum_Number
