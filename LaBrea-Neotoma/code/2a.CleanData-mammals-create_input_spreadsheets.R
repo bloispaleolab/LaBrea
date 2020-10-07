@@ -14,6 +14,8 @@ files <- list.files(
 
 # create a master spreadsheet with standardized taxonomic names ----
 master <- NULL
+taxonomy_file <- read.delim("data/TaxonomyMatchingFile-forNeotomaDB.txt", sep="/t", header=T)
+
 for (i in 1:length(files)){
   
     # read in data ----
@@ -36,12 +38,12 @@ for (i in 1:length(files)){
     data$Species[which(data$Species == "cf P. californicus")] <- "cf californicus"
   }
   
-  # replace cf. with cf
-  if (length(grep("cf. ", data$Species)>0)){
-    data$Species[grep("cf. ", data$Species)] <- gsub("cf. ", "cf ", data$Species[grep("cf. ", data$Species)])
+  # replace cf with cf.
+  if (length(grep("cf ", data$Species)>0)){
+    data$Species[grep("cf ", data$Species)] <- gsub("cf ", "cf. ", data$Species[grep("cf ", data$Species)])
   }
-  if (length(grep("cf. ", data$Genus)>0)){
-    data$Genus[grep("cf. ", data$Genus)] <- gsub("cf. ", "cf ", data$Genus[grep("cf. ", data$Genus)])
+  if (length(grep("cf ", data$Genus)>0)){
+    data$Genus[grep("cf ", data$Genus)] <- gsub("cf ", "cf. ", data$Genus[grep("cf ", data$Genus)])
   }
   
   # figure out prelim_taxon_name ----
@@ -66,6 +68,15 @@ for (i in 1:length(files)){
   data$prelim_taxon_name[rowsToSubfamily] <- paste0(data$Family[rowsToSubfamily], " (", data$Subfamily[rowsToSubfamily], ")")
   data$prelim_taxon_name[rowsToFamily] <- as.character(data$Family[rowsToFamily])
   data$prelim_taxon_name[otherRows] <- paste(data$Class[otherRows], data$Order[otherRows], sep="-")
+  
+  # 2nd step taxon name cleaning ### JESSICA MAKE SURE THIS WORKS
+  # replace the prelim_taxon_name with the correct name in taxonomy_file$OriginalName_cleaned
+  data[,'prelim_taxon_name'] <- taxonomy_file[match(taxonomy_file$OriginalName_cleaned, data$prelim_taxon_name),'OriginalName_cleaned']
+  
+  # delete the rows with NA taxa # JESSICA CHECK THIS TOO!!
+  if (length(which(data$prelim_taxon_name=="NA-NA")) > 0){
+    data <- data[-which(data$prelim_taxon_name=="NA-NA"),]
+  }
   
   # Add Box number to dataframe
   box <- sub('.*Deposit ', '', files[i])
@@ -96,6 +107,11 @@ for (i in 1:length(files)){
   }
   
 } 
+
+
+# clean up taxonomy for Tilia
+
+
 
 # deal with specimens with repeated catalog numbers ----
 
