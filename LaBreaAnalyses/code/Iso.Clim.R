@@ -528,3 +528,40 @@ C<-ggplot(data1, aes(Cal_age, pach.d18O)) +
 C + theme(axis.text.y.left = element_text(color="blue"),
           axis.text.y.right = element_text(color="brown"))
 
+
+
+## Jessica through time plot ----
+cairo_pdf(file="output/C_O_through_time.pdf", height=6, width=10)
+par(mar=c(4,4,1,4)+0.1)
+plot(iso_dat$Calibrated_mean_age, -iso_dat$pach.d18O_mean, 
+     type="l", lty=2, col="blue",
+     axes=F, xlim=c(50000, 0), xlab="", xaxs="i", 
+     ylab= "", yaxs="r")
+points(iso_dat$Calibrated_mean_age, iso_dat$pach.d18O_mean, 
+       pch=16, cex=0.5, col="blue")
+axis(1, col="black")
+axis(2, col="blue", xpd=T)
+mtext(side=1, line=2.5, "Years ago (cal BP)")
+mtext(side=2, line=2.5, expression({delta}^18*O~'\u2030'))
+par(new=T)
+plot(iso_dat$Calibrated_mean_age, iso_dat$d13C, 
+     type="l", lty=2, col="red", 
+     axes=F, xlim=c(50000, 0), xlab="", xaxs="i",
+     ylab="", yaxs="r")
+points(iso_dat$Calibrated_mean_age, iso_dat$d13C, 
+       pch=16, cex=0.5, col="red")
+axis(4, col="red", xpd=T)
+mtext(side=4, expression({delta}^13*C~'\u2030'), line = 2.5)
+dev.off()
+
+ccf(iso_dat$d13C[1:66], iso_dat$pach.d18O_mean[1:66])
+lm<- lm(iso_dat$d13C[1:66]~iso_dat$pach.d18O_mean[1:66])
+
+cairo_pdf(file="output/C_O_through_time_lm.pdf", height=6, width=8)
+plot(iso_dat$d13C[1:66]~iso_dat$pach.d18O_mean[1:66], 
+     pch=16, xaxs="r", yaxs="r", 
+     xlab=expression({delta}^18*O~'\u2030'),
+     ylab=expression({delta}^13*C~'\u2030'))
+abline(lm)
+legend("topright", legend=paste0("Adj. R2 = ", round(summary(lm)$adj.r.squared, 2), "; p < 0.0001"), bty="n", cex=1.5)
+dev.off()
