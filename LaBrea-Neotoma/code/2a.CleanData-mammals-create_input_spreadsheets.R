@@ -6,6 +6,7 @@
 library(readr)
 library(tidyr)
 
+# This is Daniela's test edit 
 # STEP 1: Read in data exported from Google Drive and clean in same manner as La Brea project----
 deposits <- c("1","7b","13","14", "misc_1", "misc_7b", "misc_13", "misc_14", "HC")
 files <- list.files(
