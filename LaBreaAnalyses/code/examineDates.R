@@ -16,7 +16,7 @@ matchedTaxa<- mammalTaxa[match(dates_orig$prelim_taxon_name, mammalTaxa$Original
 dates <- cbind(dates_orig, matchedTaxa)
 
 # filter out "no" dates and Box 999 dates
-dates <- dates[-which(dates$UseSample=="N"),]
+# dates <- dates[-which(dates$UseSample=="N"),]
 dates <- dates[-which(dates$box=="999"),]
 
 # Add column indicating a "too old" flag
@@ -35,10 +35,16 @@ dates$box <- factor(dates$box, levels = rev(c("14", "7b", "13", "1", "HC", "999"
 dates$RevisedName <- factor(dates$RevisedName, levels = rev(c("Sylvilagus sp", "Sylvilagus bachmani", "Sylvilagus audubonii", "Lepus sp", "Otospermophilus beecheyi", "Neotoma sp", "Thomomys sp", "Mustela frenata", "Canis latrans")))
 
 # select only the columns I need
-dates <- select(dates, "UCIAMS_Number", "C14_age_BP", "C14_age_error", "box", "Canister", "RevisedName", "Genus", "GreaterThan")
+dates <- select(dates, "UCIAMS_Number", "Museum_Number", "C14_age_BP", "C14_age_error", "box", "Canister", "RevisedName", "Genus", "GreaterThan")
 highlight_df <- dates[which(dates$Canister == "misc"),]
 #highlight_df <- dates[c(which(is.na(dates$Canister)), which(dates$Canister == "misc")),]
   
+# pull out dates by box for final deposit age models 
+box1_dates <- dates[which(dates$box == 1),]
+box14_dates <- dates[which(dates$box == 14),]
+box13_dates <- dates[which(dates$box == 13),]
+box7b_dates <- dates[which(dates$box == "7b"),]
+
 ########## PLOTTING ###########
 ## BY BOX ##
 pdf(file="output/boxplot-alldates.pdf", height=6, width=12)
