@@ -1,5 +1,5 @@
 
-# NOTE that this plot uses the 2003 data, whereas the next one (final) uses the 2002 data
+# NOTE that this plot uses the 2003 data, whereas the other one (final) uses the 2002 data
 dat<- read.delim("data/raw/climate/hendy2003data.txt")
 plot(-smoothed~Y2Kage, data=dat, type="l", 
      xlab="Years before 2000", ylab="d18O benthic forams, smoothed",
@@ -19,9 +19,12 @@ pdf(file="output/ClimateCurve-updated.pdf", height=6, width=8)
 dev.off()
 
 
+## Final climate code ----
 # Interpolate climate to calibrated radiocarbon ages of small mammals 
 
 dat2<- read.delim("data/raw/climate/hendy2002data.txt")
+
+# from everything I can tell, they do not necessarily use 'before 2000' in the 2002 paper, so commented out below!
 #HendyAge_corr<-dat2$HendyAge -50 #correct for difference between RC age (before 1950) and Hendy Age (before 2000)
 #dat2_corrected<-cbind(dat2, HendyAge_corr)
 
