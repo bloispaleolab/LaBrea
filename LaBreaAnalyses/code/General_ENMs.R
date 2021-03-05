@@ -9,10 +9,15 @@ library("rJava")
 library("ENMeval")
 library("rgeos")
 library("rgdal")
+library('tibble')
 library("rgbif")
+
+taxaList <- list() # add this or read it in
 
 ## Find species occurrences and coordinates ####
 # Note: still need to add this code to directly query gbif
+
+# find unique keys in gbif for each taxon, then search for occs that way.
 
 
 # load in peromyscus maniculatus lineage 1 data 
