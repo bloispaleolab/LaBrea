@@ -110,10 +110,10 @@ Dep14 <- t(as.matrix(Div.data[3, ]))
 Dep7b <- t(as.matrix(Div.data[4, ]))
 
 
-RankAbun.1 <- rankabundance(Dep1)#enter deposit of interest
+RankAbun.1 <- rankabundance(Dep13)#enter deposit of interest
 RankAbun.1
 #rank abundance
-pdf("Output/diversity/Dep1_RA.pdf", width=5, height=5)
+pdf("Output/diversity/Dep13_RA.pdf", width=5, height=5)
 rankabunplot(RankAbun.1, scale='abundance', addit=FALSE, specnames=c(1,2,3,4))
 dev.off()
 #log abundance
@@ -124,7 +124,7 @@ rankabunplot(RankAbun.1, scale='logabun', addit=FALSE, specnames=c(1:15),
 
 ## install the latest version from github
 
-#iNEXT.data <- read.csv("data/processed/P23_div_iNEXT_spp.csv", row.names = 1) # Note: this was Nate's original code, replaced below by nisp output
+iNEXT.data <- read.csv("data/processed/P23_div_iNEXT_spp.csv", row.names = 1) # Note: this was Nate's original code, replaced below by nisp output
 
 iNEXT.data <- nisp[,c('Box_1', 'Box_13', 'Box_14', 'Box_7b')]
 # iNEXT.data <- apply(iNEXT.data, 2, function(x) replace_na(x, 0))
@@ -147,9 +147,13 @@ dev.off()
 # don't need this
 
 # just plot the data without Box 14
-iNEXT.data.sub <- nisp[,c('Box_1', 'Box_13', 'Box_7b')]
+
+iNEXT.data.sub <- read.csv("data/processed/P23_div_iNEXT_gen.csv", row.names = 1) # Note: this was Nate's original code, replaced below by nisp output
+
+iNEXT.data.sub <- iNEXT.data.sub[,c('Deposit.1', 'Deposit.13', 'Deposit.7B')]
+#iNEXT.data.sub <- nisp[,c('Box_1', 'Box_13', 'Box_7b')]
 # iNEXT.data <- apply(iNEXT.data, 2, function(x) replace_na(x, 0))
-rownames(iNEXT.data.sub) <- nisp$'RevisedName'
+#rownames(iNEXT.data.sub) <- nisp$'RevisedName'
 
 out.sub <- iNEXT(iNEXT.data.sub, q=c(1), datatype="abundance", conf=0.95, endpoint=1000)
 

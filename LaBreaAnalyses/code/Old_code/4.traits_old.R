@@ -24,7 +24,7 @@ mammals <- mammals_orig[-which(mammals_orig$misc == "y"),]
 # replace !st x% of the rows with one spp
 # replace the remainder of the rows with the other spp. (not whole row, just prelim_taxon_name)
 
-taxonomy_traits <- read.delim("data/processed/TaxonomyTraitsFile_Reg_est.txt", sep="\t", stringsAsFactors = F)
+taxonomy_traits <- read.delim("data/processed/Old_files/TaxonomyTraitsFile_Reg_est.txt", sep="\t", stringsAsFactors = F)
 
 
 taxon <- as.data.frame(matrix(ncol=9, nrow=nrow(mammals)))

@@ -24,7 +24,7 @@ par(mfrow=c(1,1), mar=c(5,5,4,1)+0.01)
 plotSiberObject(siber.RLB,
                 ax.pad = 2, 
                 hulls = T, community.hulls.args, 
-                ellipses = F, group.ellipses.args,
+                ellipses = T, group.ellipses.args,
                 group.hulls = T, group.hull.args,
                 bty = "L",
                 iso.order = c(1,2),
