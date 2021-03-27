@@ -12,9 +12,9 @@ format_for_oxcal <- function(file){
       'R_Date("', 
       file$UCIAMS_Number[i], 
       '", ',
-      file$X14C_age_BP[i], 
+      file$C14_age_BP[i], 
       ", ", 
-      file$X14C_age_error[i],
+      file$C14_age_error[i],
       ");", sep=""))
   }
   return(text)
@@ -49,3 +49,5 @@ box13_all <- dates %>%
   #filter(box == 1, prelim_taxon_name == "Sylvilagus audubonii")
 
 format_for_oxcal(box1_all)
+
+

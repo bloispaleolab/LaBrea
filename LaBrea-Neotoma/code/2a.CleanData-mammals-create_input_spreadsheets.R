@@ -1,44 +1,22 @@
-# Convert specimen data into form suitable for entry into Neotoma database
+# Convert specimen data from La Brea into a format suitable for entry into Neotoma database
 # We need two files for each deposit:
 # 1) Main data file, which should have the following columns:
-# Name --> Taxon ID
-# Element	 --> "bone/tooth"
-# Units --> "present/absent"
-# Taphonomy	> blank
-# Group	> blank
-# Analysis units --> add one column per analysis unit, which corresponds to canister
-
 # 2) specimen-level spreadsheet, with the following columns  
-# Spec ID
-# element
-# symmetry
-# portion
-# maturity
-# sex
-# domestic status
-# taphonomy
-# preservative
-# nisp
-# repository
-# Spec Nr
-# Field Nr
-# Arctos Nr
-# GenBank Nr
-# Notes
-
 
 library(readr)
+library(tidyr)
 
-# Read in data exported from Google Drive ----
+# STEP 1: Read in data exported from Google Drive and clean in same manner as La Brea project----
 deposits <- c("1","7b","13","14", "misc_1", "misc_7b", "misc_13", "misc_14", "HC")
 files <- list.files(
   "data/GoogleDriveExports-mammals", 
   full=T) 
 
 # create a master spreadsheet with standardized taxonomic names ----
+master <- NULL
+taxonomy_file <- read.delim("data/TaxonomyMatchingFile-forNeotomaDB.txt", sep="/t", header=T)
+
 for (i in 1:length(files)){
-master_data <- NULL
-master_specimens <- NULL
   
     # read in data ----
   original<- read_tsv(files[i], trim_ws=T) 
@@ -60,12 +38,12 @@ master_specimens <- NULL
     data$Species[which(data$Species == "cf P. californicus")] <- "cf californicus"
   }
   
-  # replace cf. with cf
-  if (length(grep("cf. ", data$Species)>0)){
-    data$Species[grep("cf. ", data$Species)] <- gsub("cf. ", "cf ", data$Species[grep("cf. ", data$Species)])
+  # replace cf with cf.
+  if (length(grep("cf ", data$Species)>0)){
+    data$Species[grep("cf ", data$Species)] <- gsub("cf ", "cf. ", data$Species[grep("cf ", data$Species)])
   }
-  if (length(grep("cf. ", data$Genus)>0)){
-    data$Genus[grep("cf. ", data$Genus)] <- gsub("cf. ", "cf ", data$Genus[grep("cf. ", data$Genus)])
+  if (length(grep("cf ", data$Genus)>0)){
+    data$Genus[grep("cf ", data$Genus)] <- gsub("cf ", "cf. ", data$Genus[grep("cf ", data$Genus)])
   }
   
   # figure out prelim_taxon_name ----
@@ -91,6 +69,15 @@ master_specimens <- NULL
   data$prelim_taxon_name[rowsToFamily] <- as.character(data$Family[rowsToFamily])
   data$prelim_taxon_name[otherRows] <- paste(data$Class[otherRows], data$Order[otherRows], sep="-")
   
+  # 2nd step taxon name cleaning ### JESSICA MAKE SURE THIS WORKS
+  # replace the prelim_taxon_name with the correct name in taxonomy_file$OriginalName_cleaned
+  data[,'prelim_taxon_name'] <- taxonomy_file[match(taxonomy_file$OriginalName_cleaned, data$prelim_taxon_name),'OriginalName_cleaned']
+  
+  # delete the rows with NA taxa # JESSICA CHECK THIS TOO!!
+  if (length(which(data$prelim_taxon_name=="NA-NA")) > 0){
+    data <- data[-which(data$prelim_taxon_name=="NA-NA"),]
+  }
+  
   # Add Box number to dataframe
   box <- sub('.*Deposit ', '', files[i])
   box <- sub(".tsv", '', box)
@@ -108,11 +95,11 @@ master_specimens <- NULL
   
   # Add onto the master spreadsheet
   if (i ==1){
-    master_specimens <- rbind(master_specimens, data)
+    master <- rbind(master, data)
     print(paste0(i, ": Rows added"))
   }else{
-    if (all(colnames(data) == colnames(master_specimens))){
-      master_specimens <- rbind(master_specimens, data)
+    if (all(colnames(data) == colnames(master))){
+      master <- rbind(master, data)
       print(paste0(i, ": Rows added"))
     }else{
       print(paste0(i, ": CHECK COLNAMES"))
@@ -120,6 +107,11 @@ master_specimens <- NULL
   }
   
 } 
+
+
+# clean up taxonomy for Tilia
+
+
 
 # deal with specimens with repeated catalog numbers ----
 
@@ -156,16 +148,108 @@ for (i in 1:length(rowsWithRepeats)){
 master <- master[-rowsWithRepeats,]
 master <- rbind(master, newRowsMaster)
 
-# This block of code is used to generate (part of) the taxonomy matching file
-unique_names <- unique(master$prelim_taxon_name)
-unique_names <- sort(unique_names)
-unique_names
-
-write.csv(unique_names, file = "data/raw/TaxonomyMatchingFile.csv")
-
 # replace "7B" with "7b"
 master$box[which(master$box == "7B")] <- "7b"
 
-
 # export master file ----
-write.table(master, file="data/processed/master_mammal_file.txt", sep="\t", row.names = F)
+# all specimens
+write.table(master, file="data/output/master_mammal_file - all specimens combined.txt", sep="\t", row.names = F)
+
+# STEP 2: Break cleaned data back into spreadsheets for each box ----
+master <- read.delim(file="data/output/master_mammal_file - all specimens combined.txt", sep="\t")
+
+deposits <- unique(master$box)
+
+for (k in 1:length(deposits)){
+  
+  # First, create the Tilia main 'Data' table ----
+  # 1) Main data file, which should have the following columns:
+  # Name --> Taxon ID
+  # Element	 --> "bone/tooth"
+  # Units --> "present/absent"
+  # Taphonomy	> blank
+  # Group	> blank
+  # Analysis units --> add one column per analysis unit, which corresponds to canister
+  dat <- master[which(master$box == deposits[k]),]
+  
+  # find unique analysis units
+  AnUnits <- unique(dat$Canister)
+  AnUnits <- na.omit(AnUnits)
+  
+  taxa <- unique(dat$prelim_taxon_name)
+  
+  master_data <- matrix(nrow = length(taxa), ncol=length(AnUnits))
+  master_data <- as.data.frame(master_data)
+  colnames(master_data) <- AnUnits
+  
+  # assign presences to the main Analysis Units/Canisters
+  for (i in 1:length(AnUnits)){
+    temp <- dat[which(dat$Canister == AnUnits[i]),]
+    master_data[match(unique(temp$prelim_taxon_name), taxa), which(colnames(master_data) == AnUnits[i])] <- 1
+    rm(temp)
+  }
+  
+  # add on misc bones
+  # these should only be bones marked 'y' for misc, but without an assigned canister
+  if (length(intersect(which(dat$misc=="y"), which(is.na(dat$Canister))))>0){
+    master_data$misc <- NA
+    temp <- dat[intersect(which(dat$misc=="y"), which(is.na(dat$Canister))),]
+    master_data[match(unique(temp$prelim_taxon_name), taxa), 'misc'] <- 1
+    rm(temp)
+  }
+  
+  # check - all Analysis Units have data?
+  cat("Deposit", as.character(deposits[k]))
+  print(any(colSums(master_data, na.rm=T)==0)) # should be FALSE
+  
+  # delete NAs 
+  master_data[is.na(master_data)] <- ""
+  
+  # add on other info for Tilia
+  Name <- taxa
+  Element <- rep("bone/tooth", length(taxa))
+  Units <- rep("present/absent", length(taxa))  
+  
+  # reorder columns:
+  master_data <- cbind(Name, Element, Units, master_data) 
+  
+  # all specimens
+  write.table(master_data, file=paste0("data/output/Tilia_data-Box", deposits[k], ".txt"), sep="\t", row.names = F)
+ 
+  ## JESSICA NOTES: ----
+  ## 1) Do you want to add another set of rows with the NISP data too?
+  ## 2) We still need to do some taxonomy cleanup here - match to lookup file?
+  
+  # Second, arrange the specimen data for easy input into the specimens table of Tilia ----
+  # 2) specimen-level spreadsheet, with the following columns  
+  # Spec ID --> Museum_Number
+  # Depth
+  # Anal Unit --> Canister
+  # Taxon
+  # element --> Element_original
+  # symmetry
+  # portion
+  # maturity
+  # sex
+  # domestic status
+  # taphonomy
+  # preservative
+  # nisp --> 1
+  # repository --> "Los Angeles County Museum of Natural History" (or "LACM")
+  # Spec Nr --> Museum_Number 
+  # Field Nr
+  # Arctos Nr
+  # GenBank Nr
+  # Notes
+  
+  # First, replace the "NA" with "misc" in the "Canister"
+  master_specimens <- dat
+  master_specimens[which(is.na(master_specimens$Canister)), 'Canister'] <- "misc"
+  
+  
+  # start to deal with elements
+  #symmetry:
+  symmetry <- NULL
+  symmetry[grep("rt", master_specimens$Element_original)] <- "right"
+  symmetry[grep("lt", master_specimens$Element_original)] <- "left"
+}

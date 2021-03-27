@@ -105,3 +105,20 @@ bp<- ggplot(mammals_filtered, aes(x="", y=n, fill= Genus)) +
 pdf(file="output/mammal_nisp.pdf", width=12, height=6, encoding="MacRoman") 
   bp  
 dev.off()
+
+
+mammals_filtered_3 <- mammals_filtered %>% filter(box != 14)
+bp3<- ggplot(mammals_filtered_3, aes(x="", y=n, fill= Genus)) +
+  scale_fill_manual(values=rgb(t(col2rgb(Genus_Colors$color, alpha = FALSE)/255))) +
+  geom_bar(stat = "identity", position = position_fill()) +   
+  facet_grid(.~ box) +
+  theme_light() +
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        strip.text.x = element_text(
+          size = 18, face = "bold"
+        ))
+
+pdf(file="output/mammal_nisp_no14.pdf", width=12, height=6, encoding="MacRoman") 
+bp3  
+dev.off()

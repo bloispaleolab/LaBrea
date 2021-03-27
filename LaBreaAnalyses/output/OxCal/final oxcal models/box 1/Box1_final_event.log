@@ -1,0 +1,322 @@
+OxCal v4.4.2 Bronk Ramsey (2020); r:5
+Atmospheric data from Reimer et al (2020)
+FALSE
+OxCal v4.4.2 Bronk Ramsey (2020); r:5
+IntCal20 Curve(IntCal20.14c)
+Atmospheric data from Reimer et al (2020)
+Boundary()
+dups R_Combine(30696,198)
+  68.3% probability
+    35270BP (68.3%) 34795BP
+  95.4% probability
+    35452BP (95.4%) 34606BP
+ X2-Test: df=1 T=1.0(5% 3.8)
+UCIAMS 191095 R_Date(35750,610)
+  68.3% probability
+    41406BP (68.3%) 40279BP
+  95.4% probability
+    41890BP (95.4%) 39754BP
+UCIAMS 191096 R_Date(35440,580)
+  68.3% probability
+    41100BP (68.3%) 40005BP
+  95.4% probability
+    41612BP (95.4%) 39487BP
+UCIAMS 191097 R_Date(35150,580)
+  68.3% probability
+    40861BP (68.3%) 39755BP
+  95.4% probability
+    41352BP (95.4%) 39266BP
+UCIAMS 191098 R_Date(36050,630)
+  68.3% probability
+    41688BP (68.3%) 40620BP
+  95.4% probability
+    42056BP (95.4%) 39996BP
+UCIAMS 191099 R_Date(33830,480)
+  68.3% probability
+    39466BP (67.6%) 38034BP
+    37890BP ( 0.7%) 37870BP
+  95.4% probability
+    39941BP (95.4%) 37276BP
+UCIAMS 191100 R_Date(35780,600)
+  68.3% probability
+    41434BP (68.3%) 40329BP
+  95.4% probability
+    41897BP (95.4%) 39792BP
+UCIAMS 191101 R_Date(46200,2200)
+Warning! Date may extend out of range - 46200+/-2200BP
+  68.3% probability
+    51880BP (68.3%) 46660BP
+  95.4% probability
+    ... (12.3%) 53138BP
+    52982BP (83.2%) 45908BP
+UCIAMS 191102 R_Date(35420,580)
+  68.3% probability
+    41084BP (68.3%) 39990BP
+  95.4% probability
+    41590BP (95.4%) 39465BP
+UCIAMS 198205 R_Date(36580,610)
+  68.3% probability
+    41956BP (68.3%) 41138BP
+  95.4% probability
+    42244BP (95.4%) 40636BP
+UCIAMS 198207 R_Date(31830,340)
+  68.3% probability
+    36526BP (68.3%) 35768BP
+  95.4% probability
+    36918BP (95.4%) 35447BP
+UCIAMS 198294 R_Date(39700,810)
+  68.3% probability
+    43846BP (12.6%) 43572BP
+    43466BP (55.7%) 42569BP
+  95.4% probability
+    44410BP (95.4%) 42360BP
+UCIAMS 198199 R_Date(35770,550)
+  68.3% probability
+    41389BP (68.3%) 40376BP
+  95.4% probability
+    41844BP (95.4%) 39845BP
+UCIAMS 198200 R_Date(35050,510)
+  68.3% probability
+    40705BP (68.3%) 39704BP
+  95.4% probability
+    41160BP (95.4%) 39309BP
+UCIAMS 198201 R_Date(32500,370)
+  68.3% probability
+    37256BP (68.3%) 36362BP
+  95.4% probability
+    38184BP (95.4%) 36110BP
+UCIAMS 198202 R_Date(35900,560)
+  68.3% probability
+    41494BP (68.3%) 40494BP
+  95.4% probability
+    41928BP (95.4%) 39954BP
+UCIAMS 198203 R_Date(33100,620)
+  68.3% probability
+    38790BP (68.3%) 36980BP
+  95.4% probability
+    39423BP (95.4%) 36328BP
+UCIAMS 198204 R_Date(36160,910)
+  68.3% probability
+    41934BP (68.3%) 40542BP
+  95.4% probability
+    42310BP (95.4%) 39690BP
+Event 
+ Event = ( Phase P23-1 all
+P23-1 all Phase()
+) Phase P23-1 all
+Boundary()
+( Sequence 
+Sequence()
+) Sequence 
+i : Using logs - function probability low
+Posterior 
+( MCMC(30000)
+Overall agreement  80.4%
+Dynamic agreement  80.5%
+Posterior 
+  68.3% probability
+    47103BP ( 0.1%) 47098BP
+    47084BP ( 0.3%) 47066BP
+    47052BP ( 0.3%) 47034BP
+    47028BP (67.0%) 44756BP
+    44752BP ( 0.4%) 44733BP
+    44711BP ( 0.2%) 44702BP
+  95.4% probability
+    48738BP ( 0.1%) 48714BP
+    48691BP (95.2%) 43412BP
+    43402BP ( 0.1%) 43370BP
+dups Posterior 
+  68.3% probability
+    35368BP (68.3%) 34904BP
+  95.4% probability
+    35560BP (95.4%) 34650BP
+ Agreement  95.8%
+UCIAMS 191095 Posterior 
+  68.3% probability
+    41416BP ( 0.5%) 41404BP
+    41398BP (67.8%) 40274BP
+  95.4% probability
+    41894BP (95.4%) 39756BP
+ Agreement  99.9%
+UCIAMS 191096 Posterior 
+  68.3% probability
+    41101BP (68.3%) 40010BP
+  95.4% probability
+    41612BP (95.4%) 39498BP
+ Agreement 100.0%
+UCIAMS 191097 Posterior 
+  68.3% probability
+    40869BP (68.3%) 39762BP
+  95.4% probability
+    41353BP (95.4%) 39259BP
+ Agreement  99.9%
+UCIAMS 191098 Posterior 
+  68.3% probability
+    41692BP (68.3%) 40622BP
+  95.4% probability
+    42056BP (95.4%) 39998BP
+ Agreement 100.0%
+UCIAMS 191099 Posterior 
+  68.3% probability
+    39468BP (63.9%) 38133BP
+    38128BP ( 0.8%) 38105BP
+    38088BP ( 0.2%) 38083BP
+    38065BP ( 0.5%) 38050BP
+    38044BP ( 0.2%) 38038BP
+    38002BP ( 0.2%) 37996BP
+    37982BP ( 0.1%) 37978BP
+    37968BP ( 0.2%) 37963BP
+    37948BP ( 0.3%) 37940BP
+    37922BP ( 0.2%) 37918BP
+    37910BP ( 0.8%) 37890BP
+    37880BP ( 0.2%) 37874BP
+    37844BP ( 0.4%) 37832BP
+    37800BP ( 0.2%) 37795BP
+  95.4% probability
+    39934BP (95.4%) 37266BP
+ Agreement 100.0%
+UCIAMS 191100 Posterior 
+  68.3% probability
+    41438BP (67.5%) 40350BP
+    40344BP ( 0.8%) 40322BP
+  95.4% probability
+    41898BP (95.4%) 39792BP
+ Agreement 100.0%
+UCIAMS 191101 Posterior 
+  68.3% probability
+    46390BP ( 0.4%) 46372BP
+    46366BP (67.8%) 44482BP
+  95.4% probability
+    47628BP (95.4%) 43146BP
+Warning! Poor agreement - A= 41.1%(A'c= 60.0%)
+ Poor agreement  41.1%
+UCIAMS 191102 Posterior 
+  68.3% probability
+    41084BP (68.3%) 39982BP
+  95.4% probability
+    41592BP (95.4%) 39466BP
+ Agreement 100.1%
+UCIAMS 198205 Posterior 
+  68.3% probability
+    41956BP (68.3%) 41134BP
+  95.4% probability
+    42240BP (95.4%) 40634BP
+ Agreement 100.0%
+UCIAMS 198207 Posterior 
+  68.3% probability
+    36532BP ( 0.5%) 36524BP
+    36516BP (67.8%) 35772BP
+  95.4% probability
+    36914BP (95.4%) 35448BP
+ Agreement 100.1%
+UCIAMS 198294 Posterior 
+  68.3% probability
+    43817BP ( 0.2%) 43812BP
+    43807BP ( 0.4%) 43798BP
+    43785BP ( 8.4%) 43597BP
+    43588BP ( 1.3%) 43558BP
+    43526BP ( 0.2%) 43523BP
+    43488BP ( 1.1%) 43464BP
+    43458BP ( 0.3%) 43452BP
+    43445BP (56.5%) 42563BP
+  95.4% probability
+    44386BP (95.4%) 42361BP
+ Agreement 101.0%
+UCIAMS 198199 Posterior 
+  68.3% probability
+    41388BP (68.3%) 40374BP
+  95.4% probability
+    41848BP (95.4%) 39850BP
+ Agreement  99.9%
+UCIAMS 198200 Posterior 
+  68.3% probability
+    40698BP (67.9%) 39712BP
+    39706BP ( 0.3%) 39700BP
+  95.4% probability
+    41161BP (95.4%) 39310BP
+ Agreement 100.0%
+UCIAMS 198201 Posterior 
+  68.3% probability
+    37262BP ( 0.2%) 37258BP
+    37250BP (68.1%) 36358BP
+  95.4% probability
+    38192BP (95.4%) 36110BP
+ Agreement  99.9%
+UCIAMS 198202 Posterior 
+  68.3% probability
+    41506BP (68.3%) 40507BP
+  95.4% probability
+    41923BP (95.4%) 39952BP
+ Agreement 100.1%
+UCIAMS 198203 Posterior 
+  68.3% probability
+    38906BP ( 0.1%) 38904BP
+    38832BP ( 0.2%) 38826BP
+    38816BP ( 0.3%) 38808BP
+    38798BP ( 0.6%) 38778BP
+    38768BP ( 0.3%) 38758BP
+    38752BP ( 0.2%) 38746BP
+    38740BP (66.5%) 36967BP
+  95.4% probability
+    39416BP (95.4%) 36328BP
+ Agreement 100.0%
+UCIAMS 198204 Posterior 
+  68.3% probability
+    41932BP (68.0%) 40544BP
+    40534BP ( 0.2%) 40528BP
+  95.4% probability
+    42307BP (95.4%) 39695BP
+ Agreement 100.0%
+Event Posterior 
+  68.3% probability
+    44024BP ( 0.1%) 44014BP
+    43873BP ( 0.1%) 43864BP
+    43827BP ( 0.3%) 43794BP
+    43758BP ( 0.1%) 43750BP
+    43652BP ( 0.3%) 43620BP
+    43602BP ( 0.2%) 43574BP
+    43565BP ( 0.2%) 43547BP
+    43532BP ( 0.7%) 43438BP
+    43432BP ( 2.9%) 43086BP
+    43080BP ( 0.7%) 43002BP
+    42997BP ( 0.2%) 42975BP
+    42969BP ( 5.7%) 42288BP
+    42282BP ( 0.1%) 42268BP
+    42262BP ( 0.8%) 42161BP
+    42156BP ( 3.5%) 41739BP
+    41728BP ( 0.5%) 41667BP
+    41660BP ( 1.9%) 41427BP
+    41422BP ( 2.0%) 41193BP
+    41188BP ( 0.9%) 41080BP
+    41074BP ( 1.7%) 40872BP
+    40866BP ( 1.0%) 40752BP
+    40742BP ( 0.3%) 40705BP
+    40700BP ( 0.6%) 40636BP
+    40624BP ( 0.1%) 40611BP
+    40605BP ( 0.8%) 40506BP
+    40500BP ( 3.1%) 40128BP
+    40120BP ( 2.5%) 39827BP
+    39822BP ( 4.7%) 39266BP
+    39258BP ( 0.8%) 39162BP
+    39146BP ( 6.1%) 38432BP
+    38426BP ( 5.1%) 37826BP
+    37820BP ( 4.3%) 37315BP
+    37308BP ( 5.7%) 36633BP
+    36627BP ( 0.7%) 36545BP
+    36540BP ( 5.7%) 35870BP
+    35864BP ( 0.8%) 35776BP
+    35770BP ( 1.8%) 35558BP
+    35550BP ( 0.6%) 35486BP
+    35480BP ( 0.1%) 35461BP
+    35452BP ( 0.3%) 35412BP
+    35408BP ( 0.2%) 35382BP
+  95.4% probability
+    46385BP (95.4%) 34474BP
+Posterior 
+  68.3% probability
+    35277BP ( 0.2%) 35273BP
+    35260BP (67.8%) 34296BP
+    34282BP ( 0.3%) 34274BP
+  95.4% probability
+    35550BP (95.4%) 33020BP
+) MCMC(4224000)

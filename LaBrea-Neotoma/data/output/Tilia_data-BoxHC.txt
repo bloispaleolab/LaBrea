@@ -1,0 +1,5 @@
+"Name"	"Element"	"Units"	"Pit 10 E-8 9ft"	"Bliss 29"	"Pit 16"	"No Data"	"Pit A"	"Pit 10"	"Pit 4"
+"Sylvilagus audubonii"	"bone/tooth"	"present/absent"	"1"	""	"1"	"1"	"1"	""	""
+"?Otospermophilus beecheyi"	"bone/tooth"	"present/absent"	"1"	"1"	"1"	"1"	""	"1"	""
+"Sylvilagus bachmani"	"bone/tooth"	"present/absent"	""	""	"1"	""	"1"	""	""
+"Sylvilagus sp"	"bone/tooth"	"present/absent"	""	""	""	"1"	""	"1"	"1"
