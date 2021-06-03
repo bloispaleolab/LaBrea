@@ -32,6 +32,41 @@ dates$RevisedName <- factor(dates$RevisedName, levels = rev(c("Sylvilagus sp", "
 # select only the columns I need
 dates <- select(dates, "UCIAMS_Number", "Museum_Number", "C14_age_BP", "C14_age_error", "box", "Canister", "RevisedName", "Genus", "GreaterThan")
 
+### Create file to calibrate all dates at once
+
+# remove any "greater than" dates
+if (any(dates$GreaterThan == 1)){
+  trimmed_dates <- dates[-which(dates$GreaterThan == 1),]
+}
+
+# create the dataframe to store the dates
+dates_for_input <- as.data.frame(matrix(data=NA, nrow=nrow(trimmed_dates), ncol=2))
+colnames(dates_for_input) <- c("type", "code")
+
+# first, create the basic dataframe for all dates
+dates_for_input$type <- rep(paste0("R_date"), nrow(trimmed_dates))
+dates_for_input$code <- paste0("R_Date('UCIAMS ", trimmed_dates$UCIAMS_Number, "',", trimmed_dates$C14_age_BP, ",", trimmed_dates$C14_age_error, ")")
+
+# then, if there are any duplicated dates, replace "R_date" with "R_combine"
+# find any dates duplicated across individuals. 
+# These should be entered into OxCal using the R_Combine function, but also just the R_date function to calibrate them individually
+
+if (any(duplicated(trimmed_dates$Museum_Number))){
+  dup_rows <- which(duplicated(trimmed_dates$Museum_Number))
+  dup_MuseumNum <- unique(trimmed_dates[dup_rows,'Museum_Number']) # can't just work with row numbers. need to get down to museum number in case multiple different specimens are re-dated, or there are three dates for an individual, etc.
+  
+  for (m in 1:length(dup_MuseumNum)){
+    # which rows contain the first set of duplicated museum numbers?
+    dups <-  which(trimmed_dates$Museum_Number == dup_MuseumNum[m])
+    dates_for_input$type[dups] <- rep(paste0("R_combine_",m), length(dups))
+  }
+}
+
+write.csv(dates_for_input, file='output/OxCal/dates_for_input_all.csv', row.names=F)
+
+#####
+
+
 
 box <- c(1, 13, 14) # do these separate from 7b
 for (i in 1:length(box)){

@@ -1,40 +1,36 @@
-Options()
-
-{
-
+ Options()
+ {
   BCAD=FALSE;
-
-  Curve("IntCal13","IntCal13.14c");
-
-};
-
-Plot()
-
-{
-
+  Curve("IntCal20","IntCal20.14c");
+ };
+ Plot()
+ {
   Sequence()
-
   {
-
    Boundary();
-
-   Phase("P23-1 squirrels")
-
+   Phase("P23-13 all")
    {
-
-	R_Date("198205", 36580, 610);
-	R_Date("198206", 30480, 290);
-	R_Date("198207", 31830, 340);
-	R_Date("198302", 30870, 270);
-	R_Date("198201", 32500, 370);
-	R_Date("198202", 35900, 560);
-	R_Date("198203", 33100, 620);
-	R_Date("198204", 36160, 910)
-
+    R_Combine("dups")
+    {
+     R_Date('UCIAMS 223495',38740,640);
+     R_Date('UCIAMS 223585',39220,460);
+    };
+    R_Date('UCIAMS 223496',40640,800);
+    R_Date('UCIAMS 223497',39240,670);
+    R_Date('UCIAMS 223498',34800,390);
+    R_Date('UCIAMS 223499',33590,340);
+    R_Date('UCIAMS 223500',35230,410);
+    R_Date('UCIAMS 223501',35270,410);
+    R_Date('UCIAMS 223502',44000,1200);
+    R_Date('UCIAMS 223503',46200,1600);
+    R_Date('UCIAMS 223504',47400,1800);
+    R_Date('UCIAMS 223505',33260,320);
+    R_Date('UCIAMS 223506',36260,470);
+    R_Date('UCIAMS 223507',31230,270);
+    R_Date('UCIAMS 223508',31980,280);
+    R_Date('UCIAMS 223509',32660,300);
+    Date("Event");
    };
-
    Boundary();
-
   };
-
-};
+ };
