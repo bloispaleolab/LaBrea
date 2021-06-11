@@ -1,0 +1,26 @@
+********************************************** 
+ Beginning Spatial Thinning.
+ Script Started at: Thu Jun 10 11:53:57 2021
+There appear to be more than one species name in this *.csv file.
+Only using species name: 1
+
+Thinning Parameter Used (in km): 50
+Number of replicates of thinning script: 100
+
+Elapsed time for thinning completion
+0.043 0.133 0.292 0.043 0.057
+
+Number of data.frames per locations retained
+loc.cnt df.freq
+11
+100
+Maximum number of records after thinning: 11
+Number of data.frames with max records: 100
+
+**New *.csv file creation:**
+Writing new *.csv files to output directory: data/gbif_occurrences/thin_50/
+Writing file: data/gbif_occurrences/thin_50/Neotamias merriami_t_thin1.csv
+Writing file: data/gbif_occurrences/thin_50/Neotamias merriami_t_thin2.csv
+Writing file: data/gbif_occurrences/thin_50/Neotamias merriami_t_thin3.csv
+Writing file: data/gbif_occurrences/thin_50/Neotamias merriami_t_thin4.csv
+Writing file: data/gbif_occurrences/thin_50/Neotamias merriami_t_thin5.csv
