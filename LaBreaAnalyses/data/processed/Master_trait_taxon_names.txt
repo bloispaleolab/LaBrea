@@ -1,88 +1,88 @@
-OriginalName	RevisedName	Species	BestTaxData	BestSpatData	NatureServeID	PantheriaID	include
-?Dipodomys sp	Dipodomys sp	D.agilis 	estimated	local	dipo_agil_pl	Dipodomys agilis	y
-?Mephitis mephitis	Mephitis mephitis	M.mephitis	known	continental	meph_meph_pl	Mephitis mephitis	y
-?Microtus sp	Microtus sp	M.californicus	known	local	micr_cali_pl	Microtus californicus	y
-?Mustela frenata	Mustela frenata	M.frenata	known	continental	must_fren_pl	Mustela frenata	y
-?Neotoma sp	Neotoma sp	N.macrotis	known	local	neot_macr_pl	Neotoma macrotis	y
-?Onychomys torridus	Onychomys torridus	O.torridus	cf	regional	onyc_torr_pl	Onychomys torridus	y
-?Otospermophilus beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper_beec_pl	Spermophilus beecheyi	y
-?Peromyscus maniculatus	Peromyscus maniculatus	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	y
-?Peromyscus sp	Peromyscus sp	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	y
-?Reithrodontomys megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	y
-?Sorex sp	Sorex sp	S.ornatus	estimated	local	sore_orna_pl	Sorex ornatus	y
-?Spilogale gracilis	Spilogale gracilis	S.gracilis	known	regional	spil_grac_pl	Spilogale gracilis	y
-?Sylvilagus sp	Sylvilagus sp	NA	NA	NA	NA	NA	y
-?Tamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Tamias merriami	y
-?Thomomys sp	Thomomys sp	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	y
-Aves-NA	Aves	NA	NA	NA	NA	NA	n
-Canis cf dirus	Canis dirus	C.dirus	NA	NA	NA	NA	n
-Canis cf latrans	Canis latrans	C.latrans	NA	NA	NA	NA	n
-Canis dirus	Canis dirus	C.dirus	NA	NA	NA	NA	n
-Canis latrans	Canis latrans	C.latrans	NA	NA	NA	NA	n
-Canis sp	Canis sp	NA	NA	NA	NA	NA	n
-Capromeryx minor	Capromeryx minor	C.minor	NA	NA	NA	NA	n
-cf Lepus sp	Lepus sp	L.californicus	NA	NA	NA	NA	n
-cf Microtus sp	Microtus sp	M.californicus	known	local	micr_cali_pl	Microtus californicus	y
-cf Otospermophilus beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper_beec_pl	Spermophilus beecheyi	y
-cf Peromyscus sp	Peromyscus sp	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	y
-cf Reithrodontomys megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	y
-cf Spilogale gracilis	Spilogale gracilis	S.gracilis	known	regional	spil_grac_pl	Spilogale gracilis	y
-cf Tamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Tamias merriami	y
-cf Taxidea taxus	Taxidea taxus	T.taxus	NA	NA	NA	NA	n
-Dipodomys sp	Dipodomys sp	D.agilis 	estimated	local	dipo_agil_pl	Dipodomys agilis	y
-Insecta-Hymenoptera	Hymenoptera	NA	NA	NA	NA	NA	n
-Mammalia-??	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-???	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-?Carnivora	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-?Eulipotyphla	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-?Lagomorpha	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-?Rodentia	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-Artiodactyla	Artiodactyla	NA	NA	NA	NA	NA	n
-Mammalia-Carnivora	Carnivora	NA	NA	NA	NA	NA	n
-Mammalia-cf Carnivora	Carnivora	NA	NA	NA	NA	NA	n
-Mammalia-cf Rodentia	Rodentia	NA	NA	NA	NA	NA	n
-Mammalia-Eulipotyphla	Eulipotyphla	NA	NA	NA	NA	NA	n
-Mammalia-Lagomorpha	Lagomorpha	NA	NA	NA	NA	NA	n
-Mammalia-Lagomorpha/Rodentia	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-Misc	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-NA	Mammalia	NA	NA	NA	NA	NA	n
-Mammalia-Rodentia	Rodentia	NA	NA	NA	NA	NA	n
-Mammalia-Rodentia/Lagomorpha	Mammalia	NA	NA	NA	NA	NA	n
-Mephitis mephitis	Mephitis mephitis	M.mephitis	known	continental	meph_meph_pl	Mephitis mephitis	y
-Microtus californicus	Microtus californicus	M.californicus	known	local	micr_cali_pl	Microtus californicus	y
-Microtus sp	Microtus sp	M.californicus	known	local	micr_cali_pl	Microtus californicus	y
-Mustela frenata	Mustela frenata	M.frenata	known	continental	must_fren_pl	Mustela frenata	y
-NA-NA	NA	NA	NA	NA	NA	NA	n
-Neotoma macrotis	Neotoma macrotis	N.macrotis	known	local	neot_macr_pl	Neotoma macrotis	y
-Neotoma sp	Neotoma sp	N.macrotis	known	local	neot_macr_pl	Neotoma macrotis	y
-Otospermophilus beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper_beec_pl	Spermophilus beecheyi	y
-Otospermophilus cf beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper_beec_pl	Spermophilus beecheyi	y
-Peromyscus ?maniculatus	Peromyscus maniculatus	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	y
-Peromyscus cf maniculatus	Peromyscus maniculatus	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	y
-Peromyscus sp	Peromyscus sp	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	y
-Reithrodontomys cf megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	y
-Reithrodontomys megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	y
-Scapanus latimanus	Scapanus latimanus	S.latimanus	cf	local	scap_lati_pl	Scapanus latimanus	y
-Sorex cf ornatus	Sorex ornatus	S.ornatus	estimated	local	sore_orna_pl	Sorex ornatus	y
-Sorex sp	Sorex sp	S.ornatus	estimated	local	sore_orna_pl	Sorex ornatus	y
-Spermophilus sp	Spermophilus sp	O.beecheyi	known	local	sper_beec_pl	Spermophilus beecheyi	y
-Spilogale gracilis	Spilogale gracilis	S.gracilis	known	regional	spil_grac_pl	Spilogale gracilis	y
-Sylvilagus ?audubonii	Sylvilagus audubonii	S.audubonii	known	regional	sylv_audu_pl	Sylvilagus audubonii	y
-Sylvilagus audubonii	Sylvilagus audubonii	S.audubonii	known	regional	sylv_audu_pl	Sylvilagus audubonii	y
-Sylvilagus bachmani	Sylvilagus bachmani	S. bachmani	known	local	sylv_bach_pl	Sylvilagus bachmani	y
-Sylvilagus cf audubonii	Sylvilagus audubonii	S.audubonii	known	regional	sylv_audu_pl	Sylvilagus audubonii	y
-Sylvilagus cf bachmani	Sylvilagus bachmani	S. bachmani	known	local	sylv_bach_pl	Sylvilagus bachmani	y
-Sylvilagus sp	Sylvilagus sp	NA	NA	NA	NA	NA	n
-Tamias cf merriami	Tamias merriami	T.merriami	estimated	local	neot_merr_pl	Tamias merriami	y
-Tamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Tamias merriami	y
-Tamias/Neotamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Tamias merriami	y
-Taxidea taxus	Taxidea taxus	T.taxus	NA	NA	NA	NA	n
-Thomomys bottae	Thomomys bottae	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	y
-Thomomys cf bottae	Thomomys bottae	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	y
-Thomomys sp	Thomomys sp	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	y
-Urocyon cinereoargenteus	Urocyon cinereoargenteus	U.cinereoargenteus	NA	NA	NA	NA	n
-Vertebrata-NA	Vertebrata	NA	NA	NA	NA	NA	n
-Vertebrata cf Mammalia-NA	Mammalia	NA	NA	NA	NA	NA	n
-Peromyscus cf californicus	Peromyscus californicus	P.californicus	cf	local	pero_cali_pl	Peromyscus californicus	y
-cf Peromyscus cf californicus	Peromyscus californicus	P.californicus	cf	local	pero_cali_pl	Peromyscus californicus	y
-Thomomys ?bottae	Thomomys bottae	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	y
+OriginalName	RevisedName	Species	BestTaxData	BestSpatData	NatureServeID	NatureServeName	PantheriaID	include
+?Dipodomys sp	Dipodomys sp	D.agilis 	estimated	local	dipo_agil_pl	Dipodomys agilis	Dipodomys agilis	y
+?Mephitis mephitis	Mephitis mephitis	M.mephitis	known	continental	meph_meph_pl	Mephitis mephitis	Mephitis mephitis	y
+?Microtus sp	Microtus sp	M.californicus	known	local	micr_cali_pl	Microtus californicus	Microtus californicus	y
+?Mustela frenata	Mustela frenata	M.frenata	known	continental	must_fren_pl	Mustela frenata	Mustela frenata	y
+?Neotoma sp	Neotoma sp	N.macrotis	known	local	neot_macr_pl	Neotoma macrotis	Neotoma macrotis	y
+?Onychomys torridus	Onychomys torridus	O.torridus	cf	regional	onyc_torr_pl	Onychomys torridus	Onychomys torridus	y
+?Otospermophilus beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper_beec_pl	Otospermophilus beecheyi	Spermophilus beecheyi	y
+?Peromyscus maniculatus	Peromyscus maniculatus	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	Peromyscus maniculatus	y
+?Peromyscus sp	Peromyscus sp	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	Peromyscus maniculatus	y
+?Reithrodontomys megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	Reithrodontomys megalotis	y
+?Sorex sp	Sorex sp	S.ornatus	estimated	local	sore_orna_pl	Sorex ornatus	Sorex ornatus	y
+?Spilogale gracilis	Spilogale gracilis	S.gracilis	known	regional	spil_grac_pl	Spilogale gracilis	Spilogale gracilis	y
+?Sylvilagus sp	Sylvilagus sp	NA	NA	NA	NA	NA	NA	y
+?Tamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+?Thomomys sp	Thomomys sp	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	Thomomys bottae	y
+Aves-NA	Aves	NA	NA	NA	NA	NA	NA	n
+Canis cf dirus	Canis dirus	C.dirus	NA	NA	NA	NA	NA	n
+Canis cf latrans	Canis latrans	C.latrans	NA	NA	NA	NA	NA	n
+Canis dirus	Canis dirus	C.dirus	NA	NA	NA	NA	NA	n
+Canis latrans	Canis latrans	C.latrans	NA	NA	NA	NA	NA	n
+Canis sp	Canis sp	NA	NA	NA	NA	NA	NA	n
+Capromeryx minor	Capromeryx minor	C.minor	NA	NA	NA	NA	NA	n
+cf Lepus sp	Lepus sp	L.californicus	NA	NA	NA	NA	NA	n
+cf Microtus sp	Microtus sp	M.californicus	known	local	micr_cali_pl	Microtus californicus	Microtus californicus	y
+cf Otospermophilus beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper_beec_pl	Otospermophilus beecheyi	Spermophilus beecheyi	y
+cf Peromyscus sp	Peromyscus sp	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	Peromyscus maniculatus	y
+cf Reithrodontomys megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	Reithrodontomys megalotis	y
+cf Spilogale gracilis	Spilogale gracilis	S.gracilis	known	regional	spil_grac_pl	Spilogale gracilis	Spilogale gracilis	y
+cf Tamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+cf Taxidea taxus	Taxidea taxus	T.taxus	NA	NA	NA	NA	NA	n
+Dipodomys sp	Dipodomys sp	D.agilis 	estimated	local	dipo_agil_pl	Dipodomys agilis	Dipodomys agilis	y
+Insecta-Hymenoptera	Hymenoptera	NA	NA	NA	NA	NA	NA	n
+Mammalia-??	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-???	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-?Carnivora	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-?Eulipotyphla	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-?Lagomorpha	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-?Rodentia	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-Artiodactyla	Artiodactyla	NA	NA	NA	NA	NA	NA	n
+Mammalia-Carnivora	Carnivora	NA	NA	NA	NA	NA	NA	n
+Mammalia-cf Carnivora	Carnivora	NA	NA	NA	NA	NA	NA	n
+Mammalia-cf Rodentia	Rodentia	NA	NA	NA	NA	NA	NA	n
+Mammalia-Eulipotyphla	Eulipotyphla	NA	NA	NA	NA	NA	NA	n
+Mammalia-Lagomorpha	Lagomorpha	NA	NA	NA	NA	NA	NA	n
+Mammalia-Lagomorpha/Rodentia	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-Misc	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-NA	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mammalia-Rodentia	Rodentia	NA	NA	NA	NA	NA	NA	n
+Mammalia-Rodentia/Lagomorpha	Mammalia	NA	NA	NA	NA	NA	NA	n
+Mephitis mephitis	Mephitis mephitis	M.mephitis	known	continental	meph_meph_pl	Mephitis mephitis	Mephitis mephitis	y
+Microtus californicus	Microtus californicus	M.californicus	known	local	micr_cali_pl	Microtus californicus	Microtus californicus	y
+Microtus sp	Microtus sp	M.californicus	known	local	micr_cali_pl	Microtus californicus	Microtus californicus	y
+Mustela frenata	Mustela frenata	M.frenata	known	continental	must_fren_pl	Mustela frenata	Mustela frenata	y
+NA-NA	NA	NA	NA	NA	NA	NA	NA	n
+Neotoma macrotis	Neotoma macrotis	N.macrotis	known	local	neot_macr_pl	Neotoma macrotis	Neotoma macrotis	y
+Neotoma sp	Neotoma sp	N.macrotis	known	local	neot_macr_pl	Neotoma macrotis	Neotoma macrotis	y
+Otospermophilus beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper_beec_pl	Otospermophilus beecheyi	Spermophilus beecheyi	y
+Otospermophilus cf beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper_beec_pl	Otospermophilus beecheyi	Spermophilus beecheyi	y
+Peromyscus ?maniculatus	Peromyscus maniculatus	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	Peromyscus maniculatus	y
+Peromyscus cf maniculatus	Peromyscus maniculatus	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	Peromyscus maniculatus	y
+Peromyscus sp	Peromyscus sp	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	Peromyscus maniculatus	y
+Reithrodontomys cf megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	Reithrodontomys megalotis	y
+Reithrodontomys megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	Reithrodontomys megalotis	y
+Scapanus latimanus	Scapanus latimanus	S.latimanus	cf	local	scap_lati_pl	Scapanus latimanus	Scapanus latimanus	y
+Sorex cf ornatus	Sorex ornatus	S.ornatus	estimated	local	sore_orna_pl	Sorex ornatus	Sorex ornatus	y
+Sorex sp	Sorex sp	S.ornatus	estimated	local	sore_orna_pl	Sorex ornatus	Sorex ornatus	y
+Spermophilus sp	Spermophilus sp	O.beecheyi	known	local	sper_beec_pl	Otospermophilus beecheyi	Spermophilus beecheyi	y
+Spilogale gracilis	Spilogale gracilis	S.gracilis	known	regional	spil_grac_pl	Spilogale gracilis	Spilogale gracilis	y
+Sylvilagus ?audubonii	Sylvilagus audubonii	S.audubonii	known	regional	sylv_audu_pl	Sylvilagus audubonii	Sylvilagus audubonii	y
+Sylvilagus audubonii	Sylvilagus audubonii	S.audubonii	known	regional	sylv_audu_pl	Sylvilagus audubonii	Sylvilagus audubonii	y
+Sylvilagus bachmani	Sylvilagus bachmani	S. bachmani	known	local	sylv_bach_pl	Sylvilagus bachmani	Sylvilagus bachmani	y
+Sylvilagus cf audubonii	Sylvilagus audubonii	S.audubonii	known	regional	sylv_audu_pl	Sylvilagus audubonii	Sylvilagus audubonii	y
+Sylvilagus cf bachmani	Sylvilagus bachmani	S. bachmani	known	local	sylv_bach_pl	Sylvilagus bachmani	Sylvilagus bachmani	y
+Sylvilagus sp	Sylvilagus sp	NA	NA	NA	NA	NA	NA	n
+Tamias cf merriami	Tamias merriami	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+Tamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+Tamias/Neotamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+Taxidea taxus	Taxidea taxus	T.taxus	NA	NA	NA	NA	NA	n
+Thomomys bottae	Thomomys bottae	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	Thomomys bottae	y
+Thomomys cf bottae	Thomomys bottae	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	Thomomys bottae	y
+Thomomys sp	Thomomys sp	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	Thomomys bottae	y
+Urocyon cinereoargenteus	Urocyon cinereoargenteus	U.cinereoargenteus	NA	NA	NA	NA	NA	n
+Vertebrata-NA	Vertebrata	NA	NA	NA	NA	NA	NA	n
+Vertebrata cf Mammalia-NA	Mammalia	NA	NA	NA	NA	NA	NA	n
+Peromyscus cf californicus	Peromyscus californicus	P.californicus	cf	local	pero_cali_pl	Peromyscus californicus	Peromyscus californicus	y
+cf Peromyscus cf californicus	Peromyscus californicus	P.californicus	cf	local	pero_cali_pl	Peromyscus californicus	Peromyscus californicus	y
+Thomomys ?bottae	Thomomys bottae	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	Thomomys bottae	y

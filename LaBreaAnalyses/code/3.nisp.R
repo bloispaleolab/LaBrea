@@ -60,13 +60,13 @@ mammals_filtered <- mammals_filtered %>%
   group_by(box, RevisedName, Family, Genus) %>%
   summarise(n=n())
 
-# covert the data from "long" to "wide" format
+# convert the data from "long" to "wide" format
 mammals_nisp <- spread(mammals_filtered, box, n)
 mammals_nisp <- mammals_nisp[order(mammals_nisp$Family, mammals_nisp$Genus),]
 colnames(mammals_nisp)[4:7] <- paste0("Box_", colnames(mammals_nisp)[4:7])
 write.table(mammals_nisp, file="data/processed/mammal_nisp.txt", sep="\t", row.names=F)
 
-### PLOT the NISP data ###
+### PLOT the NISP data ####
 Genus_Colors <- NULL
 start <- 0
 stop <- 0
