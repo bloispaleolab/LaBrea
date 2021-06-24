@@ -10,7 +10,7 @@ data1<- read.csv("data/processed/SIBER/SIBER_data.csv")
 siber.RLB <- createSiberObject(data1)
 
 # change ellipse color
-palette(c("royalblue2","orange"))
+palette(c("royalblue2","darkorange"))
 
 
 # Create lists of plotting arguments to be passed onwards to each 
@@ -49,8 +49,9 @@ dev.off()
 # Summary stats
 group.ML <- groupMetricsML(siber.RLB)
 print(group.ML)
-#1.1 = Old audubonii, #1.2 = Old beecheyi
-#2.1 = young audubonii, #2.2 = young beecheyi
+
+#1.1 = Pre-LGM squirrels, #1.2 = Pre-LGM rabbits
+#2.1 = Post-LGM squirrels, #2.2 = Post-LGM rabbits
 
 # options for running jags
 parms <- list()
