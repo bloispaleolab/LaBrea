@@ -12,9 +12,29 @@ load(file="data/gbif_occurrences/final/species_clim_stats.RData") #species_clim_
 load(file="data/gbif_occurrences/final/species_occs_final.RData") #species_occs_final
 load(file="data/gbif_occurrences/final/species_clim_final.RData") #species_clim_final
 
+NatureServeNameList <- c('Mustela frenata',
+                 'Mephitis mephitis',
+                 'Spilogale gracilis',
+                 'Microtus californicus',
+                 'Peromyscus californicus',
+                 'Peromyscus maniculatus',
+                 'Neotoma macrotis',
+                 'Reithrodontomys megalotis',
+                 'Onychomys torridus',
+                 'Sylvilagus audubonii',
+                 'Sylvilagus bachmani',
+                 'Otospermophilus beecheyi',
+                 'Neotamias merriami',
+                 'Dipodomys agilis',
+                 'Chaetodipus californicus',
+                 'Thomomys bottae',
+                 'Scapanus latimanus',
+                 'Sorex ornatus')
+
 # load species name matches
 matches <- read_delim(file="data/processed/Master_trait_taxon_names.txt", delim="\t")
 
+# Arrange NISP data ----
 # allocate genus nisp based on ratios
 nisp_revised <- nisp[-grep("Peromyscus sp", nisp$RevisedName),]
 nisp_revised <- nisp_revised[-grep("Sylvilagus sp", nisp_revised$RevisedName),]
@@ -55,3 +75,27 @@ nisp_Sb_total <- nisp_Sb[,4:7]+nisp_Syl_Sb
 nisp_revised[grep("Sylvilagus audubonii", nisp_revised$RevisedName),4:7] <- nisp_Sa_total
 nisp_revised[grep("Sylvilagus bachmani", nisp_revised$RevisedName),4:7] <- nisp_Sb_total
 
+# calculate community climates ----
+boxes <- colnames(nisp_revised[,4:7])
+
+
+for (i in 1:length(boxes)){
+  focalBox <- boxes[i]
+  colNumber <- match(focalBox, colnames(nisp_revised))
+
+  # find NatureServeName from Revised Name
+  speciesListIndexes <- which(!is.na(nisp_revised[,colNumber]))
+
+  rangeMapNames <- matches$NatureServeName[match(nisp_revised$RevisedName[speciesListIndexes], matches$RevisedName)]
+  
+  # find names in nature serve species name list
+  unique(match(rangeMapNames, NatureServeNameList))
+  
+  # match to species_clim_stats
+  
+  # pull out medians
+  medians <- do.call('rbind', lapply(species_clim_stats,function(x) x[3,]))[unique(match(rangeMapNames, NatureServeNameList)),]
+  rownames(medians) <- NatureServeNameList[unique(match(rangeMapNames, NatureServeNameList))]
+  community.mean.medians <- apply(medians, 2, mean)
+  
+}

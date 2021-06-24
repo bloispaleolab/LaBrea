@@ -27,7 +27,7 @@ cf Otospermophilus beecheyi	Otospermophilus beecheyi	O.beecheyi	known	local	sper
 cf Peromyscus sp	Peromyscus sp	P.maniculatus	cf	continental	pero_mani_pl	Peromyscus maniculatus	Peromyscus maniculatus	y
 cf Reithrodontomys megalotis	Reithrodontomys megalotis	R.megalotis	cf	regional	reit_mega_pl	Reithrodontomys megalotis	Reithrodontomys megalotis	y
 cf Spilogale gracilis	Spilogale gracilis	S.gracilis	known	regional	spil_grac_pl	Spilogale gracilis	Spilogale gracilis	y
-cf Tamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+cf Tamias sp	Neotamias/Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
 cf Taxidea taxus	Taxidea taxus	T.taxus	NA	NA	NA	NA	NA	n
 Dipodomys sp	Dipodomys sp	D.agilis 	estimated	local	dipo_agil_pl	Dipodomys agilis	Dipodomys agilis	y
 Insecta-Hymenoptera	Hymenoptera	NA	NA	NA	NA	NA	NA	n
@@ -73,9 +73,9 @@ Sylvilagus bachmani	Sylvilagus bachmani	S. bachmani	known	local	sylv_bach_pl	Syl
 Sylvilagus cf audubonii	Sylvilagus audubonii	S.audubonii	known	regional	sylv_audu_pl	Sylvilagus audubonii	Sylvilagus audubonii	y
 Sylvilagus cf bachmani	Sylvilagus bachmani	S. bachmani	known	local	sylv_bach_pl	Sylvilagus bachmani	Sylvilagus bachmani	y
 Sylvilagus sp	Sylvilagus sp	NA	NA	NA	NA	NA	NA	n
-Tamias cf merriami	Tamias merriami	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
-Tamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
-Tamias/Neotamias sp	Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+Tamias cf merriami	Neotamias/Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+Tamias sp	Neotamias/Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
+Tamias/Neotamias sp	Neotamias/Tamias sp	T.merriami	estimated	local	neot_merr_pl	Neotamias merriami	Tamias merriami	y
 Taxidea taxus	Taxidea taxus	T.taxus	NA	NA	NA	NA	NA	n
 Thomomys bottae	Thomomys bottae	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	Thomomys bottae	y
 Thomomys cf bottae	Thomomys bottae	T.bottae	known	regional	thom_bott_pl	Thomomys bottae	Thomomys bottae	y
