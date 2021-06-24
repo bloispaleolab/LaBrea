@@ -91,11 +91,21 @@ for (i in 1:length(boxes)){
   # find names in nature serve species name list
   unique(match(rangeMapNames, NatureServeNameList))
   
-  # match to species_clim_stats
+  # match to species_clim_stats and calculate community climate - PA----
   
-  # pull out medians
-  medians <- do.call('rbind', lapply(species_clim_stats,function(x) x[3,]))[unique(match(rangeMapNames, NatureServeNameList)),]
+  # pull out medians, mins, and maxes based on presence-absence data
+  medians <- do.call('rbind', lapply(species_clim_stats,function(x) x[which(row.names(x)=="Median"),]))[unique(match(rangeMapNames, NatureServeNameList)),]
   rownames(medians) <- NatureServeNameList[unique(match(rangeMapNames, NatureServeNameList))]
   community.mean.medians <- apply(medians, 2, mean)
+  
+  mins <- do.call('rbind', lapply(species_clim_stats,function(x) x[which(row.names(x)=="Min."),]))[unique(match(rangeMapNames, NatureServeNameList)),]
+  rownames(mins) <- NatureServeNameList[unique(match(rangeMapNames, NatureServeNameList))]
+  community.mean.mins <- apply(mins, 2, mean)
+  
+  maxes <- do.call('rbind', lapply(species_clim_stats,function(x) x[which(row.names(x)=="Max."),]))[unique(match(rangeMapNames, NatureServeNameList)),]
+  rownames(maxes) <- NatureServeNameList[unique(match(rangeMapNames, NatureServeNameList))]
+  community.mean.maxes <- apply(maxes, 2, mean)
+
+# match to species_clim_stats and calculate community climate - abundance weighted----
   
 }
