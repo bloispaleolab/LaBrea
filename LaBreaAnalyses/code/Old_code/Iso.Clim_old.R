@@ -3,10 +3,8 @@ library(ggplot2)
 library(tidyverse)
 library(scales)
 library(RColorBrewer)
-library(ggpubr)
-library(rstatix)
 
-iso_dat<-read.csv("data/processed/Interpolation/IsoClim_interpolated_cal20.csv")# All rabbits and Squirrels with mean calibrated ages < 50 ka BP
+iso_dat<-read.csv("data/processed/Interpolation/IsoClim_interpolated_rev.csv")# All rabbits and Squirrels with mean calibrated ages < 50 ka BP
 
 ####Intraspecific diet ###
 
@@ -14,75 +12,65 @@ iso_dat<-read.csv("data/processed/Interpolation/IsoClim_interpolated_cal20.csv")
 
 iso_rabbits<- iso_dat[grep("S. audubonii|S. bachmani", iso_dat$Species), c(3:6)]
 
+#data normally distributed?
+C_aud <- iso_rabbits$d13C[which(iso_rabbits$Species=="S. audubonii")] #yes
+C_bach <- iso_rabbits$d13C[which(iso_rabbits$Species=="S. bachmani")] #No
+N_aud <- iso_rabbits$d15N[which(iso_rabbits$Species=="S. audubonii")] #sort of
+N_bach <- iso_rabbits$d15N[which(iso_rabbits$Species=="S. bachmani")] #sort of
+#Use non-parametric tests
+
+library(e1071)
+library(ggpubr)
+
+ggqqplot(N_bach)
+shapiro.test(N_bach) # if > 0.05, then yes  
+kurtosis(N_bach) # if within -2 and 2, then yes 
+skewness(C_bach) # if within -2 and 2, then yes
+mean(C_bach)
+median(C_bach) #if similar to mean, than yes 
+
+
 #carbon
+pdf("output/Isoplots/Rabbit_spp_d13C.pdf", width=5, height=4)
+boxplot(d13C~Species, data=iso_rabbits, ylab= expression({delta}^13*C~'\u2030'))
+dev.off()
 wilcox.test(d13C~Species, data=iso_rabbits, correct = TRUE, alternative = "two.sided")
 #t.test(d13C~Taxon, mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F, data=iso_rabbits)
 
-p1 <- ggboxplot(iso_rabbits, x = "Species", y = "d13C",
-               color = "Species", palette = c("orange", "darkorange3"),
-                add = "jitter") +
-labs(y = expression(italic(delta)^13*C~("\211")))+
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
-#  Add p-value
-p1 + stat_compare_means()
-# Change method
-p1 + stat_compare_means(method = "wilcox.test", label.x = 2)
-#p-values appear on figure as a single plot, but not on multiplots
-
 #nitrogen
+pdf("output/Isoplots/Rabbit_spp_d15N.pdf", width=5, height=4)
+boxplot(d15N~Species,data=iso_rabbits, ylab=expression({delta}^15*N~'\u2030'))
+dev.off()
 wilcox.test(d15N~Species, data=iso_rabbits, correct = TRUE)
 
-p2 <- ggboxplot(iso_rabbits, x = "Species", y = "d15N",
-                color = "Species", palette = c("orange", "darkorange3"),
-                add = "jitter") +
-  labs(y = expression(italic(delta)^15*N~("\211")))+
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
-#  Add p-value
-p2 + stat_compare_means()
-# Change method
-p2 + stat_compare_means(method = "wilcox.test", label.x = 2)
+
+## compare all rabbits to squirrels
+C_syl <- iso_dat$d13C[which(iso_dat$Taxon=="Sylvilagus ")] #No
+C_oto <- iso_dat$d13C[which(iso_dat$Taxon=="Otospermophilus")] #No
+N_syl <- iso_dat$d15N[which(iso_dat$Taxon=="Sylvilagus ")] #Yes
+N_oto <- iso_dat$d15N[which(iso_dat$Taxon=="Otospermophilus")] #sort of
+#Use non-parametric test
+
+ggqqplot(N_oto)
+shapiro.test(N_oto) # if > 0.05, then yes  
+kurtosis(N_oto) # if within -2 and 2, then yes 
+skewness(N_oto) # if within -2 and 2, then yes
+mean(N_oto)
+median(N_oto) #if similar to mean, than yes 
 
 
 #carbon
+pdf("output/Isoplots/Rabbit_squirrel_d13C.pdf", width=5, height=4)
+boxplot(d13C~Taxon,data=iso_dat, ylab=expression({delta}^13*C~'\u2030'))
+dev.off()
 wilcox.test(d13C~Taxon, data=iso_dat, correct = TRUE)
 
-p3 <- ggboxplot(iso_dat, x = "Taxon", y = "d13C",
-                color = "Taxon", palette = c("royalblue2", "darkorange"),
-                add = "jitter") +
-  labs(y = expression(italic(delta)^13*C~("\211")))+
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
-#  Add p-value
-p3 + stat_compare_means()
-# Change method
-p3 + stat_compare_means(method = "wilcox.test", label.x = 2)
-
 #nitrogen
+pdf("output/Isoplots/Rabbit_squirrel_d15N.pdf", width=5, height=4)
+boxplot(d15N~Taxon,data=iso_dat, ylab=expression({delta}^15*N~'\u2030'))
+dev.off()
 wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
 
-p4 <- ggboxplot(iso_dat, x = "Taxon", y = "d15N",
-                color = "Taxon", palette = c("royalblue2", "darkorange"),
-                add = "jitter") +
-  labs(y = expression(italic(delta)^15*N~("\211")))+
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
-#  Add p-value
-p4 + stat_compare_means()
-# Change method
-p4 + stat_compare_means(method = "wilcox.test", label.x = 2)
-
-figure <- ggarrange(p3, p4, p1, p2,
-                    labels = c("A", "B", "C", "D"),
-                    ncol = 2, nrow = 2)
-
-ggsave(filename="output/Isoplots/Species_niche.pdf",
-       width=8, height=6)
 
 #### Isotopes and Climate ###
 
@@ -540,3 +528,40 @@ C<-ggplot(data1, aes(Cal_age, pach.d18O)) +
 C + theme(axis.text.y.left = element_text(color="blue"),
           axis.text.y.right = element_text(color="brown"))
 
+
+
+## Jessica through time plot ----
+cairo_pdf(file="output/C_O_through_time.pdf", height=6, width=10)
+par(mar=c(4,4,1,4)+0.1)
+plot(iso_dat$Calibrated_mean_age, -iso_dat$pach.d18O_mean, 
+     type="l", lty=2, col="blue",
+     axes=F, xlim=c(50000, 0), xlab="", xaxs="i", 
+     ylab= "", yaxs="r")
+points(iso_dat$Calibrated_mean_age, iso_dat$pach.d18O_mean, 
+       pch=16, cex=0.5, col="blue")
+axis(1, col="black")
+axis(2, col="blue", xpd=T)
+mtext(side=1, line=2.5, "Years ago (cal BP)")
+mtext(side=2, line=2.5, expression({delta}^18*O~'\u2030'))
+par(new=T)
+plot(iso_dat$Calibrated_mean_age, iso_dat$d13C, 
+     type="l", lty=2, col="red", 
+     axes=F, xlim=c(50000, 0), xlab="", xaxs="i",
+     ylab="", yaxs="r")
+points(iso_dat$Calibrated_mean_age, iso_dat$d13C, 
+       pch=16, cex=0.5, col="red")
+axis(4, col="red", xpd=T)
+mtext(side=4, expression({delta}^13*C~'\u2030'), line = 2.5)
+dev.off()
+
+ccf(iso_dat$d13C[1:66], iso_dat$pach.d18O_mean[1:66])
+lm<- lm(iso_dat$d13C[1:66]~iso_dat$pach.d18O_mean[1:66])
+
+cairo_pdf(file="output/C_O_through_time_lm.pdf", height=6, width=8)
+plot(iso_dat$d13C[1:66]~iso_dat$pach.d18O_mean[1:66], 
+     pch=16, xaxs="r", yaxs="r", 
+     xlab=expression({delta}^18*O~'\u2030'),
+     ylab=expression({delta}^13*C~'\u2030'))
+abline(lm)
+legend("topright", legend=paste0("Adj. R2 = ", round(summary(lm)$adj.r.squared, 2), "; p < 0.0001"), bty="n", cex=1.5)
+dev.off()
