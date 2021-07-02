@@ -34,22 +34,36 @@ plotSiberObject(siber.RLB,
 )
 
 legend("bottomleft", legend = c("Otospermophilus Pre-LGM", "Sylvilagus Pre-LGM"),
-       col = palette(c("royalblue2","orange")), pch = 1, 
+       col = palette(c("royalblue2","darkorange")), pch = 1, 
        bty = "n", cex = 0.8)
 
 legend("topright", legend = c("Otospermophilus Post-LGM", "Sylvilagus Post-LGM"),
-       col = palette(c("royalblue2", "orange")), pch = 2,
+       col = palette(c("royalblue2", "darkorange")), pch = 2,
        bty = "n", cex = 0.8)
 dev.off()
 
 
-
-
-
 # Summary stats
+
+#ANOVA
+data2<- read.csv("data/processed/SIBER/SIBER_raw.csv")
+
+c.aov <- aov(del13C_permil ~ Group, data = data2)
+summary(c.aov)
+TukeyHSD(c.aov)
+
+n.aov <- aov(del15N_permil ~ Group, data = data2)
+summary(n.aov)
+
+cn.aov <- aov(del13C_permil ~ Group + del15N_permil, data = data2)
+summary(cn.aov)
+TukeyHSD(cn.aov, which = 'Group')#Present this in manuscript
+
+
+#SIBER Stats
+
 group.ML <- groupMetricsML(siber.RLB)
 print(group.ML)
-
 #1.1 = Pre-LGM squirrels, #1.2 = Pre-LGM rabbits
 #2.1 = Post-LGM squirrels, #2.2 = Post-LGM rabbits
 
