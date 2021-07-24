@@ -1,10 +1,12 @@
 library(dplyr)
 library(stringr)
+library(ggplot2)
 
 # Import and Clean data ----
 ## import isotope data ----
 # isoDat <- read.delim('data/processed/master_isotopes_file.txt', header=T, sep="\t") # this is not used in script
-isoDat2 <- read.csv('data/processed/SIBER/SIBER_raw.csv', header=T)
+isoDat2 <- read.csv('data/processed/SIBER/SIBER_raw.csv', header=T, strip.white=T)
+
 # match isotope file to ages file
 samples <- paste("UCIAMS", isoDat2$UCIAMS_Number) # this is the final set of samples with isotope data
 
@@ -13,7 +15,12 @@ climDat<- read.delim("data/raw/climate/hendy2002data.txt")
 
 ## read in calibrated ages ----
 allAges<- read.csv('output/OxCal/final oxcal models/AllAges_ages_probs.csv', header=T)
-
+all_calibrated_ages <- read.csv('output/OxCal/final oxcal models/AllAges_forinput.csv', header=T)
+all_calibrated_ages$trimmedName <- unlist(lapply(strsplit(all_calibrated_ages$Name, " R_"), '[[', 1))
+sample_median_ages <- as.data.frame(cbind(samples, all_calibrated_ages[match(samples, all_calibrated_ages$trimmedName), 'Unmodelled._BP_median']))
+colnames(sample_median_ages)[2] <- 'median_age'  
+sample_median_ages$median_age <- as.numeric(sample_median_ages$median_age)
+  
 ## data cleaning on allAges file----
 allAges<- allAges[allAges$probability != 0, ] # remove age estimates with 0 probability
 
@@ -49,6 +56,7 @@ xout <- abs(allAges$value)
 Hendy_extracted <- approx(x=climDat$HendyAge, y=climDat$pach.d18O, method="linear", xout=xout)
 d18O<-Hendy_extracted$y
 allAges_d18O<-cbind(allAges, d18O) # this matches d180 to all the age estimates, for all probabilities
+d18O_medianage <- approx(x=climDat$HendyAge, y=climDat$pach.d18O, method="linear", xout=sample_median_ages$median_age)$y
 
 # remove any unmatched specimen from the files
 matches <- match(samples, allAges_d18O$name)
@@ -86,12 +94,28 @@ for (i in 1:length(samples_final)){
 
 # match with isotope data
 matchedDF_weighted <- cbind(isoDat2_final[,c('UCIAMS_Number', 'Taxon', 'del15N_permil', 'del13C_permil', 'X14C_age_BP')], specimen_wd18O, specimen_wage)
+matchedDF_weighted$specimen_mediand18O <- d18O_medianage
+matchedDF_weighted$specimen_medianage <- sample_median_ages$median_age
 
 N_model_weighted <- lm(del15N_permil ~ specimen_wd18O, data=matchedDF_weighted)
 summary(N_model_weighted)
 C_model_weighted <- lm(del13C_permil ~ specimen_wd18O, data=matchedDF_weighted)
 summary(C_model_weighted)
 
+N_model_median <- lm(del15N_permil ~ specimen_mediand18O, data=matchedDF_weighted)
+summary(N_model_median)
+C_model_median <- lm(del13C_permil ~ specimen_mediand18O, data=matchedDF_weighted)
+summary(C_model_median)
+
+# compare weighted d180 vs d18O at median age
+# No substantial difference. N still almost signif, C still highly signif. 
+# Median is more significant than weighted, for what that's worth. Maybe only matters when we go to match isotopes with a specific age? weighted age and median age can be quite different
+summary(N_model_weighted)
+summary(N_model_median)
+summary(C_model_weighted)
+summary(C_model_median)
+
+# Plot weighted d18O
 par(mfrow=c(1,2))
 plot(del15N_permil ~ specimen_wd18O, data=matchedDF_weighted, pch=16)
 abline(N_model_weighted)
@@ -101,8 +125,18 @@ abline(C_model_weighted)
 N_cor.test_weighted <- cor.test(matchedDF_weighted$del15N_permil, matchedDF_weighted$specimen_wd18O)
 C_cor.test_weighted <- cor.test(matchedDF_weighted$del13C_permil, matchedDF_weighted$specimen_wd18O)
 
+# Plot median d18O
+par(mfrow=c(1,2))
+plot(del15N_permil ~ specimen_mediand18O, data=matchedDF_weighted, pch=16)
+abline(N_model_median)
+plot(del13C_permil ~ specimen_mediand18O, data=matchedDF_weighted, pch=16)
+abline(C_model_median)
+
+N_cor.test_median <- cor.test(matchedDF_weighted$del15N_permil, matchedDF_weighted$specimen_mediand18O)
+C_cor.test_median <- cor.test(matchedDF_weighted$del13C_permil, matchedDF_weighted$specimen_mediand18O)
 
 # Sensitivity analysis  ----
+# How much of a difference does the variation in age make?
 N=100 # Note: some specimens do not have 100 age estimates.
 N_model_res <- as.data.frame(matrix(data=NA, nrow=N, ncol=6))
 C_model_res<- as.data.frame(matrix(data=NA, nrow=N, ncol=6))
@@ -166,16 +200,220 @@ apply(C_model_res, 2, summary)
 # Supplemental figure for appendix - sensitivity analysis ----
 ## Compare final estimate with sensitivity analysis ----
 
-par(mfrow=c(1,2))
-hist(N_model_res$cor, xlab="N~O correlation")
-segments(N_cor.test_weighted$estimate, 0, N_cor.test_weighted$estimate, 17, 
-         col="red", lwd=2)
-hist(C_model_res$cor, xlab="C~O correlation")
-segments(C_cor.test_weighted$estimate, 0, C_cor.test_weighted$estimate, 25, 
-         col="red", lwd=2)
+grDevices::cairo_pdf("output/SuppFigureX_climate_sensitivity_July2021.pdf", width=8, height=6)
+  par(mfrow=c(1,2))
+  x<- hist(N_model_res$cor, xlab=expression('Correlation:'~{delta}^15*N~'\u2030'~'~'~{delta}^18*O~'\u2030'), main="")
+  segments(N_cor.test_weighted$estimate, 0, N_cor.test_weighted$estimate, max(x$counts), 
+           col="red", lwd=2)
+  segments(N_cor.test_median$estimate, 0, N_cor.test_median$estimate, max(x$counts), 
+           col="blue", lwd=2)
+  legend(xpd=T, x=0.25, y=35, bty="n", legend=c("median d18O", "weighted d18O"), 
+         col=c("blue", "red"), lwd=c(2,1), cex=0.5)
+  
+  y<- hist(C_model_res$cor, xlab=expression('Correlation:'~{delta}^13*C~'\u2030'~'~'~{delta}^18*O~'\u2030'), main="")
+  segments(C_cor.test_weighted$estimate, 0, C_cor.test_weighted$estimate, max(y$counts), 
+           col="red", lwd=1)
+  segments(C_cor.test_median$estimate, 0, C_cor.test_median$estimate, max(y$counts), 
+           col="blue", lwd=2)
+dev.off()
 
 
-# Original analysis, naive mean, no weighting ____
+####################3
+# Final Models and Figures ---- 
+# plot data with  weighted mean dataframe - matchedDF_weighted
+# we should use the median d18) values for final analysis, and present the weighted ones in supplemental, along with sensitivity analysis
+
+# Methods potential text:
+# For carbon and nitrogen, I fit a linear model that originally included oxygen, taxon, and the interaction between the two variables as independent variables. I then performed stepwise regression to determine a final model. 
+# Results potential text
+# Stepwise regression indicated that there was no significant interaction between 18O and taxon for either carbon or nitrogen stable isotope values. For carbon, variation in 13C was significantly associated with both 18O and taxon (stats from summary(carbon.lm.final)). For nitrogen, neither 18O nor taxon explained significant variation in 15N, though taxon as a single variable was marginally significant (stats from summary(nitrogen.lm.taxon)).
+
+
+# models - Carbon ----
+
+# Start simple and build complexity
+
+# climate-only model
+carbon.lm.clim<-lm(del13C_permil~specimen_mediand18O, matchedDF_weighted)
+summary(carbon.lm.clim)
+plot(del13C_permil ~ specimen_mediand18O, data=matchedDF_weighted, pch=16)
+abline(carbon.lm.clim)
+
+# taxon-only model
+carbon.lm.taxon<-lm(del13C_permil~Taxon, data=matchedDF_weighted)
+summary(carbon.lm.taxon)
+
+# model with no interaction term 
+# NOTE: this is what the final model is in the end, so THIS  IS WHAT YOU SHOULD REPORT IN THE PAPER. This should be the same as the carbon.lm.final model below
+carbon.lm.all<-lm(del13C_permil~specimen_mediand18O + Taxon, data=matchedDF_weighted)
+summary(carbon.lm.all)
+
+# model with interaction term included
+carbon.lm.all.interaction<-lm(del13C_permil~specimen_mediand18O * Taxon, data=matchedDF_weighted)
+summary(carbon.lm.all.interaction)
+
+##NOTE - interaction between d13C and climate is weaker, and d13C and taxon
+#is stronger, than with IntCal13 data. Variation is now ~equally explained 
+#by climate and taxon, rather than dominated by climate - update paper
+#discussion accordingly 
+
+#stepwise regression 
+carbon.lm.final <- step(lm(del13C_permil~specimen_mediand18O * Taxon, data=matchedDF_weighted, direction="both"))
+summary(carbon.lm.final)
+# --> this shows that the d180 + Taxon model (no interaction) is the best final model. 
+
+# t-test of residuals from climate only model
+# Otospermophilus and Sylvilagus are signif different
+c.t.clim <- t.test(carbon.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))])
+c.t.clim 
+
+# models - Nitrogen ----
+
+# Start simple and build complexity
+
+# climate-only model
+nitrogen.lm.clim<-lm(del15N_permil ~ specimen_mediand18O, data=matchedDF_weighted)
+summary(nitrogen.lm.clim)
+
+# taxon-only model
+nitrogen.lm.taxon<-lm(del15N_permil~Taxon, data=matchedDF_weighted)
+summary(nitrogen.lm.taxon)
+
+# model with no interaction term 
+nitrogen.lm.all.additive<-lm(del15N_permil ~ specimen_mediand18O + Taxon, data=matchedDF_weighted)
+summary(nitrogen.lm.all.additive)
+
+# model with interaction term included
+nitrogen.lm.all.interaction<-lm(del15N_permil ~ specimen_mediand18O * Taxon, data=matchedDF_weighted)
+summary(nitrogen.lm.all.interaction)
+
+#stepwise regression --> this shows that there is not a good final model
+nitrogen.lm.final <- step(lm(del15N_permil~specimen_mediand18O*Taxon, data=matchedDF_weighted, direction="both"))
+# --> there is not a good final model, so I am just going to treat nitrogen the same as carbon for plotting.
+nitrogen.lm.final <- nitrogen.lm.all.additive
+
+# t-test of residuals from climate-only model
+# Otospermophilus and Sylvilagus are NOT signif different
+n.t.clim <- t.test(nitrogen.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))])
+n.t.clim
+
+# JESSICA's NEW final plot ####
+## Figure 3 ----
+
+grDevices::cairo_pdf("output/Figure3_lm_carbon_nitrogen_all_July2021.pdf", width=8, height=8)
+
+layout(matrix(seq(1:6), ncol=3, nrow=2, byrow=F), widths=c(2.5,2.5,1))
+par(mar=c(4,4,1,1), cex.axis=1, bty="l")
+
+# carbon
+boxplot(carbon.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], 
+        xlab="", ylab="")
+stripchart(carbon.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
+mtext("Taxon", side=1, line=2.25)
+mtext(expression('Residuals (Climate-only Model)'), side=2, line=2.25, cex=0.8)
+# mtext(expression('Residuals ('~{delta}^13*C~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
+legend("topright", legend=paste0("t=", round(c.t.clim$statistic,2), "; df=", round(c.t.clim$parameter,2), "; p=", round(c.t.clim$p.value,2)), bty = "n", cex = 0.8)
+
+plot(del13C_permil~specimen_mediand18O, data=matchedDF_weighted, pch=16, type="n", xlab="", ylab="")
+points(del13C_permil~specimen_mediand18O, 
+       data=matchedDF_weighted[which(matchedDF_weighted$Taxon == "Sylvilagus"),], 
+       pch=16, col="darkorange")
+points(del13C_permil~specimen_mediand18O, 
+       data=matchedDF_weighted[which(matchedDF_weighted$Taxon == "Otospermophilus"),], 
+       pch=16, col="royalblue2")
+abline(carbon.lm.final, lty=2)
+abline(carbon.lm.clim, lty=1)
+mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25) 
+mtext(expression({delta}^13*C~'\u2030'), side=2, line=2)
+
+# nitrogen
+boxplot(nitrogen.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))],
+        xlab="", ylab="")
+stripchart(nitrogen.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
+mtext("Taxon", side=1, line=2.25)
+mtext(expression('Residuals (Climate-only Model)'), side=2, line=2.25, cex=0.8)
+# mtext(expression('Residuals ('~{delta}^15*N~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
+legend("topright", legend=paste0("t=", round(n.t.clim$statistic,2), "; df=", round(n.t.clim$parameter,2), "; p=", round(n.t.clim$p.value,2)), bty = "n", cex = 0.8)
+
+plot(del15N_permil~specimen_mediand18O, data=matchedDF_weighted, pch=16, 
+     xlab = "", ylab = "", type="n")
+points(del15N_permil~specimen_mediand18O, 
+       data=matchedDF_weighted[which(matchedDF_weighted$Taxon == "Sylvilagus"),], 
+       pch=16, col="darkorange")
+points(del15N_permil~specimen_mediand18O, 
+       data=matchedDF_weighted[which(matchedDF_weighted$Taxon == "Otospermophilus"),], 
+       pch=16, col="royalblue2")
+abline(nitrogen.lm.final, lty=2)
+abline(nitrogen.lm.clim, lty=1)
+mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25)
+mtext(expression({delta}^15*N~'\u2030'), side=2, line=2.25)
+
+# taxon legend
+# Draw an empty plot
+plot(5, 5, 
+     type="n", axes=FALSE, ann=FALSE, 
+     xlim=c(0, 10), ylim = c(0,10))
+legend(xpd=T, x=-5, y=5, 
+       legend = c("Otospermophilus", "Sylvilagus"),
+       title="Taxon",
+       col = c("royalblue2","darkorange"), pch = 16,
+       bty = "n", cex = 0.8)
+
+# model legend
+plot(5, 5, 
+     type="n", axes=FALSE, ann=FALSE, 
+     xlim=c(0, 10), ylim = c(0,10))
+legend(xpd=T, x=-5, y=5,
+       legend = c("Climate+Taxon", "Climate-only"),
+       title="Model",
+       lty = c(2,1),
+       bty = "n", cex = 0.8)
+
+dev.off()
+
+# I haven't put A-D labels on them yet.
+# Figure caption text.
+# Figure 3. The relationship between isotope niche and climate. A) & C) show the relationship between 13C or 15N, respectively, and 18O.  In both panels, the dashed line indicates the fitted relationship between 13C or 15N and 18O from the final model which  includes Taxon as an independent variable. The solid line indicates the fitted relationship between 13C or 15N and 18O from a linear model that just includes 18O as the independent variable. B) & D) indicate the residuals from the climate-only model, plotted by taxon.
+
+## Figure 4 ----
+#plot carbon and climate thru time
+
+# order matchedDF_weighted
+matchedDF_weighted <- matchedDF_weighted[order(matchedDF_weighted$specimen_medianage),]
+
+grDevices::cairo_pdf(file="output/Figure4_carbon_climate_time_updated.pdf", height=6, width=8)
+
+layout(matrix(seq(1:2), ncol=1, nrow=2), heights=c(0.75,1))
+par(mar=c(4,5,0,5), cex.axis=1, bty="l", xpd=F)
+
+# d13C plot
+plot(del13C_permil~specimen_medianage, data=matchedDF_weighted, 
+     type="n", axes=FALSE, ann=FALSE, xaxs="i", yaxs="r", 
+     xlim=c(55000, 0))
+axis(4)
+mtext(expression({delta}^13*C~'\u2030'), side=4, line=2.25)
+lines(del13C_permil~specimen_medianage, data=matchedDF_weighted, lty=1, col="brown")
+points(del13C_permil~specimen_medianage, data=matchedDF_weighted, pch=16, col="brown", cex=0.5)
+
+#d18O plot
+plot(pach.d18O~HendyAge, dat=climDat, 
+     type="l", 
+     xlab="Years before present", 
+     ylab = expression({delta}^18*O~'\u2030'),
+     bty="n", 
+     xlim=c(55000, 0), ylim=c(3, 0),
+     lab=c(12, 8, 7), xaxs="i", yaxs="r", col="gray")
+x1.05<- loess(climDat$pach.d18O~climDat$HendyAge, span=0.05)
+lines(x1.05$fitted~x1.05$x, type="l", col="darkgray")
+
+# add symbols for d18O at times with isotopes
+lines(specimen_mediand18O~specimen_medianage, data=matchedDF_weighted, lty=1, col="blue", cex=0.5)
+
+points(specimen_mediand18O~specimen_medianage, data=matchedDF_weighted, pch=16, col="blue", cex=0.5)
+dev.off()
+
+
+# Original analysis, naive mean, no weighting, not updated ----
 # extract mean d18O value across all ages for per specimen average - code needs to be fixed
 mean.d18O<-aggregate( d18O ~ name, allAges_d18O, mean )
 
@@ -193,164 +431,8 @@ mean.d18O2<-transform(mean.d18O, d18O = as.numeric(d18O))
 matchedDF2 <- matchedDF[order(matchedDF$UCIAMS_Number),]
 
 # combine isotope and climate files for analysis
-d18O.d13C<-cbind(matchedDF2, mean.d18O2)
+matchedDF_weighted<-cbind(matchedDF2, mean.d18O2)
 
 #Remove extra spaces in taxon levels
-d18O.d13C$Taxon <- trimws(d18O.d13C$Taxon, which = c("right"))
-d18O.d13C<-transform(d18O.d13C, Taxon = as.factor(Taxon))
-
-####plot data with sample-averaged d18O values
-##(these are the data I think we should present in the paper)
-
-##Note - these are Jessica's plots copied from "Iso.Clim.R" with updated data
-
-# Methods potential text:
-# For carbon and nitrogen, I fit a linear model that originally included oxygen, taxon, and the interaction between the two variables as independent variables. I then performed stepwise regression to determine a final model. 
-# Results potential text
-# Stepwise regression indicated that there was no significant interaction between 18O and taxon for either carbon or nitrogen stable isotope values. For carbon, variation in 13C was significantly associated with both 18O and taxon (stats from summary(carbon.lm.final)). For nitrogen, neither 18O nor taxon explained significant variation in 15N, though taxon as a single variable was marginally significant (stats from summary(nitrogen.lm.taxon)).
-
-
-## models - Carbon
-
-# model with interaction term included
-carbon.lm.all.interaction<-lm(del13C_permil~d18O * Taxon, data=d18O.d13C)
-summary(carbon.lm.all.interaction)
-
-# model with no interaction term 
-# NOTE: this is what the final model is in the end, so THIS  IS WHAT YOU SHOULD REPORT IN THE PAPER.
-carbon.lm.all<-lm(del13C_permil~d18O + Taxon, data=d18O.d13C)
-summary(carbon.lm.all)
-
-# climate-only model
-carbon.lm.clim<-lm(del13C_permil~d18O, d18O.d13C)
-summary(carbon.lm.clim)
-plot(del13C_permil ~ d18O, data=d18O.d13C, pch=16)
-abline(carbon.lm.clim)
-
-# taxon-only model
-carbon.lm.taxon<-lm(del13C_permil~Taxon, data=d18O.d13C)
-summary(carbon.lm.taxon)
-
-##NOTE - interaction between d13C and climate is weaker, and d13C and taxon
-#is stronger, than with IntCal13 data. Variation is now ~equally explained 
-#by climate and taxon, rather than dominated by climate - update paper
-#discussion accordingly 
-
-#stepwise regression 
-carbon.lm.final <- step(lm(del13C_permil~d18O*Taxon, data=d18O.d13C, direction="both"))
-summary(carbon.lm.final)
-# --> this shows that the d180 + Taxon model (no interaction) is the best final model. 
-
-# t-test of residuals from climate only model
-c.t.clim <- t.test(carbon.lm.clim$residuals ~ d18O.d13C$Taxon[which(!is.na(d18O.d13C$d18O))])
-
-# models - Nitrogen
-
-# model with interaction term included
-nitrogen.lm.all.interaction<-lm(del15N_permil ~ d18O * Taxon, data=d18O.d13C)
-summary(nitrogen.lm.all.interaction)
-
-# model with no interaction term 
-nitrogen.lm.all.additive<-lm(del15N_permil ~ d18O + Taxon, data=d18O.d13C)
-summary(nitrogen.lm.all.additive)
-
-# climate-only model
-nitrogen.lm.clim<-lm(del15N_permil ~ d18O, data=d18O.d13C)
-summary(nitrogen.lm.clim)
-
-# taxon-only model
-nitrogen.lm.taxon<-lm(del15N_permil~Taxon, data=d18O.d13C)
-summary(nitrogen.lm.taxon)
-
-#stepwise regression --> this shows that there is not a good final model
-nitrogen.lm.final <- step(lm(del15N_permil~d18O*Taxon, data=d18O.d13C, direction="both"))
-# --> there is not a good final model, so I am just going to treat nitrogen the same as carbon for plotting.
-nitrogen.lm.final <- nitrogen.lm.all.additive
-
-# t-test of residuals from climate-only model
-n.t.clim <- t.test(nitrogen.lm.clim$residuals ~ d18O.d13C$Taxon[which(!is.na(d18O.d13C$d18O))])
-
-
-# JESSICA's NEW final plot ####
-
-pdf("output/Isoplots/lm_carbon_nitrogen_all.pdf", width=8, height=8)
-
-par(mfcol=c(2,2), mar=c(4,4,1,1), cex.axis=0.8)
-
-# carbon
-plot(del13C_permil~d18O, data=d18O.d13C, pch=16, type="n", xlab="", ylab="")
-points(del13C_permil~d18O, 
-       data=d18O.d13C[which(d18O.d13C$Taxon == "Sylvilagus"),], 
-       pch=16, col="darkorange")
-points(del13C_permil~d18O, 
-       data=d18O.d13C[which(d18O.d13C$Taxon == "Otospermophilus"),], 
-       pch=16, col="royalblue2")
-abline(carbon.lm.final, lty=2)
-abline(lm(del13C_permil~d18O, data=d18O.d13C), lty=1)
-mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25) 
-mtext(expression({delta}^13*C~'\u2030'), side=2, line=2) 
-legend("bottomleft", legend = c("Otospermophilus", "Sylvilagus"),
-       col = c("royalblue2","darkorange"), pch = 16, 
-       bty = "n", cex = 0.8)
-
-boxplot(carbon.lm.clim$residuals ~ d18O.d13C$Taxon[which(!is.na(d18O.d13C$d18O))], 
-        xlab="", ylab="")
-stripchart(carbon.lm.clim$residuals ~ d18O.d13C$Taxon[which(!is.na(d18O.d13C$d18O))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
-mtext("Taxon", side=1, line=2.25)
-mtext(expression('Residuals ('~{delta}^13*C~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
-legend("topright", legend=paste0("t=", round(c.t.clim$statistic,2), "; df=", round(c.t.clim$parameter,2), "; p=", round(c.t.clim$p.value,2)), bty = "n", cex = 0.8)
-
-
-# nitrogen
-plot(del15N_permil~d18O, data=d18O.d13C, pch=16, 
-     xlab = "", ylab = "", type="n")
-points(del15N_permil~d18O, 
-       data=d18O.d13C[which(d18O.d13C$Taxon == "Sylvilagus"),], 
-       pch=16, col="darkorange")
-points(del15N_permil~d18O, 
-       data=d18O.d13C[which(d18O.d13C$Taxon == "Otospermophilus"),], 
-       pch=16, col="royalblue2")
-abline(nitrogen.lm.final, lty=2)
-abline(lm(del15N_permil~d18O, data=d18O.d13C), lty=1)
-legend("topleft", legend = c("Otospermophilus", "Sylvilagus"),
-       col = c("royalblue2","darkorange"), pch = 16, 
-       bty = "n", cex = 0.8)
-mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25)
-mtext(expression({delta}^15*N~'\u2030'), side=2, line=2.25)
-
-boxplot(nitrogen.lm.clim$residuals ~ d18O.d13C$Taxon[which(!is.na(d18O.d13C$d18O))],
-        xlab="", ylab="")
-stripchart(nitrogen.lm.clim$residuals ~ d18O.d13C$Taxon[which(!is.na(d18O.d13C$d18O))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
-mtext("Taxon", side=1, line=2.25)
-mtext(expression('Residuals ('~{delta}^15*N~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
-legend("topright", legend=paste0("t=", round(n.t.clim$statistic,2), "; df=", round(n.t.clim$parameter,2), "; p=", round(n.t.clim$p.value,2)), bty = "n", cex = 0.8)
-
-dev.off()
-
-# I haven't put A-D labels on them yet.
-# Figure caption text.
-# Figure 4. The relationship between isotope niche and climate. A) & C) show the relationship between 13C or 15N, respectively, and 18O.  In both panels, the dashed line indicates the fitted relationship between 13C or 15N and 18O from the final model which  includes Taxon as an independent variable. The solid line indicates the fitted relationship between 13C or 15N and 18O from a linear model that just includes 18O as the independent variable. B) & D) indicate the residuals from the climate-only model, plotted by taxon.
-
-
-#plot carbon and climate thru time
-
-ylim.prim <- c(0, 3)   
-ylim.sec <- c(-23, -17)
-
-b <- diff(ylim.prim)/diff(ylim.sec)
-a <- b*(ylim.prim[1] - ylim.sec[1])
-
-pdf("output/Isoplots/carbon_climate_time_updated.pdf", width=7, height=4)
-C<-ggplot(d18O.d13C, aes(X14C_age_BP, d18O)) +
-  geom_line(aes(y = a + del13C_permil*b), color = "brown") +
-  geom_line(aes(y = d18O), color = "blue") +
-  scale_y_reverse(name = expression({delta}^18*O~'\u2030'), sec.axis = sec_axis(~ (. - a)/b, name = expression({delta}^13*C~'\u2030'))) +
-  scale_x_reverse("Radiocarbon Years Before Present")+
-  theme_light() 
-C + theme(axis.text.y.left = element_text(color="blue"),
-          axis.text.y.right = element_text(color="brown"))
-dev.off()
-#This fig is not very informative with the averaged d18O data, perhaps omit
-# from the paper?
-
-
+matchedDF_weighted$Taxon <- trimws(matchedDF_weighted$Taxon, which = c("right"))
+matchedDF_weighted<-transform(matchedDF_weighted, Taxon = as.factor(Taxon))

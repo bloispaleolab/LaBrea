@@ -1,0 +1,490 @@
+OxCal v4.4.4 Bronk Ramsey (2021); r:5
+Atmospheric data from Reimer et al (2020)
+FALSE
+OxCal v4.4.4 Bronk Ramsey (2021); r:5
+IntCal20 Curve(IntCal20.14c)
+Atmospheric data from Reimer et al (2020)
+R Combine 1 LACMP23-33228 R_Combine(30696,198)
+  68.3% probability
+    35270BP (68.3%) 34795BP
+  95.4% probability
+    35452BP (95.4%) 34606BP
+ X2-Test: df=1 T=1.0(5% 3.8)
+R Combine 2 LACMHC-142773 R_Combine(41890,871)
+  68.3% probability
+    45504BP (68.3%) 44060BP
+  95.4% probability
+    46188BP (95.4%) 43128BP
+ X2-Test: df=1 T=1.2(5% 3.8)
+R Combine 3 LACMHC-142779 R_Combine(35645,400)
+  68.3% probability
+    41181BP (68.3%) 40440BP
+  95.4% probability
+    41460BP (95.4%) 39896BP
+ X2-Test: df=1 T=0.1(5% 3.8)
+R Combine 4 LACMP23-35541 R_Combine(39066,374)
+  68.3% probability
+    42822BP (68.3%) 42490BP
+  95.4% probability
+    43024BP (95.4%) 42349BP
+ X2-Test: df=1 T=0.4(5% 3.8)
+R Combine 5 LACMP23-40642 R_Combine(26735,105)
+  68.3% probability
+    31090BP (68.3%) 30940BP
+  95.4% probability
+    31140BP (95.4%) 30840BP
+ X2-Test: df=1 T=0.5(5% 3.8)
+UCIAMS 191095 R_Date(35750,610)
+  68.3% probability
+    41406BP (68.3%) 40279BP
+  95.4% probability
+    41890BP (95.4%) 39754BP
+UCIAMS 191096 R_Date(35440,580)
+  68.3% probability
+    41100BP (68.3%) 40005BP
+  95.4% probability
+    41612BP (95.4%) 39487BP
+UCIAMS 191097 R_Date(35150,580)
+  68.3% probability
+    40861BP (68.3%) 39755BP
+  95.4% probability
+    41352BP (95.4%) 39266BP
+UCIAMS 191098 R_Date(36050,630)
+  68.3% probability
+    41688BP (68.3%) 40620BP
+  95.4% probability
+    42056BP (95.4%) 39996BP
+UCIAMS 191099 R_Date(33830,480)
+  68.3% probability
+    39466BP (67.6%) 38034BP
+    37890BP ( 0.7%) 37870BP
+  95.4% probability
+    39941BP (95.4%) 37276BP
+UCIAMS 191100 R_Date(35780,600)
+  68.3% probability
+    41434BP (68.3%) 40329BP
+  95.4% probability
+    41897BP (95.4%) 39792BP
+UCIAMS 191101 R_Date(46200,2200)
+Warning! Date may extend out of range - 46200+/-2200BP
+  68.3% probability
+    51880BP (68.3%) 46660BP
+  95.4% probability
+    ... (12.3%) 53138BP
+    52982BP (83.2%) 45908BP
+UCIAMS 191102 R_Date(35420,580)
+  68.3% probability
+    41084BP (68.3%) 39990BP
+  95.4% probability
+    41590BP (95.4%) 39465BP
+UCIAMS 198205 R_Date(36580,610)
+  68.3% probability
+    41956BP (68.3%) 41138BP
+  95.4% probability
+    42244BP (95.4%) 40636BP
+UCIAMS 198206 R_Date(30480,290)
+  68.3% probability
+    35180BP (68.3%) 34608BP
+  95.4% probability
+    35428BP (95.4%) 34376BP
+UCIAMS 198207 R_Date(31830,340)
+  68.3% probability
+    36526BP (68.3%) 35768BP
+  95.4% probability
+    36918BP (95.4%) 35447BP
+UCIAMS 198208 R_Date(25620,160)
+  68.3% probability
+    30104BP (68.3%) 29788BP
+  95.4% probability
+    30176BP (91.4%) 29450BP
+    29442BP ( 4.0%) 29322BP
+UCIAMS 198294 R_Date(39700,810)
+  68.3% probability
+    43846BP (12.6%) 43572BP
+    43466BP (55.7%) 42569BP
+  95.4% probability
+    44410BP (95.4%) 42360BP
+UCIAMS 198295 R_Date(33070,350)
+  68.3% probability
+    38322BP (68.3%) 37038BP
+  95.4% probability
+    39084BP (95.4%) 36778BP
+UCIAMS 198296 R_Date(47400,2000)
+Warning! Date may extend out of range - 47400+/-2000BP
+  68.3% probability
+    54206BP ( 2.1%) 53996BP
+    52540BP (66.1%) 47996BP
+  95.4% probability
+    ... (95.4%) 47197BP
+UCIAMS 198297 R_Date(28600,210)
+  68.3% probability
+    33238BP (40.8%) 32744BP
+    32626BP (27.5%) 32246BP
+  95.4% probability
+    33618BP (95.4%) 32062BP
+UCIAMS 198298 R_Date(26310,150)
+  68.3% probability
+    30793BP (68.3%) 30370BP
+  95.4% probability
+    30952BP (95.4%) 30198BP
+UCIAMS 198302 R_Date(30870,270)
+  68.3% probability
+    35484BP (68.3%) 34827BP
+  95.4% probability
+    35902BP (95.4%) 34633BP
+UCIAMS 216760 R_Date(5925,20)
+  68.3% probability
+    6786BP (54.8%) 6731BP
+    6696BP (13.5%) 6680BP
+  95.4% probability
+    6794BP (95.4%) 6670BP
+UCIAMS 216761 R_Date(11105,25)
+  68.3% probability
+    13096BP (42.6%) 13052BP
+    13040BP (25.7%) 12998BP
+  95.4% probability
+    13100BP (89.2%) 12960BP
+    12950BP ( 6.3%) 12926BP
+UCIAMS 216762 R_Date(43700,1600)
+Warning! Date may extend out of range - 43700+/-1600BP
+  68.3% probability
+    47964BP (68.3%) 44764BP
+  95.4% probability
+    51710BP (95.4%) 43974BP
+UCIAMS 216763 R_Date(36880,660)
+  68.3% probability
+    42095BP (68.3%) 41300BP
+  95.4% probability
+    42385BP (95.4%) 40815BP
+UCIAMS 216764 R_Date(36350,620)
+  68.3% probability
+    41873BP (68.3%) 40949BP
+  95.4% probability
+    42202BP (95.4%) 40386BP
+UCIAMS 216765 R_Date(28600,240)
+  68.3% probability
+    33246BP (40.1%) 32718BP
+    32650BP (28.2%) 32237BP
+  95.4% probability
+    33675BP (95.4%) 32015BP
+UCIAMS 216766 R_Date(13990,40)
+  68.3% probability
+    17070BP (68.3%) 16975BP
+  95.4% probability
+    17304BP ( 0.4%) 17290BP
+    17242BP ( 1.8%) 17193BP
+    17128BP (93.3%) 16860BP
+UCIAMS 216767 R_Date(14390,40)
+  68.3% probability
+    17712BP (19.6%) 17615BP
+    17552BP (48.7%) 17388BP
+  95.4% probability
+    17797BP (95.4%) 17358BP
+UCIAMS 216768 R_Date(41000,1100)
+  68.3% probability
+    44718BP (68.3%) 43069BP
+  95.4% probability
+    45943BP (95.4%) 42624BP
+UCIAMS 216769 R_Date(42900,1400)
+  68.3% probability
+    46978BP (68.3%) 44391BP
+  95.4% probability
+    49144BP (95.4%) 43160BP
+UCIAMS 216770 R_Date(35740,570)
+  68.3% probability
+    41377BP (68.3%) 40320BP
+  95.4% probability
+    41845BP (95.4%) 39793BP
+UCIAMS 216771 R_Date(30320,290)
+  68.3% probability
+    35066BP (68.3%) 34472BP
+  95.4% probability
+    35324BP (95.4%) 34288BP
+UCIAMS 216772 R_Date(2375,15)
+  68.3% probability
+    2406BP (15.0%) 2391BP
+    2367BP (53.2%) 2346BP
+  95.4% probability
+    2462BP ( 2.0%) 2452BP
+    2432BP (93.4%) 2344BP
+UCIAMS 216773 R_Date(31340,330)
+  68.3% probability
+    36060BP (68.3%) 35414BP
+  95.4% probability
+    36372BP (94.7%) 35072BP
+    34993BP ( 0.8%) 34926BP
+UCIAMS 216779 R_Date(31000,320)
+  68.3% probability
+    35776BP (63.3%) 35055BP
+    35002BP ( 5.0%) 34919BP
+  95.4% probability
+    36084BP (95.4%) 34692BP
+UCIAMS 216780 R_Date(30900,320)
+  68.3% probability
+    35568BP (68.3%) 34806BP
+  95.4% probability
+    36014BP (95.4%) 34624BP
+UCIAMS 216781 R_Date(30970,320)
+  68.3% probability
+    35685BP (68.3%) 34886BP
+  95.4% probability
+    36065BP (95.4%) 34672BP
+UCIAMS 216782 R_Date(38750,840)
+  68.3% probability
+    43024BP (68.3%) 42175BP
+  95.4% probability
+    44086BP (95.4%) 41920BP
+UCIAMS 216783 R_Date(42600,1400)
+  68.3% probability
+    46798BP (68.3%) 44206BP
+  95.4% probability
+    48740BP (95.4%) 43028BP
+UCIAMS 216784 R_Date(41500,1200)
+  68.3% probability
+    45276BP (68.3%) 43269BP
+  95.4% probability
+    46836BP (95.4%) 42737BP
+UCIAMS 216785 R_Date(50200,3500)
+Warning! Date may extend out of range - 50200+/-3500BP
+Warning! Date probably out of range - 50200+/-3500BP
+  68.3% probability
+    ... (68.3%) 50880BP
+  95.4% probability
+    ... (95.4%) 48213BP
+UCIAMS 217076 R_Date(42900,1400)
+  68.3% probability
+    46978BP (68.3%) 44391BP
+  95.4% probability
+    49144BP (95.4%) 43160BP
+UCIAMS 217077 R_Date(35550,560)
+  68.3% probability
+    41180BP (68.3%) 40120BP
+  95.4% probability
+    41696BP (95.4%) 39627BP
+UCIAMS 217078 R_Date(28500,240)
+  68.3% probability
+    33088BP (68.3%) 32206BP
+  95.4% probability
+    33523BP (95.4%) 31900BP
+UCIAMS 217079 R_Date(46200,2400)
+Warning! Date may extend out of range - 46200+/-2400BP
+  68.3% probability
+    51986BP (68.3%) 46524BP
+  95.4% probability
+    ... (95.4%) 45905BP
+UCIAMS 223493 R_Date(4505,20)
+  68.3% probability
+    5288BP (10.1%) 5268BP
+    5187BP (16.3%) 5155BP
+    5147BP (11.8%) 5122BP
+    5112BP (30.0%) 5054BP
+  95.4% probability
+    5295BP (28.4%) 5212BP
+    5195BP (67.0%) 5050BP
+UCIAMS 223494 R_Date(2650,25)
+  68.3% probability
+    2770BP (68.3%) 2745BP
+  95.4% probability
+    2844BP ( 6.4%) 2823BP
+    2784BP (89.0%) 2736BP
+UCIAMS 223495 R_Date(38740,640)
+  68.3% probability
+    42837BP (68.3%) 42288BP
+  95.4% probability
+    43778BP ( 0.5%) 43704BP
+    43408BP (94.9%) 41994BP
+UCIAMS 223496 R_Date(40640,800)
+  68.3% probability
+    44305BP (68.3%) 43110BP
+  95.4% probability
+    44938BP (95.4%) 42700BP
+UCIAMS 223497 R_Date(39240,670)
+  68.3% probability
+    43146BP (68.3%) 42394BP
+  95.4% probability
+    44031BP (95.4%) 42252BP
+UCIAMS 223498 R_Date(34800,390)
+  68.3% probability
+    40404BP (68.3%) 39579BP
+  95.4% probability
+    40796BP (95.4%) 39266BP
+UCIAMS 223499 R_Date(33590,340)
+  68.3% probability
+    39134BP (62.7%) 38050BP
+    37936BP ( 5.6%) 37824BP
+  95.4% probability
+    39412BP (95.4%) 37384BP
+UCIAMS 223500 R_Date(35230,410)
+  68.3% probability
+    40801BP (68.3%) 39948BP
+  95.4% probability
+    41146BP (95.4%) 39585BP
+UCIAMS 223501 R_Date(35270,410)
+  68.3% probability
+    40840BP (68.3%) 39989BP
+  95.4% probability
+    41175BP (95.4%) 39615BP
+UCIAMS 223502 R_Date(44000,1200)
+  68.3% probability
+    47724BP (68.3%) 45344BP
+  95.4% probability
+    49593BP (95.4%) 44570BP
+UCIAMS 223503 R_Date(46200,1600)
+Warning! Date may extend out of range - 46200+/-1600BP
+  68.3% probability
+    51035BP (68.3%) 46830BP
+  95.4% probability
+    54967BP ( 6.5%) 53540BP
+    52690BP (89.0%) 45970BP
+UCIAMS 223504 R_Date(47400,1800)
+Warning! Date may extend out of range - 47400+/-1800BP
+  68.3% probability
+    52498BP (68.3%) 48029BP
+  95.4% probability
+    ... (95.4%) 47406BP
+UCIAMS 223505 R_Date(33260,320)
+  68.3% probability
+    38639BP (68.3%) 37388BP
+  95.4% probability
+    39126BP (95.4%) 37058BP
+UCIAMS 223506 R_Date(36260,470)
+  68.3% probability
+    41730BP (68.3%) 40962BP
+  95.4% probability
+    42020BP (95.4%) 40564BP
+UCIAMS 223507 R_Date(31230,270)
+  68.3% probability
+    35940BP (68.3%) 35352BP
+  95.4% probability
+    36225BP (95.0%) 35078BP
+    34982BP ( 0.4%) 34950BP
+UCIAMS 223508 R_Date(31980,280)
+  68.3% probability
+    36650BP (68.3%) 36065BP
+  95.4% probability
+    36975BP (95.4%) 35706BP
+UCIAMS 223509 R_Date(32660,300)
+  68.3% probability
+    37432BP (68.3%) 36611BP
+  95.4% probability
+    38133BP (95.4%) 36274BP
+UCIAMS 223513 R_Date(25830,140)
+  68.3% probability
+    30194BP (68.3%) 29987BP
+  95.4% probability
+    30350BP (95.4%) 29908BP
+UCIAMS 223515 R_Date(27200,160)
+  68.3% probability
+    31336BP (68.3%) 31100BP
+  95.4% probability
+    31580BP (95.4%) 31064BP
+UCIAMS 223516 R_Date(26780,160)
+  68.3% probability
+    31122BP (68.3%) 30927BP
+  95.4% probability
+    31208BP (95.4%) 30744BP
+UCIAMS 223517 R_Date(36870,500)
+  68.3% probability
+    42025BP (68.3%) 41385BP
+  95.4% probability
+    42255BP (95.4%) 41060BP
+UCIAMS 223518 R_Date(49800,2500)
+Warning! Date may extend out of range - 49800+/-2500BP
+  68.3% probability
+    ... (68.3%) 51235BP
+  95.4% probability
+    ... (95.4%) 48850BP
+UCIAMS 223519 R_Date(49400,2400)
+Warning! Date may extend out of range - 49400+/-2400BP
+  68.3% probability
+    ... (68.3%) 50999BP
+  95.4% probability
+    ... (95.4%) 48647BP
+UCIAMS 223520 R_Date(28750,190)
+  68.3% probability
+    33651BP (68.3%) 32866BP
+  95.4% probability
+    33760BP (95.4%) 32224BP
+UCIAMS 223521 R_Date(26940,320)
+  68.3% probability
+    31343BP (68.3%) 30818BP
+  95.4% probability
+    31640BP (95.4%) 30406BP
+UCIAMS 223522 R_Date(38490,610)
+  68.3% probability
+    42715BP (68.3%) 42218BP
+  95.4% probability
+    43096BP (95.4%) 41951BP
+UCIAMS 223585 R_Date(39220,460)
+  68.3% probability
+    42937BP (68.3%) 42502BP
+  95.4% probability
+    43392BP (95.4%) 42288BP
+UCIAMS 223587 R_Date(26710,110)
+  68.3% probability
+    31080BP (68.3%) 30920BP
+  95.4% probability
+    31137BP (95.4%) 30814BP
+UCIAMS 198199 R_Date(35770,550)
+  68.3% probability
+    41389BP (68.3%) 40376BP
+  95.4% probability
+    41844BP (95.4%) 39845BP
+UCIAMS 198200 R_Date(35050,510)
+  68.3% probability
+    40705BP (68.3%) 39704BP
+  95.4% probability
+    41160BP (95.4%) 39309BP
+UCIAMS 198201 R_Date(32500,370)
+  68.3% probability
+    37256BP (68.3%) 36362BP
+  95.4% probability
+    38184BP (95.4%) 36110BP
+UCIAMS 198202 R_Date(35900,560)
+  68.3% probability
+    41494BP (68.3%) 40494BP
+  95.4% probability
+    41928BP (95.4%) 39954BP
+UCIAMS 198203 R_Date(33100,620)
+  68.3% probability
+    38790BP (68.3%) 36980BP
+  95.4% probability
+    39423BP (95.4%) 36328BP
+UCIAMS 198204 R_Date(36160,910)
+  68.3% probability
+    41934BP (68.3%) 40542BP
+  95.4% probability
+    42310BP (95.4%) 39690BP
+UCIAMS 223524 R_Date(28090,180)
+  68.3% probability
+    32740BP ( 6.9%) 32630BP
+    32236BP (61.4%) 31722BP
+  95.4% probability
+    32900BP (95.4%) 31650BP
+UCIAMS 223525 R_Date(31460,260)
+  68.3% probability
+    36104BP (68.3%) 35558BP
+  95.4% probability
+    36292BP (95.4%) 35314BP
+UCIAMS 223526 R_Date(30540,240)
+  68.3% probability
+    35185BP (68.3%) 34674BP
+  95.4% probability
+    35390BP (95.4%) 34474BP
+UCIAMS 223527 R_Date(35870,450)
+  68.3% probability
+    41358BP (68.3%) 40567BP
+  95.4% probability
+    41804BP (95.4%) 40082BP
+UCIAMS 223528 R_Date(6155,25)
+  68.3% probability
+    7156BP (27.7%) 7110BP
+    7072BP (16.4%) 7041BP
+    7030BP (24.2%) 6990BP
+  95.4% probability
+    7158BP (95.4%) 6960BP
+UCIAMS 223529 R_Date(28370,180)
+  68.3% probability
+    32886BP (68.3%) 32136BP
+  95.4% probability
+    33136BP (95.4%) 31894BP
