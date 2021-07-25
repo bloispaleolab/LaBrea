@@ -297,6 +297,14 @@ nitrogen.lm.final <- nitrogen.lm.all.additive
 n.t.clim <- t.test(nitrogen.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))])
 n.t.clim
 
+# Do we need to add age as a co-variate in the models? ----
+# Does this answer the question: "does isotope vary through time?"
+carbon.lm.all.age<-step(lm(del13C_permil~specimen_mediand18O * Taxon * specimen_medianage, data=matchedDF_weighted))
+summary(carbon.lm.all.age)
+
+nitrogen.lm.all.age<-step(lm(del15N_permil ~ specimen_mediand18O * Taxon * specimen_medianage, data=matchedDF_weighted))
+summary(nitrogen.lm.all.age)
+
 # JESSICA's NEW final plot ####
 ## Figure 3 ----
 
@@ -306,14 +314,6 @@ layout(matrix(seq(1:6), ncol=3, nrow=2, byrow=F), widths=c(2.5,2.5,1))
 par(mar=c(4,4,1,1), cex.axis=1, bty="l")
 
 # carbon
-boxplot(carbon.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], 
-        xlab="", ylab="")
-stripchart(carbon.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
-mtext("Taxon", side=1, line=2.25)
-mtext(expression('Residuals (Climate-only Model)'), side=2, line=2.25, cex=0.8)
-# mtext(expression('Residuals ('~{delta}^13*C~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
-legend("topright", legend=paste0("t=", round(c.t.clim$statistic,2), "; df=", round(c.t.clim$parameter,2), "; p=", round(c.t.clim$p.value,2)), bty = "n", cex = 0.8)
-
 plot(del13C_permil~specimen_mediand18O, data=matchedDF_weighted, pch=16, type="n", xlab="", ylab="")
 points(del13C_permil~specimen_mediand18O, 
        data=matchedDF_weighted[which(matchedDF_weighted$Taxon == "Sylvilagus"),], 
@@ -326,15 +326,15 @@ abline(carbon.lm.clim, lty=1)
 mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25) 
 mtext(expression({delta}^13*C~'\u2030'), side=2, line=2)
 
-# nitrogen
-boxplot(nitrogen.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))],
+boxplot(carbon.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], 
         xlab="", ylab="")
-stripchart(nitrogen.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
+stripchart(carbon.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
 mtext("Taxon", side=1, line=2.25)
 mtext(expression('Residuals (Climate-only Model)'), side=2, line=2.25, cex=0.8)
-# mtext(expression('Residuals ('~{delta}^15*N~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
-legend("topright", legend=paste0("t=", round(n.t.clim$statistic,2), "; df=", round(n.t.clim$parameter,2), "; p=", round(n.t.clim$p.value,2)), bty = "n", cex = 0.8)
+# mtext(expression('Residuals ('~{delta}^13*C~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
+legend("topright", legend=paste0("t=", round(c.t.clim$statistic,2), "; df=", round(c.t.clim$parameter,2), "; p=", round(c.t.clim$p.value,2)), bty = "n", cex = 0.8)
 
+# nitrogen
 plot(del15N_permil~specimen_mediand18O, data=matchedDF_weighted, pch=16, 
      xlab = "", ylab = "", type="n")
 points(del15N_permil~specimen_mediand18O, 
@@ -347,6 +347,14 @@ abline(nitrogen.lm.final, lty=2)
 abline(nitrogen.lm.clim, lty=1)
 mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25)
 mtext(expression({delta}^15*N~'\u2030'), side=2, line=2.25)
+
+boxplot(nitrogen.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))],
+        xlab="", ylab="")
+stripchart(nitrogen.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
+mtext("Taxon", side=1, line=2.25)
+mtext(expression('Residuals (Climate-only Model)'), side=2, line=2.25, cex=0.8)
+# mtext(expression('Residuals ('~{delta}^15*N~'\u2030'~' ~ '~{delta}^18*O~'\u2030'~')'), side=2, line=2.25, cex=0.8)
+legend("topright", legend=paste0("t=", round(n.t.clim$statistic,2), "; df=", round(n.t.clim$parameter,2), "; p=", round(n.t.clim$p.value,2)), bty = "n", cex = 0.8)
 
 # taxon legend
 # Draw an empty plot
@@ -414,25 +422,25 @@ dev.off()
 
 
 # Original analysis, naive mean, no weighting, not updated ----
-# extract mean d18O value across all ages for per specimen average - code needs to be fixed
-mean.d18O<-aggregate( d18O ~ name, allAges_d18O, mean )
-
-#Remove "UCIAMS" from name column 
-mean.d18O <- mean.d18O %>%
-  mutate_at("name", str_replace, "UCIAMS", "")
-
-#Get rid of extra spaces
-mean.d18O[,1:2] <- lapply(mean.d18O[,1:2], trimws)
-
-#Convert d18O back to numeric values 
-mean.d18O2<-transform(mean.d18O, d18O = as.numeric(d18O))
-
-# Sort "matchedDF" specimens in assending order like "mean.d18O" specimens
-matchedDF2 <- matchedDF[order(matchedDF$UCIAMS_Number),]
-
-# combine isotope and climate files for analysis
-matchedDF_weighted<-cbind(matchedDF2, mean.d18O2)
-
-#Remove extra spaces in taxon levels
-matchedDF_weighted$Taxon <- trimws(matchedDF_weighted$Taxon, which = c("right"))
-matchedDF_weighted<-transform(matchedDF_weighted, Taxon = as.factor(Taxon))
+# # extract mean d18O value across all ages for per specimen average - code needs to be fixed
+# mean.d18O<-aggregate( d18O ~ name, allAges_d18O, mean )
+# 
+# #Remove "UCIAMS" from name column 
+# mean.d18O <- mean.d18O %>%
+#   mutate_at("name", str_replace, "UCIAMS", "")
+# 
+# #Get rid of extra spaces
+# mean.d18O[,1:2] <- lapply(mean.d18O[,1:2], trimws)
+# 
+# #Convert d18O back to numeric values 
+# mean.d18O2<-transform(mean.d18O, d18O = as.numeric(d18O))
+# 
+# # Sort "matchedDF" specimens in assending order like "mean.d18O" specimens
+# matchedDF2 <- matchedDF[order(matchedDF$UCIAMS_Number),]
+# 
+# # combine isotope and climate files for analysis
+# matchedDF_weighted<-cbind(matchedDF2, mean.d18O2)
+# 
+# #Remove extra spaces in taxon levels
+# matchedDF_weighted$Taxon <- trimws(matchedDF_weighted$Taxon, which = c("right"))
+# matchedDF_weighted<-transform(matchedDF_weighted, Taxon = as.factor(Taxon))
