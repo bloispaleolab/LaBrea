@@ -200,7 +200,7 @@ apply(C_model_res, 2, summary)
 # Supplemental figure for appendix - sensitivity analysis ----
 ## Compare final estimate with sensitivity analysis ----
 
-grDevices::cairo_pdf("output/SuppFigureX_climate_sensitivity_July2021.pdf", width=8, height=6)
+grDevices::pdf("output/SuppFigureX_climate_sensitivity_July2021.pdf", width=8, height=6)
   par(mfrow=c(1,2))
   x<- hist(N_model_res$cor, xlab=expression('Correlation:'~{delta}^15*N~'\u2030'~'~'~{delta}^18*O~'\u2030'), main="")
   segments(N_cor.test_weighted$estimate, 0, N_cor.test_weighted$estimate, max(x$counts), 
@@ -308,7 +308,7 @@ summary(nitrogen.lm.all.age)
 # JESSICA's NEW final plot ####
 ## Figure 3 ----
 
-grDevices::cairo_pdf("output/Figure3_lm_carbon_nitrogen_all_July2021.pdf", width=8, height=8)
+grDevices::pdf("output/Figure3_lm_carbon_nitrogen_all_July2021.pdf", width=8, height=8)
 
 layout(matrix(seq(1:6), ncol=3, nrow=2, byrow=F), widths=c(2.5,2.5,1))
 par(mar=c(4,4,1,1), cex.axis=1, bty="l")
@@ -389,7 +389,7 @@ dev.off()
 # order matchedDF_weighted
 matchedDF_weighted <- matchedDF_weighted[order(matchedDF_weighted$specimen_medianage),]
 
-grDevices::cairo_pdf(file="output/Figure4_carbon_climate_time_updated.pdf", height=6, width=8)
+grDevices::pdf(file="output/Figure4_carbon_climate_time_updated.pdf", height=6, width=8)
 
 layout(matrix(seq(1:2), ncol=1, nrow=2), heights=c(0.75,1))
 par(mar=c(4,5,0,5), cex.axis=1, bty="l", xpd=F)
