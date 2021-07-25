@@ -8,7 +8,7 @@
 
 dat2<- read.delim("data/raw/climate/hendy2002data.txt")
 ages <- read.csv("output/OxCal/final oxcal models/Table Y - DateSummary.csv", header=T)
-ages[,4:12] <- ages[,4:12] - 50 # subtract 50 years to all ages to make it years before 2000
+#ages[,4:12] <- ages[,4:12] - 50 # subtract 50 years to all ages to make it years before 2000
 
 
 # OLD NOTE: from everything I can tell, they do not necessarily use 'before 2000' in the 2002 paper, so commented out below!
@@ -21,7 +21,7 @@ ages[,4:12] <- ages[,4:12] - 50 # subtract 50 years to all ages to make it years
 
 grDevices::cairo_pdf(file="output/Figure2_ClimateCurve-updated.pdf", height=6, width=8)
   plot(pach.d18O~HendyAge, dat=dat2, type="l", 
-       xlab="Years before 2000", ylab = expression({delta}^18*O~'\u2030'),
+       xlab="Years before present", ylab = expression({delta}^18*O~'\u2030'),
        bty="n", 
        xlim=c(60000, 0), ylim=c(3, 0),
        lab=c(12, 8, 7), xaxs="i", yaxs="r", col="gray")

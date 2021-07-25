@@ -127,7 +127,7 @@ if (length(which(is.na(matches)))>0){
   samples_final <- samples
 }
 
-N=100
+N=100 # Note: some specimens do not have 100 age estimates.
 N_model_res <- as.data.frame(matrix(data=NA, nrow=N, ncol=6))
 C_model_res<- as.data.frame(matrix(data=NA, nrow=N, ncol=6))
 colnames(N_model_res) <- colnames(C_model_res) <- c('Fstat', 'lm_pVal', 'coeff', 'AdjR2', 'cor', 'cor_pVal')
