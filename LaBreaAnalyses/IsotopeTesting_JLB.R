@@ -201,7 +201,7 @@ apply(C_model_res, 2, summary)
 ## Compare final estimate with sensitivity analysis ----
 
 grDevices::pdf("output/SuppFigureX_climate_sensitivity_July2021.pdf", width=8, height=6)
-  par(mfrow=c(1,2))
+  par(mfrow=c(1,2)) #I changed "cairo_pdf" to "pdf" because the former gives me an error
   x<- hist(N_model_res$cor, xlab=expression('Correlation:'~{delta}^15*N~'\u2030'~'~'~{delta}^18*O~'\u2030'), main="")
   segments(N_cor.test_weighted$estimate, 0, N_cor.test_weighted$estimate, max(x$counts), 
            col="red", lwd=2)
@@ -304,6 +304,8 @@ grDevices::pdf("output/Figure3_lm_carbon_nitrogen_all_July2021.pdf", width=8, he
 
 layout(matrix(seq(1:6), ncol=3, nrow=2, byrow=F), widths=c(2.5,2.5,1))
 par(mar=c(4,4,1,1), cex.axis=1, bty="l")
+
+dev.off()#this PDF is giving me an error
 
 # carbon
 boxplot(carbon.lm.clim$residuals ~ matchedDF_weighted$Taxon[which(!is.na(matchedDF_weighted$specimen_mediand18O))], 
