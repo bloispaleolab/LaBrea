@@ -290,7 +290,7 @@ summary(nitrogen.lm.all.interaction)
 #stepwise regression --> this shows that there is not a good final model
 nitrogen.lm.final <- step(lm(del15N_permil~specimen_mediand18O*Taxon, data=matchedDF_weighted, direction="both"))
 # --> there is not a good final model, so I am just going to treat nitrogen the same as carbon for plotting.
-nitrogen.lm.final <- nitrogen.lm.all.additive
+#nitrogen.lm.final <- nitrogen.lm.all.additive
 
 # t-test of residuals from climate-only model
 # Otospermophilus and Sylvilagus are NOT signif different
