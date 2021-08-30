@@ -40,22 +40,21 @@ allAges<- allAges[!(allAges$name=="UCIAMS 198199" |
                      allAges$name=="UCIAMS 216782" | allAges$name=="UCIAMS 223520" |
                      allAges$name=="UCIAMS 198297"),]
 
-#remove specimens without stable isotope values
+#remove specimens without stable isotope values & unmeasureable dates
 allAges<- allAges[!(allAges$name=="UCIAMS 223515" | 
                      allAges$name=="UCIAMS 223519" | allAges$name=="UCIAMS 223522"),]
 
-#remove specimens with unmeasureable dates
-allAges<- allAges[!(allAges$name=="UCIAMS 223515" | 
-                     allAges$name=="UCIAMS 223519" | allAges$name=="UCIAMS 223522"),]
+# Match d180 to all age estimates (both median_age as well as the full distribution of ages) for every sample ----
 
+# adding d18O to allAges to match to the full distribution of age estimates for each sample
 
-# Match d180 to all age estimates for every sample ----
-# end result is a new dataframe, adding d18O to allAges
 all(allAges$value<0) # this should be true, then take the absolute values to match to climate
 xout <- abs(allAges$value)
 Hendy_extracted <- approx(x=climDat$HendyAge, y=climDat$pach.d18O, method="linear", xout=xout)
 d18O<-Hendy_extracted$y
 allAges_d18O<-cbind(allAges, d18O) # this matches d180 to all the age estimates, for all probabilities
+
+# matching d18O to the median ages
 d18O_medianage <- approx(x=climDat$HendyAge, y=climDat$pach.d18O, method="linear", xout=sample_median_ages$median_age)$y
 
 # remove any unmatched specimen from the files
@@ -72,14 +71,13 @@ if (length(which(is.na(matches)))>0){
 # end result dataframes:
 # isoDat2_final - final C/N isotope data
 # samples_final - final set of samples
-# allAges_d18O - ages, probabilities, and d18O for each sample
+# allAges_d18O - ages, probabilities, and d18O for the calibrated age estimates associated with each sample
 
+# Age uncertainty: calculate weighted age and weighted mean d18O for each specimen ----
+# For each specimen, calculate the weighted d180 and weighted mean age, based on the probability of each calibrated age from the age models
 
-# Primary analysis: calculate weighted mean d18O and weighted age for each specimen ----
-# For each specimen, calculate the weighted d180 and weighted mean age, based on the probability of each calibrated age from the age models, then do the linear models
-
-specimen_wd18O <- vector(mode="numeric", length=length(samples_final))
 specimen_wage <- vector(mode="numeric", length=length(samples_final))
+specimen_wd18O <- vector(mode="numeric", length=length(samples_final))
 
 for (i in 1:length(samples_final)){
   # pull out specimen ID
@@ -92,141 +90,30 @@ for (i in 1:length(samples_final)){
   specimen_wage[i] <- weighted.mean(specd18O$value, specd18O$probability)
 }
 
-# match with isotope data
-matchedDF_weighted <- cbind(isoDat2_final[,c('UCIAMS_Number', 'Taxon', 'del15N_permil', 'del13C_permil', 'X14C_age_BP')], specimen_wd18O, specimen_wage)
-matchedDF_weighted$specimen_mediand18O <- d18O_medianage
+# match all age and d18O estimates with the original C&N isotope data
+# matchedDF_weighted thus is the full final dataset:
+# UCIAMS_Number
+# Taxon
+# del15N_permil      
+# del13C_permil
+# X14C_age_BP
+# specimen_wage # sensitivity age
+# specimen_wd18O # sensitivity d18O estimate
+# specimen_medianage # primary age
+# specimen_mediand18O #primary d18O estimate
+
+matchedDF_weighted <- cbind(isoDat2_final[,c('UCIAMS_Number', 'Taxon', 'del15N_permil', 'del13C_permil', 'X14C_age_BP')], specimen_wage, specimen_wd18O)
 matchedDF_weighted$specimen_medianage <- sample_median_ages$median_age
-
-N_model_weighted <- lm(del15N_permil ~ specimen_wd18O, data=matchedDF_weighted)
-summary(N_model_weighted)
-C_model_weighted <- lm(del13C_permil ~ specimen_wd18O, data=matchedDF_weighted)
-summary(C_model_weighted)
-
-N_model_median <- lm(del15N_permil ~ specimen_mediand18O, data=matchedDF_weighted)
-summary(N_model_median)
-C_model_median <- lm(del13C_permil ~ specimen_mediand18O, data=matchedDF_weighted)
-summary(C_model_median)
-
-# compare weighted d180 vs d18O at median age
-# No substantial difference. N still almost signif, C still highly signif. 
-# Median is more significant than weighted, for what that's worth. Maybe only matters when we go to match isotopes with a specific age? weighted age and median age can be quite different
-summary(N_model_weighted)
-summary(N_model_median)
-summary(C_model_weighted)
-summary(C_model_median)
-
-# Plot weighted d18O
-par(mfrow=c(1,2))
-plot(del15N_permil ~ specimen_wd18O, data=matchedDF_weighted, pch=16)
-abline(N_model_weighted)
-plot(del13C_permil ~ specimen_wd18O, data=matchedDF_weighted, pch=16)
-abline(C_model_weighted)
-
-N_cor.test_weighted <- cor.test(matchedDF_weighted$del15N_permil, matchedDF_weighted$specimen_wd18O)
-C_cor.test_weighted <- cor.test(matchedDF_weighted$del13C_permil, matchedDF_weighted$specimen_wd18O)
-
-# Plot median d18O
-par(mfrow=c(1,2))
-plot(del15N_permil ~ specimen_mediand18O, data=matchedDF_weighted, pch=16)
-abline(N_model_median)
-plot(del13C_permil ~ specimen_mediand18O, data=matchedDF_weighted, pch=16)
-abline(C_model_median)
-
-N_cor.test_median <- cor.test(matchedDF_weighted$del15N_permil, matchedDF_weighted$specimen_mediand18O)
-C_cor.test_median <- cor.test(matchedDF_weighted$del13C_permil, matchedDF_weighted$specimen_mediand18O)
-
-# Sensitivity analysis  ----
-# How much of a difference does the variation in age make?
-N=100 # Note: some specimens do not have 100 age estimates.
-N_model_res <- as.data.frame(matrix(data=NA, nrow=N, ncol=6))
-C_model_res<- as.data.frame(matrix(data=NA, nrow=N, ncol=6))
-colnames(N_model_res) <- colnames(C_model_res) <- c('Fstat', 'lm_pVal', 'coeff', 'AdjR2', 'cor', 'cor_pVal')
-
-for (k in 1:N){
-  
-  # for each specimen, sample a d18O value
-  sampledd18O <- vector(mode="numeric", length=length(samples_final))
-  
-  for (i in 1:length(samples_final)){
-    # pull out specimen ID
-    spec <- samples_final[i] 
-    # pull out all calibrated ages and probabilities
-    specd18O <- allAges_d18O[which(allAges_d18O$name == spec),]
-    # sample a single age, with sampling weighted per the probability
-    sampledd18O[i] <- sample(specd18O$d18O, 1, prob=specd18O$probability)
-  }
-  
-  # match with isotope data
-  matchedDF_sensitivity <- cbind(isoDat2_final[,c('UCIAMS_Number', 'Taxon', 'del15N_permil', 'del13C_permil', 'X14C_age_BP')], sampledd18O)
-  #matchedDF <- cbind(matchedDF, weighted.d18O) ## NATE - No 'weighted.d18O' object found, commented this out.
-  
-  N_model_sensitivity <- lm(del15N_permil ~ sampledd18O, data=matchedDF_sensitivity)
-  C_model_sensitivity <- lm(del13C_permil ~ sampledd18O, data=matchedDF_sensitivity)
-  
-  par(mfrow=c(1,2))
-  plot(del15N_permil ~ sampledd18O, data=matchedDF_sensitivity, pch=16)
-  abline(N_model_sensitivity)
-  plot(del13C_permil ~ sampledd18O, data=matchedDF_sensitivity, pch=16)
-  abline(C_model_sensitivity)
-  
-  N_cor.test_sensitivity <- cor.test(matchedDF_sensitivity$del15N_permil, matchedDF_sensitivity$sampledd18O)
-  C_cor.test_sensitivity <- cor.test(matchedDF_sensitivity$del13C_permil, matchedDF_sensitivity$sampledd18O)
-  
-  N_model_res[k, 1]<- summary(N_model_sensitivity)$fstatistic[1]
-  N_model_res[k, 2]<- summary(N_model_sensitivity)$coefficients[8]
-  N_model_res[k, 3]<- summary(N_model_sensitivity)$coefficients[2]
-  N_model_res[k, 4]<- summary(N_model_sensitivity)$adj.r.squared
-  N_model_res[k, 5]<- N_cor.test_sensitivity$estimate
-  N_model_res[k, 6]<- N_cor.test_sensitivity$p.value
-  
-  C_model_res[k, 1]<- summary(C_model_sensitivity)$fstatistic[1]
-  C_model_res[k, 2]<- summary(C_model_sensitivity)$coefficients[8]
-  C_model_res[k, 3]<- summary(C_model_sensitivity)$coefficients[2]
-  C_model_res[k, 4]<- summary(C_model_sensitivity)$adj.r.squared
-  C_model_res[k, 5]<- C_cor.test_sensitivity$estimate
-  C_model_res[k, 6]<- C_cor.test_sensitivity$p.value
-  
-}
-
-#Jessica - Can we run many iterations on the model above (e.g., 1000)
-#and use the min of mins and max of maxes below to better quantify 
-#the sensitivity of these estimates and the full range of R2 values?
-# sure: that's what the script above does (though only for N=100), then the apply function below shows a variety of summary stats
-
-# Calculate summary statistics on each column
-apply(N_model_res, 2, summary)
-apply(C_model_res, 2, summary)
-
-# Supplemental figure for appendix - sensitivity analysis ----
-## Compare final estimate with sensitivity analysis ----
-
-grDevices::pdf("output/SuppFigureX_climate_sensitivity_July2021_NF.pdf", width=8, height=6)
-#Jessica - use commented out line below instead of above
-#grDevices::cairo_pdf("output/SuppFigureX_climate_sensitivity_July2021_JB.pdf", width=8, height=6)
-  par(mfrow=c(1,2)) 
-  x<- hist(N_model_res$cor, xlab=expression('Correlation:'~{delta}^15*N~'\u2030'~'~'~{delta}^18*O~'\u2030'), main="")
-  segments(N_cor.test_weighted$estimate, 0, N_cor.test_weighted$estimate, max(x$counts), 
-           col="red", lwd=2)
-  segments(N_cor.test_median$estimate, 0, N_cor.test_median$estimate, max(x$counts), 
-           col="blue", lwd=2)
-  legend(xpd=T, x=0.25, y=35, bty="n", legend=c("median d18O", "weighted d18O"), 
-         col=c("blue", "red"), lwd=c(2,1), cex=0.5)
-  
-  y<- hist(C_model_res$cor, xlab=expression('Correlation:'~{delta}^13*C~'\u2030'~'~'~{delta}^18*O~'\u2030'), main="")
-  segments(C_cor.test_weighted$estimate, 0, C_cor.test_weighted$estimate, max(y$counts), 
-           col="red", lwd=1)
-  segments(C_cor.test_median$estimate, 0, C_cor.test_median$estimate, max(y$counts), 
-           col="blue", lwd=2)
-dev.off()
+matchedDF_weighted$specimen_mediand18O <- d18O_medianage
 
 
 ####################3
 # Final Models and Figures ---- 
-# plot data with  weighted mean dataframe - matchedDF_weighted
-# we should use the median d18) values for final analysis, and present the weighted ones in supplemental, along with sensitivity analysis
+# using the final dataframe: matchedDF_weighted
+# we should use the median d18O values for final analysis, and present the weighted ones in supplemental, along with sensitivity analysis
 
 # Methods potential text:
-# For carbon and nitrogen, I fit a linear model that originally included oxygen, taxon, and the interaction between the two variables as independent variables. I then performed stepwise regression to determine a final model. 
+# For carbon and nitrogen, we fit a linear model that originally included oxygen, taxon, and the interaction between the two variables as independent variables. We then performed stepwise regression to determine a final model. 
 # Results potential text
 # Stepwise regression indicated that there was no significant interaction between 18O and taxon for either carbon or nitrogen stable isotope values. For carbon, variation in 13C was significantly associated with both 18O and taxon (stats from summary(carbon.lm.final)). For nitrogen, neither 18O nor taxon explained significant variation in 15N, though taxon as a single variable was marginally significant (stats from summary(nitrogen.lm.taxon)).
 
@@ -246,7 +133,7 @@ carbon.lm.taxon<-lm(del13C_permil~Taxon, data=matchedDF_weighted)
 summary(carbon.lm.taxon)
 
 # model with no interaction term 
-# NOTE: this is what the final model is in the end, so THIS  IS WHAT YOU SHOULD REPORT IN THE PAPER. This should be the same as the carbon.lm.final model below
+# NOTE: this is what the final model is in the end, so THIS  IS WHAT YOU SHOULD REPORT IN THE PAPER. This should be the same as the carbon.lm.final model below (line 151)
 carbon.lm.all<-lm(del13C_permil~specimen_mediand18O + Taxon, data=matchedDF_weighted)
 summary(carbon.lm.all)
 
@@ -292,7 +179,6 @@ summary(nitrogen.lm.all.interaction)
 #stepwise regression --> this shows that there is not a good final model
 nitrogen.lm.final <- step(lm(del15N_permil~specimen_mediand18O*Taxon, data=matchedDF_weighted, direction="both"))
 # --> there is not a good final model, so I am just going to treat nitrogen the same as carbon for plotting.
-#nitrogen.lm.final <- nitrogen.lm.all.additive
 
 # t-test of residuals from climate-only model
 # Otospermophilus and Sylvilagus are NOT signif different
@@ -307,16 +193,15 @@ summary(carbon.lm.all.age)
 nitrogen.lm.all.age<-step(lm(del15N_permil ~ specimen_mediand18O * Taxon * specimen_medianage, data=matchedDF_weighted))
 summary(nitrogen.lm.all.age)
 
-# JESSICA's NEW final plot ####
+# NEW final plot ####
 ## Figure 3 ----
 
-grDevices::pdf("output/Figure3_lm_carbon_nitrogen_all_July2021_NF.pdf", width=8, height=8)
-#grDevices::pdf("output/Figure3_lm_carbon_nitrogen_all_July2021_JB.pdf", width=8, height=8)
+#grDevices::pdf("output/Figure3_lm_carbon_nitrogen_all_July2021_NF.pdf", width=8, height=8)
+grDevices::cairo_pdf("output/Figure3_lm_carbon_nitrogen_all_Aug2021_JB.pdf", width=8, height=8)
 
 layout(matrix(seq(1:6), ncol=3, nrow=2, byrow=F), widths=c(2.5,2.5,1))
 par(mar=c(4,4,1,1), cex.axis=1, bty="l")
 
-dev.off()#this PDF is giving me an error
 
 # carbon
 plot(del13C_permil~specimen_mediand18O, data=matchedDF_weighted, pch=16, type="n", xlab="", ylab="")
@@ -426,27 +311,171 @@ lines(specimen_mediand18O~specimen_medianage, data=matchedDF_weighted, lty=1, co
 points(specimen_mediand18O~specimen_medianage, data=matchedDF_weighted, pch=16, col="blue", cex=0.5)
 dev.off()
 
+# Sensitivity analysis  ----
+# sensitivity analysis #1: compare weighted and median age models, using the final models from the primary analysis
 
-# Original analysis, naive mean, no weighting, not updated ----
-# # extract mean d18O value across all ages for per specimen average - code needs to be fixed
-# mean.d18O<-aggregate( d18O ~ name, allAges_d18O, mean )
-# 
-# #Remove "UCIAMS" from name column 
-# mean.d18O <- mean.d18O %>%
-#   mutate_at("name", str_replace, "UCIAMS", "")
-# 
-# #Get rid of extra spaces
-# mean.d18O[,1:2] <- lapply(mean.d18O[,1:2], trimws)
-# 
-# #Convert d18O back to numeric values 
-# mean.d18O2<-transform(mean.d18O, d18O = as.numeric(d18O))
-# 
-# # Sort "matchedDF" specimens in assending order like "mean.d18O" specimens
-# matchedDF2 <- matchedDF[order(matchedDF$UCIAMS_Number),]
-# 
-# # combine isotope and climate files for analysis
-# matchedDF_weighted<-cbind(matchedDF2, mean.d18O2)
-# 
-# #Remove extra spaces in taxon levels
-# matchedDF_weighted$Taxon <- trimws(matchedDF_weighted$Taxon, which = c("right"))
-# matchedDF_weighted<-transform(matchedDF_weighted, Taxon = as.factor(Taxon))
+C_model_weighted <- lm(del13C_permil ~ specimen_wd18O + Taxon, data=matchedDF_weighted)
+summary(C_model_weighted)
+C_model_median <- lm(del13C_permil ~ specimen_mediand18O + Taxon, data=matchedDF_weighted)
+summary(C_model_median) # this is the final model from the primary analyses
+
+N_model_weighted <- lm(del15N_permil ~ specimen_wd18O + Taxon, data=matchedDF_weighted)
+summary(N_model_weighted)
+N_model_median <- lm(del15N_permil ~ specimen_mediand18O + Taxon, data=matchedDF_weighted)
+summary(N_model_median) # this is the final model from the primary analyses
+
+# compare weighted d180 vs d18O at median age
+# No substantial difference. N still almost signif, C still highly signif. 
+# Median is more significant than weighted, for what that's worth. Maybe only matters when we go to match isotopes with a specific age? weighted age and median age can be quite different
+
+
+# How much of a difference does the variation in age make?
+N=100 # Note: some specimens do not have 100 age estimates.
+N_model_res <- as.data.frame(matrix(data=NA, nrow=N, ncol=6))
+C_model_res<- as.data.frame(matrix(data=NA, nrow=N, ncol=6))
+colnames(N_model_res) <- colnames(C_model_res) <- c('Fstat', 'lm_pVal', 'coeff', 'AdjR2', 'cor', 'cor_pVal')
+
+for (k in 1:N){
+  
+  # for each specimen, sample a d18O value
+  sampledd18O <- vector(mode="numeric", length=length(samples_final))
+  
+  for (i in 1:length(samples_final)){
+    # pull out specimen ID
+    spec <- samples_final[i] 
+    # pull out all calibrated ages and probabilities
+    specd18O <- allAges_d18O[which(allAges_d18O$name == spec),]
+    # sample a single age, with sampling weighted per the probability
+    sampledd18O[i] <- sample(specd18O$d18O, 1, prob=specd18O$probability)
+  }
+  
+  # match with isotope data
+  matchedDF_sensitivity <- cbind(isoDat2_final[,c('UCIAMS_Number', 'Taxon', 'del15N_permil', 'del13C_permil', 'X14C_age_BP')], sampledd18O)
+  
+  N_model_sensitivity <- lm(del15N_permil ~ sampledd18O, data=matchedDF_sensitivity)
+  C_model_sensitivity <- lm(del13C_permil ~ sampledd18O, data=matchedDF_sensitivity)
+  
+  par(mfrow=c(1,2))
+  plot(del15N_permil ~ sampledd18O, data=matchedDF_sensitivity, pch=16)
+  abline(N_model_sensitivity)
+  plot(del13C_permil ~ sampledd18O, data=matchedDF_sensitivity, pch=16)
+  abline(C_model_sensitivity)
+  
+  N_cor.test_sensitivity <- cor.test(matchedDF_sensitivity$del15N_permil, matchedDF_sensitivity$sampledd18O)
+  C_cor.test_sensitivity <- cor.test(matchedDF_sensitivity$del13C_permil, matchedDF_sensitivity$sampledd18O)
+  
+  N_model_res[k, 1]<- summary(N_model_sensitivity)$fstatistic[1]
+  N_model_res[k, 2]<- summary(N_model_sensitivity)$coefficients[8]
+  N_model_res[k, 3]<- summary(N_model_sensitivity)$coefficients[2]
+  N_model_res[k, 4]<- summary(N_model_sensitivity)$adj.r.squared
+  N_model_res[k, 5]<- N_cor.test_sensitivity$estimate
+  N_model_res[k, 6]<- N_cor.test_sensitivity$p.value
+  
+  C_model_res[k, 1]<- summary(C_model_sensitivity)$fstatistic[1]
+  C_model_res[k, 2]<- summary(C_model_sensitivity)$coefficients[8]
+  C_model_res[k, 3]<- summary(C_model_sensitivity)$coefficients[2]
+  C_model_res[k, 4]<- summary(C_model_sensitivity)$adj.r.squared
+  C_model_res[k, 5]<- C_cor.test_sensitivity$estimate
+  C_model_res[k, 6]<- C_cor.test_sensitivity$p.value
+  
+}
+
+#Jessica - Can we run many iterations on the model above (e.g., 1000)
+#and use the min of mins and max of maxes below to better quantify 
+#the sensitivity of these estimates and the full range of R2 values?
+# sure: that's what the script above does (though only for N=100), then the apply function below shows a variety of summary stats
+
+# Calculate summary statistics on each column
+apply(N_model_res, 2, summary)
+apply(C_model_res, 2, summary)
+
+# Supplemental figure for appendix - sensitivity analysis ----
+## Compare final estimate with sensitivity analysis ----
+
+# new supplemental figure, showing the test results for both Adj. R2 and the fitted coefficient for d18O.
+# Note the following models to use:
+# Carbon median ages univariate climate: carbon.lm.clim
+# Nitrogen median ages univariate climate: nitrogen.lm.clim
+
+# Carbon weighted age univariate climate
+carbon.lm.clim.weighted <- lm(del13C_permil ~ specimen_wd18O, data=matchedDF_weighted)
+# Nitrogen weighted age univariate climate
+nitrogen.lm.clim.weighted <- lm(del15N_permil ~ specimen_wd18O, data=matchedDF_weighted)
+
+# grDevices::pdf("output/SuppFigureX_climate_sensitivity_July2021_NF.pdf", width=8, height=6)
+#Jessica - use line below instead of above
+grDevices::cairo_pdf("output/SuppFigureX_climate_sensitivity_R2andcoeff.pdf", width=8, height=6)
+
+par(mfrow=c(2,2)) 
+
+# plot Carbon R2
+y1<- hist(C_model_res$AdjR2, xlab=expression('Adjusted R'^2), main=expression('Model:'~{delta}^13*C~'\u2030'~'~'~{delta}^18*O~'\u2030'))
+segments(summary(carbon.lm.clim.weighted)$adj.r.squared, 0, 
+         summary(carbon.lm.clim.weighted)$adj.r.squared, max(y1$counts), 
+         col="red", lwd=1)
+segments(summary(carbon.lm.clim)$adj.r.squared, 0, 
+         summary(carbon.lm.clim)$adj.r.squared, max(y1$counts), 
+         col="blue", lwd=2)
+legend(xpd=T, x=0.25, y=35, bty="n", legend=c("median d18O", "weighted d18O"), 
+       col=c("blue", "red"), lwd=c(2,1), cex=0.5)
+
+# plot Carbon d18O fitted coefficient
+y2 <- hist(C_model_res$coeff, xlab=expression({delta}^18*O~'fitted coefficient'), main="")
+segments(summary(carbon.lm.clim.weighted)$coefficients[2], 0, 
+         summary(carbon.lm.clim.weighted)$coefficients[2], max(y2$counts), 
+         col="red", lwd=1)
+segments(summary(carbon.lm.clim)$coefficients[2], 0, 
+         summary(carbon.lm.clim)$coefficients[2], max(y2$counts), 
+         col="blue", lwd=2)
+
+
+# plot Nitrogen R2
+x1<- hist(N_model_res$AdjR2, xlab=expression('Adjusted R'^2), main=expression('Model:'~{delta}^15*N~'\u2030'~'~'~{delta}^18*O~'\u2030'))
+segments(summary(nitrogen.lm.clim.weighted)$adj.r.squared, 0, 
+         summary(nitrogen.lm.clim.weighted)$adj.r.squared, max(x1$counts), 
+         col="red", lwd=1)
+segments(summary(nitrogen.lm.clim)$adj.r.squared, 0, 
+         summary(nitrogen.lm.clim)$adj.r.squared, max(x1$counts), 
+         col="blue", lwd=2)
+
+# plot Nitrogen d18O fitted coefficient
+x2 <- hist(N_model_res$coeff, xlab=expression({delta}^18*O~'fitted coefficient'), main="")
+segments(summary(nitrogen.lm.clim.weighted)$coefficients[2], 0, 
+         summary(nitrogen.lm.clim.weighted)$coefficients[2], max(x2$counts), 
+         col="red", lwd=1)
+segments(summary(nitrogen.lm.clim)$coefficients[2], 0, 
+         summary(nitrogen.lm.clim)$coefficients[2], max(x2$counts), 
+         col="blue", lwd=2)
+dev.off()
+
+# old supplemental figure, showing the correlation test results
+grDevices::pdf("output/SuppFigureX_climate_sensitivity_July2021_NF.pdf", width=8, height=6)
+#Jessica - use commented out line below instead of above
+#grDevices::cairo_pdf("output/SuppFigureX_climate_sensitivity_July2021_JB.pdf", width=8, height=6)
+par(mfrow=c(1,2)) 
+x<- hist(N_model_res$cor, xlab=expression('Correlation:'~{delta}^15*N~'\u2030'~'~'~{delta}^18*O~'\u2030'), main="")
+segments(N_cor.test_weighted$estimate, 0, N_cor.test_weighted$estimate, max(x$counts), 
+         col="red", lwd=2)
+segments(N_cor.test_median$estimate, 0, N_cor.test_median$estimate, max(x$counts), 
+         col="blue", lwd=2)
+legend(xpd=T, x=0.25, y=35, bty="n", legend=c("median d18O", "weighted d18O"), 
+       col=c("blue", "red"), lwd=c(2,1), cex=0.5)
+
+y<- hist(C_model_res$cor, xlab=expression('Correlation:'~{delta}^13*C~'\u2030'~'~'~{delta}^18*O~'\u2030'), main="")
+segments(C_cor.test_weighted$estimate, 0, C_cor.test_weighted$estimate, max(y$counts), 
+         col="red", lwd=1)
+segments(C_cor.test_median$estimate, 0, C_cor.test_median$estimate, max(y$counts), 
+         col="blue", lwd=2)
+dev.off()
+
+
+# Final additional plot - age of Squirrels vs rabbits ----
+age_ttest<- t.test(specimen_medianage~Taxon, data=matchedDF_weighted)
+
+pdf(file="output/SuppFigY_taxon_age_distribution.pdf", height=6, width=6)
+boxplot(specimen_medianage~Taxon, data=matchedDF_weighted, 
+        ylim=c(55000, 0), 
+        xlab="", ylab="Median Specimen Age (cal years BP)")
+stripchart(specimen_medianage~Taxon, data=matchedDF_weighted, vertical=TRUE, ylim=c(55000, 0), add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
+legend("topright", legend=paste0("t=", round(age_ttest$statistic,2), "; df=", round(age_ttest$parameter,2), "; p=", round(age_ttest$p.value,2)), bty = "n", cex = 0.8)
+dev.off()
