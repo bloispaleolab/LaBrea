@@ -5,15 +5,14 @@
 
 ### Read in common data files
 ## things to do still - determine whether the -50 offset is appropriate
+# OLD NOTE: from everything I can tell, they do not necessarily use 'before 2000' in the 2002 paper, so commented out below!
+#HendyAge_corr<-dat2$HendyAge -50 #correct for difference between RC age (before 1950) and Hendy Age (before 2000)
+#dat2_corrected<-cbind(dat2, HendyAge_corr)
 
 dat2<- read.delim("data/raw/climate/hendy2002data.txt")
 ages <- read.csv("output/OxCal/final oxcal models/Table Y - DateSummary.csv", header=T)
 #ages[,4:12] <- ages[,4:12] - 50 # subtract 50 years to all ages to make it years before 2000
 
-
-# OLD NOTE: from everything I can tell, they do not necessarily use 'before 2000' in the 2002 paper, so commented out below!
-#HendyAge_corr<-dat2$HendyAge -50 #correct for difference between RC age (before 1950) and Hendy Age (before 2000)
-#dat2_corrected<-cbind(dat2, HendyAge_corr)
 
   ### SECTION 1 CODE ----
   
