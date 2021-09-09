@@ -8,7 +8,7 @@ library(rstatix)
 
 iso_dat<-read.csv("data/processed/Interpolation/IsoClim_interpolated_cal20.csv")# All rabbits and Squirrels with mean calibrated ages < 50 ka BP
 
-####Intraspecific diet ###
+####Intraspecific diet - Figure 1 ####
 
 ## Compare desert cottontails to brush rabbits
 
@@ -21,15 +21,16 @@ wilcox.test(d13C~Species, data=iso_rabbits, correct = TRUE, alternative = "two.s
 p1 <- ggboxplot(iso_rabbits, x = "Species", y = "d13C",
                color = "Species", palette = c("orange", "darkorange3"),
                 add = "jitter") +
-labs(y = expression(italic(delta)^13*C~("\211")))+
+  labs(y = expression({delta}^13*C~'\u2030'))+
   theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
+        legend.position = "none")
+
 #  Add p-value
-p1 + stat_compare_means()
+# p1 + stat_compare_means()
 # Change method
-p1 + stat_compare_means(method = "wilcox.test", label.x = 2)
+rabbits_C <- p1 + stat_compare_means(method = "wilcox.test", label.x = 2)
 #p-values appear on figure as a single plot, but not on multiplots
+rabbits_C
 
 #nitrogen
 wilcox.test(d15N~Species, data=iso_rabbits, correct = TRUE)
@@ -37,15 +38,16 @@ wilcox.test(d15N~Species, data=iso_rabbits, correct = TRUE)
 p2 <- ggboxplot(iso_rabbits, x = "Species", y = "d15N",
                 color = "Species", palette = c("orange", "darkorange3"),
                 add = "jitter") +
-  labs(y = expression(italic(delta)^15*N~("\211")))+
+#  labs(y = expression(italic(delta)^15*N~("\211")))+
+  labs(y = expression(italic(delta)^15*N~("\u2030")))+
   theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
+        legend.position = "none")
 #  Add p-value
-p2 + stat_compare_means()
+#p2 + stat_compare_means()
 # Change method
-p2 + stat_compare_means(method = "wilcox.test", label.x = 2)
+rabbits_N <- p2 + stat_compare_means(method = "wilcox.test", label.x = 2)
 
+## Compare squirrels to rabbits
 
 #carbon
 wilcox.test(d13C~Taxon, data=iso_dat, correct = TRUE)
@@ -53,14 +55,14 @@ wilcox.test(d13C~Taxon, data=iso_dat, correct = TRUE)
 p3 <- ggboxplot(iso_dat, x = "Taxon", y = "d13C",
                 color = "Taxon", palette = c("royalblue2", "darkorange"),
                 add = "jitter") +
-  labs(y = expression(italic(delta)^13*C~("\211")))+
+  labs(y = expression({delta}^13*C~'\u2030'), x="")+
+  #  labs(y = expression(italic(delta)^13*C~("\211")))+
   theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
+        legend.position = "none")
 #  Add p-value
-p3 + stat_compare_means()
+# p3 + stat_compare_means()
 # Change method
-p3 + stat_compare_means(method = "wilcox.test", label.x = 2)
+genus_C <- p3 + stat_compare_means(method = "wilcox.test", label.x = 2)
 
 #nitrogen
 wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
@@ -68,23 +70,39 @@ wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
 p4 <- ggboxplot(iso_dat, x = "Taxon", y = "d15N",
                 color = "Taxon", palette = c("royalblue2", "darkorange"),
                 add = "jitter") +
-  labs(y = expression(italic(delta)^15*N~("\211")))+
+  #  labs(y = expression(italic(delta)^15*N~("\211")))+
+  labs(y = expression(italic(delta)^15*N~("\u2030")))+
   theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
+        legend.position = "none")
 #  Add p-value
-p4 + stat_compare_means()
+# p4 + stat_compare_means()
 # Change method
-p4 + stat_compare_means(method = "wilcox.test", label.x = 2)
+genus_N <- p4 + stat_compare_means(method = "wilcox.test", label.x = 2)
 
-figure <- ggarrange(p3, p4, p1, p2,
-                    labels = c("A", "B", "C", "D"),
+# figure <- ggarrange(p3, p4, p1, p2,
+#                     labels = c("A", "B", "C", "D"),
+#                     ncol = 2, nrow = 2)
+# figure <- ggarrange(genus_C, genus_N, rabbits_C, rabbits_N,
+#                     labels = c("A", "B", "C", "D"),
+#                     ncol = 2, nrow = 2)
+figure <- ggarrange(genus_C, rabbits_C, genus_N, rabbits_N,
+                    labels = c("A", "C", "B", "D"),
                     ncol = 2, nrow = 2)
+grDevices::cairo_pdf("output/isotope paper final/Figure1_niche_boxplots_Sep2021_JB.pdf", width=8, height=8)
+figure
+dev.off()
 
-ggsave(filename="output/Isoplots/Species_niche.pdf",
-       width=8, height=6)
+# In Illustrator: Change the following labels:
+# A: W=1153, p=<0.001
+# B: W=482
+# C: W=102.5
+# D: W=88
 
-#### Isotopes and Climate ###
+# ggsave(filename="output/Isoplots/Species_niche.pdf",
+#        width=8, height=6)
+
+#### Isotopes and Climate ####
+### Note: All of these models are now in file IsotopeTesting_JLB.R ####
 
 # Methods potential text:
 # For carbon and nitrogen, I fit a linear model that originally included oxygen, taxon, and the interaction between the two variables as independent variables. I then performed stepwise regression to determine a final model. 
@@ -145,7 +163,6 @@ nitrogen.lm.final <- nitrogen.lm.all.additive
 
 # t-test of residuals from climate-only model
 n.t.clim <- t.test(nitrogen.lm.clim$residuals ~ iso_dat$Taxon[which(!is.na(iso_dat$pach.d18O_mean))])
-
 
 # JESSICA's NEW final plot ####
 
@@ -540,3 +557,9 @@ C<-ggplot(data1, aes(Cal_age, pach.d18O)) +
 C + theme(axis.text.y.left = element_text(color="blue"),
           axis.text.y.right = element_text(color="brown"))
 
+
+# Old code snippet formatting
+
+theme(axis.title.x=element_blank(),
+      axis.text.x=element_blank(),
+      axis.ticks.x=element_blank())
