@@ -23,11 +23,13 @@ all(iso1 == data_nate$iso1)
 all(iso2 == data_nate$iso2)
 all(group == data_nate$group)
 all(community == data_nate$community)
-data_formatted <- cbind(iso1, iso2, group, community)
+data_formatted <- as.data.frame(cbind(iso1, iso2, group, community))
 
 all(data_formatted == data_nate)
 
-write.csv(data_formatted, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
+# write.csv(data_formatted, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
+
+rm(list = c('iso1','iso2', 'group', 'community'))
 
 # rename data_formatted to data1 so it works in rest of code
 data1 <- data_formatted
@@ -35,21 +37,23 @@ data1 <- data_formatted
 # create the siber object
 siber.RLB <- createSiberObject(data1)
 
+# default SIBER plots ####
+
 # change ellipse color
 palette(c("royalblue2","darkorange"))
-
 
 # Create lists of plotting arguments to be passed onwards to each 
 # of the three plotting functions.
 community.hulls.args <- list(col = 1, lty = 1, lwd = 1)
 group.ellipses.args  <- list(n = 100, p.interval = 0.68, lty = 1, lwd = 2)
-group.hull.args      <- list(lty = 2, col = "grey20")
+group.hull.args      <- list(lty = 2, col = "grey20") # change color here to be organe vs blue? 
 
-pdf("output/Isoplots/SIBER.pdf", width=5, height=4)
+#pdf("output/isotope paper final/Isoplots/SIBER.pdf", width=5, height=4)
+pdf("output/isotope paper final/Figure2_SIBER.pdf", width=5, height=4)
 par(mfrow=c(1,1), mar=c(5,5,4,1)+0.01)
 plotSiberObject(siber.RLB,
                 ax.pad = 2, 
-                hulls = T, community.hulls.args, 
+                hulls = F, community.hulls.args, 
                 ellipses = T, group.ellipses.args,
                 group.hulls = T, group.hull.args,
                 bty = "L",
@@ -67,6 +71,43 @@ legend("topright", legend = c("Otospermophilus Post-LGM", "Sylvilagus Post-LGM")
        col = palette(c("royalblue2", "darkorange")), pch = 2,
        bty = "n", cex = 0.8)
 dev.off()
+
+# custom SIBER plots ####
+library(tidyverse)
+rlb_data <- data1 %>% mutate(group = factor(group), 
+                             community = factor(community),
+                             d13C = iso1, 
+                             d15N = iso2,
+                             .keep = "unused") 
+
+first.plot <- ggplot(data = rlb_data, 
+                     aes(x = d13C, 
+                         y = d15N)) + 
+  geom_point(aes(color = group, shape = community), size = 5) +
+  ylab(expression(paste(delta^{15}, "N (\u2030)"))) +
+  xlab(expression(paste(delta^{13}, "C (\u2030)"))) + 
+  theme(text = element_text(size=16)) + 
+  scale_color_viridis_d()
+
+# And print our plot to screen
+print(first.plot)
+
+classic.first.plot <- first.plot + theme_classic() + 
+  theme(text = element_text(size=18),
+        axis.ticks.length = unit(0.15, "cm"))
+
+# and print to screen
+print(classic.first.plot)
+
+# error bars
+sbg <- data1 %>% 
+  group_by(group, community) %>% 
+  summarise(count = n(),
+            mC = mean(d13C), 
+            sdC = sd(d13C), 
+            mN = mean(d15N), 
+            sdN = sd(d15N))
+
 
 
 # Summary stats
