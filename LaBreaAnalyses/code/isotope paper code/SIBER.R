@@ -4,8 +4,34 @@ library(SIBER)
 set.seed(1)
 
 # load in the dataset
-data1<- read.csv("data/processed/SIBER/SIBER_data.csv")
-#
+data_raw<- read.csv("data/processed/SIBER/SIBER_raw.csv", strip.white=T)
+
+# turn this into a SIBER data file:
+iso1 <- data_raw$del13C_permil
+iso2 <- data_raw$del15N_permil
+group <- vector(length=nrow(data_raw))
+group[which(data_raw$Taxon=="Otospermophilus")] <- 1
+group[which(data_raw$Taxon=="Sylvilagus")] <- 2
+
+community <- vector(length=nrow(data_raw))
+community[which(data_raw$X14C_age_BP > 20000)] <- 1
+community[which(data_raw$X14C_age_BP < 20000)] <- 2
+
+# check to make sure this matches Nate's original file
+data_nate<- read.csv("data/processed/SIBER/SIBER_data_Nate.csv")
+all(iso1 == data_nate$iso1)
+all(iso2 == data_nate$iso2)
+all(group == data_nate$group)
+all(community == data_nate$community)
+data_formatted <- cbind(iso1, iso2, group, community)
+
+all(data_formatted == data_nate)
+
+write.csv(data_formatted, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
+
+# rename data_formatted to data1 so it works in rest of code
+data1 <- data_formatted
+
 # create the siber object
 siber.RLB <- createSiberObject(data1)
 
