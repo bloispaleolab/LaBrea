@@ -1,8 +1,10 @@
 
 library(SIBER)
+library(tidyverse)
 
 set.seed(1)
 
+# Create SIBER dataset ----
 # load in the dataset
 data_raw<- read.csv("data/processed/SIBER/SIBER_raw.csv", strip.white=T)
 
@@ -27,17 +29,18 @@ data_formatted <- as.data.frame(cbind(iso1, iso2, group, community))
 
 all(data_formatted == data_nate)
 
-# write.csv(data_formatted, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
+write.csv(data_formatted, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
 
 rm(list = c('iso1','iso2', 'group', 'community'))
+data1 <- data_formatted # rename data_formatted to data1 so it works in rest of code
 
-# rename data_formatted to data1 so it works in rest of code
-data1 <- data_formatted
+# Read in SIBER dataset  and create SIBER object ----
 
-# create the siber object
-siber.RLB <- createSiberObject(data1)
+data1 <- read.csv(file="data/processed/SIBER/SIBER_data.csv", header=T)
+siber.RLB <- createSiberObject(data1) # create the siber object
 
-# default SIBER plots ####
+
+# default SIBER plots - using SIBER plotting ####
 
 # change ellipse color
 palette(c("royalblue2","darkorange"))
@@ -72,8 +75,9 @@ legend("topright", legend = c("Otospermophilus Post-LGM", "Sylvilagus Post-LGM")
        bty = "n", cex = 0.8)
 dev.off()
 
-# custom SIBER plots ####
-library(tidyverse)
+
+# custom SIBER plots - using ggplot2 ####
+rlbPalette <- palette(c("royalblue2","darkorange"))
 rlb_data <- data1 %>% mutate(group = factor(group), 
                              community = factor(community),
                              d13C = iso1, 
@@ -83,30 +87,73 @@ rlb_data <- data1 %>% mutate(group = factor(group),
 first.plot <- ggplot(data = rlb_data, 
                      aes(x = d13C, 
                          y = d15N)) + 
-  geom_point(aes(color = group, shape = community), size = 5) +
+  geom_point(aes(colour = group, shape = community), size = 3) +
+  scale_colour_manual(labels = c("Otospermophilus", "Sylvilagus"), 
+                      values=rlbPalette) +
+  scale_shape_manual(labels = c("pre-LGM", "post-LGM"), 
+                     values=c(16,17)) +
   ylab(expression(paste(delta^{15}, "N (\u2030)"))) +
   xlab(expression(paste(delta^{13}, "C (\u2030)"))) + 
-  theme(text = element_text(size=16)) + 
-  scale_color_viridis_d()
+  theme_classic() +
+  theme(text = element_text(size=14),
+        axis.ticks.length = unit(0.15, "cm")) + 
+  labs(colour = "Taxon", shape="Time Period") 
+ 
+print(first.plot) 
 
-# And print our plot to screen
-print(first.plot)
-
-classic.first.plot <- first.plot + theme_classic() + 
-  theme(text = element_text(size=18),
-        axis.ticks.length = unit(0.15, "cm"))
-
-# and print to screen
-print(classic.first.plot)
 
 # error bars
-sbg <- data1 %>% 
+sbg <- rlb_data %>% 
   group_by(group, community) %>% 
   summarise(count = n(),
             mC = mean(d13C), 
             sdC = sd(d13C), 
             mN = mean(d15N), 
             sdN = sd(d15N))
+
+second.plot <- first.plot +
+  geom_errorbar(data = sbg, 
+                mapping = aes(x = mC, y = mN,
+                              ymin = mN - 1.96*sdN, 
+                              ymax = mN + 1.96*sdN), 
+                width = 0) +
+  geom_errorbarh(data = sbg, 
+                 mapping = aes(x = mC, y = mN,
+                               xmin = mC - 1.96*sdC,
+                               xmax = mC + 1.96*sdC),
+                 height = 0) + 
+  geom_point(data = sbg, aes(x = mC, 
+                             y = mN,
+                             fill = group), 
+             color = "black", shape = 22, size = 5,
+             alpha = 0.7, show.legend = FALSE) +
+  scale_fill_manual(values=rlbPalette)
+
+print(second.plot)
+
+
+p.ell <- 0.68
+ellipse.plot <- first.plot + 
+  stat_ellipse(aes(group = interaction(group, community), 
+                   fill = group, 
+                   color = group), 
+               alpha = 0.25, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  scale_fill_manual(values=rlbPalette) 
+
+
+print(ellipse.plot)
+
+# print Figure 2 plot ----
+# will alter in Illustrator afterwards
+grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Sep2021_JB.pdf", width=8, height=6)
+ellipse.plot
+dev.off()
+
+
+
 
 
 
