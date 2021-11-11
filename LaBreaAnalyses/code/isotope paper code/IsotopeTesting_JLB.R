@@ -2,7 +2,7 @@ library(dplyr)
 library(stringr)
 library(ggplot2)
 
-# Import and Clean data ----
+# Section 1: Import and Clean data ----
 ## import isotope data ----
 isoDat2 <- read.csv('data/processed/SIBER/SIBER_raw.csv', header=T, strip.white=T)
 
@@ -10,8 +10,8 @@ isoDat2 <- read.csv('data/processed/SIBER/SIBER_raw.csv', header=T, strip.white=
 samples <- paste("UCIAMS", isoDat2$UCIAMS_Number) # this is the final set of samples with isotope data
 
 ## read in calibrated ages ----
-allAges<- read.csv('output/OxCal/final oxcal models/AllAges_ages_probs.csv', header=T)
-all_calibrated_ages <- read.csv('output/OxCal/final oxcal models/AllAges_forinput.csv', header=T)
+allAges<- read.csv('output/OxCal/final oxcal models/AllAges_ages_probs.csv', header=T) # this file stores the raw probabilities for each age across the distribution
+all_calibrated_ages <- read.csv('output/OxCal/final oxcal models/AllAges_forinput.csv', header=T) # this file stores the calibrated age statistics for each age
 all_calibrated_ages$trimmedName <- unlist(lapply(strsplit(all_calibrated_ages$Name, " R_"), '[[', 1))
 sample_median_ages <- as.data.frame(cbind(samples, all_calibrated_ages[match(samples, all_calibrated_ages$trimmedName), 'Unmodelled._BP_median']))
 colnames(sample_median_ages)[2] <- 'median_age'  
@@ -40,53 +40,62 @@ allAges<- allAges[!(allAges$name=="UCIAMS 198199" |
 allAges<- allAges[!(allAges$name=="UCIAMS 223515" | 
                      allAges$name=="UCIAMS 223519" | allAges$name=="UCIAMS 223522"),]
 
-# Match d180 to all age estimates (both median_age as well as the full distribution of ages) for every sample ----
+# Section 2: Match d180 to all age estimates ----
+# (both median_age as well as the full distribution of ages) for every sample 
 
-## First, read in climate Data ----
-# which climate file do you want to use? Hendy or ngrip?
-climFile <- c('hendy') # climFile=c('ngrip')
-
-if (climFile=="hendy"){
-  climDat<- read.delim("data/raw/climate/hendy2002data.txt")
-  
-  # adding d18O to allAges to match to the full distribution of age estimates for each sample
-  all(allAges$value<0) # this should be true, then take the absolute values to match to climate
+if (all(allAges$value<0)==T){ # this should be true, then take the absolute values to match to climate
   xout <- abs(allAges$value)
-  Hendy_extracted <- approx(x=climDat$HendyAge, y=climDat$pach.d18O, method="linear", xout=xout)
-  d18O<-Hendy_extracted$y
-  allAges_d18O<-cbind(allAges, d18O) # this matches d180 to all the age estimates, for all probabilities
-  
-  # matching d18O to the median ages
-  d18O_medianage <- approx(x=climDat$HendyAge, y=climDat$pach.d18O, 
-                           method="linear", xout=sample_median_ages$median_age)$y
 }
 
-if (climFile=="ngrip"){
-  climDat<- read.delim("data/raw/climate/ngrip.txt")
-  #ngrip dates are "before 2000", so need to subtract 50 years
-  climDat$Age <- climDat$Age-50
+# first match hendy data to age data
+  hendyDat<- read.delim("data/raw/climate/hendy2002data.txt")
   
   # adding d18O to allAges to match to the full distribution of age estimates for each sample
-  all(allAges$value<0) # this should be true, then take the absolute values to match to climate
-  xout <- abs(allAges$value)
-  ngrip_extracted <- approx(x=climDat$Age, y=climDat$d18O, method="linear", xout=xout)
-  d18O<-ngrip_extracted$y
-  allAges_d18O<-cbind(allAges, d18O) # this matches d180 to all the age estimates, for all probabilities
+  Hendy_extracted <- approx(x=hendyDat$HendyAge, y=hendyDat$pach.d18O, method="linear", xout=xout)
+  d18O_hendy <-Hendy_extracted$y
+  allAges_d18O<-cbind(allAges, d18O_hendy) # this matches d180 to all the age estimates, for all probabilities
   
   # matching d18O to the median ages
-  d18O_medianage <- approx(x=climDat$Age, y=climDat$d18O, 
+  d18O_hendy_medianage <- approx(x=hendyDat$HendyAge, y=hendyDat$pach.d18O, 
                            method="linear", xout=sample_median_ages$median_age)$y
-}
-# at end of climate script, have 3 main files for later use:
-# d18O
-# allAges_d18O
-# d18O_medianage
 
+  # next match ngrip data to age data
+  ngripDat<- read.delim("data/raw/climate/ngrip.txt")
+  ngripDat$Age <- ngripDat$Age-50 #ngrip dates are "before 2000", so need to subtract 50 years
+  
+  # adding d18O to allAges to match to the full distribution of age estimates for each sample
+  ngrip_extracted <- approx(x=ngripDat$Age, y=ngripDat$d18O, method="linear", xout=xout)
+  d18O_ngrip <-ngrip_extracted$y
+  allAges_d18O <- cbind(allAges_d18O, d18O_ngrip) # this matches d180 to all the age estimates, for all probabilities
+  
+  # matching d18O to the median ages
+  d18O_ngrip_medianage <- approx(x=ngripDat$Age, y=ngripDat$d18O, 
+                           method="linear", xout=sample_median_ages$median_age)$y
+
+# clean up matched d18O data
+  # d18O_hendy # not needed - bound to allAges_d18O
+  # d18O_ngrip # not needed - bound to allAges_d18O
+  rm(d18O_hendy)
+  rm(d18O_ngrip)
+  
+  # d18O_hendy_medianage - matched to median age within sample_median_ages
+  # d18O_ngrip_medianage - matched to median age within sample_median_ages
+  sample_median_ages <- cbind(sample_median_ages, d18O_hendy_medianage, d18O_ngrip_medianage)
+  colnames(sample_median_ages)[3:4] <- c("d18O_hendy", "d18O_ngrip")
+  rm(d18O_hendy_medianage)
+  rm(d18O_ngrip_medianage)
+  
+  ### at end of Section 2, have 2 main files for later use: ###
+
+  # allAges_d18O (stores both ngrip and hendy)
+  # sample_median_ages (stores both ngrip and hendy)
+  
+# Section 3: additional data cleaning ----
 # remove any unmatched specimen from the files
 matches <- match(samples, allAges_d18O$name)
 
 # added ifelse statement to catch instances where there are or are not matches
-if (length(which(is.na(matches)))>0){
+if (any(is.na(matches))){
   isoDat2_final <- isoDat2[-which(is.na(matches)),]
   samples_final <- samples[-which(is.na(matches))]
 }else{
@@ -96,7 +105,8 @@ if (length(which(is.na(matches)))>0){
 # end result dataframes:
 # isoDat2_final - final C/N isotope data
 # samples_final - final set of samples
-# allAges_d18O - ages, probabilities, and d18O for the calibrated age estimates associated with each sample
+# allAges_d18O - ages, probabilities, and d18O for the full distribution of calibrated age estimates associated with each sample
+# sample_median_ages - median ages and d180 estimates at those median ages for each sample
 
 # Age uncertainty: calculate weighted age and weighted mean d18O for each specimen ----
 # For each specimen, calculate the weighted d180 and weighted mean age, based on the probability of each calibrated age from the age models
