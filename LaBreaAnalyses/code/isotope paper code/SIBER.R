@@ -5,8 +5,18 @@ library(tidyverse)
 set.seed(1)
 
 # Create SIBER dataset ----
-# load in the dataset
-data_raw<- read.csv("data/processed/SIBER/SIBER_raw.csv", strip.white=T)
+# load in the isotope dataset
+data_raw<- read.csv("data/processed/SIBER/SIBER_raw_final.csv", strip.white=T)
+# create sample names for matching isotope file to ages file
+samples <- paste("UCIAMS", data_raw$UCIAMS_Number) # this is the final set of samples with isotope data
+
+all_calibrated_ages <- read.csv('output/OxCal/final oxcal models/AllAges_forinput.csv', header=T) # this file stores the calibrated age statistics for each age
+all_calibrated_ages$trimmedName <- unlist(lapply(strsplit(all_calibrated_ages$Name, " R_"), '[[', 1))
+sample_median_ages <- as.data.frame(cbind(samples, all_calibrated_ages[match(samples, all_calibrated_ages$trimmedName), 'Unmodelled._BP_median']))
+colnames(sample_median_ages)[2] <- 'median_age'  
+sample_median_ages$median_age <- as.numeric(sample_median_ages$median_age)
+
+data_raw <- cbind(data_raw, median_age=sample_median_ages$median_age)
 
 # turn this into a SIBER data file:
 iso1 <- data_raw$del13C_permil
@@ -16,27 +26,20 @@ group[which(data_raw$Taxon=="Otospermophilus")] <- 1
 group[which(data_raw$Taxon=="Sylvilagus")] <- 2
 
 community <- vector(length=nrow(data_raw))
-community[which(data_raw$X14C_age_BP > 20000)] <- 1
-community[which(data_raw$X14C_age_BP < 20000)] <- 2
+community[which(data_raw$median_age > 11500)] <- 1
+community[which(data_raw$median_age < 11500)] <- 2
 
-# check to make sure this matches Nate's original file
-data_nate<- read.csv("data/processed/SIBER/SIBER_data_Nate.csv")
-all(iso1 == data_nate$iso1)
-all(iso2 == data_nate$iso2)
-all(group == data_nate$group)
-all(community == data_nate$community)
-data_formatted <- as.data.frame(cbind(iso1, iso2, group, community))
+data1 <- as.data.frame(cbind(iso1, iso2, group, community))
+data2 <- data1
+data2$group <- as.factor(data2$group)
+data2$community <- as.factor(data2$community)
 
-all(data_formatted == data_nate)
-
-write.csv(data_formatted, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
-
+write.csv(data1, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
 rm(list = c('iso1','iso2', 'group', 'community'))
-data1 <- data_formatted # rename data_formatted to data1 so it works in rest of code
 
 # Read in SIBER dataset  and create SIBER object ----
 
-data1 <- read.csv(file="data/processed/SIBER/SIBER_data.csv", header=T)
+#data1 <- read.csv(file="data/processed/SIBER/SIBER_data.csv", header=T)
 siber.RLB <- createSiberObject(data1) # create the siber object
 
 
@@ -51,8 +54,7 @@ community.hulls.args <- list(col = 1, lty = 1, lwd = 1)
 group.ellipses.args  <- list(n = 100, p.interval = 0.68, lty = 1, lwd = 2)
 group.hull.args      <- list(lty = 2, col = "grey20") # change color here to be organe vs blue? 
 
-#pdf("output/isotope paper final/Isoplots/SIBER.pdf", width=5, height=4)
-pdf("output/isotope paper final/Figure2_SIBER.pdf", width=5, height=4)
+#pdf("output/isotope paper final/Figure2_SIBER.pdf", width=5, height=4)
 par(mfrow=c(1,1), mar=c(5,5,4,1)+0.01)
 plotSiberObject(siber.RLB,
                 ax.pad = 2, 
@@ -90,7 +92,7 @@ first.plot <- ggplot(data = rlb_data,
   geom_point(aes(colour = group, shape = community), size = 3) +
   scale_colour_manual(labels = c("Otospermophilus", "Sylvilagus"), 
                       values=rlbPalette) +
-  scale_shape_manual(labels = c("pre-LGM", "post-LGM"), 
+  scale_shape_manual(labels = c("Pleistocene", "Holocene"), 
                      values=c(16,17)) +
   ylab(expression(paste(delta^{15}, "N (\u2030)"))) +
   xlab(expression(paste(delta^{13}, "C (\u2030)"))) + 
@@ -148,38 +150,29 @@ print(ellipse.plot)
 
 # print Figure 2 plot ----
 # will alter in Illustrator afterwards
-grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Sep2021_JB.pdf", width=8, height=6)
+grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Nov2021_JB.pdf", width=8, height=6)
 ellipse.plot
 dev.off()
 
 
+# Summary stats ----
+# iso1=del13C_permil
+# iso2=del15N_permil
 
+# t.test
+c.t <- t.test(iso1~group, data=data2)
+n.t <- t.test(iso2~group, data=data2)
 
+# cn.aov <- aov(iso1 ~ group + iso2, data = data2)
+# summary(cn.aov)
+# TukeyHSD(cn.aov, which = 'group')
 
-
-# Summary stats
-
-#ANOVA
-data2<- read.csv("data/processed/SIBER/SIBER_raw.csv")
-
-c.aov <- aov(del13C_permil ~ Group, data = data2)
-summary(c.aov)
-TukeyHSD(c.aov)
-
-n.aov <- aov(del15N_permil ~ Group, data = data2)
-summary(n.aov)
-
-cn.aov <- aov(del13C_permil ~ Group + del15N_permil, data = data2)
-summary(cn.aov)
-TukeyHSD(cn.aov, which = 'Group')#Present this in manuscript
-
-
-#SIBER Stats
+#SIBER Stats -- Not used, doesn't work except the first few lines !!----
 
 group.ML <- groupMetricsML(siber.RLB)
 print(group.ML)
-#1.1 = Pre-LGM squirrels, #1.2 = Pre-LGM rabbits
-#2.1 = Post-LGM squirrels, #2.2 = Post-LGM rabbits
+#1.1 = Pleistocene squirrels, #1.2 = Pleistocene rabbits
+#2.1 = Holocene squirrels, #2.2 = Holocene rabbits
 
 # options for running jags
 parms <- list()
