@@ -159,9 +159,29 @@ dev.off()
 # iso1=del13C_permil
 # iso2=del15N_permil
 
+cn.manova <- manova(cbind(iso1, iso2) ~ group, data1)
+summary(cn.manova)
+
 # t.test
 c.t <- t.test(iso1~group, data=data2)
+c.t
 n.t <- t.test(iso2~group, data=data2)
+n.t
+
+# Just pleistocene data
+data3 <- data2[which(data2$community==1),]
+cn.manova.p <- manova(cbind(iso1, iso2) ~ group, data3)
+summary(cn.manova.p)
+
+# t.test
+c.t.p <- t.test(iso1~group, data=data3)
+c.t.p
+n.t.p <- t.test(iso2~group, data=data3)
+n.t.p
+
+# old anovas
+cn.aov <- aov(group~iso1+iso2, data=data1)
+summary(cn.aov)
 
 # cn.aov <- aov(iso1 ~ group + iso2, data = data2)
 # summary(cn.aov)
