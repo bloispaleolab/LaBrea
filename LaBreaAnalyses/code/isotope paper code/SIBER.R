@@ -1,98 +1,50 @@
-
-library(SIBER)
 library(tidyverse)
 
-set.seed(1)
+# Create final dataset ----
+# originally input through SIBER, hence the file names. No longer using SIBER
 
-# Create SIBER dataset ----
 # load in the isotope dataset
 data_raw<- read.csv("data/processed/SIBER/SIBER_raw_final.csv", strip.white=T)
+
 # create sample names for matching isotope file to ages file
 samples <- paste("UCIAMS", data_raw$UCIAMS_Number) # this is the final set of samples with isotope data
 
+# match with the sample ages
 all_calibrated_ages <- read.csv('output/OxCal/final oxcal models/AllAges_forinput.csv', header=T) # this file stores the calibrated age statistics for each age
 all_calibrated_ages$trimmedName <- unlist(lapply(strsplit(all_calibrated_ages$Name, " R_"), '[[', 1))
 sample_median_ages <- as.data.frame(cbind(samples, all_calibrated_ages[match(samples, all_calibrated_ages$trimmedName), 'Unmodelled._BP_median']))
 colnames(sample_median_ages)[2] <- 'median_age'  
 sample_median_ages$median_age <- as.numeric(sample_median_ages$median_age)
 
+# add ages to the file
 data_raw <- cbind(data_raw, median_age=sample_median_ages$median_age)
 
-# turn this into a SIBER data file:
-iso1 <- data_raw$del13C_permil
-iso2 <- data_raw$del15N_permil
-group <- vector(length=nrow(data_raw))
-group[which(data_raw$Taxon=="Otospermophilus")] <- 1
-group[which(data_raw$Taxon=="Sylvilagus")] <- 2
+# Create age groups
+time_group <- vector(length=nrow(data_raw))
+time_group[which(data_raw$median_age > 11500)] <- "Pleistocene"
+time_group[which(data_raw$median_age < 11500)] <- "Holocene"
 
-community <- vector(length=nrow(data_raw))
-community[which(data_raw$median_age > 11500)] <- 1
-community[which(data_raw$median_age < 11500)] <- 2
-
-data1 <- as.data.frame(cbind(iso1, iso2, group, community))
-data2 <- data1
-data2$group <- as.factor(data2$group)
-data2$community <- as.factor(data2$community)
+# add age groups to raw data and create primary data file (data1)
+data1 <- as.data.frame(cbind(data_raw, time_group))
 
 write.csv(data1, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
-rm(list = c('iso1','iso2', 'group', 'community'))
-
-# Read in SIBER dataset  and create SIBER object ----
-
-#data1 <- read.csv(file="data/processed/SIBER/SIBER_data.csv", header=T)
-siber.RLB <- createSiberObject(data1) # create the siber object
 
 
-# default SIBER plots - using SIBER plotting ####
-
-# change ellipse color
-palette(c("royalblue2","darkorange"))
-
-# Create lists of plotting arguments to be passed onwards to each 
-# of the three plotting functions.
-community.hulls.args <- list(col = 1, lty = 1, lwd = 1)
-group.ellipses.args  <- list(n = 100, p.interval = 0.68, lty = 1, lwd = 2)
-group.hull.args      <- list(lty = 2, col = "grey20") # change color here to be organe vs blue? 
-
-#pdf("output/isotope paper final/Figure2_SIBER.pdf", width=5, height=4)
-par(mfrow=c(1,1), mar=c(5,5,4,1)+0.01)
-plotSiberObject(siber.RLB,
-                ax.pad = 2, 
-                hulls = F, community.hulls.args, 
-                ellipses = T, group.ellipses.args,
-                group.hulls = T, group.hull.args,
-                bty = "L",
-                iso.order = c(1,2),
-                xlab = expression({delta}^13*C~'\u2030'),
-                ylab = expression({delta}^15*N~'\u2030')
-               
-)
-
-legend("bottomleft", legend = c("Otospermophilus Pre-LGM", "Sylvilagus Pre-LGM"),
-       col = palette(c("royalblue2","darkorange")), pch = 1, 
-       bty = "n", cex = 0.8)
-
-legend("topright", legend = c("Otospermophilus Post-LGM", "Sylvilagus Post-LGM"),
-       col = palette(c("royalblue2", "darkorange")), pch = 2,
-       bty = "n", cex = 0.8)
-dev.off()
-
-
-# custom SIBER plots - using ggplot2 ####
+# plot the isotope data - using ggplot2 ####
 rlbPalette <- palette(c("royalblue2","darkorange"))
-rlb_data <- data1 %>% mutate(group = factor(group), 
-                             community = factor(community),
-                             d13C = iso1, 
-                             d15N = iso2,
+rlb_data <- data1 %>% mutate(Taxon = factor(Taxon), 
+                             time_group = factor(time_group),
+                             d13C = del13C_permil, 
+                             d15N = del15N_permil,
                              .keep = "unused") 
 
 first.plot <- ggplot(data = rlb_data, 
                      aes(x = d13C, 
                          y = d15N)) + 
-  geom_point(aes(colour = group, shape = community), size = 3) +
+  geom_point(aes(colour = Taxon, shape = time_group), size = 3) +
   scale_colour_manual(labels = c("Otospermophilus", "Sylvilagus"), 
                       values=rlbPalette) +
-  scale_shape_manual(labels = c("Pleistocene", "Holocene"), 
+  scale_shape_manual(labels = c("Holocene", "Pleistocene"), 
                      values=c(16,17)) +
   ylab(expression(paste(delta^{15}, "N (\u2030)"))) +
   xlab(expression(paste(delta^{13}, "C (\u2030)"))) + 
@@ -106,7 +58,7 @@ print(first.plot)
 
 # error bars
 sbg <- rlb_data %>% 
-  group_by(group, community) %>% 
+  group_by(Taxon, time_group) %>% 
   summarise(count = n(),
             mC = mean(d13C), 
             sdC = sd(d13C), 
@@ -126,7 +78,7 @@ second.plot <- first.plot +
                  height = 0) + 
   geom_point(data = sbg, aes(x = mC, 
                              y = mN,
-                             fill = group), 
+                             fill = Taxon), 
              color = "black", shape = 22, size = 5,
              alpha = 0.7, show.legend = FALSE) +
   scale_fill_manual(values=rlbPalette)
@@ -136,15 +88,14 @@ print(second.plot)
 
 p.ell <- 0.68
 ellipse.plot <- first.plot + 
-  stat_ellipse(aes(group = interaction(group, community), 
-                   fill = group, 
-                   color = group), 
+  stat_ellipse(aes(Taxon = interaction(Taxon, time_group), 
+                   fill = Taxon, 
+                   color = Taxon), 
                alpha = 0.25, 
                level = p.ell,
                type = "norm",
                geom = "polygon") + 
   scale_fill_manual(values=rlbPalette) 
-
 
 print(ellipse.plot)
 
@@ -154,30 +105,98 @@ grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Nov2021_JB.p
 ellipse.plot
 dev.off()
 
-
 # Summary stats ----
-# iso1=del13C_permil
-# iso2=del15N_permil
 
-cn.manova <- manova(cbind(iso1, iso2) ~ group, data1)
+cn.manova <- manova(cbind(del13C_permil, del15N_permil) ~ Taxon, data1)
 summary(cn.manova)
 
+# factor two of the grouping variables the run t-tests
+data2 <- data1
+data2$Taxon <- as.factor(data2$Taxon)
+data2$time_group <- as.factor(data2$time_group)
+
 # t.test
-c.t <- t.test(iso1~group, data=data2)
+c.t <- t.test(del13C_permil~Taxon, data=data2)
 c.t
-n.t <- t.test(iso2~group, data=data2)
+n.t <- t.test(del15N_permil~Taxon, data=data2)
 n.t
 
 # Just pleistocene data
-data3 <- data2[which(data2$community==1),]
-cn.manova.p <- manova(cbind(iso1, iso2) ~ group, data3)
+data3 <- data2[which(data2$time_group=="Pleistocene"),]
+cn.manova.p <- manova(cbind(del13C_permil, del15N_permil) ~ Taxon, data3)
 summary(cn.manova.p)
 
 # t.test
-c.t.p <- t.test(iso1~group, data=data3)
+c.t.p <- t.test(del13C_permil~Taxon, data=data3)
 c.t.p
-n.t.p <- t.test(iso2~group, data=data3)
+n.t.p <- t.test(del15N_permil~Taxon, data=data3)
 n.t.p
+
+# try adding sample age to the manova
+cnt.manova <- manova(cbind(del13C_permil, del15N_permil) ~ Taxon + median_age, data1)
+summary(cnt.manova)
+
+cnt.manova.p <- manova(cbind(del13C_permil, del15N_permil) ~ Taxon + median_age, data3)
+summary(cnt.manova.p)
+
+# try adding sample age to the manova
+cnt.manova.interact <- manova(cbind(del13C_permil, del15N_permil) ~ Taxon * median_age, data1)
+summary(cnt.manova.interact)
+
+cnt.manova.p.interact <- manova(cbind(del13C_permil, del15N_permil) ~ Taxon * median_age, data3)
+summary(cnt.manova.p.interact)
+
+# try adding a color gradient
+# Note: this doesn't add valuable info and is  confusing
+# plot the isotope data - using ggplot2 ####
+rlbPalette <- palette(c("royalblue2","darkorange"))
+rlb_data <- data1 %>% mutate(Taxon = factor(Taxon), 
+                             time_group = factor(time_group),
+                             d13C = del13C_permil, 
+                             d15N = del15N_permil,
+                             .keep = "unused") 
+
+first.plot <- ggplot(data = rlb_data, 
+                     aes(x = d13C, 
+                         y = d15N)) + 
+  geom_point(aes(colour = Taxon, shape = time_group, alpha=median_age), size = 3) +
+  scale_colour_manual(labels = c("Otospermophilus", "Sylvilagus"), 
+                      values=rlbPalette) +
+  scale_shape_manual(labels = c("Holocene", "Pleistocene"), 
+                     values=c(16,17)) +
+  ylab(expression(paste(delta^{15}, "N (\u2030)"))) +
+  xlab(expression(paste(delta^{13}, "C (\u2030)"))) + 
+  theme_classic() +
+  theme(text = element_text(size=14),
+        axis.ticks.length = unit(0.15, "cm")) + 
+  labs(colour = "Taxon", shape="Time Period", alpha="Median Age") 
+
+print(first.plot) 
+
+p.ell <- 0.68
+ellipse.plot <- first.plot + 
+  stat_ellipse(aes(Taxon = interaction(Taxon, time_group), 
+                   fill = Taxon, 
+                   color = Taxon), 
+               alpha = 0.25, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  scale_fill_manual(values=rlbPalette) 
+
+print(ellipse.plot)
+
+# print Figure 2 plot ----
+# will alter in Illustrator afterwards
+grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Nov2021_JB_agegradient.pdf", width=8, height=6)
+ellipse.plot
+dev.off()
+
+
+
+###
+## Everything following is old, unused code ----
+###
 
 # old anovas
 cn.aov <- aov(group~iso1+iso2, data=data1)
@@ -303,4 +322,37 @@ siberDensityPlot(cbind(layman.B[[1]][,"TA"], layman.B[[2]][,"TA"]),
                  ylab = "TA - Convex Hull Area",
                  xlab = "")
 
+# default SIBER plots - using SIBER plotting ####
+
+# change ellipse color
+palette(c("royalblue2","darkorange"))
+
+# Create lists of plotting arguments to be passed onwards to each 
+# of the three plotting functions.
+community.hulls.args <- list(col = 1, lty = 1, lwd = 1)
+group.ellipses.args  <- list(n = 100, p.interval = 0.68, lty = 1, lwd = 2)
+group.hull.args      <- list(lty = 2, col = "grey20") # change color here to be organe vs blue? 
+
+#pdf("output/isotope paper final/Figure2_SIBER.pdf", width=5, height=4)
+par(mfrow=c(1,1), mar=c(5,5,4,1)+0.01)
+plotSiberObject(siber.RLB,
+                ax.pad = 2, 
+                hulls = F, community.hulls.args, 
+                ellipses = T, group.ellipses.args,
+                group.hulls = T, group.hull.args,
+                bty = "L",
+                iso.order = c(1,2),
+                xlab = expression({delta}^13*C~'\u2030'),
+                ylab = expression({delta}^15*N~'\u2030')
+                
+)
+
+legend("bottomleft", legend = c("Otospermophilus Pre-LGM", "Sylvilagus Pre-LGM"),
+       col = palette(c("royalblue2","darkorange")), pch = 1, 
+       bty = "n", cex = 0.8)
+
+legend("topright", legend = c("Otospermophilus Post-LGM", "Sylvilagus Post-LGM"),
+       col = palette(c("royalblue2", "darkorange")), pch = 2,
+       bty = "n", cex = 0.8)
+dev.off()
 
