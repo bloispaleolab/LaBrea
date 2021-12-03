@@ -55,6 +55,33 @@ first.plot <- ggplot(data = rlb_data,
  
 print(first.plot) 
 
+### Nate's code ###
+
+# Make convex hulls for Pleistocene data grouped by taxon
+PLE <- rlb_data[-c(1:5), ]
+hull <- PLE %>%
+  group_by(Taxon) %>% 
+  slice(chull(d13C, d15N))
+
+# add convex hulls to Jessica's first plot
+nate.plot <- first.plot +
+  geom_polygon(data = hull,
+               aes(fill = Taxon,
+                   colour = Taxon),
+               alpha = 0)
+# add probability ellipses for Pleistocene and Holocene data (all taxa)
+pdf("output/isotope paper final/Figure2_SIBERplots_Dec2021_NF_ugly.pdf", width=7, height=4)
+p.ell <- 0.68
+nate.ellipse.plot <- nate.plot + 
+  stat_ellipse(aes(time_group = time_group), 
+               alpha = 0.25, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  scale_fill_manual(values=rlbPalette) 
+print(nate.ellipse.plot)
+dev.off()
+### End of Nate's code ###
 
 # error bars
 sbg <- rlb_data %>% 
