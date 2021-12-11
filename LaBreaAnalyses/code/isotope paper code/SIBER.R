@@ -27,7 +27,7 @@ time_group[which(data_raw$median_age < 11500)] <- "Holocene"
 # add age groups to raw data and create primary data file (data1)
 data1 <- as.data.frame(cbind(data_raw, time_group))
 
-write.csv(data1, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
+#write.csv(data1, file="data/processed/SIBER/SIBER_data.csv", row.names=F)
 
 
 # plot the isotope data - using ggplot2 ####
@@ -54,34 +54,6 @@ first.plot <- ggplot(data = rlb_data,
   labs(colour = "Taxon", shape="Time Period") 
  
 print(first.plot) 
-
-### Nate's code ###
-
-# Make convex hulls for Pleistocene data grouped by taxon
-PLE <- rlb_data[-c(1:5), ]
-hull <- PLE %>%
-  group_by(Taxon) %>% 
-  slice(chull(d13C, d15N))
-
-# add convex hulls to Jessica's first plot
-nate.plot <- first.plot +
-  geom_polygon(data = hull,
-               aes(fill = Taxon,
-                   colour = Taxon),
-               alpha = 0)
-# add probability ellipses for Pleistocene and Holocene data (all taxa)
-pdf("output/isotope paper final/Figure2_SIBERplots_Dec2021_NF_ugly.pdf", width=7, height=4)
-p.ell <- 0.68
-nate.ellipse.plot <- nate.plot + 
-  stat_ellipse(aes(time_group = time_group), 
-               alpha = 0.25, 
-               level = p.ell,
-               type = "norm",
-               geom = "polygon") + 
-  scale_fill_manual(values=rlbPalette) 
-print(nate.ellipse.plot)
-dev.off()
-### End of Nate's code ###
 
 # error bars
 sbg <- rlb_data %>% 
@@ -125,6 +97,120 @@ ellipse.plot <- first.plot +
   scale_fill_manual(values=rlbPalette) 
 
 print(ellipse.plot)
+
+# test out new plots ----
+
+
+# add probability ellipses for Pleistocene and Holocene data 
+# (taxa differentiated)
+
+p.ell <- 0.68
+alldata.taxa.ellipse.plot <- first.plot + 
+  stat_ellipse(data = rlb_data, 
+               aes(x = d13C, 
+                   y = d15N, color=Taxon), 
+               alpha = 0.25, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  stat_ellipse(data = rlb_data[-c(1:5),], 
+               aes(x = d13C, 
+                   y = d15N, color=Taxon), 
+               linetype = 2,
+               alpha = 0, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  scale_fill_manual(values=rlbPalette) 
+
+grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Dec2021_JLB_bytaxa_time.pdf", width=7, height=4)
+print(alldata.taxa.ellipse.plot)
+dev.off()
+
+# add probability ellipses for Pleistocene and Holocene data 
+# (combining taxa)
+
+p.ell <- 0.68
+alldata.time.ellipse.plot <- first.plot + 
+  stat_ellipse(data = rlb_data[-c(1:5)], 
+               aes(x = d13C, 
+                   y = d15N), 
+               alpha = 0.25, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  stat_ellipse(data = rlb_data[c(1:5),], 
+               aes(x = d13C, 
+                   y = d15N), 
+               linetype = 2,
+               alpha = 0.5, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon")  
+
+grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Dec2021_JLB_bytime.pdf", width=7, height=4)
+print(alldata.time.ellipse.plot)
+dev.off()
+
+#merged
+
+new.first.plot <- ggplot(data = rlb_data, 
+                     aes(x = d13C, 
+                         y = d15N)) + 
+  lims(x = c(-23, -17), y= c(0,11)) +
+  geom_point(aes(colour = Taxon, shape = time_group), size = 3) +
+  scale_colour_manual(labels = c("Otospermophilus", "Sylvilagus"), 
+                      values=rlbPalette) +
+  scale_shape_manual(labels = c("Holocene", "Pleistocene"), 
+                     values=c(16,17)) +
+  ylab(expression(paste(delta^{15}, "N (\u2030)"))) +
+  xlab(expression(paste(delta^{13}, "C (\u2030)"))) + 
+  theme_classic() +
+  theme(text = element_text(size=14),
+        axis.ticks.length = unit(0.15, "cm")) + 
+  labs(colour = "Taxon", shape="Time Period") 
+
+new.alldata.taxa.ellipse.plot <- new.first.plot + 
+  stat_ellipse(data = rlb_data, 
+               aes(x = d13C, 
+                   y = d15N, color=Taxon), 
+               alpha = 0.25, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  stat_ellipse(data = rlb_data[-c(1:5),], 
+               aes(x = d13C, 
+                   y = d15N, color=Taxon), 
+               linetype = 2,
+               alpha = 0, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  scale_fill_manual(values=rlbPalette) 
+
+new.alldata.time.ellipse.plot <- new.first.plot + 
+  stat_ellipse(data = rlb_data[-c(1:5)], 
+               aes(x = d13C, 
+                   y = d15N), 
+               alpha = 0.25, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") + 
+  stat_ellipse(data = rlb_data[c(1:5),], 
+               aes(x = d13C, 
+                   y = d15N), 
+               linetype = 2,
+               alpha = 0.5, 
+               level = p.ell,
+               type = "norm",
+               geom = "polygon") 
+grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Dec2021_JLB_both.pdf", width=12, height=4)
+grid.arrange(new.alldata.taxa.ellipse.plot, 
+             new.alldata.time.ellipse.plot, nrow = 1)
+dev.off()
+
+
+
 
 # print Figure 2 plot ----
 # will alter in Illustrator afterwards
