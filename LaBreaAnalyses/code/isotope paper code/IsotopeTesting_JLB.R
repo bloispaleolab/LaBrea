@@ -412,6 +412,7 @@ summary(nitrogen.lm.final.hendy)
   abline(nitrogen.lm.final.hendy, lty=2)
   abline(nitrogen.lm.clim.hendy, lty=1)
   mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25)
+  
   mtext(expression({delta}^15*N~'\u2030'), side=2, line=2.25)
   
   boxplot(nitrogen.lm.clim.hendy$residuals ~ matchedDF_all$Taxon[which(!is.na(matchedDF_all$d18O_hendy))],
@@ -456,7 +457,7 @@ summary(nitrogen.lm.final.hendy)
   matchedDF_all <- matchedDF_all[order(matchedDF_all$median_age),]
   
   #grDevices::pdf(file="output/Figure4_carbon_climate_time_updated_NF.pdf", height=6, width=8)
-  grDevices::cairo_pdf(file="output/isotope paper final/Figure4_carbon_climate_time_updated_Nov2021_JB.pdf", height=6, width=8)
+  grDevices::cairo_pdf(file="output/isotope paper final/Figure4_carbon_climate_time_updated_Jan2022_JB.pdf", height=6, width=8)
   
   layout(matrix(seq(1:2), ncol=1, nrow=2), heights=c(0.75,1))
   par(mar=c(4,5,0,5), cex.axis=1, bty="l", xpd=F)
@@ -467,8 +468,9 @@ summary(nitrogen.lm.final.hendy)
        xlim=c(55000, 0))
   axis(4)
   mtext(expression({delta}^13*C~'\u2030'), side=4, line=2.25)
-  lines(del13C_permil~median_age, data=matchedDF_all, lty=1, col="brown")
-  points(del13C_permil~median_age, data=matchedDF_all, pch=16, col="brown", cex=0.5)
+  lines(del13C_permil~median_age, data=matchedDF_all, lty=1, col="black")
+  points(del13C_permil~median_age, data=matchedDF_all[which(matchedDF_all$Taxon=="Otospermophilus"),], pch=16, col="royalblue2", cex=0.5)
+  points(del13C_permil~median_age, data=matchedDF_all[which(matchedDF_all$Taxon=="Sylvilagus"),], pch=16, col="darkorange", cex=0.5)
   
   #d18O plot - Hendy
   plot(pach.d18O~HendyAge, dat=hendyDat,
@@ -477,11 +479,12 @@ summary(nitrogen.lm.final.hendy)
        ylab = expression({delta}^18*O~'\u2030'),
        bty="n",
        xlim=c(55000, 0), ylim=c(3, 0),
-       lab=c(12, 8, 7), xaxs="i", yaxs="r", col="gray")
+       lab=c(12, 8, 7), xaxs="i", yaxs="r", col="lightgray")
   x1.05<- loess(hendyDat$pach.d18O~hendyDat$HendyAge, span=0.05)
   lines(x1.05$fitted~x1.05$x, type="l", col="darkgray")
 
-  points(d18O_hendy~median_age, data=matchedDF_all, pch=16, col="blue", cex=0.5)
+  points(d18O_hendy~median_age, data=matchedDF_all[which(matchedDF_all$Taxon=="Sylvilagus"),], pch=16, col="darkorange", cex=0.5)
+  points(d18O_hendy~median_age, data=matchedDF_all[which(matchedDF_all$Taxon=="Otospermophilus"),], pch=16, col="royalblue2", cex=0.5)
   dev.off()
 
 
