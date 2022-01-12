@@ -6,51 +6,14 @@ library(RColorBrewer)
 library(ggpubr)
 library(rstatix)
 
+
+# Figure 1 ####
 iso_dat<-read.csv("data/processed/Interpolation/IsoClim_interpolated_cal20.csv")# All rabbits and Squirrels with mean calibrated ages < 50 ka BP
 
-####Intraspecific diet - Figure 1 ####
-
-## Compare desert cottontails to brush rabbits
-
-iso_rabbits<- iso_dat[grep("S. audubonii|S. bachmani", iso_dat$Species), c(3:6)]
+## Inter-specific - Compare squirrels to rabbits ----
 
 #carbon
-wilcox.test(d13C~Species, data=iso_rabbits, correct = TRUE, alternative = "two.sided")
-#t.test(d13C~Taxon, mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F, data=iso_rabbits)
-
-p1 <- ggboxplot(iso_rabbits, x = "Species", y = "d13C",
-               color = "Species", palette = c("orange", "darkorange3"),
-                add = "jitter") +
-  labs(y = expression({delta}^13*C~'\u2030'))+
-  theme(axis.title.x=element_blank(),
-        legend.position = "none")
-
-#  Add p-value
-# p1 + stat_compare_means()
-# Change method
-rabbits_C <- p1 + stat_compare_means(method = "wilcox.test", label.x = 2)
-#p-values appear on figure as a single plot, but not on multiplots
-rabbits_C
-
-#nitrogen
-wilcox.test(d15N~Species, data=iso_rabbits, correct = TRUE)
-
-p2 <- ggboxplot(iso_rabbits, x = "Species", y = "d15N",
-                color = "Species", palette = c("orange", "darkorange3"),
-                add = "jitter") +
-#  labs(y = expression(italic(delta)^15*N~("\211")))+
-  labs(y = expression(italic(delta)^15*N~("\u2030")))+
-  theme(axis.title.x=element_blank(),
-        legend.position = "none")
-#  Add p-value
-#p2 + stat_compare_means()
-# Change method
-rabbits_N <- p2 + stat_compare_means(method = "wilcox.test", label.x = 2)
-
-## Compare squirrels to rabbits
-
-#carbon
-wilcox.test(d13C~Taxon, data=iso_dat, correct = TRUE)
+wilcox.c.taxon <- wilcox.test(d13C~Taxon, data=iso_dat, correct = TRUE)
 
 p3 <- ggboxplot(iso_dat, x = "Taxon", y = "d13C",
                 color = "Taxon", palette = c("royalblue2", "darkorange"),
@@ -65,7 +28,7 @@ p3 <- ggboxplot(iso_dat, x = "Taxon", y = "d13C",
 genus_C <- p3 + stat_compare_means(method = "wilcox.test", label.x = 2)
 
 #nitrogen
-wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
+wilcox.n.taxon <- wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
 
 p4 <- ggboxplot(iso_dat, x = "Taxon", y = "d15N",
                 color = "Taxon", palette = c("royalblue2", "darkorange"),
@@ -79,6 +42,48 @@ p4 <- ggboxplot(iso_dat, x = "Taxon", y = "d15N",
 # Change method
 genus_N <- p4 + stat_compare_means(method = "wilcox.test", label.x = 2)
 
+
+## Intra - specific diet ---- 
+
+## Compare desert cottontails to brush rabbits
+
+iso_rabbits<- iso_dat[grep("S. audubonii|S. bachmani", iso_dat$Species), c(3:6)]
+
+#carbon
+wilcox.c.rabbits <- wilcox.test(d13C~Species, data=iso_rabbits, correct = TRUE, alternative = "two.sided")
+#t.test(d13C~Taxon, mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F, data=iso_rabbits)
+
+p1 <- ggboxplot(iso_rabbits, x = "Species", y = "d13C",
+                color = "Species", palette = c("orange", "darkorange3"),
+                add = "jitter") +
+  labs(y = expression({delta}^13*C~'\u2030'))+
+  theme(axis.title.x=element_blank(),
+        legend.position = "none")
+
+#  Add p-value
+# p1 + stat_compare_means()
+# Change method
+rabbits_C <- p1 + stat_compare_means(method = "wilcox.test", label.x = 2)
+#p-values appear on figure as a single plot, but not on multiplots
+rabbits_C
+
+#nitrogen
+wilcox.n.rabbits <- wilcox.test(d15N~Species, data=iso_rabbits, correct = TRUE)
+
+p2 <- ggboxplot(iso_rabbits, x = "Species", y = "d15N",
+                color = "Species", palette = c("orange", "darkorange3"),
+                add = "jitter") +
+  #  labs(y = expression(italic(delta)^15*N~("\211")))+
+  labs(y = expression(italic(delta)^15*N~("\u2030")))+
+  theme(axis.title.x=element_blank(),
+        legend.position = "none")
+#  Add p-value
+#p2 + stat_compare_means()
+# Change method
+rabbits_N <- p2 + stat_compare_means(method = "wilcox.test", label.x = 2)
+
+
+## Arrange original final figure 1 ----
 # figure <- ggarrange(p3, p4, p1, p2,
 #                     labels = c("A", "B", "C", "D"),
 #                     ncol = 2, nrow = 2)
@@ -92,11 +97,88 @@ grDevices::cairo_pdf("output/isotope paper final/Figure1_niche_boxplots_Sep2021_
 figure
 dev.off()
 
-# In Illustrator: Change the following labels:
-# A: W=1153, p=<0.001
-# B: W=482
-# C: W=102.5
-# D: W=88
+ # Figure 1 Revisions to sync up Sylvilagus color scheme across panels ----
+grDevices::cairo_pdf("output/isotope paper final/Figure1_niche_boxplots_Jan2022_JB.pdf", width=8, height=8)
+par(bty="l", mfcol=c(2,2), mar=c(4,4,1,1)+0.1)
+
+## Inter-specific - Compare squirrels to rabbits ----
+
+# create new dataframes and colors
+#data
+Cdatalist <- list(iso_dat$d13C[which(iso_dat$Taxon=="Otospermophilus")],
+                  iso_dat$d13C[which(iso_dat$Taxon=="Sylvilagus ")])
+
+Ndatalist <- list(iso_dat$d15N[which(iso_dat$Taxon=="Otospermophilus")],
+                  iso_dat$d15N[which(iso_dat$Taxon=="Sylvilagus ")])
+
+# colors
+oto.col<- rep("royalblue2", length(Ndatalist[[1]]))
+syl.col <- iso_dat$Species[which(iso_dat$Taxon=="Sylvilagus ")]
+syl.col[which(syl.col=="Leporidae")] <- "darkorange"
+syl.col[which(syl.col=="Sylvilagus sp")] <- "darkorange"
+syl.col[which(syl.col=="S. bachmani")] <- "red1"
+syl.col[which(syl.col=="S. audubonii")] <- "gold1"
+
+colorlist <- list(oto.col, syl.col)
+
+#carbon
+wilcox.c.taxon <- wilcox.test(d13C~Taxon, data=iso_dat, correct = TRUE)
+
+# create basic boxplot
+boxplot(d13C ~ Taxon, data=iso_dat, col = "white", ylab = "", cex.axis=0.75)
+
+# add individual data points
+for (i in 1:2) { 
+  stripchart(na.omit(Cdatalist[[i]]), at = i, add = T, 
+             bg = colorlist[[i]], vertical = T, pch =21, method = "jitter") 
+}
+mtext(expression({delta}^13*C~'value ('~'\u2030'~', VPDB)'), side=2, line = 2.25)
+legend("top", legend=paste0("W = ", wilcox.c.taxon$statistic, "; p = ", round(wilcox.c.taxon$p.value, 3)), bty="n", cex=0.75)
+
+#nitrogen
+wilcox.n.taxon <- wilcox.test(d15N~Taxon, data=iso_dat, correct = TRUE)
+
+# create basic boxplot
+boxplot(d15N ~ Taxon, data=iso_dat, col = "white", ylab = "", cex.axis=0.75)
+
+# add individual data points
+for (i in 1:2) { 
+  stripchart(na.omit(Ndatalist[[i]]), at = i, add = T, pch = 21, 
+             bg = colorlist[[i]], vertical = T, method = "jitter") 
+}
+mtext(expression({delta}^15*N~'value ('~'\u2030'~', AIR)'), side=2, line = 2.25)
+legend("top", legend=paste0("W = ", wilcox.n.taxon$statistic, "; p = ", round(wilcox.n.taxon$p.value, 3)), bty="n", cex=0.75)
+
+## Intra-specific diet ---- 
+
+## Compare desert cottontails to brush rabbits
+
+iso_rabbits<- iso_dat[grep("S. audubonii|S. bachmani", iso_dat$Species), c(3:6)]
+
+#carbon
+wilcox.c.rabbits <- wilcox.test(d13C~Species, data=iso_rabbits, correct = TRUE, alternative = "two.sided")
+
+# create basic boxplot
+boxplot(d13C ~ Species, data=iso_rabbits, col = "white", ylab = "", cex.axis=0.75)
+# add individual data points
+stripchart(d13C ~ Species, data=iso_rabbits, vertical=TRUE, add=TRUE, method="jitter", col=c("gold1","red1"), pch=16)
+mtext(expression({delta}^13*C~'value ('~'\u2030'~', VPDB)'), side=2, line = 2.25)
+legend("top", legend=paste0("W = ", wilcox.c.rabbits$statistic, "; p = ", round(wilcox.c.rabbits$p.value, 3)), bty="n", cex=0.75)
+
+#nitrogen
+wilcox.n.rabbits <- wilcox.test(d15N~Species, data=iso_rabbits, correct = TRUE)
+
+# create basic boxplot
+boxplot(d15N ~ Species, data=iso_rabbits, col = "white", ylab = "", cex.axis=0.75)
+# add individual data points
+stripchart(d15N ~ Species, data=iso_rabbits, vertical=TRUE, add=TRUE, method="stack", pch=16, col=c("gold1","red1"))
+mtext(expression({delta}^15*N~'value ('~'\u2030'~', AIR)'), side=2, line = 2.25)
+legend("top", legend=paste0("W = ", wilcox.n.rabbits$statistic, "; p = ", round(wilcox.n.rabbits$p.value, 3)), bty="n", cex=0.75)
+dev.off()
+
+
+# In Illustrator: Add A,B,C,D labels, add border around points for rabbits, italicize taxon names, move jittered points over to outliers.
+
 
 # ggsave(filename="output/Isoplots/Species_niche.pdf",
 #        width=8, height=6)

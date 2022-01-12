@@ -179,7 +179,38 @@ summary(carbon.lm.clim)
 plot(del13C_permil ~ d18O_hendy, data=matchedDF_all, pch=16)
 abline(carbon.lm.clim)
 
-# taxon-only model
+# sensitivity test: taxon specific climate-only models (both are still significant)
+carbon.lm.clim.oto <-lm(del13C_permil~d18O_hendy, data=matchedDF_all[which(matchedDF_all$Taxon=="Otospermophilus"),])
+summary(carbon.lm.clim.oto)
+
+carbon.lm.clim.syl<-lm(del13C_permil~d18O_hendy, data=matchedDF_all[which(matchedDF_all$Taxon=="Sylvilagus"),])
+summary(carbon.lm.clim.syl)
+
+# sensitivity test: Pleistocene models. Not significant!!
+# just climate, pleistocene (older than 11500)
+carbon.lm.clim.ple <-lm(del13C_permil~d18O_hendy, data=matchedDF_all[which(matchedDF_all$X14C_age_BP>11500),])
+summary(carbon.lm.clim.ple)
+plot(del13C_permil ~ d18O_hendy, data=matchedDF_all[which(matchedDF_all$X14C_age_BP>11500),], pch=16)
+abline(carbon.lm.clim.ple)
+
+# climate + taxon, just pleistocene. Taxon signficant, climate not
+carbon.lm.all.additive.ple <-lm(del13C_permil~d18O_hendy + Taxon, data=matchedDF_all[which(matchedDF_all$X14C_age_BP>11500),])
+summary(carbon.lm.all.additive.ple)
+
+# otosperm climate only, pleistocene only model. climate not significant
+carbon.lm.clim.ple.oto <-lm(del13C_permil~d18O_hendy, data=matchedDF_all[intersect(which(matchedDF_all$X14C_age_BP>11500), which(matchedDF_all$Taxon == "Otospermophilus")),])
+summary(carbon.lm.clim.ple.oto)
+plot(del13C_permil ~ d18O_hendy, data=matchedDF_all[intersect(which(matchedDF_all$X14C_age_BP>11500), which(matchedDF_all$Taxon == "Otospermophilus")),], pch=16, col="royalblue2")
+abline(carbon.lm.clim.ple.oto)
+
+# sylvilagus climate only, pleistocene only model. climate not significant
+carbon.lm.clim.ple.syl <-lm(del13C_permil~d18O_hendy, data=matchedDF_all[intersect(which(matchedDF_all$X14C_age_BP>11500), which(matchedDF_all$Taxon == "Sylvilagus")),])
+summary(carbon.lm.clim.ple.syl)
+plot(del13C_permil ~ d18O_hendy, data=matchedDF_all[intersect(which(matchedDF_all$X14C_age_BP>11500), which(matchedDF_all$Taxon == "Sylvilagus")),], pch=16, col="darkorange")
+abline(carbon.lm.clim.ple.syl)
+
+
+# original models: taxon-only model
 carbon.lm.taxon<-lm(del13C_permil~Taxon, data=matchedDF_all)
 summary(carbon.lm.taxon)
 
@@ -373,7 +404,7 @@ summary(nitrogen.lm.final.hendy)
   ### Figure 3 ----
   
   #grDevices::pdf("output/Figure3_lm_carbon_nitrogen_all_July2021_NF.pdf", width=8, height=8)
-  grDevices::cairo_pdf("output/isotope paper final/Figure3_lm_carbon_nitrogen_all_Nov2021_JB.pdf", width=8, height=8)
+  grDevices::cairo_pdf("output/isotope paper final/Figure3_lm_carbon_nitrogen_all_Jan2022_JB.pdf", width=8, height=8)
   
   layout(matrix(seq(1:6), ncol=3, nrow=2, byrow=F), widths=c(2.5,2.5,1))
   par(mar=c(4,4,1,1), cex.axis=1, bty="l")
@@ -389,8 +420,8 @@ summary(nitrogen.lm.final.hendy)
          pch=16, col="royalblue2")
   abline(carbon.lm.final.hendy, lty=2)
   abline(carbon.lm.clim.hendy, lty=1)
-  mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25) 
-  mtext(expression({delta}^13*C~'\u2030'), side=2, line=2)
+  mtext(expression({delta}^18*O~'value ('~'\u2030'~', PDB)'), side=1, line=2.25, cex=0.75) 
+  mtext(expression({delta}^13*C~'value ('~'\u2030'~', VPDB)'), side=2, line=2.25, cex=0.75)
   
   boxplot(carbon.lm.clim.hendy$residuals ~ matchedDF_all$Taxon[which(!is.na(matchedDF_all$d18O_hendy))], 
           xlab="", ylab="")
@@ -411,10 +442,9 @@ summary(nitrogen.lm.final.hendy)
          pch=16, col="royalblue2")
   abline(nitrogen.lm.final.hendy, lty=2)
   abline(nitrogen.lm.clim.hendy, lty=1)
-  mtext(expression({delta}^18*O~'\u2030'), side=1, line=2.25)
-  
-  mtext(expression({delta}^15*N~'\u2030'), side=2, line=2.25)
-  
+  mtext(expression({delta}^18*O~'value ('~'\u2030'~', PDB)'), side=1, line=2.25, cex=0.75)
+  mtext(expression({delta}^15*N~'value ('~'\u2030'~', AIR)'), side=2, line=2.25, cex=0.75)
+
   boxplot(nitrogen.lm.clim.hendy$residuals ~ matchedDF_all$Taxon[which(!is.na(matchedDF_all$d18O_hendy))],
           xlab="", ylab="")
   stripchart(nitrogen.lm.clim.hendy$residuals ~ matchedDF_all$Taxon[which(!is.na(matchedDF_all$d18O_hendy))], vertical=TRUE, add=TRUE, method="stack", col=c("royalblue2","darkorange"), pch=16)
@@ -467,16 +497,17 @@ summary(nitrogen.lm.final.hendy)
        type="n", axes=FALSE, ann=FALSE, xaxs="i", yaxs="r", 
        xlim=c(55000, 0))
   axis(4)
-  mtext(expression({delta}^13*C~'\u2030'), side=4, line=2.25)
+  mtext(expression({delta}^13*C~'value ('~'\u2030'~', VPDB)'), side=4, line=2.25)
   lines(del13C_permil~median_age, data=matchedDF_all, lty=1, col="black")
   points(del13C_permil~median_age, data=matchedDF_all[which(matchedDF_all$Taxon=="Otospermophilus"),], pch=16, col="royalblue2", cex=0.5)
   points(del13C_permil~median_age, data=matchedDF_all[which(matchedDF_all$Taxon=="Sylvilagus"),], pch=16, col="darkorange", cex=0.5)
+  
   
   #d18O plot - Hendy
   plot(pach.d18O~HendyAge, dat=hendyDat,
        type="l",
        xlab="Years before present",
-       ylab = expression({delta}^18*O~'\u2030'),
+       ylab = expression({delta}^18*O~'value ('~'\u2030'~', PDB)'),
        bty="n",
        xlim=c(55000, 0), ylim=c(3, 0),
        lab=c(12, 8, 7), xaxs="i", yaxs="r", col="lightgray")

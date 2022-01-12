@@ -1,5 +1,5 @@
 library(tidyverse)
-
+library(gridExtra)
 # Create final dataset ----
 # originally input through SIBER, hence the file names. No longer using SIBER
 
@@ -152,7 +152,8 @@ grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Dec2021_JLB_
 print(alldata.time.ellipse.plot)
 dev.off()
 
-#merged
+# merged - Final Figure 2 plot ----
+# will alter in Illustrator afterwards
 
 new.first.plot <- ggplot(data = rlb_data, 
                      aes(x = d13C, 
@@ -163,8 +164,8 @@ new.first.plot <- ggplot(data = rlb_data,
                       values=rlbPalette) +
   scale_shape_manual(labels = c("Holocene", "Pleistocene"), 
                      values=c(16,17)) +
-  ylab(expression(paste(delta^{15}, "N (\u2030)"))) +
-  xlab(expression(paste(delta^{13}, "C (\u2030)"))) + 
+  ylab(expression({delta}^15*N~'value ('~'\u2030'~', AIR)')) +
+  xlab(expression({delta}^13*C~'value ('~'\u2030'~', VPDB)')) + 
   theme_classic() +
   theme(text = element_text(size=14),
         axis.ticks.length = unit(0.15, "cm")) + 
@@ -204,19 +205,17 @@ new.alldata.time.ellipse.plot <- new.first.plot +
                level = p.ell,
                type = "norm",
                geom = "polygon") 
-grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Dec2021_JLB_both.pdf", width=12, height=4)
-grid.arrange(new.alldata.taxa.ellipse.plot, 
-             new.alldata.time.ellipse.plot, nrow = 1)
+
+figure <- ggarrange(new.alldata.time.ellipse.plot, 
+                    new.alldata.taxa.ellipse.plot, 
+                    labels = c("A", "B"),
+                    ncol = 2, nrow = 1)
+
+grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Jan2022_JLB_both.pdf", width=12, height=4)
+print(figure)
 dev.off()
 
 
-
-
-# print Figure 2 plot ----
-# will alter in Illustrator afterwards
-grDevices::cairo_pdf("output/isotope paper final/Figure2_SIBERplots_Nov2021_JB.pdf", width=8, height=6)
-ellipse.plot
-dev.off()
 
 # Summary stats ----
 
