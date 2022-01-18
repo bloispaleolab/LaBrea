@@ -1,5 +1,6 @@
 library(tidyverse)
 library(gridExtra)
+library(SIBER)
 # Create final dataset ----
 # originally input through SIBER, hence the file names. No longer using SIBER
 
@@ -318,13 +319,89 @@ summary(cn.aov)
 # summary(cn.aov)
 # TukeyHSD(cn.aov, which = 'group')
 
-#SIBER Stats -- Not used, doesn't work except the first few lines !!----
+#SIBER Stats ----
 
-group.ML <- groupMetricsML(siber.RLB)
-print(group.ML)
-#1.1 = Pleistocene squirrels, #1.2 = Pleistocene rabbits
-#2.1 = Holocene squirrels, #2.2 = Holocene rabbits
+## Create data frame for SIBER analysis
+# First create a df with both groups (taxa) and communities (Holo vs Pleisto). The sample sizes are too low for Holo
+siber.data <- data1
+siber.data <- siber.data %>% 
+  rename(iso1 = del13C_permil,
+        iso2 = del15N_permil,
+        community = time_group,
+        group = Taxon) %>%
+    select(iso1, iso2, group, community)
 
+siber.obj <- createSiberObject(siber.data)
+
+# create new object that groups Pleisto and Holo into one community
+siber.data.1comm <- siber.data
+siber.data.1comm$community <- "Quaternary"
+siber.1comm.obj <- createSiberObject(siber.data.1comm)
+
+# Then create separate Pleisto dataframe
+siber.data.pleisto <- data1 %>% 
+  rename(iso1 = del13C_permil,
+         iso2 = del15N_permil,
+         community = time_group,
+         group = Taxon) %>%
+  filter(median_age > 11500) %>%
+  select(iso1, iso2, group, community)
+siber.pleisto.obj <- createSiberObject(siber.data.pleisto)
+
+community.hulls.args <- list(col = 1, lty = 1, lwd = 1)
+group.ellipses.args  <- list(n = 100, p.interval = 0.95, lty = 1, lwd = 2)
+group.hulls.args     <- list(lty = 2, col = "grey20")
+
+# plot data with all four separate groups and communities
+par(mfrow=c(1,1))
+plotSiberObject(siber.obj,
+                ax.pad = 2, 
+                hulls = F, community.hulls.args = community.hulls.args, 
+                ellipses = T, group.ellipses.args = group.ellipses.args,
+                group.hulls = T, group.hulls.args = group.hulls.args,
+                bty = "L",
+                iso.order = c(1,2),
+                xlab = expression({delta}^13*C~'\u2030'),
+                ylab = expression({delta}^15*N~'\u2030')
+)
+
+group.ML.siber.obj <- groupMetricsML(siber.obj)
+print(group.ML.siber.obj)
+
+# plot data with two groups and 1 Quaternary community
+par(mfrow=c(1,1))
+plotSiberObject(siber.1comm.obj,
+                ax.pad = 2, 
+                hulls = F, community.hulls.args = community.hulls.args, 
+                ellipses = T, group.ellipses.args = group.ellipses.args,
+                group.hulls = T, group.hulls.args = group.hulls.args,
+                bty = "L",
+                iso.order = c(1,2),
+                xlab = expression({delta}^13*C~'\u2030'),
+                ylab = expression({delta}^15*N~'\u2030')
+)
+
+group.ML.siber.1comm.obj <- groupMetricsML(siber.1comm.obj)
+print(group.ML.siber.1comm.obj)
+
+
+# plot data with two groups and 1 Pleisto community
+par(mfrow=c(1,1))
+plotSiberObject(siber.pleisto.obj,
+                ax.pad = 2, 
+                hulls = F, community.hulls.args = community.hulls.args, 
+                ellipses = T, group.ellipses.args = group.ellipses.args,
+                group.hulls = T, group.hulls.args = group.hulls.args,
+                bty = "L",
+                iso.order = c(1,2),
+                xlab = expression({delta}^13*C~'\u2030'),
+                ylab = expression({delta}^15*N~'\u2030')
+)
+
+group.ML.siber.pleisto.obj <- groupMetricsML(siber.pleisto.obj)
+print(group.ML.siber.pleisto.obj)
+
+# fit Bayesian multivariate normal distributions to each group in the dataset. do this for all four separately ----
 # options for running jags
 parms <- list()
 parms$n.iter <- 2 * 10^4   # number of iterations to run the model for
@@ -341,7 +418,7 @@ priors$tau.mu <- 1.0E-2
 # fit the ellipses which uses an Inverse Wishart prior
 # on the covariance matrix Sigma, and a vague normal prior on the 
 # means. Fitting is via the JAGS method.
-ellipses.posterior <- siberMVN(siber.RLB, parms, priors)
+ellipses.posterior <- siberMVN(siber.obj, parms, priors)
 
 
 # The posterior estimates of the ellipses for each group can be used to
